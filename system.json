@@ -2,7 +2,7 @@
   "id": "eoa",
   "title": "Edge of Anarchy",
   "description": "A system for playing the Edge of Anarchy game system in the Foundry Virtual Tabletop environment.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
