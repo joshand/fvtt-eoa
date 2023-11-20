@@ -1,4 +1,4 @@
-![](https://github.com/joshand/fvtt-eoa/media/eoa.jpeg)
+![](https://github.com/joshand/fvtt-eoa/blob/main/media/eoa.jpeg?raw=true)
 
 # Foundry Virtual Tabletop - Edge of Anarchy Game System
 
