@@ -6,7 +6,7 @@
  */
 
 // Import Configuration
-import DND5E from "./module/config.mjs";
+import EOA from "./module/config.mjs";
 import registerSystemSettings from "./module/settings.mjs";
 
 // Import Submodules
@@ -24,10 +24,10 @@ import {ModuleArt} from "./module/module-art.mjs";
 /*  Define Module Structure                     */
 /* -------------------------------------------- */
 
-globalThis.dnd5e = {
+globalThis.EOA = {
   applications,
   canvas,
-  config: DND5E,
+  config: EOA,
   dataModels,
   dice,
   documents,
@@ -41,35 +41,35 @@ globalThis.dnd5e = {
 /* -------------------------------------------- */
 
 Hooks.once("init", function() {
-  globalThis.dnd5e = game.dnd5e = Object.assign(game.system, globalThis.dnd5e);
-  console.log(`DnD5e | Initializing the DnD5e Game System - Version ${dnd5e.version}\n${DND5E.ASCII}`);
+  globalThis.EOA = game.EOA = Object.assign(game.system, globalThis.EOA);
+  console.log(`EOA | Initializing the EOA Game System - Version ${EOA.version}\n${EOA.ASCII}`);
 
   // Record Configuration Values
-  CONFIG.DND5E = DND5E;
-  CONFIG.ActiveEffect.documentClass = documents.ActiveEffect5e;
-  CONFIG.Actor.documentClass = documents.Actor5e;
-  CONFIG.Item.documentClass = documents.Item5e;
-  CONFIG.Token.documentClass = documents.TokenDocument5e;
-  CONFIG.Token.objectClass = canvas.Token5e;
+  CONFIG.EOA = EOA;
+  CONFIG.ActiveEffect.documentClass = documents.ActiveEffectEoA;
+  CONFIG.Actor.documentClass = documents.ActorEoA;
+  CONFIG.Item.documentClass = documents.ItemEoA;
+  CONFIG.Token.documentClass = documents.TokenDocumentEoA;
+  CONFIG.Token.objectClass = canvas.TokenEoA;
   CONFIG.time.roundTime = 6;
   CONFIG.Dice.DamageRoll = dice.DamageRoll;
   CONFIG.Dice.D20Roll = dice.D20Roll;
-  CONFIG.MeasuredTemplate.defaults.angle = 53.13; // 5e cone RAW should be 53.13 degrees
-  CONFIG.ui.combat = applications.combat.CombatTracker5e;
-  game.dnd5e.isV10 = game.release.generation < 11;
+  CONFIG.MeasuredTemplate.defaults.angle = 53.13;
+  CONFIG.ui.combat = applications.combat.CombatTrackerEoA;
+  game.EOA.isV10 = game.release.generation < 11;
 
   // Register System Settings
   registerSystemSettings();
 
   // Validation strictness.
-  if ( game.dnd5e.isV10 ) _determineValidationStrictness();
+  if ( game.EOA.isV10 ) _determineValidationStrictness();
 
   // Configure module art.
-  game.dnd5e.moduleArt = new ModuleArt();
+  game.EOA.moduleArt = new ModuleArt();
 
   // Remove honor & sanity from configuration if they aren't enabled
-  if ( !game.settings.get("dnd5e", "honorScore") ) delete DND5E.abilities.hon;
-  if ( !game.settings.get("dnd5e", "sanityScore") ) delete DND5E.abilities.san;
+  if ( !game.settings.get("EOA", "honorScore") ) delete EOA.abilities.hon;
+  if ( !game.settings.get("EOA", "sanityScore") ) delete EOA.abilities.san;
 
   // Configure trackable & consumable attributes.
   _configureTrackableAttributes();
@@ -83,41 +83,41 @@ Hooks.once("init", function() {
   CONFIG.Dice.rolls.push(dice.DamageRoll);
 
   // Hook up system data types
-  const modelType = game.dnd5e.isV10 ? "systemDataModels" : "dataModels";
+  const modelType = game.EOA.isV10 ? "systemDataModels" : "dataModels";
   CONFIG.Actor[modelType] = dataModels.actor.config;
   CONFIG.Item[modelType] = dataModels.item.config;
   CONFIG.JournalEntryPage[modelType] = dataModels.journal.config;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("dnd5e", applications.actor.ActorSheet5eCharacter, {
+  Actors.registerSheet("EOA", applications.actor.ActorSheetEoACharacter, {
     types: ["character"],
     makeDefault: true,
-    label: "DND5E.SheetClassCharacter"
+    label: "EOA.SheetClassCharacter"
   });
-  Actors.registerSheet("dnd5e", applications.actor.ActorSheet5eNPC, {
+  Actors.registerSheet("EOA", applications.actor.ActorSheetEoANPC, {
     types: ["npc"],
     makeDefault: true,
-    label: "DND5E.SheetClassNPC"
+    label: "EOA.SheetClassNPC"
   });
-  Actors.registerSheet("dnd5e", applications.actor.ActorSheet5eVehicle, {
+  Actors.registerSheet("EOA", applications.actor.ActorSheetEoAVehicle, {
     types: ["vehicle"],
     makeDefault: true,
-    label: "DND5E.SheetClassVehicle"
+    label: "EOA.SheetClassVehicle"
   });
-  Actors.registerSheet("dnd5e", applications.actor.GroupActorSheet, {
+  Actors.registerSheet("EOA", applications.actor.GroupActorSheet, {
     types: ["group"],
     makeDefault: true,
-    label: "DND5E.SheetClassGroup"
+    label: "EOA.SheetClassGroup"
   });
 
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("dnd5e", applications.item.ItemSheet5e, {
+  Items.registerSheet("EOA", applications.item.ItemSheetEoA, {
     makeDefault: true,
-    label: "DND5E.SheetClassItem"
+    label: "EOA.SheetClassItem"
   });
-  DocumentSheetConfig.registerSheet(JournalEntryPage, "dnd5e", applications.journal.JournalClassPageSheet, {
-    label: "DND5E.SheetClassClassSummary",
+  DocumentSheetConfig.registerSheet(JournalEntryPage, "EOA", applications.journal.JournalClassPageSheet, {
+    label: "EOA.SheetClassClassSummary",
     types: ["class"]
   });
 
@@ -133,7 +133,7 @@ Hooks.once("init", function() {
  * @internal
  */
 function _determineValidationStrictness() {
-  dataModels.SystemDataModel._enableV10Validation = game.settings.get("dnd5e", "strictValidation");
+  dataModels.SystemDataModel._enableV10Validation = game.settings.get("EOA", "strictValidation");
 }
 
 /**
@@ -144,9 +144,9 @@ async function _configureValidationStrictness() {
   if ( !game.user.isGM ) return;
   const invalidDocuments = game.actors.invalidDocumentIds.size + game.items.invalidDocumentIds.size
     + game.scenes.invalidDocumentIds.size;
-  const strictValidation = game.settings.get("dnd5e", "strictValidation");
+  const strictValidation = game.settings.get("EOA", "strictValidation");
   if ( invalidDocuments && strictValidation ) {
-    await game.settings.set("dnd5e", "strictValidation", false);
+    await game.settings.set("EOA", "strictValidation", false);
     game.socket.emit("reload");
     foundry.utils.debouncedReload();
   }
@@ -160,8 +160,8 @@ function _configureTrackableAttributes() {
   const common = {
     bar: [],
     value: [
-      ...Object.keys(DND5E.abilities).map(ability => `abilities.${ability}.value`),
-      ...Object.keys(DND5E.movementTypes).map(movement => `attributes.movement.${movement}`),
+      ...Object.keys(EOA.abilities).map(ability => `abilities.${ability}.value`),
+      ...Object.keys(EOA.movementTypes).map(movement => `attributes.movement.${movement}`),
       "attributes.ac.value", "attributes.init.total"
     ]
   };
@@ -170,8 +170,8 @@ function _configureTrackableAttributes() {
     bar: [...common.bar, "attributes.hp", "spells.pact"],
     value: [
       ...common.value,
-      ...Object.keys(DND5E.skills).map(skill => `skills.${skill}.passive`),
-      ...Object.keys(DND5E.senses).map(sense => `attributes.senses.${sense}`),
+      ...Object.keys(EOA.skills).map(skill => `skills.${skill}.passive`),
+      ...Object.keys(EOA.senses).map(sense => `attributes.senses.${sense}`),
       "attributes.spelldc"
     ]
   };
@@ -201,18 +201,18 @@ function _configureTrackableAttributes() {
  * @internal
  */
 function _configureConsumableAttributes() {
-  CONFIG.DND5E.consumableResources = [
-    ...Object.keys(DND5E.abilities).map(ability => `abilities.${ability}.value`),
+  CONFIG.EOA.consumableResources = [
+    ...Object.keys(EOA.abilities).map(ability => `abilities.${ability}.value`),
     "attributes.ac.flat",
     "attributes.hp.value",
-    ...Object.keys(DND5E.senses).map(sense => `attributes.senses.${sense}`),
-    ...Object.keys(DND5E.movementTypes).map(type => `attributes.movement.${type}`),
-    ...Object.keys(DND5E.currencies).map(denom => `currency.${denom}`),
+    ...Object.keys(EOA.senses).map(sense => `attributes.senses.${sense}`),
+    ...Object.keys(EOA.movementTypes).map(type => `attributes.movement.${type}`),
+    ...Object.keys(EOA.currencies).map(denom => `currency.${denom}`),
     "details.xp.value",
     "resources.primary.value", "resources.secondary.value", "resources.tertiary.value",
     "resources.legact.value", "resources.legres.value",
     "spells.pact.value",
-    ...Array.fromRange(Object.keys(DND5E.spellLevels).length - 1, 1).map(level => `spells.spell${level}.value`)
+    ...Array.fromRange(Object.keys(EOA.spellLevels).length - 1, 1).map(level => `spells.spell${level}.value`)
   ];
 }
 
@@ -224,12 +224,12 @@ function _configureConsumableAttributes() {
  * Prepare attribute lists.
  */
 Hooks.once("setup", function() {
-  CONFIG.DND5E.trackableAttributes = expandAttributeList(CONFIG.DND5E.trackableAttributes);
-  game.dnd5e.moduleArt.registerModuleArt();
+  CONFIG.EOA.trackableAttributes = expandAttributeList(CONFIG.EOA.trackableAttributes);
+  game.EOA.moduleArt.registerModuleArt();
 
   // Apply custom compendium styles to the SRD rules compendium.
-  if ( !game.dnd5e.isV10 ) {
-    const rules = game.packs.get("dnd5e.rules");
+  if ( !game.EOA.isV10 ) {
+    const rules = game.packs.get("EOA.rules");
     rules.applicationClass = applications.journal.SRDCompendium;
   }
 });
@@ -253,7 +253,7 @@ function expandAttributeList(attributes) {
 /**
  * Perform one-time pre-localization and sorting of some configuration objects
  */
-Hooks.once("i18nInit", () => utils.performPreLocalization(CONFIG.DND5E));
+Hooks.once("i18nInit", () => utils.performPreLocalization(CONFIG.EOA));
 
 /* -------------------------------------------- */
 /*  Foundry VTT Ready                           */
@@ -263,33 +263,33 @@ Hooks.once("i18nInit", () => utils.performPreLocalization(CONFIG.DND5E));
  * Once the entire VTT framework is initialized, check to see if we should perform a data migration
  */
 Hooks.once("ready", function() {
-  if ( game.dnd5e.isV10 ) {
+  if ( game.EOA.isV10 ) {
     // Configure validation strictness.
     _configureValidationStrictness();
 
     // Apply custom compendium styles to the SRD rules compendium.
-    const rules = game.packs.get("dnd5e.rules");
+    const rules = game.packs.get("EOA.rules");
     rules.apps = [new applications.journal.SRDCompendium(rules)];
   }
 
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => {
     if ( ["Item", "ActiveEffect"].includes(data.type) ) {
-      documents.macro.create5eMacro(data, slot);
+      documents.macro.createEoAMacro(data, slot);
       return false;
     }
   });
 
   // Determine whether a system migration is required and feasible
   if ( !game.user.isGM ) return;
-  const cv = game.settings.get("dnd5e", "systemMigrationVersion") || game.world.flags.dnd5e?.version;
+  const cv = game.settings.get("EOA", "systemMigrationVersion") || game.world.flags.EOA?.version;
   const totalDocuments = game.actors.size + game.scenes.size + game.items.size;
-  if ( !cv && totalDocuments === 0 ) return game.settings.set("dnd5e", "systemMigrationVersion", game.system.version);
+  if ( !cv && totalDocuments === 0 ) return game.settings.set("EOA", "systemMigrationVersion", game.system.version);
   if ( cv && !isNewerVersion(game.system.flags.needsMigrationVersion, cv) ) return;
 
   // Perform the migration
   if ( cv && isNewerVersion(game.system.flags.compatibleMigrationVersion, cv) ) {
-    ui.notifications.error("MIGRATION.5eVersionTooOldWarning", {localize: true, permanent: true});
+    ui.notifications.error("MIGRATION.EoAVersionTooOldWarning", {localize: true, permanent: true});
   }
   migrations.migrateWorld();
 });
@@ -299,7 +299,7 @@ Hooks.once("ready", function() {
 /* -------------------------------------------- */
 
 Hooks.on("canvasInit", gameCanvas => {
-  gameCanvas.grid.diagonalRule = game.settings.get("dnd5e", "diagonalMovement");
+  gameCanvas.grid.diagonalRule = game.settings.get("EOA", "diagonalMovement");
   SquareGrid.prototype.measureDistances = canvas.measureDistances;
 });
 
@@ -310,9 +310,9 @@ Hooks.on("canvasInit", gameCanvas => {
 Hooks.on("renderChatMessage", documents.chat.onRenderChatMessage);
 Hooks.on("getChatLogEntryContext", documents.chat.addChatMessageContextOptions);
 
-Hooks.on("renderChatLog", (app, html, data) => documents.Item5e.chatListeners(html));
-Hooks.on("renderChatPopout", (app, html, data) => documents.Item5e.chatListeners(html));
-Hooks.on("getActorDirectoryEntryContext", documents.Actor5e.addDirectoryContextOptions);
+Hooks.on("renderChatLog", (app, html, data) => documents.ItemEoA.chatListeners(html));
+Hooks.on("renderChatPopout", (app, html, data) => documents.ItemEoA.chatListeners(html));
+Hooks.on("getActorDirectoryEntryContext", documents.ActorEoA.addDirectoryContextOptions);
 
 /* -------------------------------------------- */
 /*  Bundled Module Exports                      */
@@ -327,5 +327,5 @@ export {
   enrichers,
   migrations,
   utils,
-  DND5E
+  EOA
 };
