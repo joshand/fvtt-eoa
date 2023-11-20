@@ -1,0 +1,82 @@
+{
+  "_id": "SmLgmw8HiHxsrQLH",
+  "name": "Solitus",
+  "type": "breed",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>Balanced and adaptable, the Solitus are the most human-like of the breeds, descendants of the original colonists of Rubi-ka. They are versatile and can excel in any profession.</p><p><strong><em>Active Genome Trait: Adaptive Survival:</em></strong> Crash your own NCU to gain 1+ per TL on your next Test to resist environmental hazards and status effects.</p><p><strong><em>Passive Genome Trait:</em></strong> Gain +1 Treatment skill per TL.</p><p><strong><em>Attribute Modifiers:</em></strong> None, but gain +2 additional Skill points per TL.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "solitus",
+    "advancement": [
+      {
+        "_id": "jLtMgVC2inCvcdOX",
+        "type": "AttributeValueImprovement",
+        "configuration": {
+          "points": 0,
+          "fixed": {
+            "str": 0,
+            "agi": 0,
+            "sta": 0,
+            "int": 0,
+            "sen": 0,
+            "psy": 0
+          },
+          "cap": 4
+        },
+        "value": {
+          "type": "avi"
+        },
+        "level": 0,
+        "title": ""
+      }
+    ],
+    "movement": {
+      "burrow": null,
+      "climb": null,
+      "fly": null,
+      "swim": null,
+      "walk": 30,
+      "units": "ft",
+      "hover": false
+    },
+    "senses": {
+      "darkvision": null,
+      "blindsight": null,
+      "tremorsense": null,
+      "truesight": null,
+      "units": "ft",
+      "special": ""
+    },
+    "type": {
+      "value": "solitus",
+      "subtype": "solitus",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!SmLgmw8HiHxsrQLH"
+}
