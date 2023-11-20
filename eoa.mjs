@@ -7,125 +7,125 @@
 
 // Import Configuration
 import EOA from "./module/config.mjs";
-import registerSystemSettings from "./module/settings.mjs";
+// import registerSystemSettings from "./module/settings.mjs";
 
 // Import Submodules
-import * as applications from "./module/applications/_module.mjs";
-import * as canvas from "./module/canvas/_module.mjs";
-import * as dataModels from "./module/data/_module.mjs";
-import * as dice from "./module/dice/_module.mjs";
-import * as documents from "./module/documents/_module.mjs";
-import * as enrichers from "./module/enrichers.mjs";
-import * as migrations from "./module/migration.mjs";
-import * as utils from "./module/utils.mjs";
-import {ModuleArt} from "./module/module-art.mjs";
+// import * as applications from "./module/applications/_module.mjs";
+// import * as canvas from "./module/canvas/_module.mjs";
+// import * as dataModels from "./module/data/_module.mjs";
+// import * as dice from "./module/dice/_module.mjs";
+// import * as documents from "./module/documents/_module.mjs";
+// import * as enrichers from "./module/enrichers.mjs";
+// import * as migrations from "./module/migration.mjs";
+// import * as utils from "./module/utils.mjs";
+// import {ModuleArt} from "./module/module-art.mjs";
 
 /* -------------------------------------------- */
 /*  Define Module Structure                     */
 /* -------------------------------------------- */
 
-globalThis.EOA = {
-  applications,
-  canvas,
-  config: EOA,
-  dataModels,
-  dice,
-  documents,
-  enrichers,
-  migrations,
-  utils
-};
+// globalThis.EOA = {
+//   applications,
+//   canvas,
+//   config: EOA,
+//   dataModels,
+//   dice,
+//   documents,
+//   enrichers,
+//   migrations,
+//   utils
+// };
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
 /* -------------------------------------------- */
 
 Hooks.once("init", function() {
-  globalThis.EOA = game.EOA = Object.assign(game.system, globalThis.EOA);
   console.log(`EOA | Initializing the EOA Game System - Version ${EOA.version}\n${EOA.ASCII}`);
+  globalThis.EOA = game.EOA = Object.assign(game.system, globalThis.EOA);
 
   // Record Configuration Values
   CONFIG.EOA = EOA;
-  CONFIG.ActiveEffect.documentClass = documents.ActiveEffectEoA;
-  CONFIG.Actor.documentClass = documents.ActorEoA;
-  CONFIG.Item.documentClass = documents.ItemEoA;
-  CONFIG.Token.documentClass = documents.TokenDocumentEoA;
-  CONFIG.Token.objectClass = canvas.TokenEoA;
-  CONFIG.time.roundTime = 6;
-  CONFIG.Dice.DamageRoll = dice.DamageRoll;
-  CONFIG.Dice.D20Roll = dice.D20Roll;
-  CONFIG.MeasuredTemplate.defaults.angle = 53.13;
-  CONFIG.ui.combat = applications.combat.CombatTrackerEoA;
-  game.EOA.isV10 = game.release.generation < 11;
+  // CONFIG.ActiveEffect.documentClass = documents.ActiveEffectEoA;
+  // CONFIG.Actor.documentClass = documents.ActorEoA;
+  // CONFIG.Item.documentClass = documents.ItemEoA;
+  // CONFIG.Token.documentClass = documents.TokenDocumentEoA;
+  // CONFIG.Token.objectClass = canvas.TokenEoA;
+  // CONFIG.time.roundTime = 6;
+  // CONFIG.Dice.DamageRoll = dice.DamageRoll;
+  // CONFIG.Dice.D20Roll = dice.D20Roll;
+  // CONFIG.MeasuredTemplate.defaults.angle = 53.13;
+  // CONFIG.ui.combat = applications.combat.CombatTrackerEoA;
+  // game.EOA.isV10 = game.release.generation < 11;
 
   // Register System Settings
-  registerSystemSettings();
+  // registerSystemSettings();
 
   // Validation strictness.
-  if ( game.EOA.isV10 ) _determineValidationStrictness();
+  // if ( game.EOA.isV10 ) _determineValidationStrictness();
 
   // Configure module art.
-  game.EOA.moduleArt = new ModuleArt();
+  // game.EOA.moduleArt = new ModuleArt();
 
   // Remove honor & sanity from configuration if they aren't enabled
-  if ( !game.settings.get("EOA", "honorScore") ) delete EOA.abilities.hon;
-  if ( !game.settings.get("EOA", "sanityScore") ) delete EOA.abilities.san;
+  // if ( !game.settings.get("EOA", "honorScore") ) delete EOA.abilities.hon;
+  // if ( !game.settings.get("EOA", "sanityScore") ) delete EOA.abilities.san;
 
   // Configure trackable & consumable attributes.
-  _configureTrackableAttributes();
-  _configureConsumableAttributes();
+  // _configureTrackableAttributes();
+  // _configureConsumableAttributes();
 
   // Patch Core Functions
-  Combatant.prototype.getInitiativeRoll = documents.combat.getInitiativeRoll;
+  // Combatant.prototype.getInitiativeRoll = documents.combat.getInitiativeRoll;
 
   // Register Roll Extensions
-  CONFIG.Dice.rolls.push(dice.D20Roll);
-  CONFIG.Dice.rolls.push(dice.DamageRoll);
+  // CONFIG.Dice.rolls.push(dice.D20Roll);
+  // CONFIG.Dice.rolls.push(dice.DamageRoll);
 
   // Hook up system data types
-  const modelType = game.EOA.isV10 ? "systemDataModels" : "dataModels";
-  CONFIG.Actor[modelType] = dataModels.actor.config;
-  CONFIG.Item[modelType] = dataModels.item.config;
-  CONFIG.JournalEntryPage[modelType] = dataModels.journal.config;
+  // const modelType = game.EOA.isV10 ? "systemDataModels" : "dataModels";
+  // CONFIG.Actor[modelType] = dataModels.actor.config;
+  // CONFIG.Item[modelType] = dataModels.item.config;
+  // CONFIG.JournalEntryPage[modelType] = dataModels.journal.config;
 
   // Register sheet application classes
-  Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("EOA", applications.actor.ActorSheetEoACharacter, {
-    types: ["character"],
-    makeDefault: true,
-    label: "EOA.SheetClassCharacter"
-  });
-  Actors.registerSheet("EOA", applications.actor.ActorSheetEoANPC, {
-    types: ["npc"],
-    makeDefault: true,
-    label: "EOA.SheetClassNPC"
-  });
-  Actors.registerSheet("EOA", applications.actor.ActorSheetEoAVehicle, {
-    types: ["vehicle"],
-    makeDefault: true,
-    label: "EOA.SheetClassVehicle"
-  });
-  Actors.registerSheet("EOA", applications.actor.GroupActorSheet, {
-    types: ["group"],
-    makeDefault: true,
-    label: "EOA.SheetClassGroup"
-  });
+  // Actors.unregisterSheet("core", ActorSheet);
+  // Actors.registerSheet("EOA", applications.actor.ActorSheetEoACharacter, {
+  //   types: ["character"],
+  //   makeDefault: true,
+  //   label: "EOA.SheetClassCharacter"
+  // });
+  // Actors.registerSheet("EOA", applications.actor.ActorSheetEoANPC, {
+  //   types: ["npc"],
+  //   makeDefault: true,
+  //   label: "EOA.SheetClassNPC"
+  // });
+  // Actors.registerSheet("EOA", applications.actor.ActorSheetEoAVehicle, {
+  //   types: ["vehicle"],
+  //   makeDefault: true,
+  //   label: "EOA.SheetClassVehicle"
+  // });
+  // Actors.registerSheet("EOA", applications.actor.GroupActorSheet, {
+  //   types: ["group"],
+  //   makeDefault: true,
+  //   label: "EOA.SheetClassGroup"
+  // });
 
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("EOA", applications.item.ItemSheetEoA, {
     makeDefault: true,
     label: "EOA.SheetClassItem"
   });
-  DocumentSheetConfig.registerSheet(JournalEntryPage, "EOA", applications.journal.JournalClassPageSheet, {
-    label: "EOA.SheetClassClassSummary",
-    types: ["class"]
-  });
+  // DocumentSheetConfig.registerSheet(JournalEntryPage, "EOA", applications.journal.JournalClassPageSheet, {
+  //   label: "EOA.SheetClassClassSummary",
+  //   types: ["class"]
+  // });
 
   // Preload Handlebars helpers & partials
-  utils.registerHandlebarsHelpers();
-  utils.preloadHandlebarsTemplates();
+  // utils.registerHandlebarsHelpers();
+  // utils.preloadHandlebarsTemplates();
 
-  enrichers.registerCustomEnrichers();
+  // enrichers.registerCustomEnrichers();
 });
 
 /**
@@ -225,7 +225,7 @@ function _configureConsumableAttributes() {
  */
 Hooks.once("setup", function() {
   CONFIG.EOA.trackableAttributes = expandAttributeList(CONFIG.EOA.trackableAttributes);
-  game.EOA.moduleArt.registerModuleArt();
+  // game.EOA.moduleArt.registerModuleArt();
 
   // Apply custom compendium styles to the SRD rules compendium.
   if ( !game.EOA.isV10 ) {
