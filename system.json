@@ -4,7 +4,7 @@
   "description": "A system for playing the Edge of Anarchy game system in the Foundry Virtual Tabletop environment.",
   "version": "0.0.1",
   "compatibility": {
-    "minimum": "10.303",
+    "minimum": "11",
     "verified": "11"
   },
   "url": "https://github.com/joshand/fvtt-eoa/",
@@ -16,6 +16,12 @@
       "url": "https://foundryvtt.com",
       "flags": {}
     }
+  ],
+  "esmodules": [
+    "eoa.mjs"
+  ],
+  "styles": [
+    "eoa.css"
   ],
   "packs": [
     {
