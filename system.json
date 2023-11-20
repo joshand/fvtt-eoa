@@ -57,12 +57,5 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "attributes.hp",
-  "flags": {
-    "needsMigrationVersion": "0.0.1",
-    "compatibleMigrationVersion": "0.0.0",
-    "hotReload": {
-      "extensions": ["css", "hbs", "json"],
-      "paths": ["eoa.css", "templates", "lang"]
-    }
-  }
+  "flags": {}
 }
