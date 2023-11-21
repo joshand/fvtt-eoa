@@ -5,20 +5,20 @@
  * Software License: MIT
  */
 
-import GameItem from './GameItem';
-import { register as registerSheets } from '../item/sheets/index';
+import GameItem from './GameItem.js';
+import { register as registerSheets } from '../item/sheets/index.js';
 
-import AbilityDataModel from '../item/data/AbilityDataModel';
-import ArchetypeDataModel from '../item/data/ArchetypeDataModel';
-import ArmorDataModel from '../item/data/ArmorDataModel';
-import CareerDataModel from '../item/data/CareerDataModel';
-import ContainerDataModel from '../item/data/ContainerDataModel';
-import EquipmentDataModel from '../item/data/EquipmentDataModel';
-import InjuryDataModel from '../item/data/InjuryDataModel';
-import SkillDataModel from '../item/data/SkillDataModel';
-import TalentDataModel from '../item/data/TalentDataModel';
-import ItemQualityDataModel from '../item/data/ItemQualityDataModel';
-import WeaponDataModel from '../item/data/WeaponDataModel';
+import AbilityDataModel from '../item/data/AbilityDataModel.js';
+import ArchetypeDataModel from '../item/data/ArchetypeDataModel.js';
+import ArmorDataModel from '../item/data/ArmorDataModel.js';
+import CareerDataModel from '../item/data/CareerDataModel.js';
+import ContainerDataModel from '../item/data/ContainerDataModel.js';
+import EquipmentDataModel from '../item/data/EquipmentDataModel.js';
+import InjuryDataModel from '../item/data/InjuryDataModel.js';
+import SkillDataModel from '../item/data/SkillDataModel.js';
+import TalentDataModel from '../item/data/TalentDataModel.js';
+import ItemQualityDataModel from '../item/data/ItemQualityDataModel.js';
+import WeaponDataModel from '../item/data/WeaponDataModel.js';
 
 export function register() {
 	CONFIG.Item.documentClass = GameItem;

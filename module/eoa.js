@@ -6,7 +6,7 @@
  */
 
 
-import { register as registerItems, CharacterCreationItemTypes, EquipmentItemTypes } from './item/index';
+import { register as registerItems, CharacterCreationItemTypes, EquipmentItemTypes } from './item/index.js';
 
 
 Hooks.once('init', async () => {
