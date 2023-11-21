@@ -5,8 +5,8 @@
  * Software License: MIT
  */
 
-import GameItem from '../item/GameItem';
-import { register as registerSheets } from '../item/sheets';
+import GameItem from './GameItem';
+import { register as registerSheets } from '../item/sheets/index';
 
 import AbilityDataModel from '../item/data/AbilityDataModel';
 import ArchetypeDataModel from '../item/data/ArchetypeDataModel';
