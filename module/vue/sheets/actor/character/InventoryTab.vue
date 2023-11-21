@@ -1,0 +1,262 @@
+<script lang="ts" setup>
+import { computed, inject, ref, toRaw } from 'vue';
+import { ActorSheetContext, RootContext } from '../../../SheetContext';
+import CharacterDataModel from '../../../../actor/data/CharacterDataModel';
+import { NAMESPACE as SETTINGS_NAMESPACE } from '../../../../settings';
+import { KEY_MONEY_NAME } from '../../../../settings/campaign';
+import Localized from '../../../components/Localized.vue';
+import EquipmentDataModel, { EquipmentState } from '../../../../item/data/EquipmentDataModel';
+import GameItem from '../../../../item/GameItem';
+import InventoryItem from '../../../components/inventory/InventoryItem.vue';
+import InventorySortSlot from '../../../components/inventory/InventorySortSlot.vue';
+import GameEffect from '../../../../effects/GameEffect';
+
+const EQUIPMENT_TYPES = ['weapon', 'armor', 'consumable', 'gear', 'container'];
+
+const rootContext = inject<ActorSheetContext<CharacterDataModel>>(RootContext)!;
+const inventory = computed(() => toRaw(rootContext.data.actor).items.filter((i) => EQUIPMENT_TYPES.includes(i.type)) as GameItem<EquipmentDataModel>[]);
+const system = computed(() => toRaw(rootContext.data.actor).systemData);
+
+const equippedItems = computed(() => inventory.value.filter((i) => i.systemData.state === 'equipped').sort(sortItems));
+const carriedItems = computed(() => inventory.value.filter((i) => i.systemData.state === 'carried' && i.systemData.container === '').sort(sortItems));
+const droppedItems = computed(() => inventory.value.filter((i) => i.systemData.state === 'dropped' && i.systemData.container === '').sort(sortItems));
+
+const draggingItem = ref(false);
+
+const CURRENCY_LABEL = game.settings.get(SETTINGS_NAMESPACE, KEY_MONEY_NAME);
+
+function sortItems(left: GameItem, right: GameItem) {
+	return left.sort - right.sort;
+}
+
+async function sortDroppedItem(event: DragEvent, sortCategory: EquipmentState, sortIndex: number) {
+	console.log('SORTING');
+	const dragSource = JSON.parse(event.dataTransfer?.getData('text/plain') ?? '{}');
+	console.log(dragSource);
+
+	if (!dragSource.id) {
+		return;
+	}
+
+	const actor = toRaw(rootContext.data.actor);
+
+	const item = actor.items.get(dragSource.id);
+	if (!item || (sortCategory === EquipmentState.Equipped && !['weapon', 'armor'].includes(item.type))) {
+		return;
+	}
+	console.log(item);
+
+	let sortedInventory = equippedItems;
+	switch (sortCategory) {
+		case EquipmentState.Carried:
+			sortedInventory = carriedItems;
+			break;
+
+		case EquipmentState.Dropped:
+			sortedInventory = droppedItems;
+			break;
+	}
+
+	let newSort = item.sort;
+	if (sortIndex === -1) {
+		// Sort the item at the beginning of the list.
+		if (sortedInventory.value.length > 0) {
+			newSort = sortedInventory.value[0].sort - 1;
+		}
+	} else {
+		newSort = sortedInventory.value[sortIndex].sort + 1;
+
+		if (sortedInventory.value.length > sortIndex + 1) {
+			newSort = Math.floor((newSort + sortedInventory.value[sortIndex + 1].sort) / 2);
+		}
+	}
+
+	console.log('UPDATING');
+
+	await item.update({
+		'system.container': '',
+		'system.state': sortCategory,
+		sort: newSort,
+	});
+
+	handleEffectsSuppresion(sortCategory, [item as GameItem]);
+}
+
+async function handleEffectsSuppresion(desiredState: EquipmentState, items: GameItem[]) {
+	const actor = toRaw(rootContext.data.actor);
+
+	for (const item of items) {
+		// More work is required before we also handle consumables.
+		if (item.type == 'consumable') {
+			continue;
+		}
+
+		const preferredState = ['weapon', 'armor'].includes(item.type) ? EquipmentState.Equipped : EquipmentState.Carried;
+		const shouldDisable = desiredState !== preferredState;
+
+		await Promise.all(
+			actor.effects
+				.filter((effect) => (effect as GameEffect).originItem?.id === item.id && effect.disabled !== shouldDisable)
+				.map(
+					async (effect) =>
+						await effect.update({
+							disabled: shouldDisable,
+						}),
+				),
+		);
+	}
+}
+</script>
+
+<template>
+	<section class="tab-inventory">
+		<div class="section-header">
+			<span><Localized label="EoA.Labels.Equipped" /></span>
+		</div>
+
+		<InventorySortSlot :active="draggingItem" @drop="sortDroppedItem($event, EquipmentState.Equipped, -1)" />
+
+		<TransitionGroup name="inv">
+			<template v-for="(item, index) in equippedItems" :key="item.id">
+				<InventoryItem :item="item" draggable="true" @dragstart="draggingItem = true" @dragend="draggingItem = false" :dragging="draggingItem" @equipment-state-change="handleEffectsSuppresion" />
+
+				<InventorySortSlot :active="draggingItem" @drop="sortDroppedItem($event, EquipmentState.Equipped, index)" />
+			</template>
+		</TransitionGroup>
+
+		<div class="section-header">
+			<span><Localized label="EoA.Labels.Carried" /></span>
+		</div>
+
+		<InventorySortSlot :active="draggingItem" @drop="sortDroppedItem($event, EquipmentState.Carried, -1)" />
+
+		<TransitionGroup name="inv">
+			<template v-for="(item, index) in carriedItems" :key="item.id">
+				<InventoryItem :item="item" draggable="true" @dragstart="draggingItem = true" @dragend="draggingItem = false" :dragging="draggingItem" @equipment-state-change="handleEffectsSuppresion" />
+
+				<InventorySortSlot :active="draggingItem" @drop="sortDroppedItem($event, EquipmentState.Carried, index)" />
+			</template>
+		</TransitionGroup>
+
+		<div class="section-header">
+			<span><Localized label="EoA.Labels.Dropped" /></span>
+		</div>
+
+		<InventorySortSlot :active="draggingItem" @drop="sortDroppedItem($event, EquipmentState.Dropped, -1)" />
+
+		<TransitionGroup name="inv">
+			<template v-for="(item, index) in droppedItems" :key="item.id">
+				<InventoryItem :item="item" draggable="true" @dragstart="draggingItem = true" @dragend="draggingItem = false" :dragging="draggingItem" @equipment-state-change="handleEffectsSuppresion" />
+
+				<InventorySortSlot :active="draggingItem" @drop="sortDroppedItem($event, EquipmentState.Dropped, index)" />
+			</template>
+		</TransitionGroup>
+
+		<div class="encumbrance-currency-row">
+			<div class="currency-row">
+				<label><i class="fas fa-coins"></i> {{ CURRENCY_LABEL }}:</label>
+				<input type="text" name="system.currency" :value="system.currency" />
+			</div>
+
+			<div :class="`encumbrance-row ${system.isEncumbered ? 'encumbered' : ''}`">
+				<span v-if="system.isEncumbered"><Localized label="EoA.Labels.Encumbered" /></span>
+				<span><i class="fas fa-weight-hanging"></i></span>
+				<span>{{ system.currentEncumbrance.value }}/{{ system.currentEncumbrance.threshold }}</span>
+			</div>
+		</div>
+	</section>
+</template>
+
+<style lang="scss" scoped>
+@use '@scss/mixins/reset.scss';
+@use '@scss/vars/colors.scss';
+
+.tab-inventory {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 0.5em;
+
+	.inv-move,
+	.inv-enter-active,
+	.inv-leave-active {
+		transition: all 0.5s ease;
+	}
+
+	.inv-enter-from,
+	.inv-leave-to {
+		height: 0;
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	.encumbrance-currency-row {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr auto auto;
+
+		.currency-row,
+		.encumbrance-row {
+			background: colors.$dark-blue;
+			padding-left: 0.5em;
+			height: 100%;
+			color: white;
+		}
+
+		.currency-row {
+			grid-column: 2 / span 1;
+			border-top-left-radius: 0.5rem;
+			border-bottom-left-radius: 0.5rem;
+		}
+
+		.encumbrance-row {
+			grid-column: 3 / span 1;
+			padding-right: 0.5em;
+			border-top-right-radius: 0.5rem;
+			border-bottom-right-radius: 0.5rem;
+		}
+	}
+
+	.currency-row {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+
+		font-family: 'Bebas Neue', sans-serif;
+		font-size: 1.1em;
+
+		@include reset.input();
+		input {
+			background: transparentize(white, 0.8);
+			padding: 3px;
+			text-align: right;
+			width: 100px;
+			font-size: 1.1em;
+			color: white;
+		}
+	}
+
+	.encumbrance-row {
+		width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 0.25em;
+		font-family: 'Bebas Neue', sans-serif;
+		align-items: center;
+
+		span {
+			margin-left: 0.5em;
+		}
+
+		&.encumbered {
+			color: #f63d3d;
+		}
+	}
+
+	.section-header {
+		display: flex;
+		font-size: 1.25em;
+		font-family: 'Bebas Neue', sans-serif;
+	}
+}
+</style>
