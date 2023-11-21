@@ -2,14 +2,14 @@
   "id": "eoa",
   "title": "Edge of Anarchy",
   "description": "A system for playing the Edge of Anarchy game system in the Foundry Virtual Tabletop environment.",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
   },
   "url": "https://github.com/joshand/fvtt-eoa/",
   "manifest": "https://raw.githubusercontent.com/joshand/fvtt-eoa/main/system.json",
-  "download": "https://github.com/joshand/fvtt-eoa/archive/refs/tags/v0.0.14.zip",
+  "download": "https://github.com/joshand/fvtt-eoa/archive/refs/tags/v0.0.15.zip",
   "authors": [
     {
       "name": "Josh",
@@ -18,7 +18,7 @@
     }
   ],
   "esmodules": [
-    "eoa.js"
+    "eoa.ts"
   ],
   "styles": [
     "eoa.css"
