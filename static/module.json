@@ -2,7 +2,7 @@
   "name": "eoa",
   "title": "Edge of Anarchy",
   "description": "A system for playing the Edge of Anarchy game system in the Foundry Virtual Tabletop environment.",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
@@ -15,7 +15,6 @@
     }
   ],
   "library": "false",
-  "dependencies": [],
   "conflicts": [],
   "esmodules": [
     "eoa.js"
@@ -28,7 +27,7 @@
     {
       "name": "breeds",
       "label": "Breeds",
-      "system": "eoa",
+      "system": "grpga",
       "path": "packs/breeds.db",
       "type": "Item",
       "private": false,
@@ -54,7 +53,7 @@
   ],
   "url": "https://github.com/joshand/fvtt-eoa/",
   "manifest": "https://raw.githubusercontent.com/joshand/fvtt-eoa/main/module.json",
-  "download": "https://github.com/joshand/fvtt-eoa/archive/refs/tags/v0.0.23.zip",
+  "download": "https://github.com/joshand/fvtt-eoa/archive/refs/tags/v0.0.24.zip",
   "media": [
     {
       "type": "icon",
