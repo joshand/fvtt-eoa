@@ -18,6 +18,7 @@
   {{!-- Item Sheet Navigation --}}
   <nav class="sheet-navigation tabs" data-group="primary">
     <a class="item active" data-tab="description">{{localize "EOA.Description"}}</a>
+    <a class="item" data-tab="signature-ability">{{localize "EOA.SignatureAbility"}}</a>
   </nav>
 
   {{!-- Item Sheet Body --}}
@@ -32,6 +33,20 @@
 
       <div class="description">
           {{editor data.system.description.overview target="system.description.overview" button=true owner=owner editable=editable}}
+      </div>
+
+    </div>
+
+    {{!-- Signature Ability Tab --}}
+    <div class="tab flexrow active" data-group="primary" data-tab="signature-ability">
+
+      <div class="item-properties">
+        &nbsp;
+      </div>
+
+      <div class="description">
+          <strong>Signature Ability:<em>{{data.system.description.signature_ability}}</em></strong>
+          {{editor data.system.description.signature_description target="system.description.signature_description" button=true owner=owner editable=editable}}
       </div>
 
     </div>
