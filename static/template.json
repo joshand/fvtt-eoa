@@ -31,7 +31,7 @@
     }
   },
   "Item": {
-    "types": ["breed"],
+    "types": ["breed", "profession"],
     "templates": {
       "rarity": {
         "rarity": "Common",
@@ -39,6 +39,9 @@
       }
     },
     "breed": {
+      "templates": ["rarity"]
+    },
+    "profession": {
       "templates": ["rarity"]
     }
   }
