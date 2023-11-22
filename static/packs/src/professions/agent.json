@@ -8,6 +8,89 @@
       "overview": "<p>Agents are masters of disguise and subterfuge, skilled in misdirection and adaptation. They excel at infiltration, espionage, and can temporarily mimic the abilities of other professions, making them unpredictable and resourceful allies.</p>",
       "signature_ability": "False Profession",
       "signature_description": "<p><strong>Functionality:</strong> Agents can temporarily access and utilize nanoprograms from other professions, mimicking their abilities.</p><p><strong>Disadvantages:</strong> While using False Profession, Agents may not have access to all the capabilities of the mimicked profession and might experience increased resource costs or reduced effectiveness. Additionally, frequent switching between professions may lead to a cooldown period.</p><p><strong>Mechanics of False Profession:</strong></p><p>Agents select a target profession to mimic its nanoprograms.</p><p>The mimicry lasts for a limited duration with specific nanoprograms available for use.</p><p>After mimicry ends, there may be a cooldown before the ability can be used again.</p><p>The effectiveness of mimicked abilities might be less than that of the original profession.</p><br><p><strong>Feline Grace</strong></p><p>Focus, Buff</p><p><strong>NCU Cost:</strong> 2</p><p><strong>Effect:</strong> Increases the target’s Agility and Sense by +1</p>",
+      "skills": [
+        {
+          "name": "Infiltration",
+          "description": "Specializes in stealth, espionage, and reconnaissance.",
+          "programs": [
+            {
+              "name": "Camouflage",
+              "description": "",
+              "np": 10,
+              "ncu": 4,
+              "effect": "Grants temporary stealth, grant + Concealment."
+            },
+            {
+              "name": "Cloak of Deception",
+              "description": "",
+              "np": 15,
+              "ncu": 2,
+              "effect": "Masks the Agent's actions to reduce predictability."
+            },
+            {
+              "name": "False Identity",
+              "description": "Assumes the appearance of another character or NPC.",
+              "np": 25,
+              "ncu": 6,
+              "effect": "Assumes the appearance of another character with a + TN."
+            }
+          ]
+        },
+        {
+          "name": "Tactical Deception",
+          "description": "Focuses on misdirection, disguise, and creating diversions.",
+          "programs": [
+            {
+              "name": "Quick Escape",
+              "description": "Enables rapid disengagement and evasion.",
+              "np": 10,
+              "ncu": 4,
+              "effect": "Nanobots form a cloud in + Zones, the cloud conceals your location until you do any other action but sneaking"
+            },
+            {
+              "name": "Decoy Deployment",
+              "description": "",
+              "np": 20,
+              "ncu": 5,
+              "effect": "Creates + decoys to distract and mislead enemies."
+            },
+            {
+              "name": "Holographic Distraction",
+              "description": "Projects confusing holographic images.",
+              "np": 15,
+              "ncu": 5,
+              "effect": "Creates + Projects confusing holographic images."
+            }
+          ]
+        },
+        {
+          "name": "Precision",
+          "description": "Enhances the Agent's ability to deal damage, can be applied to weapon tests with weapons that use Aimed Shot or Sneak Attack.",
+          "programs": [
+            {
+              "name": "Sniper Precision",
+              "description": "",
+              "np": 10,
+              "ncu": 5,
+              "effect": "You root yourself to improve ranged attack accuracy and damage, gain an automatic + HITs for precision attacks."
+            },
+            {
+              "name": "Feline Grace",
+              "description": "",
+              "np": 20,
+              "ncu": 5,
+              "effect": "Temporarily boosts the target’s Sense and Agility by +1 then increase their Mobility by +"
+            },
+            {
+              "name": "Tactical Advantage",
+              "description": "",
+              "np": 20,
+              "ncu": 6,
+              "effect": "Analyzes and exploits enemy weaknesses for combat benefits."
+            }
+          ]
+        }
+      ],
       "chat": "",
       "unidentified": ""
     },

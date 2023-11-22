@@ -8,6 +8,96 @@
       "overview": "<p>Engineers are masters of robotics and nanotechnology, capable of deploying and controlling various types of robots for combat, defense, and utility purposes. They also specialize in nanoprogramming for additional support.</p>",
       "signature_ability": "Robotics",
       "signature_description": "<p>Specialization in creating and controlling a personal droid. As the Engineer advances in level, the robot will gain further customization and options.</p><br><p><strong><em>Droid Characteristics:</em></strong></p><p><strong>HP: 40+ (20 × Engineer's TL.</strong></p><p><strong>Combat Abilities:</strong> Based on droid type (combat, utility, or defense).</p><p><strong>Commanding the Droid in Combat:</strong></p><p>Issue commands for Attack, Defend, or Special Abilities.</p><p>Effective within a specific range of the Engineer.</p><p>Abilities may have cooldowns.</p>",
+      "skills": [
+        {
+          "name": "Offensive Engineering",
+          "description": "Focuses on enhancing the attack capabilities of robots, like increased damage output or special attacks.",
+          "programs": [
+            {
+              "name": "Formula 22",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Boosts Droid combat response speed."
+            },
+            {
+              "name": "Offensive Protocol",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Enhances Droid’s offense."
+            },
+            {
+              "name": "Nano-Overhaul",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Temporarily supercharges the Slayerdroid."
+            },
+            {
+              "name": "Explosive Overload (Demolitionist)",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Slayerdroid executes a powerful explosive attack."
+            },
+            {
+              "name": "Siege Mode Configuration (Demolitionist)",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Enhances Droid for siege combat."
+            },
+            {
+              "name": "Deconstructive Barrage (Demolitionist)",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Empowers Droid for destructive attacks."
+            }
+          ]
+        },
+        {
+          "name": "Utility Engineering",
+          "description": "Enhances the utility aspects of robots, such as reconnaissance, hacking, or repair functions.",
+          "programs": [
+            {
+              "name": "Construct Companion",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Creates a recon drone."
+            },
+            {
+              "name": "Master's Repairs",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Repairs and heals physically damaged technology."
+            },
+            {
+              "name": "Resource Redistribution",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Optimizes resource usage."
+            }
+          ]
+        },
+        {
+          "name": "Defensive Engineering",
+          "description": "Concentrates on bolstering the tanking and defensive abilities of robots, improving their durability and protective features.",
+          "programs": [
+            {
+              "name": "Defensive Maneuvers",
+              "description": "",
+              "np": 0,
+              "ncu": 0,
+              "effect": "Programs the Droid for defense."
+            }
+          ]
+        }
+      ],
       "chat": "",
       "unidentified": ""
     },

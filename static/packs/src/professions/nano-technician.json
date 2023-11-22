@@ -8,6 +8,89 @@
       "overview": "<p>Nano-Technicians are the quintessential casters, relying on advanced technology and their mastery over nanobots to dominate the battlefield. They can deal significant damage through direct attacks, control the battlefield with debuffs, or support allies with buffs.</p>",
       "signature_ability": "Elemental Cycle",
       "signature_description": "<p><ul><li>Offensive Nanotech Mode: Uses one Power Die to track offensive actions, building towards a devastating attack.</li><li>Supportive Nanotech Mode: Uses a separate Power Die for support actions, leading to powerful healing or buff abilities.</li><li>Mode Transition: Players switch between modes, balancing offensive and supportive strategies.</li></ul></p><p>Dual Power Dice System:</p><p><ul><li>Tracking Elemental Cycle: Two Power Dice track the buildup in Offensive and Supportive modes.</li><li>Strategic Resource Management: Balancing between building offensive capabilities and preparing for support or recovery actions.</li></ul></p><p><strong>Playing a Nano-Technician:</strong></p><p>Nano-Technicians appeal to players who enjoy dealing damage from afar and affecting the state of the battlefield. The profession requires smart resource management and strategic planning, as well as timely switching between modes to address the shifting tides of battle. In narrative scenarios, their extensive knowledge of nanotechnology makes them valuable for overcoming technological challenges and pushing the boundaries of science within the game's world.</p>",
+      "skills": [
+        {
+          "name": "Matter Creation",
+          "description": "Specializes in creating damaging nanoprograms.",
+          "programs": [
+            {
+              "name": "Molecular Disruption",
+              "description": "",
+              "np": 5,
+              "ncu": 1,
+              "effect": "Deals damage by disrupting enemy molecular structures."
+            },
+            {
+              "name": "Particle Swarm",
+              "description": "",
+              "np": 10,
+              "ncu": 1,
+              "effect": "Releases nanobots that attack multiple targets."
+            },
+            {
+              "name": "Nano Storm",
+              "description": "",
+              "np": 20,
+              "ncu": 1,
+              "effect": "A wide-area effect causing damage and debuffs."
+            }
+          ]
+        },
+        {
+          "name": "Nullity Programing",
+          "description": "Uses nanotech for defense and ally protection.",
+          "programs": [
+            {
+              "name": "Nano Shield",
+              "description": "",
+              "np": 15,
+              "ncu": 5,
+              "effect": "Creates a protective shield around the Nano-Technician or allies."
+            },
+            {
+              "name": "System Overload",
+              "description": "",
+              "np": 15,
+              "ncu": 1,
+              "effect": "Disables or debuffs enemy nanotech systems."
+            },
+            {
+              "name": "Feedback Loop",
+              "description": "",
+              "np": 15,
+              "ncu": 4,
+              "effect": "Reflects damage back to attackers."
+            }
+          ]
+        },
+        {
+          "name": "Notum Humidification",
+          "description": "Focuses on healing and nanopoint recovery.",
+          "programs": [
+            {
+              "name": "Nano Restoration",
+              "description": "",
+              "np": 20,
+              "ncu": 4,
+              "effect": "Rapidly heals the Nano-Technician or an ally’s nanopoints"
+            },
+            {
+              "name": "Neuronal Stimulator",
+              "description": "",
+              "np": 20,
+              "ncu": 6,
+              "effect": "Grant target +1 Intelligence and Psyche"
+            },
+            {
+              "name": "Quantum Decoding",
+              "description": "",
+              "np": 10,
+              "ncu": 1,
+              "effect": "Enhances nanotech understanding and manipulation."
+            }
+          ]
+        }
+      ],
       "chat": "",
       "unidentified": ""
     },

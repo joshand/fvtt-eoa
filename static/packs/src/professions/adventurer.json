@@ -8,6 +8,89 @@
       "overview": "<p>Adventurers are experts in survival and exploration, capable of adapting to various environments and challenges. They excel at navigating uncharted territories, dealing with wild creatures, and using their transformative abilities to overcome obstacles.</p>",
       "signature_ability": "Animal Morphing",
       "signature_description": "<p>Adventurers possess the unique ability to morph into various animals, gaining abilities and attributes based on the form.</p><p><strong><em>Animal Morphs Details:</em></strong></p><p><ul><li><strong>Predator Form:</strong> Enhances combat capabilities; embodies the power and agility of a predator.</li><li><strong>Scout Form:</strong> Boosts stealth and reconnaissance; moves unseen and unheard.</li><li><strong>Aquatic Adaptation:</strong> Adapted for underwater exploration and combat; graceful and speedy in water.</li><li><strong>Bird Form:</strong> Grants flight and heightened vision; soars high for scouting and fast travel.</li><li><strong>Tank Form:</strong> Increases defense and resistance; a durable creature for absorbing damage.</li><li><strong>Speedster Form:</strong> Maximizes speed and evasion; perfect for quick escapes and rapid traversal.</li></ul></p><p><strong>Mechanics of Morphing:</strong></p><p>Duration: Each morph has a limited duration, requiring strategic timing for transformations.</p><p>Cooldown: After morphing, a cooldown period prevents immediate shifting to another form.</p><p>Resource Cost: Morphing consumes resources (like Nanopoints) and may require specific environmental conditions or preparations.</p><p>Combat Integration: Morph forms can be integrated into combat, with each form having its unique combat abilities and style.</p><p>Exploration Enhancement: Certain forms enhance exploration abilities, like climbing, digging, or enhanced sensory perception.</p>",
+      "skills": [
+        {
+          "name": "Ranger",
+          "description": "Survival, tracking, and utilizing natural resources.",
+          "programs": [
+            {
+              "name": "Survivalist's Resilience",
+              "description": "",
+              "np": 15,
+              "ncu": 5,
+              "effect": "Boosts resistance to damage and hazards."
+            },
+            {
+              "name": "Natural Harmony",
+              "description": "",
+              "np": 15,
+              "ncu": 3,
+              "effect": "Balances stats for current needs."
+            },
+            {
+              "name": "Adventurer's Cunning",
+              "description": "",
+              "np": 10,
+              "ncu": 3,
+              "effect": "Enhances adaptability in diverse situations."
+            }
+          ]
+        },
+        {
+          "name": "Hunter",
+          "description": "Rapid adjustment in combat using animal forms.",
+          "programs": [
+            {
+              "name": "Lick Wounds",
+              "description": "",
+              "np": 15,
+              "ncu": 2,
+              "effect": "Provides steady healing to the Adventurer and another ally."
+            },
+            {
+              "name": "Predator's Instinct",
+              "description": "",
+              "np": 5,
+              "ncu": 3,
+              "effect": "Enhances tracking and hunting capabilities."
+            },
+            {
+              "name": "Camouflage",
+              "description": "",
+              "np": 10,
+              "ncu": 3,
+              "effect": "Grants temporary stealth."
+            }
+          ]
+        },
+        {
+          "name": "Pathfinding",
+          "description": "Navigation, uncovering secrets, and handling unknown challenges.",
+          "programs": [
+            {
+              "name": "Expeditionary Maneuvers",
+              "description": "",
+              "np": 10,
+              "ncu": 3,
+              "effect": "Enhances movement speed and agility."
+            },
+            {
+              "name": "Terrain Mastery",
+              "description": "",
+              "np": 15,
+              "ncu": 4,
+              "effect": "Navigates difficult terrains effortlessly."
+            },
+            {
+              "name": "Explorer's Insight",
+              "description": "",
+              "np": 10,
+              "ncu": 2,
+              "effect": "Reveals hidden traps and resources."
+            }
+          ]
+        }
+      ],
       "chat": "",
       "unidentified": ""
     },
