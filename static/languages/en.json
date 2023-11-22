@@ -1,5 +1,5 @@
 {
-  "MODULE.hello": "hello",
+  "submitText": "Save",
 
   "ACTOR.TypeCharacter": "Player Character",
   "ACTOR.TypeCharacterPl": "Player Characters",
