@@ -32,6 +32,15 @@
       "type": "Item",
       "private": false,
       "flags": {}
+    },
+    {
+      "name": "professions",
+      "label": "Professions",
+      "system": "eoa",
+      "path": "packs/professions.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -40,7 +49,8 @@
       "sorting": "m",
       "color": "#cd2c1e",
       "packs": [
-        "breeds"
+        "breeds",
+        "professions"
       ]
     }
   ],
