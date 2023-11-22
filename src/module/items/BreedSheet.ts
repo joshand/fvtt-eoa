@@ -1,3 +1,7 @@
+
+/**
+ * @extends {ItemSheet}
+ */
 export class EoABreedSheet extends ItemSheet {
   /** @inheritdoc */
   static get defaultOptions() {

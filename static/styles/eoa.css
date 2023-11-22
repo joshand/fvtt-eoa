@@ -108,6 +108,53 @@ h5 {
 .eoa h3 {
   border-bottom: none;
 }
+.eoa-in-place-box {
+  height: 20px !important;
+  border: 1px solid #7a7971;
+  background: rgba(0, 0, 0, 0.05);
+  color: #191813;
+}
+.eoa-inline-label {
+  margin-left: 4px;
+  margin-top: 2px;
+  display: inline-block;
+  vertical-align: top;
+}
+.eoa-inline-box {
+  height: 20px !important;
+  border: 1px solid #7a7971;
+  background: rgba(0, 0, 0, 0.05);
+  color: #191813;
+  display: inline-block;
+  vertical-align: top;
+}
+.eoa-width-30 {
+  width: 30px !important;
+}
+.eoa-width-60 {
+  width: 60px !important;
+}
+.eoa-width-90 {
+  width: 90px !important;
+}
+.eoa-width-120 {
+  width: 120px !important;
+}
+.eoa-width-150 {
+  width: 150px !important;
+}
+.eoa-width-180 {
+  width: 180px !important;
+}
+.eoa-width-210 {
+  width: 210px !important;
+}
+.eoa-width-240 {
+  width: 240px !important;
+}
+.eoa-width-480 {
+  width: 480px !important;
+}
 .eoa input[type="text"],
 .eoa input[type="number"],
 .eoa select {
