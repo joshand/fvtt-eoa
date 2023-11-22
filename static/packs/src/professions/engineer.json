@@ -1,0 +1,47 @@
+{
+  "_id": "COD6tnjlieqwIEgu",
+  "name": "Engineer",
+  "type": "engineer",
+  "img": "icons/engineer.png",
+  "system": {
+    "description": {
+      "overview": "<p>Engineers are masters of robotics and nanotechnology, capable of deploying and controlling various types of robots for combat, defense, and utility purposes. They also specialize in nanoprogramming for additional support.</p>",
+      "signature_ability": "Robotics",
+      "signature_description": "<p>Specialization in creating and controlling a personal droid. As the Engineer advances in level, the robot will gain further customization and options.</p><br><p><strong><em>Droid Characteristics:</em></strong></p><p><strong>HP: 40+ (20 × Engineer's TL.</strong></p><p><strong>Combat Abilities:</strong> Based on droid type (combat, utility, or defense).</p><p><strong>Commanding the Droid in Combat:</strong></p><p>Issue commands for Attack, Defend, or Special Abilities.</p><p>Effective within a specific range of the Engineer.</p><p>Abilities may have cooldowns.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "engineer",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "engineer",
+      "subtype": "engineer",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!COD6tnjlieqwIEgu"
+}

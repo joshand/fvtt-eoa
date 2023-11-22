@@ -74,6 +74,27 @@ h5 {
   margin-block-end: 0;
   font-size: var(--font-size-13);
 }
+.app {
+  background-color: rgba(0, 0, 0, 0);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: none;
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+}
+.window-app {
+  background-color: #ffffff !important;
+  color: var(--color-text-dark-1);
+}
+.Compendium-sidebar .directory-item {
+  color: var(--color-text-dark-1);
+}
+.header-control {
+  color: var(--color-text-dark-1);
+}
 .eoa {
   /* ----------------------------------------- */
   /*  Element Styles                           */

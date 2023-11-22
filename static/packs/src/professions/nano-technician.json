@@ -1,0 +1,47 @@
+{
+  "_id": "MA5hxz4mYEDTjvU1",
+  "name": "Nano-Technician",
+  "type": "nano-technician",
+  "img": "icons/nano-technician.png",
+  "system": {
+    "description": {
+      "overview": "<p>Nano-Technicians are the quintessential casters, relying on advanced technology and their mastery over nanobots to dominate the battlefield. They can deal significant damage through direct attacks, control the battlefield with debuffs, or support allies with buffs.</p>",
+      "signature_ability": "Elemental Cycle",
+      "signature_description": "<p><ul><li>Offensive Nanotech Mode: Uses one Power Die to track offensive actions, building towards a devastating attack.</li><li>Supportive Nanotech Mode: Uses a separate Power Die for support actions, leading to powerful healing or buff abilities.</li><li>Mode Transition: Players switch between modes, balancing offensive and supportive strategies.</li></ul></p><p>Dual Power Dice System:</p><p><ul><li>Tracking Elemental Cycle: Two Power Dice track the buildup in Offensive and Supportive modes.</li><li>Strategic Resource Management: Balancing between building offensive capabilities and preparing for support or recovery actions.</li></ul></p><p><strong>Playing a Nano-Technician:</strong></p><p>Nano-Technicians appeal to players who enjoy dealing damage from afar and affecting the state of the battlefield. The profession requires smart resource management and strategic planning, as well as timely switching between modes to address the shifting tides of battle. In narrative scenarios, their extensive knowledge of nanotechnology makes them valuable for overcoming technological challenges and pushing the boundaries of science within the game's world.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "nano-technician",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "nano-technician",
+      "subtype": "nano-technician",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!MA5hxz4mYEDTjvU1"
+}

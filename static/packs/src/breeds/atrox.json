@@ -5,7 +5,7 @@
   "img": "icons/environment/people/commoner.webp",
   "system": {
     "description": {
-      "value": "<p>Engineered for labor, the Atrox are towering and muscular. They are capable of great endurance and strength but lack the affinity for the subtle arts.Primary Genome Ability: Mongo Blood: Crash your own NCU to gain +1 TL on your next Strength Test.</p><p><strong><em>Passive Genome Ability: Engineered Vitality:</em></strong> Gain +10 HP per TL</p><p><strong><em>Attribute Modifiers:</em></strong> +1 Strength +1 Stamina and both attributes are naturally capped at 6, however Intelligence and Sense are naturally capped at 3</p>",
+      "value": "<p>Engineered for labor, the Atrox are towering and muscular. They are capable of great endurance and strength but lack the affinity for the subtle arts.</p><p><strong><em>Primary Genome Ability: Mongo Blood:</em></strong> Crash your own NCU to gain +1 TL on your next Strength Test.</p><p><strong><em>Passive Genome Ability: Engineered Vitality:</em></strong> Gain +10 HP per TL</p><p><strong><em>Attribute Modifiers:</em></strong> +1 Strength +1 Stamina and both attributes are naturally capped at 6, however Intelligence and Sense are naturally capped at 3</p>",
       "chat": "",
       "unidentified": ""
     },

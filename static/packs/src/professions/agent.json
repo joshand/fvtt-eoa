@@ -1,0 +1,47 @@
+{
+  "_id": "EqZgdYkEINTpqCSM",
+  "name": "Agent",
+  "type": "agent",
+  "img": "icons/agent.png",
+  "system": {
+    "description": {
+      "overview": "<p>Agents are masters of disguise and subterfuge, skilled in misdirection and adaptation. They excel at infiltration, espionage, and can temporarily mimic the abilities of other professions, making them unpredictable and resourceful allies.</p>",
+      "signature_ability": "False Profession",
+      "signature_description": "<p><strong>Functionality:</strong> Agents can temporarily access and utilize nanoprograms from other professions, mimicking their abilities.</p><p><strong>Disadvantages:</strong> While using False Profession, Agents may not have access to all the capabilities of the mimicked profession and might experience increased resource costs or reduced effectiveness. Additionally, frequent switching between professions may lead to a cooldown period.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "agent",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "agent",
+      "subtype": "agent",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!EqZgdYkEINTpqCSM"
+}

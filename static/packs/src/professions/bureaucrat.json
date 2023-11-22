@@ -1,0 +1,47 @@
+{
+  "_id": "YtPyds3ID17YM3bC",
+  "name": "Bureaucrat",
+  "type": "bureaucrat",
+  "img": "icons/bureaucrat.png",
+  "system": {
+    "description": {
+      "overview": "<p>Bureaucrats are the puppet masters of the corporate and political arenas, using their charm and commanding presence to influence, control, and manipulate friends and foes alike. They are skilled at negotiation, control, and leveraging situations to their advantage with a mix of charisma and calculated strategy.</p>",
+      "signature_ability": "Administrative Assistant",
+      "signature_description": "<p>You have a administrative droid assistant and bodyguard. While not durable you can use nanoprograms and abilities from the position of your droid assistant.</p><p><strong>In emergencies your droid can take a hit for you sacrificing itself in the process.</strong></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "bureaucrat",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "bureaucrat",
+      "subtype": "bureaucrat",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!YtPyds3ID17YM3bC"
+}

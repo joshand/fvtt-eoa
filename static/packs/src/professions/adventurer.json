@@ -1,0 +1,47 @@
+{
+  "_id": "tcJpR5d6AUArRZJX",
+  "name": "Adventurer",
+  "type": "adventurer",
+  "img": "icons/adventurer.png",
+  "system": {
+    "description": {
+      "overview": "<p>Adventurers are experts in survival and exploration, capable of adapting to various environments and challenges. They excel at navigating uncharted territories, dealing with wild creatures, and using their transformative abilities to overcome obstacles.</p>",
+      "signature_ability": "Animal Morphing",
+      "signature_description": "<p>Adventurers possess the unique ability to morph into various animals, gaining abilities and attributes based on the form.</p><p><strong><em>Animal Morphs Details:</em></strong></p><ul><li><strong>Predator Form:</strong> Enhances combat capabilities; embodies the power and agility of a predator.</li><li><strong>Scout Form:</strong> Boosts stealth and reconnaissance; moves unseen and unheard.</li><li><strong>Aquatic Adaptation:</strong> Adapted for underwater exploration and combat; graceful and speedy in water.</li><li><strong>Bird Form:</strong> Grants flight and heightened vision; soars high for scouting and fast travel.</li><li><strong>Tank Form:</strong> Increases defense and resistance; a durable creature for absorbing damage.</li><li><strong>Speedster Form:</strong> Maximizes speed and evasion; perfect for quick escapes and rapid traversal.</li></ul>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "adventurer",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "adventurer",
+      "subtype": "adventurer",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!tcJpR5d6AUArRZJX"
+}

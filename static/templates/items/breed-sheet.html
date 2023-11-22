@@ -12,12 +12,6 @@
         <h4 class="item-type">{{itemType}}</h4>
         <span class="item-status">{{itemStatus}}</span>
       </div>
-
-      <ul class="summary flexrow">
-        <li>
-          {{> "eoa.item-source"}}
-        </li>
-      </ul>
     </div>
   </header>
 
@@ -36,8 +30,10 @@
         &nbsp;
       </div>
 
-      {{editor enriched.description target="system.description.value" button=true editable=editable
-               engine="prosemirror" collaborate=false}}
+      <div class="description">
+          {{editor data.system.description.value target="system.description.value" button=true owner=owner editable=editable}}
+      </div>
+
     </div>
   </section>
 </form>

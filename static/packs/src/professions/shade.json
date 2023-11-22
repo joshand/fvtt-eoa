@@ -1,0 +1,47 @@
+{
+  "_id": "yQ9O3IeUOP4wHPhN",
+  "name": "Shade",
+  "type": "shade",
+  "img": "icons/shade.png",
+  "system": {
+    "description": {
+      "overview": "<p>Shade.</p>",
+      "signature_ability": "Essence Siphoning and Shadow Manipulation",
+      "signature_description": "<p>Shades have the unique ability to siphon essences from monsters and use these essences as a substitute for implants. This ability defines their combat style and abilities.</p><br><p><strong>Unique Mechanic: Essence Equipment</strong></p><p>Essence Siphoning: Shades can extract essences from defeated monsters.</p><p>Essence Equipping: Unlike other professions, Shades are unable to use implants. Instead, they equip these siphoned essences, each providing unique bonuses or abilities.</p><p>Essence Variety: Different monster essences offer various enhancements, from increased damage or defense to special abilities unique to the monster type.</p><p><strong>Gameplay Dynamics:</strong></p><br><p>Shades must strategically choose which essences to siphon and equip based on their current needs and combat scenarios.</p><p>The absence of traditional implants means Shades rely heavily on their ability to adapt to various essences for enhancement.</p><p>This unique mechanic sets Shades apart as highly adaptable and opportunistic fighters, with a playstyle that revolves around exploiting the strengths of defeated foes.</p><br><p>Essence Equipment Mechanics:</p><br><p>Shades can equip different types of monster essences, each providing unique benefits. These essences are categorized based on their primary effects.</p><p>Types of Equippable Essences:</p><br><p>Offensive Essences:</p><br><p>Function: Enhance the Shade's damage output and critical hit rate.</p><p>Example: A fierce predator's essence might increase physical attack power or add a bleed effect to attacks.</p><p>Defensive Essences:</p><br><p>Function: Boost the Shade's defensive capabilities, such as increased resistance to damage or status effects.</p><p>Example: An armored creature's essence could provide enhanced armor or reduced damage from certain attack types.</p><p>Agility Essences:</p><br><p>Function: Improve evasion, speed, and mobility.</p><p>Example: An essence from a swift creature might grant increased movement speed or a higher dodge rate.</p><p>Utility Essences:</p><br><p>Function: Offer various utility benefits like increased stealth, perception, or specific skill enhancements.</p><p>Example: An essence from a cunning animal might enhance stealth abilities or improve lock-picking skills.</p><p>Healing Essences:</p><br><p>Function: Provide self-healing or health regeneration capabilities.</p><p>Example: An essence from a regenerative creature could grant passive health regeneration or a self-heal ability.</p><p>Special Abilities Essences:</p><br><p>Function: Grant unique abilities or attacks, which could be specific to the monster type from which the essence was siphoned.</p><p>Example: Siphoning essence from a creature with a unique elemental attack might allow the Shade to use a similar elemental ability.</p><p>Equipping and Managing Essences:</p><br><p>Shades can equip a limited number of essences at a time.</p><p>Choosing the right combination of essences is crucial, depending on the combat scenario and the Shade's role in the team.</p><p>Essences can be swapped out, but there may be a cooldown or other limitations to prevent constant switching.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "shade",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "shade",
+      "subtype": "shade",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!yQ9O3IeUOP4wHPhN"
+}

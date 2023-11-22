@@ -23,7 +23,7 @@ module.exports = (env) => {
     const isDevelopment = environment.mode === "development";
 
     const config = {
-        entry: "./src/module.ts",
+        entry: "./src/eoa.ts",
         watch: environment.watch,
         devtool: "inline-source-map",
         stats: "minimal",
@@ -32,17 +32,19 @@ module.exports = (env) => {
             extensions: [".wasm", ".mjs", ".ts", ".js", ".json"],
         },
         output: {
-            filename: "module.js",
+            filename: "eoa.js",
             path: path.resolve(__dirname, "dist"),
             publicPath: '',
         },
         devServer: {
             hot: true,
-            writeToDisk: true,
+            devMiddleware: {
+                writeToDisk: true,
+            },
             proxy: [
                 {
                     context: (pathname) => {
-                        return !pathname.match("^/sockjs");
+                        return !pathname.match("^/ws");
                     },
                     target: "http://localhost:30000",
                     ws: true,

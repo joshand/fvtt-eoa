@@ -1,0 +1,47 @@
+{
+  "_id": "x0aVOlCE2PMdk4Vw",
+  "name": "Keeper",
+  "type": "keeper",
+  "img": "icons/keeper.png",
+  "system": {
+    "description": {
+      "overview": "<p>Keepers are guardians and warriors who draw from ancient lore to empower themselves and their allies. Through their deep connection to lost wisdom, they can invoke powerful auras that bolster their comrades and confound their foes. With their sacred weapons, they stand as beacons on the battlefield, directing the flow of combat and sustaining their allies through the darkest fights.</p><p><strong>Unique Mechanic: Aura Weaving & Focus</strong></p><p>Keepers can switch between different auras to adapt to various combat scenarios. These auras can provide offensive, defensive, or support benefits, and the Keeper's mastery allows them to weave these effects into their swordplay, creating a harmonious balance between attack and aid.</p><br><p><strong>Playing a Keeper:</strong></p><p>Keepers fit players who want to be at the heart of the group, protecting and enhancing their allies. They require a player who can make quick decisions about which aura to employ and when to invest in focusing on a particular aura to maximize its benefits. In narrative play, Keepers are storytellers and advisors, using their deep lore to guide their party through cryptic mysteries and ancient dangers.</p>",
+      "signature_ability": "Aura Weaving",
+      "signature_description": "<p>Dynamic Aura Shifting: The Keeper can activate and switch between different nanobot auras as a part of their action. Each aura, crafted from nanobots, provides unique buffs or debuffs.</p><br><p>Aura Combining: Similar to the Bard's song twisting, the Keeper can overlap auras for a brief period, allowing a combination of effects. This requires precise timing and resource management.</p><br><p>Aura Resonance: The effectiveness of each aura depends on the Keeper's skill level and the situation, with potential for enhanced effects under specific conditions.</p><br><p><strong>Aegis Aura:</strong> The Keeper can invoke different auras through empowering their nanocloud, each with unique effects.</p><p><ul><li><strong>Battle Aura:</strong> Boosts offensive capabilities for the Keeper and nearby allies.</li><li><strong>Defender's Aura:</strong> Enhances defensive stats, mitigating damage for the team.</li><li><strong>Aura of Revival:</strong> Provides utility buffs like increased healing or debuff resistance.</li><li><strong>Harmony Aura:</strong> Balances offensive and defensive benefits, providing moderate boosts in both areas.</li></ul></p><p><strong>Twisting Auras:</strong> the Keeper can dynamically switch between auras, combining their effects for a short duration.</p><p><strong>Harmonization:</strong> The effectiveness of the auras can be enhanced by the Keeper's skill and the situation on the battlefield.</p><p><strong>Maintaining Auras:</strong> Using the Focus mechanic, Keepers could maintain one or more auras by allocating a portion of their dice roll successes to sustain the effects from successful Skill Tests they make with their action. The Aura’s power is equal to the dice invested.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "keeper",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "keeper",
+      "subtype": "keeper",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!x0aVOlCE2PMdk4Vw"
+}

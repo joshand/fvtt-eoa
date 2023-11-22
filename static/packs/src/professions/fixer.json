@@ -1,0 +1,47 @@
+{
+  "_id": "M7rZ5fRBKSjRCVIu",
+  "name": "Fixer",
+  "type": "fixer",
+  "img": "icons/fixer.png",
+  "system": {
+    "description": {
+      "overview": "<p>Fixers are tech-savvy rogues and experts in digital warfare who excel in infiltration, extraction, and control of the battlefield. With their unique Grid Armor and advanced understanding of nanotechnology, they serve as the linchpins of any strategic operation.</p>",
+      "signature_ability": "Grid Armor",
+      "signature_description": "<p><strong>Activation:</strong> Costs 10 NP, uses 2 NCU slots.</p><br><p><strong>Effect:</strong> You have a Power Die, set a d6 down starting at 1. Each time you end your turn in Grid Armor, tick the die by 1. While Grid Armor is active you gain the following benefits.</p><p>+1 to DR and +1 Initiative for each Power Die level. When the die is at 3, you gain the Phasing ability and can move through solid objects but cannot end your turn in the object.</p><p><strong>Risks:</strong> Exceeding Power Die level 6 leads to 'Fading'.</p><p><strong>Nanocasting Skill:</strong> Breaking & Entering (Agility) or Computer Literacy (Intelligence)</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "fixer",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "fixer",
+      "subtype": "fixer",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!M7rZ5fRBKSjRCVIu"
+}
