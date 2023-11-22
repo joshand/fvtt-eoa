@@ -1,7 +1,7 @@
 {
   "_id": "x0aVOlCE2PMdk4Vw",
   "name": "Keeper",
-  "type": "keeper",
+  "type": "profession",
   "img": "icons/keeper.png",
   "system": {
     "description": {

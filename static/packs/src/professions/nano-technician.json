@@ -1,7 +1,7 @@
 {
   "_id": "MA5hxz4mYEDTjvU1",
   "name": "Nano-Technician",
-  "type": "nano-technician",
+  "type": "profession",
   "img": "icons/nano-technician.png",
   "system": {
     "description": {

@@ -1,7 +1,7 @@
 {
   "_id": "ZljIylTbJZ4lQ3kW",
   "name": "Enforcer",
-  "type": "enforcer",
+  "type": "profession",
   "img": "icons/enforcer.png",
   "system": {
     "description": {

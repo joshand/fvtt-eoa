@@ -1,7 +1,7 @@
 {
   "_id": "EqZgdYkEINTpqCSM",
   "name": "Agent",
-  "type": "agent",
+  "type": "profession",
   "img": "icons/agent.png",
   "system": {
     "description": {

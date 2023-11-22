@@ -1,7 +1,7 @@
 {
   "_id": "YtPyds3ID17YM3bC",
   "name": "Bureaucrat",
-  "type": "bureaucrat",
+  "type": "profession",
   "img": "icons/bureaucrat.png",
   "system": {
     "description": {

@@ -1,7 +1,7 @@
 {
   "_id": "tcJpR5d6AUArRZJX",
   "name": "Adventurer",
-  "type": "adventurer",
+  "type": "profession",
   "img": "icons/adventurer.png",
   "system": {
     "description": {

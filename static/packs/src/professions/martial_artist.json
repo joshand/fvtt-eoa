@@ -1,7 +1,7 @@
 {
   "_id": "F9khFcumBdO9JZKG",
   "name": "Martial Artist",
-  "type": "martial_artist",
+  "type": "profession",
   "img": "icons/martial_artist.png",
   "system": {
     "description": {
