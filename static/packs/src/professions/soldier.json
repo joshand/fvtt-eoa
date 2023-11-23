@@ -8,7 +8,10 @@
       "overview": "<p>Soldiers are the embodiment of military might on the battlefield, equipped with the knowledge and gear to engage in prolonged combat. They specialize in various weapons and are adept at creating strategic advantages through firepower and defensive tactics.</p>",
       "signature_ability": "Offensive Steamroller",
       "signature_description": "<p><strong>Mechanic:</strong> Employs the Power Die to gain more Initiative after each successful attack.</p><p>Function: As the Soldier successfully lands attacks, their momentum builds, represented by the Power Die incrementing. Each increase in the Power Die level grants additional Initiative, making the Soldier quicker and more aggressive in combat.</p><p>Risk: As the Power Die level increases, the Soldier may become more vulnerable to counter-attacks or lose precision, representing the trade-off between aggression and control.</p>",
-      "skills": [
+      "chat": "",
+      "unidentified": ""
+    },
+    "skills": [
         {
           "name": "Firepower",
           "description": "Focuses on maximizing damage output with various weapons.",
@@ -91,9 +94,6 @@
           ]
         }
       ],
-      "chat": "",
-      "unidentified": ""
-    },
     "source": {
       "custom": "",
       "book": "GDoc",

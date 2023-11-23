@@ -39,10 +39,11 @@
       }
     },
     "breed": {
-      "templates": ["rarity"]
+      "templates": ["base"]
     },
     "profession": {
-      "templates": ["rarity"]
+      "templates": ["base"],
+      "skills": []
     }
   }
 }

@@ -8,7 +8,10 @@
       "overview": "<p>Martial Artists are close-quarters combat specialists who combine physical prowess with mental discipline to execute precise and devastating attacks. They harness their nanotech to bolster their fighting capabilities and achieve feats beyond the reach of an average fighter.</p>",
       "signature_ability": "Martial Stances",
       "signature_description": "<p>Martial Artists can switch between various stances, each enhancing different combat aspects.</p><p><strong>Stance Switching Mechanics:</strong></p><p><strong>Action Requirement:</strong> Changing stances requires an action.</p><p><strong>Cooldown:</strong> There's a brief cooldown period before switching stances again.</p><p><strong>Resource Cost:</strong> consume nanopoints to switch stances.</p><p><strong>Martial Stances:</strong></p><p><ul><li><strong>Tiger Stance:</strong> Increases damage output and critical hit chances.</li><li><strong>Crane Stance:</strong> Improves evasion and counter-attacking capabilities.</li><li><strong>Dragon Stance:</strong> Enhances MA-based nanoprograms for healing and energy attacks.</li><li><strong>Monkey Stance:</strong> Offers a balanced boost to both offense and defense.</li></ul></p>",
-      "skills": [
+      "chat": "",
+      "unidentified": ""
+    },
+    "skills": [
         {
           "name": "Hand-to-Hand Combat",
           "description": "Specializes in advanced unarmed combat techniques.",
@@ -91,9 +94,6 @@
           ]
         }
       ],
-      "chat": "",
-      "unidentified": ""
-    },
     "source": {
       "custom": "",
       "book": "GDoc",

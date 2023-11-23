@@ -8,7 +8,10 @@
       "overview": "<p>Doctors are the lifeblood of any team, keeping allies in fighting shape and turning the tides of battle with their medical expertise. They are as skilled with a scalpel as they are with nanoprograms, making them vital for any mission requiring endurance and recovery.</p>",
       "signature_ability": "Diagnosis",
       "signature_description": "<p>When any character uses Edge. Doctors can Focus to diagnose a target, applying a medical mark that reveals key vulnerabilities or potential cures and symptoms.</p><p><strong>Mark Utilization:</strong> Consuming the mark enhances the next nanoprogram, whether for healing, debuffing, or damaging.</p><p><strong>Strategic Application:</strong> Requires tactical decision-making to maximize the effectiveness of the mark.</p>",
-      "skills": [
+      "chat": "",
+      "unidentified": ""
+    },
+    "skills": [
         {
           "name": "Pharma Tech",
           "description": "Rapid and emergency healing techniques.",
@@ -91,9 +94,6 @@
           ]
         }
       ],
-      "chat": "",
-      "unidentified": ""
-    },
     "source": {
       "custom": "",
       "book": "GDoc",

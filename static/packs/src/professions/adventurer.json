@@ -8,7 +8,10 @@
       "overview": "<p>Adventurers are experts in survival and exploration, capable of adapting to various environments and challenges. They excel at navigating uncharted territories, dealing with wild creatures, and using their transformative abilities to overcome obstacles.</p>",
       "signature_ability": "Animal Morphing",
       "signature_description": "<p>Adventurers possess the unique ability to morph into various animals, gaining abilities and attributes based on the form.</p><p><strong><em>Animal Morphs Details:</em></strong></p><p><ul><li><strong>Predator Form:</strong> Enhances combat capabilities; embodies the power and agility of a predator.</li><li><strong>Scout Form:</strong> Boosts stealth and reconnaissance; moves unseen and unheard.</li><li><strong>Aquatic Adaptation:</strong> Adapted for underwater exploration and combat; graceful and speedy in water.</li><li><strong>Bird Form:</strong> Grants flight and heightened vision; soars high for scouting and fast travel.</li><li><strong>Tank Form:</strong> Increases defense and resistance; a durable creature for absorbing damage.</li><li><strong>Speedster Form:</strong> Maximizes speed and evasion; perfect for quick escapes and rapid traversal.</li></ul></p><p><strong>Mechanics of Morphing:</strong></p><p>Duration: Each morph has a limited duration, requiring strategic timing for transformations.</p><p>Cooldown: After morphing, a cooldown period prevents immediate shifting to another form.</p><p>Resource Cost: Morphing consumes resources (like Nanopoints) and may require specific environmental conditions or preparations.</p><p>Combat Integration: Morph forms can be integrated into combat, with each form having its unique combat abilities and style.</p><p>Exploration Enhancement: Certain forms enhance exploration abilities, like climbing, digging, or enhanced sensory perception.</p>",
-      "skills": [
+      "chat": "",
+      "unidentified": ""
+    },
+    "skills": [
         {
           "name": "Ranger",
           "description": "Survival, tracking, and utilizing natural resources.",
@@ -91,9 +94,6 @@
           ]
         }
       ],
-      "chat": "",
-      "unidentified": ""
-    },
     "source": {
       "custom": "",
       "book": "GDoc",

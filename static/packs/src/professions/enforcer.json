@@ -8,7 +8,10 @@
       "overview": "<p>Enforcers are the bulwark of any team, wielding immense strength and the unmatched ability to control the flow of combat. Their presence alone can dominate the battlefield, drawing the attention of foes and shielding their comrades from harm.</p>",
       "signature_ability": "Mongo Rage",
       "signature_description": "<p>Utilizes Mongo Rage to control aggro and increase survivability.\nPower Die Mechanic: Enhances threat level and defense with each successful aggro control or damage mitigation.</p><p><strong>Risk:</strong> Higher Power Die levels make the Enforcer a more focused target.</p>",
-      "skills": [
+      "chat": "",
+      "unidentified": ""
+    },
+    "skills": [
         {
           "name": "Brute Strength",
           "description": "Maximizes melee damage and enhances physical capabilities.",
@@ -91,9 +94,6 @@
           ]
         }
       ],
-      "chat": "",
-      "unidentified": ""
-    },
     "source": {
       "custom": "",
       "book": "GDoc",
