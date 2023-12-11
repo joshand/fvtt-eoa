@@ -9,7 +9,7 @@
   },
   "url": "https://github.com/joshand/fvtt-eoa/",
   "manifest": "https://raw.githubusercontent.com/joshand/fvtt-eoa/main/system.json",
-  "download": "https://github.com/joshand/fvtt-eoa/archive/refs/tags/v0.0.34.zip",
+  "download": "https://github.com/joshand/fvtt-eoa/releases/download/0.0.34/system.zip",
   "authors": [
     {
       "name": "Josh",
