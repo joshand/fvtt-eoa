@@ -8,7 +8,7 @@
     "verified": "11"
   },
   "url": "https://github.com/joshand/fvtt-eoa/",
-  "manifest": "https://raw.githubusercontent.com/joshand/fvtt-eoa/main/system.json",
+  "manifest": "https://raw.githubusercontent.com/joshand/fvtt-eoa/main/static/system.json",
   "download": "https://github.com/joshand/fvtt-eoa/releases/download/0.0.39/system.zip",
   "authors": [
     {
