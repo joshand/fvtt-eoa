@@ -2,7 +2,7 @@
   "_id": "EqZgdYkEINTpqCSM",
   "name": "Agent",
   "type": "profession",
-  "img": "icons/agent.png",
+  "img": "systems/eoa/icons/agent.png",
   "system": {
     "description": {
       "overview": "<p>Agents are masters of disguise and subterfuge, skilled in misdirection and adaptation. They excel at infiltration, espionage, and can temporarily mimic the abilities of other professions, making them unpredictable and resourceful allies.</p>",

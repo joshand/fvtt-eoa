@@ -2,7 +2,7 @@
   "_id": "yQ9O3IeUOP4wHPhN",
   "name": "Shade",
   "type": "profession",
-  "img": "icons/shade.png",
+  "img": "systems/eoa/icons/shade.png",
   "system": {
     "description": {
       "overview": "<p>Shade.</p>",

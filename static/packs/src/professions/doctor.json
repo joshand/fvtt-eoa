@@ -2,7 +2,7 @@
   "_id": "ztOsyDGZoXyaeneP",
   "name": "Doctor",
   "type": "profession",
-  "img": "icons/doctor.png",
+  "img": "systems/eoa/icons/doctor.png",
   "system": {
     "description": {
       "overview": "<p>Doctors are the lifeblood of any team, keeping allies in fighting shape and turning the tides of battle with their medical expertise. They are as skilled with a scalpel as they are with nanoprograms, making them vital for any mission requiring endurance and recovery.</p>",

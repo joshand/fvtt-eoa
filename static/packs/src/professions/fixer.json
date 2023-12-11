@@ -2,7 +2,7 @@
   "_id": "M7rZ5fRBKSjRCVIu",
   "name": "Fixer",
   "type": "profession",
-  "img": "icons/fixer.png",
+  "img": "systems/eoa/icons/fixer.png",
   "system": {
     "description": {
       "overview": "<p>Fixers are tech-savvy rogues and experts in digital warfare who excel in infiltration, extraction, and control of the battlefield. With their unique Grid Armor and advanced understanding of nanotechnology, they serve as the linchpins of any strategic operation.</p>",

@@ -2,7 +2,7 @@
   "_id": "F9khFcumBdO9JZKG",
   "name": "Martial Artist",
   "type": "profession",
-  "img": "icons/martial_artist.png",
+  "img": "systems/eoa/icons/martial_artist.png",
   "system": {
     "description": {
       "overview": "<p>Martial Artists are close-quarters combat specialists who combine physical prowess with mental discipline to execute precise and devastating attacks. They harness their nanotech to bolster their fighting capabilities and achieve feats beyond the reach of an average fighter.</p>",
