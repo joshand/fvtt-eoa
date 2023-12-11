@@ -118,7 +118,7 @@ jobs:
             `# The files that will be included.` \
             README.md                            \
             LICENSE
-          cd ../static
+          cd static
           zip                                    \
             `# Options`                          \
             --recurse-paths                      \
