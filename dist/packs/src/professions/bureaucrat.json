@@ -1,0 +1,130 @@
+{
+  "_id": "YtPyds3ID17YM3bC",
+  "name": "Bureaucrat",
+  "type": "profession",
+  "img": "icons/bureaucrat.png",
+  "system": {
+    "description": {
+      "overview": "<p>Bureaucrats are the puppet masters of the corporate and political arenas, using their charm and commanding presence to influence, control, and manipulate friends and foes alike. They are skilled at negotiation, control, and leveraging situations to their advantage with a mix of charisma and calculated strategy.</p>",
+      "signature_ability": "Administrative Assistant",
+      "signature_description": "<p>To ensure their safety and maintain their influence, Bureaucrats are often assigned bodyguards. These bodyguards are not just for protection; they are a status symbol, representing the Bureaucrat's importance and the value their organization places on them. Additionally, bodyguards serve as a deterrent against potential threats, indicating that any aggression towards the Bureaucrat will be met with formidable resistance.</p><br><p>The bodyguard summoning process is a service provided by a specialized division within the Bureaucrat's corporation. When a Bureaucrat activates the summoning nanoprogram, it sends an encrypted signal to this division's command center. The signal includes the Bureaucrat's location, current threat level, and any specific requirements for the situation.</p><br><p>The division then deploys a bodyguard, either a clone or a robotic agent, equipped with the latest corporate-funded technology. This rapid deployment is often facilitated by the corporation's exclusive grid transport channels, ensuring that their valuable Bureaucrats are never without protection in critical moments.</p><p><strong>In emergencies your droid can take a hit for you sacrificing itself in the process.</strong></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "skills": [
+        {
+          "name": "Political Savvy",
+          "description": "Negotiation, persuasion, and social manipulation.",
+          "programs": [
+            {
+              "name": "Charm Offensive",
+              "description": "",
+              "np": 20,
+              "ncu": 4,
+              "effect": "Temporarily Charms an Enemy. Focusing dictates the TN of breaking the charm."
+            },
+            {
+              "name": "Calm the Crowd",
+              "description": "Reduces enemy aggression.",
+              "np": 10,
+              "ncu": 4,
+              "effect": "Calms + enemies. Targets are calm until attacked or threatened."
+            },
+            {
+              "name": "Holographic Distraction",
+              "description": "Creates confusing illusions.",
+              "np": 5,
+              "ncu": 3,
+              "effect": "Creates + confusing illusions of yourself."
+            }
+          ]
+        },
+        {
+          "name": "Leadership",
+          "description": "Strategic planning and team coordination.",
+          "programs": [
+            {
+              "name": "Demotivational Speech",
+              "description": "",
+              "np": 15,
+              "ncu": 4,
+              "effect": "Applies - Initiative to enemies."
+            },
+            {
+              "name": "Diplomatic Immunity",
+              "description": "",
+              "np": 25,
+              "ncu": 4,
+              "effect": "Grants temporary resistance or invulnerability to a target"
+            },
+            {
+              "name": "Motivational Speech",
+              "description": "Enhances team strategy.",
+              "np": 10,
+              "ncu": 3,
+              "effect": "Enhances team strategy, granting a + to their Initiative"
+            }
+          ]
+        },
+        {
+          "name": "Bureaucracy",
+          "description": "Expertise in deploying and controlling legal counsel, robotic assistants and interacting with corporations.",
+          "programs": [
+            {
+              "name": "Cut Red Tape",
+              "description": "Boosts team morale and combat efficiency.",
+              "np": 15,
+              "ncu": 4,
+              "effect": "+ to Reactions"
+            },
+            {
+              "name": "Summon Legal Counsel",
+              "description": "Deploys a law firm clone of Pinnetti, Pinnetti, and Pinnetti have been the sole legal representation of a family of supposed \"legitimate businessmen\" for the last 300 years (started in 29169). This law firm have now composed clones of the firm's finest bodyguard, Carlita \"The Convincer\" Desposito. If you can't take care of your own problems, these professionals will make them disappear. They specialize in cases where people have turned down offers that \"can't be refused\" with scaling HP.",
+              "np": 30,
+              "ncu": 6,
+              "effect": "Create 1 Summon in the same Zone as you. Summon has 10 x tier HP and deals your damage."
+            },
+            {
+              "name": "Performance Review",
+              "description": "",
+              "np": 15,
+              "ncu": 1,
+              "effect": "Deals Intelligence + 5 x tier damage based on Intelligence and reduces the target's Psyche -2."
+            }
+          ]
+        }
+      ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "bureaucrat",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "bureaucrat",
+      "subtype": "bureaucrat",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!YtPyds3ID17YM3bC"
+}

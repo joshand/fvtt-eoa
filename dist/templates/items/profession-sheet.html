@@ -1,0 +1,140 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    {{!-- Item Sheet Header --}}
+    <header class="sheet-header flexrow">
+        <img class="profile" src="{{item.img}}" title="{{item.name}}" data-edit="img">
+
+        <div class="header-details flexrow">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'EOA.RaceName'}}">
+            </h1>
+
+            <div class="item-subtitle">
+                <h4 class="item-type">{{itemType}}</h4>
+                <span class="item-status">{{itemStatus}}</span>
+            </div>
+        </div>
+    </header>
+
+    {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item active" data-tab="description">{{localize "EOA.Description"}}</a>
+        <a class="item" data-tab="signature-ability">{{localize "EOA.SignatureAbility"}}</a>
+        {{#each data.system.description.skills as | skill |}}
+        <a class="item" data-tab="{{skill.name}}">{{skill.name}}</a>
+        {{/each}}
+    </nav>
+
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Description Tab --}}
+        <div class="tab flexrow active" data-group="primary" data-tab="description">
+
+            <!--      <div class="item-properties">-->
+            <!--        &nbsp;-->
+            <!--      </div>-->
+
+            <div class="description">
+                <br>
+                {{editor data.system.description.overview target="system.description.overview" button=true owner=owner editable=editable}}
+            </div>
+
+        </div>
+
+        {{!-- Signature Ability Tab --}}
+        <div class="tab flexrow" data-group="primary" data-tab="signature-ability">
+
+            <div>
+                <br>
+                <div class="form-group">
+                    <label>Signature Ability</label>
+                    <div class="form-fields">
+                        <input type="text" name="data.system.description.signature_ability" value="{{data.system.description.signature_ability}}"
+                               placeholder="{{data.system.description.signature_ability}}">
+                    </div>
+                </div>
+
+<!--                <strong>Signature Ability:</strong> <input class="eoa-in-place-box" type="text" name="{{data.system.description.signature_ability}}" value="{{data.system.description.signature_ability}}" />-->
+
+                <br><br><strong>Description:</strong><br>
+                {{editor data.system.description.signature_description target="system.description.signature_description" button=true owner=owner editable=editable}}
+            </div>
+
+        </div>
+
+        {{!-- Skills Tabs --}}
+        {{#each data.system.skills as | skill |}}
+        <div class="tab flexrow" data-group="primary" data-tab="{{skill.name}}">
+
+            <div>
+                {{i}}
+                <br>
+                <div class="form-group">
+                    <label>Description</label>
+                    <div class="form-fields">
+                        <input type="text" name="data.system.skills.{{@index}}.description" value="{{skill.description}}"
+                               placeholder="{{skill.description}}">
+                    </div>
+                </div>
+<!--                <strong>Description:</strong> <input class="eoa-in-place-box" type="text" name="{{skill.description}}" value="{{skill.description}}" />-->
+
+                <br><br><strong>Nanoprograms:</strong><hr>
+                {{#each skill.programs as | pgm |}}
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <div class="form-fields">
+                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.name" value="{{pgm.name}}"
+                               placeholder="{{pgm.name}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <div class="form-fields">
+                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.name" value="{{pgm.description}}"
+                               placeholder="{{pgm.description}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nanopoint Cost</label>
+                    <div class="form-fields">
+                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.np" value="{{pgm.np}}"
+                               placeholder="{{pgm.np}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>NCU</label>
+                    <div class="form-fields">
+                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.ncu" value="{{pgm.ncu}}"
+                               placeholder="{{pgm.ncu}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Effect</label>
+                    <div class="form-fields">
+                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.effect" value="{{pgm.effect}}"
+                               placeholder="{{pgm.effect}}">
+                    </div>
+                </div>
+
+<!--                    <input class="eoa-in-place-box" type="text" name="{{pgm.name}}" value="{{pgm.name}}" />-->
+<!--                    <input class="eoa-in-place-box" type="text" name="{{pgm.description}}" value="{{pgm.description}}" placeholder="Description" />-->
+<!--                    <label class="eoa-inline-label">Nanopoint Cost: </label><input class="eoa-inline-box eoa-width-30" type="text" name="{{pgm.np}}" value="{{pgm.np}}" />-->
+<!--                    <label class="eoa-inline-label">NCU: </label><input class="eoa-inline-box eoa-width-30" type="text" name="{{pgm.ncu}}" value="{{pgm.ncu}}" />-->
+<!--                    <label class="eoa-inline-label">Effect: </label><input class="eoa-inline-box eoa-width-480" type="text" name="{{pgm.effect}}" value="{{pgm.effect}}" />-->
+                <hr>
+                {{/each}}
+            </div>
+
+        </div>
+        {{/each}}
+    </section>
+
+<!--    <footer class="sheet-footer">-->
+<!--        <button type="submit"><i class="fas fa-save"></i> {{localize submitText}}</button>-->
+<!--    </footer>-->
+</form>

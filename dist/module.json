@@ -1,0 +1,63 @@
+{
+  "name": "eoa",
+  "title": "Edge of Anarchy",
+  "description": "A system for playing the Edge of Anarchy game system in the Foundry Virtual Tabletop environment.",
+  "version": "0.0.33",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "authors": [
+    {
+      "name": "Josh",
+      "url": "https://foundryvtt.com",
+      "flags": {}
+    }
+  ],
+  "library": "false",
+  "conflicts": [],
+  "esmodules": [
+    "eoa.js"
+  ],
+  "scripts": [],
+  "styles": [
+    "/styles/eoa.css"
+  ],
+  "packs": [
+    {
+      "name": "breeds",
+      "label": "Breeds",
+      "system": "grpga",
+      "path": "packs/breeds.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "EoA Content",
+      "sorting": "m",
+      "color": "#cd2c1e",
+      "packs": [
+        "breeds"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "url": "https://github.com/joshand/fvtt-eoa/",
+  "manifest": "https://raw.githubusercontent.com/joshand/fvtt-eoa/main/module.json",
+  "download": "https://github.com/joshand/fvtt-eoa/archive/refs/tags/v0.0.33.zip",
+  "media": [
+    {
+      "type": "icon",
+      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
+    }
+  ]
+}

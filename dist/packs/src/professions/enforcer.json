@@ -1,0 +1,130 @@
+{
+  "_id": "ZljIylTbJZ4lQ3kW",
+  "name": "Enforcer",
+  "type": "profession",
+  "img": "icons/enforcer.png",
+  "system": {
+    "description": {
+      "overview": "<p>Enforcers are the bulwark of any team, wielding immense strength and the unmatched ability to control the flow of combat. Their presence alone can dominate the battlefield, drawing the attention of foes and shielding their comrades from harm.</p>",
+      "signature_ability": "Mongo Rage",
+      "signature_description": "<p>Utilizes Mongo Rage to control aggro and increase survivability.\nPower Die Mechanic: Enhances threat level and defense with each successful aggro control or damage mitigation.</p><p><strong>Risk:</strong> Higher Power Die levels make the Enforcer a more focused target.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "skills": [
+        {
+          "name": "Brute Strength",
+          "description": "Maximizes melee damage and enhances physical capabilities.",
+          "programs": [
+            {
+              "name": "Challenger!",
+              "description": "",
+              "np": 10,
+              "ncu": 4,
+              "effect": "Temporarily increases attack power at the expense of defense."
+            },
+            {
+              "name": "Iron Constitution",
+              "description": "",
+              "np": 15,
+              "ncu": 3,
+              "effect": "Improves resistance to various combat effects and status ailments."
+            },
+            {
+              "name": "Momentum Swing",
+              "description": "",
+              "np": 10,
+              "ncu": 1,
+              "effect": "Strengthens with successive melee attacks."
+            },
+            {
+              "name": "Essence of Behemoth",
+              "description": "",
+              "np": 20,
+              "ncu": 6,
+              "effect": "Increase target’s Strength and Stamina by +1"
+            }
+          ]
+        },
+        {
+          "name": "Thuggery",
+          "description": "Employs skills to weaken and demoralize opponents.",
+          "programs": [
+            {
+              "name": "Insult",
+              "description": "",
+              "np": 5,
+              "ncu": 1,
+              "effect": "Central to tanking, it draws enemy attention."
+            },
+            {
+              "name": "War Cry",
+              "description": "",
+              "np": 10,
+              "ncu": 1,
+              "effect": "Diminishes the combat effectiveness of nearby enemies."
+            }
+          ]
+        },
+        {
+          "name": "Stalwart",
+          "description": "Focuses on resilience and ally protection.",
+          "programs": [
+            {
+              "name": "Stoic Defense",
+              "description": "",
+              "np": 15,
+              "ncu": 4,
+              "effect": "Significantly boosts defense against incoming damage."
+            },
+            {
+              "name": "Unyielding Stance",
+              "description": "",
+              "np": 10,
+              "ncu": 3,
+              "effect": "Strengthens the Enforcer against heavy attacks."
+            },
+            {
+              "name": "Shield Ally",
+              "description": "",
+              "np": 15,
+              "ncu": 3,
+              "effect": "Temporarily protects an ally with the Enforcer's defensive capabilities."
+            }
+          ]
+        }
+      ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "enforcer",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "enforcer",
+      "subtype": "enforcer",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!ZljIylTbJZ4lQ3kW"
+}

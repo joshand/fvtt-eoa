@@ -1,0 +1,130 @@
+{
+  "_id": "z2MGhiOYMYaviJGl",
+  "name": "Meta-Physicist",
+  "type": "profession",
+  "img": "icons/meta-physicist.png",
+  "system": {
+    "description": {
+      "overview": "<p>Meta-Physicists are mystics who delve into the metaphysical realm, summoning entities and bending the laws of reality with their nano skills. They have a unique understanding of both the physical and metaphysical worlds, allowing them to conjure allies from the nether and wield nano programs that alter the fabric of reality.</p>",
+      "signature_ability": "Summoning & Metaphysics",
+      "signature_description": "<p>Meta-Physicists can call forth entities from the Shadowlands to aid them in battle or perform other tasks.</p><br><p>Specialization in summoning and controlling three types of entities: Attack Pet, Heal Pet, and Mezz Pet.</p><p>Rules for Commanding Summons:</p><p>Attack Pet: Direct combat, with commands for attacking, guarding, and retreating.</p><p>Heal Pet: Provides healing with commands for targeted and group healing.</p><p>Mezz Pet: Specializes in crowd control, with commands for mesmerizing and disabling multiple enemies.</p><br><p>Summon Management:</p><br><p>Active management of summons with energy gauges.</p><p>Strategic summoning based on combat situations.</p><p>Multiple summons require balanced control and energy management.</p><br><p>Rules for Commanding Summons:</p><br><p>Attack Pet:</p><br><p>Purpose: Engages in direct combat, dealing physical damage.</p><p>Commands: Attack (target enemy), Guard (protect a specific area or person), and Retreat (withdraw from combat).</p><p>Control: Requires active management; if not commanded, it follows basic defensive protocols.</p><br><p>Heal Pet:</p><p>Purpose: Provides healing and support to the Meta-Physicist and allies.</p><p>Commands: Heal (target ally), Group Heal (affects surrounding allies), and Follow (stay close to a designated ally).</p><p>Autonomy: Can autonomously heal if no specific commands are given, prioritizing the most injured ally.</p><br><p>Mezz Pet:</p><p>Purpose: Specializes in crowd control, debuffing, or incapacitating enemies.</p><p>Commands: Mesmerize (disable a specific target), Area Mezz (affect multiple enemies), and Disengage (cease crowd control actions).</p><p>Judicious Use: Requires careful command to avoid breaking crowd control prematurely.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "skills": [
+        {
+          "name": "Summoning",
+          "description": "Mastery in summoning diverse entities.",
+          "programs": [
+            {
+              "name": "Summon Entity",
+              "description": "",
+              "np": 20,
+              "ncu": 4,
+              "effect": "Improves focus for more effective attacks or healing. Summons a pet for aid in combat or support."
+            },
+            {
+              "name": "Nanomystic Synchronization",
+              "description": "",
+              "np": 10,
+              "ncu": 7,
+              "effect": "Bolsters target summon with nanotech."
+            },
+            {
+              "name": "Astral Projection",
+              "description": "",
+              "np": 10,
+              "ncu": 7,
+              "effect": "Reconnaissance or stealth using metaphysical energy."
+            }
+          ]
+        },
+        {
+          "name": "Metaphysics",
+          "description": "Enhancing abilities for various effects.",
+          "programs": [
+            {
+              "name": "Mind Over Matter",
+              "description": "",
+              "np": 10,
+              "ncu": 1,
+              "effect": "Psychic attack or manipulation."
+            },
+            {
+              "name": "Psychic Shield",
+              "description": "",
+              "np": 20,
+              "ncu": 3,
+              "effect": "Creates a protective psychic barrier."
+            },
+            {
+              "name": "Telekinetic Strike",
+              "description": "",
+              "np": 10,
+              "ncu": 1,
+              "effect": "Delivers a powerful psychic force attack."
+            }
+          ]
+        },
+        {
+          "name": "Symbiosis",
+          "description": "Integrating nanotechnology with the meta world.",
+          "programs": [
+            {
+              "name": "Neural Link",
+              "description": "",
+              "np": 15,
+              "ncu": 4,
+              "effect": "Target’s nanopoint cost is reduced by -5"
+            },
+            {
+              "name": "Composite Mochams",
+              "description": "",
+              "np": 15,
+              "ncu": 5,
+              "effect": "Increase target’s nanoskills by +"
+            },
+            {
+              "name": "Psychic Resonance",
+              "description": "",
+              "np": 10,
+              "ncu": 1,
+              "effect": "Weakens enemies' mental defenses."
+            }
+          ]
+        }
+      ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "meta-physicist",
+    "advancement": [
+
+    ],
+    "type": {
+      "value": "meta-physicist",
+      "subtype": "meta-physicist",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!z2MGhiOYMYaviJGl"
+}
