@@ -123,7 +123,7 @@ jobs:
             `# Options`                          \
             --recurse-paths                      \
             `# The name of the output file`      \
-             ..system.zip                        \
+             ../system.zip                       \
             `# The files that will be included.` \
             icons/                               \
             languages/                           \
