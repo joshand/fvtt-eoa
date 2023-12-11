@@ -2,7 +2,7 @@
   "_id": "MA5hxz4mYEDTjvU1",
   "name": "Nano-Technician",
   "type": "profession",
-  "img": "icons/nano-technician.png",
+  "img": "systems/eoa/icons/nano-technician.png",
   "system": {
     "description": {
       "overview": "<p>Nano-Technicians are the quintessential casters, relying on advanced technology and their mastery over nanobots to dominate the battlefield. They can deal significant damage through direct attacks, control the battlefield with debuffs, or support allies with buffs.</p>",

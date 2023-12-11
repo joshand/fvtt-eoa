@@ -2,7 +2,7 @@
   "_id": "xjlLK04v334Z9puO",
   "name": "Trader",
   "type": "profession",
-  "img": "icons/trader.png",
+  "img": "systems/eoa/icons/trader.png",
   "system": {
     "description": {
       "overview": "<p>Traders are known for their ability to manipulate markets, but they also have unique skills that allow them to drain and transfer skills, buffs, and even health from their foes to themselves and their allies. They are the ultimate opportunists, turning the tide of battle by weakening foes and strengthening friends.</p>",

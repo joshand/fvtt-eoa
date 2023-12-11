@@ -2,7 +2,7 @@
   "_id": "tcJpR5d6AUArRZJX",
   "name": "Adventurer",
   "type": "profession",
-  "img": "icons/adventurer.png",
+  "img": "systems/eoa/icons/adventurer.png",
   "system": {
     "description": {
       "overview": "<p>Adventurers are experts in survival and exploration, capable of adapting to various environments and challenges. They excel at navigating uncharted territories, dealing with wild creatures, and using their transformative abilities to overcome obstacles.</p>",

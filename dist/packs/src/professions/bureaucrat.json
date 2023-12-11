@@ -2,7 +2,7 @@
   "_id": "YtPyds3ID17YM3bC",
   "name": "Bureaucrat",
   "type": "profession",
-  "img": "icons/bureaucrat.png",
+  "img": "systems/eoa/icons/bureaucrat.png",
   "system": {
     "description": {
       "overview": "<p>Bureaucrats are the puppet masters of the corporate and political arenas, using their charm and commanding presence to influence, control, and manipulate friends and foes alike. They are skilled at negotiation, control, and leveraging situations to their advantage with a mix of charisma and calculated strategy.</p>",

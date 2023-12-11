@@ -2,7 +2,7 @@
   "_id": "x0aVOlCE2PMdk4Vw",
   "name": "Keeper",
   "type": "profession",
-  "img": "icons/keeper.png",
+  "img": "systems/eoa/icons/keeper.png",
   "system": {
     "description": {
       "overview": "<p>Keepers are guardians and warriors who draw from ancient lore to empower themselves and their allies. Through their deep connection to lost wisdom, they can invoke powerful auras that bolster their comrades and confound their foes. With their sacred weapons, they stand as beacons on the battlefield, directing the flow of combat and sustaining their allies through the darkest fights.</p><p><strong>Unique Mechanic: Aura Weaving & Focus</strong></p><p>Keepers can switch between different auras to adapt to various combat scenarios. These auras can provide offensive, defensive, or support benefits, and the Keeper's mastery allows them to weave these effects into their swordplay, creating a harmonious balance between attack and aid.</p><br><p><strong>Playing a Keeper:</strong></p><p>Keepers fit players who want to be at the heart of the group, protecting and enhancing their allies. They require a player who can make quick decisions about which aura to employ and when to invest in focusing on a particular aura to maximize its benefits. In narrative play, Keepers are storytellers and advisors, using their deep lore to guide their party through cryptic mysteries and ancient dangers.</p>",

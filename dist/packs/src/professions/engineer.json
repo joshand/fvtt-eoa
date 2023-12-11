@@ -2,7 +2,7 @@
   "_id": "COD6tnjlieqwIEgu",
   "name": "Engineer",
   "type": "profession",
-  "img": "icons/engineer.png",
+  "img": "systems/eoa/icons/engineer.png",
   "system": {
     "description": {
       "overview": "<p>Engineers are masters of robotics and nanotechnology, capable of deploying and controlling various types of robots for combat, defense, and utility purposes. They also specialize in nanoprogramming for additional support.</p>",

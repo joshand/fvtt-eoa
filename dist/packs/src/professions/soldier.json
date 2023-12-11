@@ -2,7 +2,7 @@
   "_id": "EIWvv65CPibY1b0d",
   "name": "Soldier",
   "type": "profession",
-  "img": "icons/soldier.png",
+  "img": "systems/eoa/icons/soldier.png",
   "system": {
     "description": {
       "overview": "<p>Soldiers are the embodiment of military might on the battlefield, equipped with the knowledge and gear to engage in prolonged combat. They specialize in various weapons and are adept at creating strategic advantages through firepower and defensive tactics.</p>",
