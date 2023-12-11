@@ -118,29 +118,21 @@ jobs:
             `# The files that will be included.` \
             README.md                            \
             LICENSE
-          cd static
+          cd dist
           zip                                    \
             `# Options`                          \
             --recurse-paths                      \
             `# The name of the output file`      \
-             ../system.zip                       \
+             ..system.zip                        \
             `# The files that will be included.` \
-            system.json                          \
-            template.json                        \
             icons/                               \
             languages/                           \
             packs/                               \
             styles/                              \
-            templates/
-          cd ../src
-          zip                                    \
-            `# Options`                          \
-            --recurse-paths                      \
-            `# The name of the output file`      \
-             ../system.zip                       \
-            `# The files that will be included.` \
+            templates/                           \
             eoa.js                               \
-            module/
+            system.json                          \
+            template.json
           
           # Don't forget to add a backslash at the end of the line for any
           # additional files or directories!
