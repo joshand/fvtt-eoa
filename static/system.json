@@ -18,7 +18,7 @@
     }
   ],
   "esmodules": [
-    "eoa.ts"
+    "eoa.js"
   ],
   "styles": [
     "/styles/eoa.css"
