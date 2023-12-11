@@ -1,6 +1,6 @@
-import { TemplatePreloader } from "./module/helper/TemplatePreloader";
-import { EoABreedSheet } from "./module/items/BreedSheet";
-import { EoAProfessionSheet } from "./module/items/ProfessionSheet";
+import { TemplatePreloader } from "./module/helper/TemplatePreloader.js";
+import { EoABreedSheet } from "./module/items/BreedSheet.js";
+import { EoAProfessionSheet } from "./module/items/ProfessionSheet.js";
 
 Hooks.once("init", async () => {
     console.log("========================Edge of Anarchy=====================")
