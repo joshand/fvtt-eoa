@@ -18,6 +18,7 @@
     {{!-- Item Sheet Navigation --}}
     <nav class="sheet-navigation tabs" data-group="primary">
         <a class="item active" data-tab="description">{{localize "EOA.Description"}}</a>
+        <a class="item" data-tab="lifepath">{{localize "EOA.Lifepath"}}</a>
     </nav>
 
     {{!-- Item Sheet Body --}}
@@ -34,20 +35,32 @@
                 {{editor data.system.description.value target="system.description.value" button=true owner=owner editable=editable}}
             </div>
 
+        </div>
+
+        {{!-- Lifepath Tab --}}
+        <div class="tab flexrow active" data-group="primary" data-tab="lifepath">
+
             <div>
                 <br><br><strong>Lifepath Table (Roll 2d6 or Choose):</strong><hr>
                 {{#each data.system.skills as | skill |}}
 
                 <div class="form-group">
-                    <label>{{skill.low}}-{{skill.high}}</label>
-                    <div class="form-fields">
+                    <div class="flex1">
+                        <label>{{skill.low}}-{{skill.high}}</label>
+                    </div>
+                    <div class="form-fields flex1">
                         <input type="text" name="data.system.skills.{{@index}}.name" value="{{skill.name}}"
                                placeholder="{{skill.name}}">
+                    </div>
+                    <div class="form-fields flex4">
                         <input type="text" name="data.system.skills.{{@index}}.description" value="{{skill.description}}"
                                placeholder="{{skill.description}}">
                     </div>
+                </div>
+                <div>
                     <label><ul><li><strong>Attributes:</strong> Str {{skill.str}}, Sta {{skill.sta}}, Agi {{skill.agi}}, Int {{skill.int}}, Sen {{skill.sen}}, Psy {{skill.psy}}</li></ul></label>
                 </div>
+                <hr>
 
                 {{/each}}
             </div>
