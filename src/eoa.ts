@@ -1,10 +1,11 @@
 import { TemplatePreloader } from "./module/helper/TemplatePreloader";
 import { EoABreedSheet } from "./module/items/BreedSheet";
 import { EoAProfessionSheet } from "./module/items/ProfessionSheet";
+import { EoAOriginSheet } from "./module/items/OriginSheet";
 
 Hooks.once("init", async () => {
     console.log("========================Edge of Anarchy=====================")
-    console.log("=============================HMR============================")
+    console.log("============================Load============================")
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("eoa", EoABreedSheet, {
@@ -13,6 +14,10 @@ Hooks.once("init", async () => {
     });
     Items.registerSheet("eoa", EoAProfessionSheet, {
         types: ["profession"],
+        makeDefault: true
+    });
+    Items.registerSheet("eoa", EoAOriginSheet, {
+        types: ["origin"],
         makeDefault: true
     });
 });

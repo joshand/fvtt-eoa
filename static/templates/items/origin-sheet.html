@@ -1,0 +1,39 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  {{!-- Item Sheet Header --}}
+  <header class="sheet-header flexrow">
+    <img class="profile" src="{{item.img}}" title="{{item.name}}" data-edit="img">
+
+    <div class="header-details flexrow">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'EOA.OriginName'}}">
+      </h1>
+
+      <div class="item-subtitle">
+        <h4 class="item-type">{{itemType}}</h4>
+        <span class="item-status">{{itemStatus}}</span>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Item Sheet Navigation --}}
+  <nav class="sheet-navigation tabs" data-group="primary">
+    <a class="item active" data-tab="description">{{localize "EOA.Description"}}</a>
+  </nav>
+
+  {{!-- Item Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab flexrow active" data-group="primary" data-tab="description">
+
+      <div class="item-properties">
+        &nbsp;
+      </div>
+
+      <div class="description">
+          {{editor data.system.description.value target="system.description.value" button=true owner=owner editable=editable}}
+      </div>
+
+    </div>
+  </section>
+</form>
