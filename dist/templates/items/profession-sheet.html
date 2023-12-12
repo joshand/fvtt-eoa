@@ -18,10 +18,11 @@
     {{!-- Item Sheet Navigation --}}
     <nav class="sheet-navigation tabs" data-group="primary">
         <a class="item active" data-tab="description">{{localize "EOA.Description"}}</a>
-        <a class="item" data-tab="signature-ability">{{localize "EOA.SignatureAbility"}}</a>
-        {{#each data.system.description.skills as | skill |}}
-        <a class="item" data-tab="{{skill.name}}">{{skill.name}}</a>
-        {{/each}}
+        <a class="item" data-tab="signature-ability">{{localize "EOA.SignatureAbilities"}}</a>
+        <a class="item" data-tab="skills">{{localize "EOA.Skills"}}</a>
+<!--        {{#each data.system.description.skills as | skill |}}-->
+<!--        <a class="item" data-tab="{{skill.name}}">{{skill.name}}</a>-->
+<!--        {{/each}}-->
     </nav>
 
     {{!-- Item Sheet Body --}}
@@ -36,7 +37,38 @@
 
             <div class="description">
                 <br>
+                <div style="height: 100px !important">
                 {{editor data.system.description.overview target="system.description.overview" button=true owner=owner editable=editable}}
+                </div>
+
+                <div class="form-group">
+                    <div class="form-fields flex1">
+                        <label>Flashback Ability</label>
+                    </div>
+                    <div class="form-fields flex3">
+                        <label>Flashback Trigger</label>
+                    </div>
+                    <div class="form-fields flex3">
+                        <label>Flashback Effect</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-fields flex1">
+                        <input type="text" name="data.system.flashback_ability" value="{{data.system.flashback_ability}}"
+                               placeholder="{{data.system.flashback_ability}}">
+                    </div>
+                    <div class="form-fields flex3">
+<!--                        <input type="text" name="data.system.flashback_trigger" value="{{data.system.flashback_trigger}}"-->
+<!--                               placeholder="{{data.system.flashback_trigger}}">-->
+                        {{editor data.system.flashback_trigger target="data.system.flashback_trigger" button=true owner=owner editable=editable}}
+                    </div>
+                    <div class="form-fields flex3">
+<!--                        <input type="text" name="data.system.flashback_effect" value="{{data.system.flashback_effect}}"-->
+<!--                               placeholder="{{data.system.flashback_effect}}">-->
+                        {{editor data.system.flashback_effect target="data.system.flashback_effect" button=true owner=owner editable=editable}}
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -44,94 +76,123 @@
         {{!-- Signature Ability Tab --}}
         <div class="tab flexrow" data-group="primary" data-tab="signature-ability">
 
-            <div>
+            <div class="description">
                 <br>
+                <strong>Signature Traits</strong><hr>
+                {{#each data.system.signature_traits as | skill |}}
+
                 <div class="form-group">
-                    <label>Signature Ability</label>
-                    <div class="form-fields">
-                        <input type="text" name="data.system.description.signature_ability" value="{{data.system.description.signature_ability}}"
-                               placeholder="{{data.system.description.signature_ability}}">
+                    <div class="form-fields flex1">
+                        <input type="text" name="data.system.signature_traits.{{@index}}.name" value="{{skill.name}}"
+                               placeholder="{{skill.name}}">
+                    </div>
+                    <div class="form-fields flex4">
+<!--                        <input type="text" name="data.system.signature_traits.{{@index}}.description" value="{{skill.description}}"-->
+<!--                               placeholder="{{skill.description}}">-->
+                        {{editor skill.description target="skill.description" button=true owner=owner editable=editable}}
                     </div>
                 </div>
 
-<!--                <strong>Signature Ability:</strong> <input class="eoa-in-place-box" type="text" name="{{data.system.description.signature_ability}}" value="{{data.system.description.signature_ability}}" />-->
-
-                <br><br><strong>Description:</strong><br>
-                {{editor data.system.description.signature_description target="system.description.signature_description" button=true owner=owner editable=editable}}
-            </div>
-
-        </div>
-
-        {{!-- Skills Tabs --}}
-        {{#each data.system.skills as | skill |}}
-        <div class="tab flexrow" data-group="primary" data-tab="{{skill.name}}">
-
-            <div>
-                {{i}}
-                <br>
-                <div class="form-group">
-                    <label>Description</label>
-                    <div class="form-fields">
-                        <input type="text" name="data.system.skills.{{@index}}.description" value="{{skill.description}}"
-                               placeholder="{{skill.description}}">
-                    </div>
-                </div>
-<!--                <strong>Description:</strong> <input class="eoa-in-place-box" type="text" name="{{skill.description}}" value="{{skill.description}}" />-->
-
-                <br><br><strong>Nanoprograms:</strong><hr>
-                {{#each skill.programs as | pgm |}}
-
-                <div class="form-group">
-                    <label>Name</label>
-                    <div class="form-fields">
-                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.name" value="{{pgm.name}}"
-                               placeholder="{{pgm.name}}">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Description</label>
-                    <div class="form-fields">
-                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.name" value="{{pgm.description}}"
-                               placeholder="{{pgm.description}}">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Nanopoint Cost</label>
-                    <div class="form-fields">
-                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.np" value="{{pgm.np}}"
-                               placeholder="{{pgm.np}}">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>NCU</label>
-                    <div class="form-fields">
-                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.ncu" value="{{pgm.ncu}}"
-                               placeholder="{{pgm.ncu}}">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Effect</label>
-                    <div class="form-fields">
-                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.effect" value="{{pgm.effect}}"
-                               placeholder="{{pgm.effect}}">
-                    </div>
-                </div>
-
-<!--                    <input class="eoa-in-place-box" type="text" name="{{pgm.name}}" value="{{pgm.name}}" />-->
-<!--                    <input class="eoa-in-place-box" type="text" name="{{pgm.description}}" value="{{pgm.description}}" placeholder="Description" />-->
-<!--                    <label class="eoa-inline-label">Nanopoint Cost: </label><input class="eoa-inline-box eoa-width-30" type="text" name="{{pgm.np}}" value="{{pgm.np}}" />-->
-<!--                    <label class="eoa-inline-label">NCU: </label><input class="eoa-inline-box eoa-width-30" type="text" name="{{pgm.ncu}}" value="{{pgm.ncu}}" />-->
-<!--                    <label class="eoa-inline-label">Effect: </label><input class="eoa-inline-box eoa-width-480" type="text" name="{{pgm.effect}}" value="{{pgm.effect}}" />-->
                 <hr>
                 {{/each}}
             </div>
 
         </div>
-        {{/each}}
+
+        {{!-- Skills Tab --}}
+        <div class="tab flexrow" data-group="primary" data-tab="skills">
+
+            <div class="description">
+                <br>
+                <strong>Skill List</strong> (Starting characters divide 10 points around this list. No skill can be higher than 2 at character creation):<hr>
+                {{#each data.system.skill_list as | skill |}}
+
+                <div class="form-group">
+                    <div class="form-fields flex1">
+                        <input type="text" name="data.system.skill_list.{{@index}}.name" value="{{skill.name}}"
+                               placeholder="{{skill.name}}">
+                    </div>
+                    <div class="form-fields flex4">
+                        <input type="text" name="data.system.skill_list.{{@index}}.description" value="{{skill.description}}"
+                               placeholder="{{skill.description}}">
+                    </div>
+                </div>
+
+                {{/each}}
+            </div>
+
+        </div>
+
+<!--        {{!&#45;&#45; Skills Tabs &#45;&#45;}}-->
+<!--        {{#each data.system.skills as | skill |}}-->
+<!--        <div class="tab flexrow" data-group="primary" data-tab="{{skill.name}}">-->
+
+<!--            <div>-->
+<!--                {{i}}-->
+<!--                <br>-->
+<!--                <div class="form-group">-->
+<!--                    <label>Description</label>-->
+<!--                    <div class="form-fields">-->
+<!--                        <input type="text" name="data.system.skills.{{@index}}.description" value="{{skill.description}}"-->
+<!--                               placeholder="{{skill.description}}">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                <strong>Description:</strong> <input class="eoa-in-place-box" type="text" name="{{skill.description}}" value="{{skill.description}}" />&ndash;&gt;-->
+
+<!--                <br><br><strong>Nanoprograms:</strong><hr>-->
+<!--                {{#each skill.programs as | pgm |}}-->
+
+<!--                <div class="form-group">-->
+<!--                    <label>Name</label>-->
+<!--                    <div class="form-fields">-->
+<!--                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.name" value="{{pgm.name}}"-->
+<!--                               placeholder="{{pgm.name}}">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="form-group">-->
+<!--                    <label>Description</label>-->
+<!--                    <div class="form-fields">-->
+<!--                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.name" value="{{pgm.description}}"-->
+<!--                               placeholder="{{pgm.description}}">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="form-group">-->
+<!--                    <label>Nanopoint Cost</label>-->
+<!--                    <div class="form-fields">-->
+<!--                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.np" value="{{pgm.np}}"-->
+<!--                               placeholder="{{pgm.np}}">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="form-group">-->
+<!--                    <label>NCU</label>-->
+<!--                    <div class="form-fields">-->
+<!--                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.ncu" value="{{pgm.ncu}}"-->
+<!--                               placeholder="{{pgm.ncu}}">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="form-group">-->
+<!--                    <label>Effect</label>-->
+<!--                    <div class="form-fields">-->
+<!--                        <input type="text" name="data.system.skills.{{@../index}}.program.{{@index}}.effect" value="{{pgm.effect}}"-->
+<!--                               placeholder="{{pgm.effect}}">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--&lt;!&ndash;                    <input class="eoa-in-place-box" type="text" name="{{pgm.name}}" value="{{pgm.name}}" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <input class="eoa-in-place-box" type="text" name="{{pgm.description}}" value="{{pgm.description}}" placeholder="Description" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label class="eoa-inline-label">Nanopoint Cost: </label><input class="eoa-inline-box eoa-width-30" type="text" name="{{pgm.np}}" value="{{pgm.np}}" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label class="eoa-inline-label">NCU: </label><input class="eoa-inline-box eoa-width-30" type="text" name="{{pgm.ncu}}" value="{{pgm.ncu}}" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label class="eoa-inline-label">Effect: </label><input class="eoa-inline-box eoa-width-480" type="text" name="{{pgm.effect}}" value="{{pgm.effect}}" />&ndash;&gt;-->
+<!--                <hr>-->
+<!--                {{/each}}-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        {{/each}}-->
     </section>
 
 <!--    <footer class="sheet-footer">-->
