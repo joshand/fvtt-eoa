@@ -11,6 +11,65 @@
       "chat": "",
       "unidentified": ""
     },
+    "flashback_ability": "Bureaucratic Foresight",
+    "flashback_trigger": "When a prior diplomatic move or policy could influence the present.",
+    "flashback_effect": "Roll to show that you had already maneuvered a policy or agreement that aids the current situation.",
+    "skill_list": [
+      {
+        "name": "Negotiation",
+        "description": "Expertise in brokering deals, resolving conflicts, and achieving desired outcomes through dialogue."
+      },
+      {
+        "name": "Diplomacy",
+        "description": "Skill in managing relations and communications, both within organizations and between factions."
+      },
+      {
+        "name": "Administration",
+        "description": "Proficiency in organizational management, including logistics, planning, and resource allocation."
+      },
+      {
+        "name": "Rhetoric",
+        "description": "Ability to use language effectively for persuasion or influence in speeches and discussions."
+      },
+      {
+        "name": "Psychology",
+        "description": "Understanding of human behavior and psychology, useful in predicting and manipulating responses."
+      },
+      {
+        "name": "Legal Knowledge",
+        "description": "Familiarity with laws, regulations, and bureaucratic procedures, essential for navigating and exploiting legal systems."
+      },
+      {
+        "name": "Social Networking",
+        "description": "Building and maintaining a network of contacts and allies for information and support."
+      },
+      {
+        "name": "Leadership",
+        "description": "Use your Cult of personality to sway public opinion and inspire loyalty."
+      },
+      {
+        "name": "Psychological Modifications",
+        "description": "Using nanotechnology to influence and modify psychological states, enhancing persuasion and control."
+      },
+      {
+        "name": "Sensory Improvement",
+        "description": "Enhancing sensory perceptions and awareness through nanotechnology, aiding in gathering information and detecting subtleties in social interactions."
+      }
+    ],
+    "signature_traits": [
+      {
+        "name": "Administrative Assistant",
+        "description": "<p>To ensure their safety and maintain their influence, Bureaucrats are often assigned bodyguards. These bodyguards are not just for protection; they are a status symbol, representing the Bureaucrat's importance and the value their organization places on them. Additionally, bodyguards serve as a deterrent against potential threats, indicating that any aggression towards the Bureaucrat will be met with formidable resistance.</p><p>The bodyguard summoning process is a service provided by a specialized division within the Bureaucrat's corporation. When a Bureaucrat activates the summoning nanoprogram, it sends an encrypted signal to this division's command center. The signal includes the Bureaucrat's location, current threat level, and any specific requirements for the situation.</p><p>The division then deploys a bodyguard, either a clone of a known mercenary or a robotic agent, equipped with the latest corporate-funded technology. This rapid deployment is often facilitated by the corporation's exclusive grid transport channels, ensuring that their valuable Bureaucrats are never without protection in critical moments.</p><p>Your bodyguard has the following statistics<br>HP: 10+10 for each success<br>Damage: 5+ x Bureaucracy ranks<br>Your bodyguard has the following actions. Commanding a bodyguard is a minor action.</p><ul><li>Interception: The bodyguard can intercept attacks aimed at the Bureaucrat, taking damage in their stead.</li><li>Intimidation: Use their presence to intimidate enemies, potentially causing them to hesitate or flee.</li><li>Tactical Positioning: Can position itself to provide tactical advantages, such as blocking enemy movement</li><li>Surveillance: Gather information or keep watch, alerting the Bureaucrat to hidden dangers or opportunities.</li><li>Crowd Control: You can spend 10 NP to use non-lethal force to manage groups. If the Test succeeds, all targets are rooted for the round.</li><li>Negotiation Aid: Assist in negotiations by providing a sense of security, or subtly influence discussions through their presence.</li><li>Emergency Extraction: Can quickly remove the Bureaucrat from dangerous situations, acting as a personal escape mechanism.</li></ul>"
+      },
+      {
+        "name": "Bureaucratically Requisitioned Coffee",
+        "description": "<p>In the world of Edge of Anarchy, coffee has evolved beyond a simple beverage and money sink of enthusiasts. It's a culturally significant item, often used in diplomatic and corporate settings as a gesture of goodwill or a symbol of sophisticated negotiation. This enhancing coffee is specially nano formulated to boost cognitive functions and stamina.</p><p>The brew you requisition is dependent on how much money is spent. You can add 1 effect per 200 credits spent.</p><ul><li><strong>Enhanced Focus: </strong>For the next 2 hours, players receive a +1 bonus to all skill Tests involving concentration or detail-oriented tasks.</li><li><strong>Elevated Mood: </strong>Morale is boosted, granting a +1 to all Social tests for the next 2 hours.</li><li><strong>Increased Alertness: </strong>Players gain a temporary boost in initiative, the first encounter is treated as if your party has surprised the enemy.</li><li><strong>Stamina Surge: </strong>Temporary +2 bonus to endurance or stamina-related checks, useful in prolonged tasks or encounters.</li><li><strong>Social Bonding: </strong>Drinking coffee together improves team dynamics, you can choose to reroll a single Glitch dice, potentially saving all stored Edge.</li></ul>"
+      },
+      {
+        "name": "Insurance Claim",
+        "description": "<p>Combined with their deep understanding of Rubi-Ka’s political and economic landscapes with their ability to utilize the forefront of nanotech, Bureaucrats can craft insurance policies that are more than mere contractual agreements; they're backed by nano-agents that actively monitor and respond to insured scenarios. During downtime, you can enact one of the following insurance policies.</p><ul><li><strong>Equipment Insurance:</strong><ul><li>Pay upfront cost.</li><li><strong>Effect: </strong>In case of equipment damage/loss, receive replacements or repair funds.</li></ul></li><li><strong>Mission Failure Insurance:</strong><ul><li>Purchase before accepting a mission.</li><li><strong>Effect: </strong>If mission fails, receive partial rewards or reputation protection.</li></ul></li><li><strong>Travel Insurance:</strong><ul><li>Buy before a journey.</li><li><strong>Effect: </strong>If an incident occurs during travel, gain immediate assistance or resources.</li></ul></li><li><strong>Health Insurance:</strong><ul><li>Regular premium payments.</li><li><strong>Effect: </strong>Access to enhanced healing services or reduced cost for medical care post-combat.</li></ul></li><li><strong>Investment Insurance:</strong>Secure a financial investment.</li><li><strong>Effect: </strong>Compensation or partial recovery of funds if the investment fails.</li></ul></li>"
+      }
+    ],
     "skills": [
         {
           "name": "Political Savvy",

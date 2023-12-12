@@ -927,6 +927,7 @@
   "EOA.PropertyTotal": "Total",
   "EOA.Quantity": "Quantity",
   "EOA.QuantityAbbr": "Qty",
+  "EOA.OriginName": "Origin Name",
   "EOA.Race": "Race",
   "EOA.RaceName": "Race Name",
   "EOA.RacialTraits": "Racial Traits",

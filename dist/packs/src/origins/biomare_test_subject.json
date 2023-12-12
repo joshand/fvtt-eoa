@@ -1,0 +1,93 @@
+{
+  "_id": "3Le5qkuCLeMHVjI4",
+  "name": "Biomare Test Subject",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>Marked by Biomare’s experimental endeavors, you stand as a living testament to Rubi-Ka's relentless pursuit of biotechnological advancement. The experiments left a mark on you, yet they left unanswered questions about your own humanity. Now, you venture out, seeking to define your place in a world where science blurs the line between the possible and the ethical.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"Someone saw the real me beyond the mutations.\""
+      },
+      {
+        "description": "\"I sought to understand the purpose behind my alterations.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 500,
+    "origin_skills": ["Resist", "Evolve", "Recover", "Destroy", "Mutate", "Predict"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Genetic Enhancements",
+        "description": "Subjected to genetic modification experiments, you've developed heightened abilities, but at the cost of constant physical and mental adjustments."
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Chemical Resilience",
+        "description": "After exposure to numerous experimental compounds, your body has developed an unusual resilience to toxins and diseases."
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Neurological Experiments",
+        "description": "Neural enhancements have granted you heightened senses and perception, but with lingering side effects that challenge your mental fortitude."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Physical Conditioning Trials",
+        "description": "Through rigorous physical trials, your body has been conditioned to extraordinary levels, enduring stresses beyond normal human limits."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Mental Fortitude",
+        "description": "Psychological experimentation has sharpened your mental resilience and cognitive abilities, though at times you struggle with maintaining mental balance."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Adaptive Survivor",
+        "description": "Having survived a multitude of Biomare's tests, you've become a master at adapting to any physical or mental challenge thrown your way."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "biomare_test_subject",
+    "type": {
+      "value": "biomare_test_subject",
+      "subtype": "biomare_test_subject",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!3Le5qkuCLeMHVjI4"
+}

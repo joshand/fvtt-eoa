@@ -1,0 +1,87 @@
+{
+  "_id": "mM4DawMgdn2K3cJZ",
+  "name": "Rimor Outlander",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>The wilds of Rimor were your home, a place of danger and untamed beauty far from the reach of the planet’s sprawling cities. As an Outlander, you learned to read the land and the stars, to hunt and survive against both beast and the harsh elements. Now, the call of adventure leads you from the familiar trails to the heart of Rubi-Ka's deepest mysteries and the secrets they hold.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"The wilds of Rubi-Ka were both my home and my challenge.\""
+      },
+      {
+        "description": "\"I found solace and strength in the solitude of nature.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 500,
+    "origin_skills": ["Track", "Survive", "Blend", "Mend", "Navigate", "Scavenge"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 3,
+        "name": "Lone Survivor",
+        "description": "Sole survivor of a catastrophic event, perhaps a natural disaster or a brutal attack. Left alone in the wilds, you developed exceptional survival skills but long for a deeper purpose."
+      },
+      {
+        "low": 4,
+        "high": 6,
+        "name": "Nature's Child",
+        "description": "Raised in the wilderness, isolated from society. You grew up understanding nature's language, adept in hunting and foraging, but now you seek to explore the world of humans."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Exiled Warrior",
+        "description": "Banished from your community following a controversial dispute. With your innate survival and combat skills, you now traverse the lands as a lone but formidable wanderer."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Witness to Wonder",
+        "description": "Your life was forever altered after witnessing a rare, perhaps alien event in the wild. This experience has ignited an insatiable curiosity to explore and understand the unknown."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Guardian of Secrets",
+        "description": "During your solitary travels, you stumbled upon ancient secrets or sacred lore. Bound to protect this knowledge, you journey to find its true meaning and keep it safe from the wrong hands."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "rimor_outlander",
+    "type": {
+      "value": "rimor_outlander",
+      "subtype": "rimor_outlander",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!mM4DawMgdn2K3cJZ"
+}

@@ -5,10 +5,96 @@
   "img": "icons/environment/people/commoner.webp",
   "system": {
     "description": {
-      "value": "<p>Engineered for labor, the Atrox are towering and muscular. They are capable of great endurance and strength but lack the affinity for the subtle arts.</p><p><strong><em>Primary Genome Ability: Mongo Blood:</em></strong> Crash your own NCU to gain +1 TL on your next Strength Test.</p><p><strong><em>Passive Genome Ability: Engineered Vitality:</em></strong> Gain +10 HP per TL</p><p><strong><em>Attribute Modifiers:</em></strong> +1 Strength +1 Stamina and both attributes are naturally capped at 6, however Intelligence and Sense are naturally capped at 3</p>",
+      "value": "<p>Engineered for labor, the Atrox are towering and muscular. They are capable of great endurance and strength but lack the affinity for the subtle arts.</p><p><strong><em>Primary Genome Trait: Mongo Blood: </em></strong>+10 HP and +5 Item Slots.</p>",
       "chat": "",
       "unidentified": ""
     },
+    "skills": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Brute",
+        "description": "You were born angry.",
+        "str": 6,
+        "sta": 5,
+        "agi": 2,
+        "int": 2,
+        "sen": 2,
+        "psy": 3
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Survivor",
+        "description": "You are worth more than the company that produced you.",
+        "str": 5,
+        "sta": 5,
+        "agi": 3,
+        "int": 2,
+        "sen": 4,
+        "psy": 1
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Menacing Presence",
+        "description": "Day to day life was easy, you never had to cook a meal in your life, you just took it.",
+        "str": 6,
+        "sta": 6,
+        "agi": 2,
+        "int": 1,
+        "sen": 1,
+        "psy": 4
+      },
+      {
+        "low": 7,
+        "high": 7,
+        "name": "Immovable Object",
+        "description": "They never could fire you, they couldn’t if they tried.",
+        "str": 7,
+        "sta": 6,
+        "agi": 2,
+        "int": 1,
+        "sen": 2,
+        "psy": 2
+      },
+      {
+        "low": 8,
+        "high": 9,
+        "name": "Labor Powerhouse",
+        "description": "You were bred to work, so might as well be the best at it.",
+        "str": 6,
+        "sta": 6,
+        "agi": 5,
+        "int": 1,
+        "sen": 1,
+        "psy": 1
+      },
+      {
+        "low": 10,
+        "high": 11,
+        "name": "\"Defect\"",
+        "description": "You failed at the one thing you were made for, but you're still here.",
+        "str": 4,
+        "sta": 5,
+        "agi": 1,
+        "int": 5,
+        "sen": 1,
+        "psy": 4
+      },
+      {
+        "low": 12,
+        "high": 12,
+        "name": "Wizened",
+        "description": "You outlasted the job, what next?",
+        "str": 4,
+        "sta": 4,
+        "agi": 2,
+        "int": 2,
+        "sen": 3,
+        "psy": 5
+      }
+    ],
     "source": {
       "custom": "",
       "book": "GDoc",

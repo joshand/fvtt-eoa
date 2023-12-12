@@ -11,6 +11,11 @@
       "chat": "",
       "unidentified": ""
     },
+    "flashback_ability": "Unknown",
+    "flashback_trigger": "Unknown",
+    "flashback_effect": "Unknown",
+    "skill_list": [],
+    "signature_traits": [],
     "skills": [
         {
           "name": "Hand-to-Hand Combat",

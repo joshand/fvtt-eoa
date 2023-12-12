@@ -1,0 +1,93 @@
+{
+  "_id": "YRtEzqHkjZCXMH80",
+  "name": "Syndicate Family Member",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>Born into the clandestine world of Rubi-Ka's Syndicate families, you navigated a life woven into the fabric of the planet's criminal underbelly. Within the Syndicate's secretive circles, your days were shrouded in a ballet of covert dealings, shadow economies, and power plays in hushed tones. From the neon-drenched backstreets to the opulent hideaways where fortunes and fates were bartered, your existence was a tapestry of intrigue and survival, painted with the darker hues of Rubi-Ka's hidden realms. Now, breaking from the shadows of your family's legacy, you step into a broader world, carrying the skills and secrets of a life less ordinary.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"I addressed a challenge by breaking the rules.\""
+      },
+      {
+        "description": "\"A lesson from my Family was my guiding principle.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 750,
+    "origin_skills": ["Extort", "Steal", "Smuggle", "Outwit", "Pressure", "Elude"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Ruthless Extortionist",
+        "description": "Specializing in the art of extortion, you became adept at coercing businesses and rivals into yielding to the Syndicate's demands."
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Money Launderer",
+        "description": "As the financial wizard, you expertly cleaned the Syndicate's dirty money, keeping the lifeblood of crime flowing undetected."
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Shadow Smuggler",
+        "description": "You were the master of moving illicit goods, adept at smuggling contraband across borders and through checkpoints."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Cunning Schemer",
+        "description": "Your talent lay in crafting intricate schemes, ensuring the Syndicate always stayed one step ahead of rivals and law enforcement."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Family Thug",
+        "description": "Using a blend of threats and persuasion, you ensured compliance and loyalty, both within the Syndicate and in its shadowy dealings."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Clandestine Operator",
+        "description": "You specialized in the covert side of the family business, handling operations that required a delicate touch and absolute secrecy."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "syndicate_family_member",
+    "type": {
+      "value": "syndicate_family_member",
+      "subtype": "syndicate_family_member",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!YRtEzqHkjZCXMH80"
+}

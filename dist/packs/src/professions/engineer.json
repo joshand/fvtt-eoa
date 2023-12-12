@@ -11,6 +11,61 @@
       "chat": "",
       "unidentified": ""
     },
+    "flashback_ability": "Prepared Gadget",
+    "flashback_trigger": "When an earlier invention or repair could be beneficial now.",
+    "flashback_effect": "Roll to reveal you had previously crafted or repaired a device that is pivotal in the current scenario.",
+    "skill_list": [
+      {
+        "name": "Mechanical Engineering",
+        "description": "Knowledge and skill in designing, building, and maintaining mechanical systems and constructs."
+      },
+      {
+        "name": "Electrical Engineering",
+        "description": "Expertise in working with electrical systems, circuitry, and power sources."
+      },
+      {
+        "name": "Nano Programming",
+        "description": "Skills in developing and modifying nanoprograms for various applications."
+      },
+      {
+        "name": "Computer Programming",
+        "description": "Skills in writing, testing, and maintaining software programs."
+      },
+      {
+        "name": "Weapon Smithing",
+        "description": "Ability to design, create, and modify a wide range of weaponry."
+      },
+      {
+        "name": "Technical Repair",
+        "description": "Competence in diagnosing and fixing technological equipment and machinery."
+      },
+      {
+        "name": "Quantum Force Field Technology",
+        "description": "Knowledge of advanced shield technologies and their applications for defense and utility."
+      },
+      {
+        "name": "Robotics",
+        "description": "Ability to communicate effectively with AI and machine interfaces, enhancing interactions with automated systems."
+      },
+      {
+        "name": "Matter Creation",
+        "description": "Using nanotechnology for constructing androids and other complex machinery."
+      },
+      {
+        "name": "Matter Metamorphosis",
+        "description": "Ability to manipulate physical matter at the nano level, useful for creating shields and enhancing equipment."
+      }
+    ],
+    "signature_traits": [
+      {
+        "name": "Robotics (RegiGigas Slow Start)",
+        "description": "<p>Specialization in creating and controlling a personal droid. As the Engineer advances in level, the robot will gain further customization and options.</p><p>Nanobots form a shell of a droid. When you create a droid choose the model which determines the droid’s abilities</p><p><strong>Slayer:</strong><br>Cost: 20 NP<br>HP: 30+20 per success<br>Damage 7+1 Success<br>Special: Taunt Draws enemy attention, reducing damage to the Engineer.</p><p><strong>Mechdog:</strong><br>Cost: 20 NP<br>HP: 20+10 per success<br>Damage 10+2 Success<br>Special: Burst, Spend 10 NP to deliver a powerful attack, increasing the damage by an additional tier.</p><p><strong>Buckethead:</strong><br>Cost: 20 NP<br>HP: 40+10 per success<br>Damage 4+1 Success<br>Special: Shield Projector, Can redirect a portion of damage from the Engineer or allies to itself.</p><p><strong>Droid Stats:</strong><br>AR = your Engineering+Rigging rank<br>DR = Your Engineering + Shield-tech rank<br>NR = Your Engineering +Gadgeteering Rank</p><p><strong>Commanding the Droid in Combat:</strong><br>Issue commands for Attack, Defend, or Special Abilities.<br>Effective within a specific range of the Engineer.<br>Abilities may have cooldowns.</p><p>Neural Synchronization: Engineers require a direct neural link to control their robots. This link allows for precise commands and real-time adjustments, but due to its complexity, an Engineer can maintain synchronization with only one robot at a time.</p>"
+      },
+      {
+        "name": "Rigging",
+        "description": "<p>Rigging is an advanced form of technological control that Engineers use to connect their consciousness directly with their mechanical creations. Through their specialized NCU, Engineers can 'jump in' to their drones or robots, experiencing the world through their sensors and exerting precise control over their actions. This direct link allows for intricate maneuvers and strategic deployment in various scenarios.</p><p><strong>Rigging Actions: (Costs 10 NP)</strong></p><ul><li><strong>Jump In/Out: </strong>Switch control between the Engineer and a machine.</li><li><strong>Command: </strong>Issue a basic command (e.g., attack, move, defend). Using your Intelligence + Piloting or Heavy Weapons skill</li><li><strong>Reconfigure: </strong>Change rigged machine’s operational mode (e.g., stealth, aggressive).</li></ul><p>Dice pools are based on the Engineer's relevant skill (e.g., Pilot, Heavy Weapons) but using the Engineer’s intelligence as the main attribute.<br>However, rigging is not without its risks, as it requires an Engineer to divide their attention between their physical body and the controlled machine, making them vulnerable to both physical and cyber threats<br><strong>Risks/Downsides:</strong><ul><li><strong>Noise Interference: </strong>Risk of losing control or reduced effectiveness in areas with high electronic noise. On a Glitch, your sensors get overwhelmed by interference for a round.</li><li><strong>System Overload: </strong>Continuously operating or switching from machine to machine rapidly can lead to system overload. After three consecutive actions without rest, roll 1d6; a roll of 1 or 2 results in a temporary system shutdown.</li><li><strong>Vulnerability: </strong>While 'jumped in', the Engineer's physical body is more vulnerable to attacks.</li></ul></p>"
+      }
+    ],
     "skills": [
         {
           "name": "Offensive Engineering",

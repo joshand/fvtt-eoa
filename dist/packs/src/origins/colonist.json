@@ -1,0 +1,87 @@
+{
+  "_id": "lp3x8cOUbo3IPXjW",
+  "name": "Colonist",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>Amidst the dust and dreams of Rubi-Ka's frontier, you built a life from nothing, a Colonist carving out hope in a land torn by corporate greed and clan rebellion. Your days were spent taming the wilds and defending your claim. Yet, a restlessness stirs within you, a longing to explore beyond the horizon, to unravel the planet’s hidden histories and your own destiny within them.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"I thrived on carving out a new life in uncharted territories.\""
+      },
+      {
+        "description": "\"I believed in the strength of unity and cooperation.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 1000,
+    "origin_skills": ["Work", "Trade", "Build", "Fix", "Perform", "Know"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 3,
+        "name": "Displaced Survivor",
+        "description": "Your home was razed in a raid. Uprooted and scarred, you learned to survive and adapt in unfamiliar lands, picking up a variety of skills."
+      },
+      {
+        "low": 4,
+        "high": 6,
+        "name": "Pioneering Spirit",
+        "description": "Part of the first settlers on a new territory, you helped build a community from the ground up, learning the essentials of construction, agriculture, and diplomacy."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Lost Family Legacy",
+        "description": "The fall of your family's business propelled you into a nomadic life. Seeking to reclaim your legacy, you've honed diverse skills to survive the corporate world."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Cultural Outcast",
+        "description": "Exiled over cultural misunderstandings, you've traversed various lands, learning to adapt, cook with limited resources, and repair what you can to survive."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Heroic Rescuer",
+        "description": "You emerged as a hero when disaster struck your colony, but the incident left its mark. Driven by your experiences, you've developed a broad skill set to protect others."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "colonist",
+    "type": {
+      "value": "colonist",
+      "subtype": "colonist",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!lp3x8cOUbo3IPXjW"
+}
