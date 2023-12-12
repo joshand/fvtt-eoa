@@ -5,7 +5,8 @@
   "img": "icons/environment/people/commoner.webp",
   "system": {
     "description": {
-      "value": "<p>Engineered for labor, the Atrox are towering and muscular. They are capable of great endurance and strength but lack the affinity for the subtle arts.</p><p><strong><em>Primary Genome Trait: Mongo Blood: </em></strong>+10 HP and +5 Item Slots.</p>",
+      "old_value": "<p>Engineered for labor, the Atrox are towering and muscular. They are capable of great endurance and strength but lack the affinity for the subtle arts.</p><p><strong><em>Primary Genome Trait: Mongo Blood: </em></strong>+10 HP and +5 Item Slots.</p>",
+      "value": "<p>Engineered for labor, the Atrox are towering and muscular. They are capable of great endurance and strength but lack the affinity for the subtle arts.</p>",
       "chat": "",
       "unidentified": ""
     },
