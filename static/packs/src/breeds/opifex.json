@@ -5,10 +5,96 @@
   "img": "icons/environment/people/commoner.webp",
   "system": {
     "description": {
-      "value": "<p>Agile and dexterous, the Opifex are thin and wiry. They are the masters of tasks requiring a delicate touch or a swift escape. Originally engineered to be spies and assassins, which has influenced public perception of them.</p><p><strong><em>Active Genome Trait: Limber:</em></strong> Crash your own NCU to gain +1 per TL on the next Agility Test you make.</p><p><strong><em>Passive Genome Trait:</em></strong> Gain +2 Initiative per TL.</p><p><strong><em>Attribute Modifiers:</em></strong> +1 Agility, +1 Sense and are naturally capped at 6, however Strength and Psyche are naturally capped at 3</p>",
+      "value": "<p>Agile and dexterous, the Opifex are thin and wiry. They are the masters of tasks requiring a delicate touch or a swift escape. Originally engineered to be spies and assassins, which has influenced public perception of them.</p><p><strong><em>Primary Genome Trait: Limber: </em></strong>+2 Initiative Skills and Movement</p>",
       "chat": "",
       "unidentified": ""
     },
+    "skills": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Agile Thinker",
+        "description": "Thinking fast on your feet was always literal for you.",
+        "str": 1,
+        "sta": 1,
+        "agi": 4,
+        "int": 5,
+        "sen": 5,
+        "psy": 4
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Crafty Artisan",
+        "description": "Quick application of creativity was second nature to you.",
+        "str": 1,
+        "sta": 3,
+        "agi": 5,
+        "int": 5,
+        "sen": 5,
+        "psy": 1
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Survival Instincts",
+        "description": "You needed to survive, no matter what.",
+        "str": 4,
+        "sta": 3,
+        "agi": 6,
+        "int": 1,
+        "sen": 5,
+        "psy": 1
+      },
+      {
+        "low": 7,
+        "high": 7,
+        "name": "Street Acrobat",
+        "description": "Using natural talents to make it day by day in the streets.",
+        "str": 2,
+        "sta": 2,
+        "agi": 6,
+        "int": 2,
+        "sen": 6,
+        "psy": 2
+      },
+      {
+        "low": 8,
+        "high": 9,
+        "name": "Secretive",
+        "description": "Your secrets kept those that mattered safe, who cares about the consequences now?",
+        "str": 1,
+        "sta": 2,
+        "agi": 5,
+        "int": 3,
+        "sen": 6,
+        "psy": 3
+      },
+      {
+        "low": 10,
+        "high": 11,
+        "name": "Trackster",
+        "description": "You were always a little more fit than most of your kin.",
+        "str": 4,
+        "sta": 4,
+        "agi": 6,
+        "int": 1,
+        "sen": 4,
+        "psy": 1
+      },
+      {
+        "low": 12,
+        "high": 12,
+        "name": "Sensory",
+        "description": "You were a good listener to those around you.",
+        "str": 1,
+        "sta": 2,
+        "agi": 4,
+        "int": 2,
+        "sen": 6,
+        "psy": 5
+      }
+    ],
     "source": {
       "custom": "",
       "book": "GDoc",

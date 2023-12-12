@@ -1,0 +1,87 @@
+{
+  "_id": "YBrIRc3sLwf659Z5",
+  "name": "A.R.K Society",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>The Advisors of Rubi-Ka was initially a project to found a society built on diplomacy. Whether a practicing member today, or not, the training received while participating in the ARK program is still sought after by many factions looking for a diplomat or negotiator. </p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"I diffused a potentially violent situation.\""
+      },
+      {
+        "description": "\"I brought out the best in somebody.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 2000,
+    "origin_skills": ["Mediate", "Educate", "Advocate", "Administer", "Lead", "Connect"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 3,
+        "name": "Peacekeeper's Vow",
+        "description": "Witnessing the devastating effects of conflict, you've dedicated your life to peacekeeping. Your journey is one of mediation, striving to prevent the horrors you once saw."
+      },
+      {
+        "low": 4,
+        "high": 6,
+        "name": "Diplomat Turned Adventurer",
+        "description": "A diplomatic mission that ended in betrayal and loss led you to question your beliefs. Now, you seek a new path, using your diplomatic skills in a quest for truth and justice."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Fallen from Grace",
+        "description": "Once a respected ARK member, a scandal — perhaps unjustly — tarnished your reputation. Determined to clear your name, you embark on a journey to uncover the truth."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Seeker of Harmony",
+        "description": "Fascinated by the cultural mosaic of Rubi-Ka, you venture forth to understand the diverse peoples and bring harmony to a world rife with division and strife."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Whistleblower on the Run",
+        "description": "After exposing deep corruption within ARK, you've been forced to flee. Pursued and isolated, you seek allies in your fight against the corruption you once served."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "ark_society",
+    "type": {
+      "value": "ark_society",
+      "subtype": "ark_society",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!YBrIRc3sLwf659Z5"
+}

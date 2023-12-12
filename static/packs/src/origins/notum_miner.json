@@ -1,0 +1,93 @@
+{
+  "_id": "lUvAkGnR2A3y53Ze",
+  "name": "Notum Miner",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>In the depths of Rubi-Ka’s Notum mines, amid dust and danger, you forged your resolve. Notum, the lifeblood of the planet’s economy and source of endless conflict, became your ticket out of this endless toil. Beyond the confines of the mines and the machinations of the mining corporations, you now seek to explore the planet’s vast landscapes, driven by a desire to understand the true power and purpose of this enigmatic resource.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"I found value and opportunity in the toughest conditions.\""
+      },
+      {
+        "description": "\"I did not relent in pursuit of something valuable.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 1000,
+    "origin_skills": ["Discover", "Extract", "Work", "Break", "Assess", "Move"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Lone Prospector",
+        "description": "Braving the frontiers of Rubi-Ka alone, you've honed your ability to explore uncharted territories, extract Notum, and survive in harsh conditions."
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Corporate Contractor",
+        "description": "In the corporate-driven Notum industry, you've learned to navigate complex machinery, analyze geological data, and innovate in extraction methods."
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Rebel Saboteur",
+        "description": "As a disruptor of corporate mining operations, you're adept in guerrilla tactics, surviving in hostile environments, and repairing under pressure."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Notum Research Assistant",
+        "description": "Collaborating with scientists, you've developed a keen eye for analyzing Notum and innovating in its application while honing basic extraction skills."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Industrial Accident Survivor",
+        "description": "Your survival from a mining disaster has taught you the utmost importance of quick thinking, repair skills, and the resilience to survive against all odds."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Notum Rush Veteran",
+        "description": "Weathered by the competitive Notum Rush, you've mastered the art of extracting efficiently, surviving in cutthroat conditions, and repairing on the fly."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "notum_miner",
+    "type": {
+      "value": "notum_miner",
+      "subtype": "notum_miner",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!lUvAkGnR2A3y53Ze"
+}

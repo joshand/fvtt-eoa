@@ -5,12 +5,72 @@
   "img": "systems/eoa/icons/keeper.png",
   "system": {
     "description": {
-      "overview": "<p>Keepers are guardians and warriors who draw from ancient lore to empower themselves and their allies. Through their deep connection to lost wisdom, they can invoke powerful auras that bolster their comrades and confound their foes. With their sacred weapons, they stand as beacons on the battlefield, directing the flow of combat and sustaining their allies through the darkest fights.</p><p><strong>Unique Mechanic: Aura Weaving & Focus</strong></p><p>Keepers can switch between different auras to adapt to various combat scenarios. These auras can provide offensive, defensive, or support benefits, and the Keeper's mastery allows them to weave these effects into their swordplay, creating a harmonious balance between attack and aid.</p><br><p><strong>Playing a Keeper:</strong></p><p>Keepers fit players who want to be at the heart of the group, protecting and enhancing their allies. They require a player who can make quick decisions about which aura to employ and when to invest in focusing on a particular aura to maximize its benefits. In narrative play, Keepers are storytellers and advisors, using their deep lore to guide their party through cryptic mysteries and ancient dangers.</p>",
+      "old_overview": "<p>Keepers are guardians and warriors who draw from ancient lore to empower themselves and their allies. Through their deep connection to lost wisdom, they can invoke powerful auras that bolster their comrades and confound their foes. With their sacred weapons, they stand as beacons on the battlefield, directing the flow of combat and sustaining their allies through the darkest fights.</p><p><strong>Unique Mechanic: Aura Weaving & Focus</strong></p><p>Keepers can switch between different auras to adapt to various combat scenarios. These auras can provide offensive, defensive, or support benefits, and the Keeper's mastery allows them to weave these effects into their swordplay, creating a harmonious balance between attack and aid.</p><br><p><strong>Playing a Keeper:</strong></p><p>Keepers fit players who want to be at the heart of the group, protecting and enhancing their allies. They require a player who can make quick decisions about which aura to employ and when to invest in focusing on a particular aura to maximize its benefits. In narrative play, Keepers are storytellers and advisors, using their deep lore to guide their party through cryptic mysteries and ancient dangers.</p>",
+      "overview": "<p>In the world's tapestry, the Keepers emerge as stoic guardians of equilibrium. They are descendants of an ancient order, blending martial prowess with nanotechnology. In times of turmoil, Keepers are the bulwark against chaos, embodying the principles of courage, wisdom, and balance.</p><p><strong>The Art of the Aura</strong><br>Keepers harness the art of aura manipulation. Through their combat rhythm, they weave protective, healing, or strengthening auras, each resonating with the Keeper's intent and actions in battle. These auras are but manifestations of the Keeper's adrenaline and resolve.</p><p><strong>Martial Training, The Keeper's Dance</strong><br>More than just wielding a blade, a Keeper's skill in melee combat is a sacred dance. Each strike, parry, or maneuver is an expression of their deep connection to the flow of combat. This harmony enables them to channel energies, shifting auras seamlessly to adapt to the ever-changing tides of battle.</p><p><strong>The Keeper's Creed</strong><br>Keepers are more than just soldiers; they are symbols of hope and stability. Trained in the use of nanotechnology-enhanced equipment, they uphold a creed of protection, innovation, and balance, ensuring that the power of Notum is used for the greater good.</p><p><strong>Role in the World</strong><br>In a world where the line between technology and daily life is blurred, Keepers serve as guardians against the misuse of nanotechnology. Their expertise makes them crucial in conflicts where control over Notum resources is contested, balancing the scales with their strategic and combative prowess. They often serve as mediators in disputes, using their balanced perspective to guide others towards peaceful resolutions. In battle, they are both shield and sword, defending the innocent and leading charges against encroaching darkness.</p>",
       "signature_ability": "Aura Weaving",
       "signature_description": "<p>Dynamic Aura Shifting: The Keeper can activate and switch between different nanobot auras as a part of their action. Each aura, crafted from nanobots, provides unique buffs or debuffs.</p><br><p>Aura Combining: Similar to the Bard's song twisting, the Keeper can overlap auras for a brief period, allowing a combination of effects. This requires precise timing and resource management.</p><br><p>Aura Resonance: The effectiveness of each aura depends on the Keeper's skill level and the situation, with potential for enhanced effects under specific conditions.</p><br><p><strong>Aegis Aura:</strong> The Keeper can invoke different auras through empowering their nanocloud, each with unique effects.</p><p><ul><li><strong>Battle Aura:</strong> Boosts offensive capabilities for the Keeper and nearby allies.</li><li><strong>Defender's Aura:</strong> Enhances defensive stats, mitigating damage for the team.</li><li><strong>Aura of Revival:</strong> Provides utility buffs like increased healing or debuff resistance.</li><li><strong>Harmony Aura:</strong> Balances offensive and defensive benefits, providing moderate boosts in both areas.</li></ul></p><p><strong>Twisting Auras:</strong> the Keeper can dynamically switch between auras, combining their effects for a short duration.</p><p><strong>Harmonization:</strong> The effectiveness of the auras can be enhanced by the Keeper's skill and the situation on the battlefield.</p><p><strong>Maintaining Auras:</strong> Using the Focus mechanic, Keepers could maintain one or more auras by allocating a portion of their dice roll successes to sustain the effects from successful Skill Tests they make with their action. The Aura’s power is equal to the dice invested.</p>",
       "chat": "",
       "unidentified": ""
     },
+    "flashback_ability": "Tactical Guardian",
+    "flashback_trigger": "When a critical defense or strategic insight could have been preemptively positioned.",
+    "flashback_effect": "Roll to reveal that you had previously established a strategic defense or tactical plan that activates in the current situation, such as setting up a defensive perimeter, arranging for backup, or implementing a countermeasure.",
+    "skill_list": [
+      {
+        "name": "Tactical Planning",
+        "description": "Mastery in developing strategic plans and approaches for various scenarios."
+      },
+      {
+        "name": "Vigilance",
+        "description": "Keen awareness and ability to detect hidden dangers or important details"
+      },
+      {
+        "name": "Leadership",
+        "description": "Skill in guiding, motivating, and leading others effectively."
+      },
+      {
+        "name": "Diplomacy",
+        "description": "Proficiency in peaceful negotiation and conflict resolution."
+      },
+      {
+        "name": "Empathy",
+        "description": "Ability to understand and share the feelings of others, crucial for effective communication and team cohesion."
+      },
+      {
+        "name": "First Aid",
+        "description": "Basic medical skills for providing immediate care and stabilizing injuries."
+      },
+      {
+        "name": "Investigation",
+        "description": "Aptitude for collecting and analyzing information, crucial for uncovering truths."
+      },
+      {
+        "name": "Powerlifter",
+        "description": "Honed Physical might and skill in handling heavy equipment and objects."
+      },
+      {
+        "name": "Nano Skill Sensory Improvement",
+        "description": "Mastery in using nano skills to enhance sensory perceptions, aiding in detection and awareness."
+      },
+      {
+        "name": "Nano Skill Bio-Metamorphosis",
+        "description": "Ability to use nano skills to alter biological functions, either for healing, adaptation, or enhancement."
+      }
+    ],
+    "signature_traits": [
+      {
+        "name": "Harmony of Battle",
+        "description": "<p>Central to the Keeper's combat style is the Harmony of Battle. Their expertise allows them to channel Notum when their adrenaline is running high, typically in combat situations, activating different auras with each action.<br>After making an action in combat or similarly intense situations, you can spend 5 NP to activate an aura. An aura occupies 2 NCU to run.<ul><li><strong>Bladedance: </strong>Boosts offensive capabilities for the Keeper and nearby allies. Targets deal AR+1 per success damage on their attacks.</li><li><strong>Sentinel Ward: </strong>Targets receive DR + each success adds 5 points to a temporary shield that absorbs damage.</li><li><strong>Aura of Revival: </strong>Creates a field that restores the health of those in the aura. Under this aura, characters receive NR+2 per success healing each round.</li><li><strong>Tone of Bliss: </strong>Grants nanopoint regeneration. Allies gain NP+2 per success nanopoint healing each round.</li></ul></p><p>After activating an aura with an action in combat, the Keeper must make another successful action  before being able to switch auras again.</p><p><strong>Maintaining Auras: </strong>Using the Focus mechanic, Keepers could maintain one or more auras by allocating a portion of their dice roll successes to sustain the effects from successful Skill Tests they make with their action. The Aura’s power is equal to the dice invested.</p>"
+      },
+      {
+        "name": "Echoes of Notum",
+        "description": "<p>When Keepers are in a state of calm, their aura can interact with the ambient memories embedded in areas rich with Notum. This ability allows them to analyze and visualize past events, almost like watching echoes of history. It’s as if the Notum-infused environment retains imprints of significant occurrences, which Keepers can access and interpret.<br>To implement the \"Echoes of Notum\" system effectively, here's a simple list of actions and rules:</p><p><strong>Echo Activation: </strong>The Keeper can spend 5 NP and make a roll based on their Nano Rating or Perception skill.</p><p><strong>Interpreting Echoes: </strong>Upon activation, the Keeper gets vague impressions or fragments of past events. The clarity and detail depend on the success level of their roll and how recent the event being perceived.While attuned to an echo, a Keeper player can perform the following actions:<ul><li><strong>Visualize: </strong>Attempt to see a visual representation of past events.</li><li><strong>Listen: </strong>Try to hear conversations or sounds from the past.</li><li><strong>Analyze: </strong>Use knowledge or skills to interpret the context of the echo.</li><li><strong>Trace: </strong>Follow the echo to its source or strongest point.</li><li><strong>Record: </strong>Make a record of the echo for further analysis or sharing with the team.</li><li><strong>Disengage: </strong>Safely exit the echo to avoid mental strain or misinformation.</li></ul><br>You can attempt the above actions a number of times equal to the success of the roll. Once you have tapped an area you cannot examine the same area again until you give time for the echoes to reform, usually a week later.</p>"
+      },
+      {
+        "name": "Notum Sentinel Protocol (Downtime)",
+        "description": "<p>During downtime, a keeper can choose to set up a passive surveillance network using Notum-infused nanosensors. The Keepers can deploy these sensors in areas prone to criminal activities or where suspicious activities have been reported. These sensors discreetly monitor for unusual nanoprogram activities or Notum fluctuations indicative of criminal acts, alerting the Keepers to potential issues. This proactive approach allows them to assist local authorities, prevent crimes, and maintain peace. Keepers have Advantage on Sense rolls made in areas under their surveillance.</p>"
+      }
+    ],
     "skills": [
         {
           "name": "Combat Mastery",

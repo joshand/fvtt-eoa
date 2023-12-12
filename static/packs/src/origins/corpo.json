@@ -1,0 +1,93 @@
+{
+  "_id": "uhRUxSWre9qeUg9V",
+  "name": "Corpo",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your world was one of sleek glass towers and corporate intrigue, where megacorporations are small drops in the bucket compared to Omni-Tek dictate the rhythm of life on Rubi-Ka. As a Corpo, you navigated this complex maze, wielding influence and information as weapons. But a greater calling has emerged, pushing you to seek truths that lie hidden beyond the boardrooms and the relentless corporate warfare.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"My loyalty to my corporation shaped my decisions.\""
+      },
+      {
+        "description": "\"I navigated the treacherous waters of corporate politics with finesse.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 5000,
+    "origin_skills": ["Negotiate", "Analyze", "Network", "Influence", "Strategize", "Convince"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Corporate Negotiator",
+        "description": "Expert in high-stakes corporate negotiations, you've learned the art of closing deals and forging alliances."
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Data Analyst",
+        "description": "Skilled in interpreting complex data, you provide valuable insights that guide corporate strategies and decisions."
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Network Specialist",
+        "description": "Building a broad network of contacts, you're a master at leveraging relationships for information and opportunities."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Marketing Guru",
+        "description": "With your finger on the pulse of market trends, you've mastered the art of influencing public opinion and consumer behavior."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Corporate Strategist",
+        "description": "Adept at formulating and executing business strategies, you play a key role in guiding your corporation's direction and success."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Adaptive Executive",
+        "description": "Thriving in the fast-paced corporate world, you've learned to adapt quickly to changing situations and seize opportunities."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "corpo",
+    "type": {
+      "value": "corpo",
+      "subtype": "corpo",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!uhRUxSWre9qeUg9V"
+}

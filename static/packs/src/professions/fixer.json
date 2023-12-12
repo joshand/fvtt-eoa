@@ -11,6 +11,65 @@
       "chat": "",
       "unidentified": ""
     },
+    "flashback_ability": "Advance Setup",
+    "flashback_trigger": "When earlier hacking or technical setup could have solved a current obstacle.",
+    "flashback_effect": "Roll to disclose that you had already hacked a system or set up equipment to aid in your current goal.",
+    "skill_list": [
+      {
+        "name": "Hacking",
+        "description": "Advanced skills in breaching and manipulating digital systems"
+      },
+      {
+        "name": "Grid Navigation",
+        "description": "Proficiency in navigating the Grid, leveraging the digital landscape of Rubi-Ka for strategic advantage."
+      },
+      {
+        "name": "Breaking & Entering",
+        "description": "Expertise in bypassing security systems and physically infiltrating secured areas."
+      },
+      {
+        "name": "Computer Literacy",
+        "description": "Skills in using and understanding advanced computer systems and software"
+      },
+      {
+        "name": "Concealment",
+        "description": "Ability to move unnoticed"
+      },
+      {
+        "name": "Skullduggery",
+        "description": "Proficiency in underhanded tactics, deception, and trickery"
+      },
+      {
+        "name": "Matter Creation",
+        "description": "Using nanotechnology to manipulate matter for various purposes, including healing and object creation."
+      },
+      {
+        "name": "Data Analysis",
+        "description": "Capability to analyze and interpret complex datasets for valuable insights."
+      },
+      {
+        "name": "Parkour",
+        "description": "Physical agility and skill in navigating urban environments quickly and efficiently."
+      },
+      {
+        "name": "Time & Space",
+        "description": "Mastery of nanotechnology related to teleportation, portals and speed manipulation."
+      }
+    ],
+    "signature_traits": [
+      {
+        "name": "Grid Armor",
+        "description": "<p><strong>Activation: </strong>2 NCU slots.<br>The Fixer's body is enveloped in shimmering digital code, a visible sign of their consciousness partially phasing into gridspace. This armor not only hardens their physical form against attacks but also blends elements of the digital world into their reality, enhancing their defensive capabilities. With each moment spent in Grid Armor, the fixer’s physical form starts to flicker with static, their voice carries a distorted echo.</p><p>But as the fixer overextends their stay in Grid Armor, they begin to lose touch with reality. Their form becomes translucent, their movements erratic, as if they are in a state of buffering. This is a process called Fading. When the digital world takes over them, they can struggle to differentiate between the physical and virtual world, causing disorientation and confusion.<br><strong>Effect: </strong>You have a Power Die, set a d6 down starting at 1. Each time you access Grid Armor, tick the die by 1. While Grid Armor is active you gain the following benefits.<br>+1 to DR and +1 Initiative for each Power Die level.<br>When the die is at 4, you gain the Phasing ability and can move through solid objects but cannot end your turn in the object, at this point you need to succeed on an average Breaking & Entering Test to deactivate it.<br><strong>Risks: </strong>Exceeding Power Die level 6 leads to 'Fading'. Here are the common symptoms of Fading.<ul><li><strong>Disorientation: </strong>The player has trouble distinguishing between the digital and real worlds, leading to penalties on perception checks and reaction times.</li><li><strong>Physical Weakness: </strong>As the player's consciousness is more integrated into the digital realm, their physical body becomes weaker, reducing their strength and stamina stats temporarily.</li><li><strong>Delayed Actions: </strong>The player's actions, both in combat and in interactions, are delayed due to the lag between their digital and physical selves, potentially missing turns or acting last in a round.</li><li><strong>Vulnerability to Hacking: </strong>Being more integrated into the digital realm makes the player more susceptible to hacking attacks, which can lead to information theft or control manipulation by enemies.</li><li><strong>Hallucinations: </strong>The player may start experiencing visual or auditory hallucinations, making it difficult to discern reality, which could lead to misinformed decisions or actions.</li></ul></p>"
+      },
+      {
+        "name": "Fixer Grid",
+        "description": "<p>Fixers have access to a “Decommissioned” beta version of the Grid, Version F.1337 and can navigate this specialized digital network exclusive to their profession.<br><strong>Access: </strong>The Fixer can tap into the F Grid, a digital dimension parallel to the physical world, using their unique NCU genetic coding.<br><strong>Navigation: </strong>Within the F Grid, the Fixer can traverse vast distances in the physical world almost instantaneously, effectively teleporting from one location to another.<br><strong>Utility: </strong>The Grid can be used for rapid travel, escaping danger, or reaching otherwise inaccessible areas. It may also serve as a means to gather information or deploy digital assets.<br><strong>Limitations: </strong>Whenever you exit the F Grid, it puts heavy strain on your body, leaving you with 1 HP. Accessing the F Grid more than once a mission is a risk, and can draw attention to malicious code that still exists in the system</p>"
+      },
+      {
+        "name": "Corporate Infiltrator (Downtime)",
+        "description": "<p>A secret among fixers is the backdoor to Omni-Pol’s supply channels that exists within the grid. During downtime you can bypass sophisticated protocols to access restricted information or resources.<br>You can choose 1 of the following each time during downtime.<ul><li><strong>Advanced Cybersecurity Protocols: </strong>Details on the latest digital defense mechanisms, which could be used to enhance the Fixer's own security or to breach other secure systems.</li><li><strong>Blueprints and Tech Schematics: </strong>Designs for cutting-edge technology, which could be sold, used to create new gadgets, or offered to allies as a bargaining chip.</li><li><strong>Operational Intelligence: </strong>Information on Omni-Pol operations, including troop movements, future plans, or high-value targets, useful for strategic planning in upcoming missions.</li></ul></p><p><strong>Dummy Order Attachment: </strong>To avoid detection, the Fixer must cleverly attach their dummy order to an existing legitimate order. This means the Fixer can specify the category (like information or grid warp weapons and ammo) but cannot control the exact model or type of the weapon or exact piece of information. The outcome depends on the nature of the linked legitimate order, adding an element of unpredictability to the hack. This method greatly reduces the risk of getting caught but introduces a level of uncertainty regarding the specific item to be received.</p>"
+      }
+    ],
     "skills": [
         {
           "name": "Damage Specialization",

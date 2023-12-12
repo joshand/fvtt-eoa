@@ -11,6 +11,57 @@
       "chat": "",
       "unidentified": ""
     },
+    "flashback_ability": "Anticipate and Counter",
+    "flashback_trigger": "When the team is at risk of walking into an ambush or a strategically disadvantageous situation.",
+    "flashback_effect": "The Soldier pauses the current scenario to reveal a flashback where they recognized signs of a potential ambush or trap ahead of time. They then took preventative measures, such as rerouting the team, setting up countermeasures, or neutralizing the threat in advance. The Soldier rolls to determine the success of these preparations in circumventing the ambush and securing a tactical advantage for the current situation.",
+    "skill_list": [
+      {
+        "name": "Tactics",
+        "description": "Skill in assessing situations and devising effective strategies."
+      },
+      {
+        "name": "Survival Training",
+        "description": "Expertise in survival techniques for various environments."
+      },
+      {
+        "name": "Weapon Smith",
+        "description": "Knowledge of a wide range of weaponry and their maintenance."
+      },
+      {
+        "name": "Physical Conditioning",
+        "description": "Maintaining peak physical fitness and combat readiness."
+      },
+      {
+        "name": "Leadership",
+        "description": "Ability to lead and inspire comrades in challenging situations."
+      },
+      {
+        "name": "First Aid",
+        "description": "Basic medical skills for battlefield injuries."
+      },
+      {
+        "name": "Interrogation Techniques",
+        "description": "Skills in extracting information from captives or informants."
+      },
+      {
+        "name": "Demolitions and Trap Disarm",
+        "description": "Knowledge in handling and deploying explosives safely and effectively."
+      },
+      {
+        "name": "Matter Metamorphosis (Nano Skill)",
+        "description": "Using nanotechnology for enhancing physical capabilities."
+      },
+      {
+        "name": "Matter Creation (Nano Skill)",
+        "description": "Skill in utilizing nanotechnology to create shields and barriers."
+      }
+    ],
+    "signature_traits": [
+      {
+        "name": "Offensive Steamroller",
+        "description": "<p><strong>Mechanic: </strong>Employs the Power Die to gain more Initiative after each successful attack.</p><p>Function: As the Soldier successfully lands attacks, their momentum builds, represented by the Power Die incrementing. Each increase in the Power Die level grants additional Initiative, making the Soldier quicker and more aggressive in combat.\nRisk: As the Power Die level increases, the Soldier may become more vulnerable to counter-attacks or lose precision, representing the trade-off between aggression and control.</p>"
+      }
+    ],
     "skills": [
         {
           "name": "Firepower",

@@ -1,0 +1,87 @@
+{
+  "_id": "4HnwNz9JzXllPNln",
+  "name": "Jobe Researcher",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>From the floating spires of Jobe, a beacon of knowledge and exploration, you set forth to uncover the hidden corners of Rubi-Ka. Your journeys took you through ancient ruins and forgotten lands, gathering lost knowledge and artifacts. With each discovery, your thirst for the unknown grows, driving you further into the unexplored, where history and danger intertwine.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"I was drawn to uncover the mysteries of the past.\""
+      },
+      {
+        "description": "\"I questioned my own understanding of the world.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 2000,
+    "origin_skills": ["Research", "Discover", "Interpret", "Analyze", "Innovate", "Communicate"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 3,
+        "name": "Lost Expedition Member",
+        "description": "The sole returnee of a high-risk expedition gone awry, you carry the weight of your lost team's aspirations, along with rare knowledge gleaned from the brink of disaster."
+      },
+      {
+        "low": 4,
+        "high": 6,
+        "name": "Curiosity-Driven Wanderer",
+        "description": "Your insatiable thirst for knowledge led you to leave behind a predictable life, seeking the secrets hidden in the  Shadowlands uncharted territories and ancient ruins."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Accidental Time Traveler",
+        "description": "After a temporal anomaly disrupts your exploration, you find yourself in an unfamiliar time, seeking both a way back and understanding of your unintended journey."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Star-Crossed Scientist",
+        "description": "Betrayed and robbed of your life's work, you now traverse Rubi-Ka, driven by a quest to reclaim your stolen research and expose the truth behind the treachery."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Alien Artifact Bearer",
+        "description": "Your discovery of an enigmatic alien artifact has set you on a path fraught with danger and intrigue, as you seek to unlock its mysteries while evading those who covet its power."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "jobe_researcher",
+    "type": {
+      "value": "jobe_researcher",
+      "subtype": "jobe_researcher",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!4HnwNz9JzXllPNln"
+}

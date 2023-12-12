@@ -1,0 +1,93 @@
+{
+  "_id": "Zmx7AmYoRQjCTsjV",
+  "name": "Alien Abductee",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your encounters with the enigmatic Kyr’Ozch, the encroaching alien threat of Rubi-Ka has left an indelible mark on your mind. Abducted and experimented upon, you returned with knowledge and abilities beyond understanding. Haunted by memories and questions, you now seek answers in the shadows of the invaders who took everything from you.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"I addressed challenges with my unique perspective and experience.\""
+      },
+      {
+        "description": "\"I convinced someone to believe my story.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 100,
+    "origin_skills": ["Decipher", "Ignore", "Evolve", "Conceal", "Absorb", "Scheme"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Fragmented Psyche",
+        "description": "Returned to Rubi-Ka with a mind fractured by alien experiments, you possess strange, fragmented knowledge and skills but struggle with identity and trust."
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Chased by Shadows",
+        "description": "Ever since your return, you've been pursued by mysterious entities. Living a life on the run, you seek to understand why you're targeted and what secrets you hold."
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Implanted with Alien Tech",
+        "description": "The aliens left something in you; a device or implant that grants bizarre abilities. It's a gift and a curse, as you endure its pain and search for its purpose."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Bearer of a Cryptic Message",
+        "description": "Haunted by a cryptic alien message, your life's quest is to decode its meaning. The journey is dangerous, filled with enigmatic clues and relentless pursuers."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Lost Time",
+        "description": "You returned years after your abduction to a world that has moved on without you. Disoriented and out of place, you seek to understand what you left behind."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Experimental Subject",
+        "description": "The alien experiments altered you, leaving visible marks and hidden powers. Shunned by society, you're driven to discover the extent of these changes and their purpose."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "alien_abductee",
+    "type": {
+      "value": "alien_abductee",
+      "subtype": "alien_abductee",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!Zmx7AmYoRQjCTsjV"
+}

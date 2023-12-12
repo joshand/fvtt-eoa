@@ -1,0 +1,93 @@
+{
+  "_id": "VtUQeBaoToaafZz5",
+  "name": "Gridrunner",
+  "type": "origin",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>Once a denizen of Rubi-Ka's sprawling data networks, you were a Gridrunner, a phantom in the electronic ether. Your talents for digital espionage and virtual thievery were unparalleled, unveiling secrets that could shift the balance of power. Now, the real world calls, beckoning you to apply your skills to the tangible mysteries and intrigues of Rubi-Ka.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "ideals": [
+      {
+        "description": "\"I sought hidden truths that I am not privy too in data and shadows.\""
+      },
+      {
+        "description": "\"I wielded information as my greatest weapon.\""
+      },
+      {
+        "description": "\"I expressed my heritage, background, or beliefs through my actions.\""
+      }
+    ],
+    "starting_money": 500,
+    "origin_skills": ["Program", "Evade", "Network", "Barter", "Observe", "Strategize"],
+    "life_path": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Virtual Infiltrator",
+        "description": "Skilled in bypassing digital security, you've mastered the art of extracting information from the most secure networks."
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Underworld Liaison",
+        "description": "A crucial link between different factions in the underworld, your strength lies in making deals and forming strategic alliances."
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Data Courier",
+        "description": "Carrying sensitive information across dangerous territories, you've honed your skills in evading both physical and virtual pursuit."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Black Market Trader",
+        "description": "Dealing in illicit goods and information, you've developed a knack for negotiation and staying one step ahead of the law."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Surveillance Expert",
+        "description": "Specializing in observation and information gathering, you're adept at uncovering secrets and staying hidden in plain sight."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Tactical Planner",
+        "description": "Known for your strategic mind, you excel in planning complex operations that require a blend of physical and digital acumen."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "gridrunner",
+    "type": {
+      "value": "gridrunner",
+      "subtype": "gridrunner",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!VtUQeBaoToaafZz5"
+}

@@ -5,10 +5,96 @@
   "img": "icons/environment/people/commoner.webp",
   "system": {
     "description": {
-      "value": "<p>Born of pure notum and often raised in vats, the Nanomages are the wizards of the age, with innate prowess in manipulating nanotechnology. Their bodies are frail, but their minds are mighty.</p><p><strong><em>Active Genome Trait: Expand Mind:</em></strong> Crash your own NCU to gain +1 per TL on your next Intelligence Test.</p><p><strong><em>Passive Genome Trait:</em></strong> Gain +10 NP per TL and NCU cost for nanoprograms is -1.</p><p><strong><em>Attribute Modifiers:</em></strong> +1 Intelligence, +1 Psyche and are naturally capped at 6, however Strength and Stamina are naturally capped at 3</p>",
+      "value": "<p>Born of pure notum and often raised in vats, the Nanomages are the wizards of the age, with innate prowess in manipulating nanotechnology. Their bodies are often frail, but their minds are mighty.</p><p><strong><em>Primary Genome Trait: Expand Mind: </em></strong>+5 NCU and +10 Nanopool Points</p>",
       "chat": "",
       "unidentified": ""
     },
+    "skills": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Inquisitive Mind",
+        "description": "Ever since you could access a search engine, your curiosity knew no bounds.",
+        "str": 1,
+        "sta": 1,
+        "agi": 3,
+        "int": 6,
+        "sen": 5,
+        "psy": 4
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Adept",
+        "description": "You achieved physicality beyond some of your peers.",
+        "str": 3,
+        "sta": 3,
+        "agi": 3,
+        "int": 5,
+        "sen": 2,
+        "psy": 4
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Researcher",
+        "description": "Researcher",
+        "str": 1,
+        "sta": 2,
+        "agi": 2,
+        "int": 4,
+        "sen": 4,
+        "psy": 5
+      },
+      {
+        "low": 7,
+        "high": 7,
+        "name": "Savant",
+        "description": "What you could achieve in your youth could leave others speechless.",
+        "str": 1,
+        "sta": 1,
+        "agi": 2,
+        "int": 6,
+        "sen": 4,
+        "psy": 6
+      },
+      {
+        "low": 8,
+        "high": 9,
+        "name": "Guru",
+        "description": "You tried to inspire others at any moment you could.",
+        "str": 1,
+        "sta": 1,
+        "agi": 3,
+        "int": 5,
+        "sen": 4,
+        "psy": 6
+      },
+      {
+        "low": 10,
+        "high": 11,
+        "name": "Calculated",
+        "description": "You were always economical with your actions.",
+        "str": 1,
+        "sta": 2,
+        "agi": 4,
+        "int": 5,
+        "sen": 4,
+        "psy": 4
+      },
+      {
+        "low": 12,
+        "high": 12,
+        "name": "Psionic Phenomenon",
+        "description": "You were bred with unusual circumstances.",
+        "str": 5,
+        "sta": 1,
+        "agi": 3,
+        "int": 5,
+        "sen": 1,
+        "psy": 5
+      }
+    ],
     "source": {
       "custom": "",
       "book": "GDoc",
