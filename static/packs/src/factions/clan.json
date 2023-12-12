@@ -1,0 +1,87 @@
+{
+  "_id": "tiKfJDS0J3O8aCGS",
+  "name": "Clan",
+  "type": "faction",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>The Clans represent a coalition of groups who follow the Council of Truth in its aim in  opposing Omni-Tek's dominance and bringing about a free Rubi-Ka. They are diverse in their ideologies, ranging from commercial enterprises and ecological activism to militant resistance and chivalrous orders.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "money_mult": 2,
+    "life_path": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Vanguard Mercantile",
+        "description": "As a Vanguard, you are part of a Clan-based commercial enterprise, skilled in trade and negotiation, striving to ensure economic independence from Omni-Tek.",
+        "equipment": "Business attire, portable trading device, secure credit account, trade contracts."
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Unionist",
+        "description": "Committed to advocating for the rights and welfare of workers, you are actively involved in organizing and protecting the interests of laborers across Rubi-Ka.",
+        "equipment": "Work gear, union banners and pamphlets, communication device, documentation tools."
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Sentinel Extremist",
+        "description": "As a member of the Sentinels, you adopt an uncompromising stance against Omni-Tek, engaging in aggressive actions and guerrilla tactics to disrupt corporate operations.",
+        "equipment": "Guerrilla warfare gear, explosives, encrypted communication device, survival kit."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Terra Firma Activist",
+        "description": "Passionately dedicated to protecting Rubi-Ka's environment, you engage in various ecological initiatives, advocating against environmental exploitation.",
+        "equipment": "Environmental monitoring gear, eco-awareness materials, non-violent protest tools, biodegradable supplies."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "New Dawn Advocate",
+        "description": "As a proponent of peaceful coexistence, you work towards diplomatic solutions, promoting dialogue and understanding between conflicting parties.",
+        "equipment": "Peace envoy attire, diplomatic credentials, negotiation aids, symbol of New Dawn."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Knight of Avalon",
+        "description": "Aligned with the Shadowlands Redeemed, you fight for higher ideals, standing against the Unredeemed and Omni-Tek, upholding the noble values of honor and justice.",
+        "equipment": "Avalon knight armor, ceremonial sword, shield with the Avalon crest, code of conduct scroll."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "clan",
+    "type": {
+      "value": "clan",
+      "subtype": "clan",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!tiKfJDS0J3O8aCGS"
+}

@@ -1,0 +1,87 @@
+{
+  "_id": "RJuyCHFFuRP1MsfO",
+  "name": "Neutral",
+  "type": "faction",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>The Neutral faction encompasses a wide range of individuals who value their independence from the dominant powers of Rubi-Ka. Their roles and lifestyles vary significantly, reflecting the diversity within the faction.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "money_mult": 1,
+    "life_path": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Newland City Guard",
+        "description": "Ensuring the safety and order of Newland City, you serve as a beacon of stability in this key Neutral territory.",
+        "equipment": "Guard uniform, standard sidearm, communication device, city access pass."
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "ICC Peacekeeper",
+        "description": "As a representative of the ICC, you are tasked with maintaining neutrality and mediating conflicts on Rubi-Ka.",
+        "equipment": "Peacekeeper uniform, non-lethal deterrents, ICC identification, diplomatic tools."
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Dreadloch Employee",
+        "description": "Working with the industrious Dreadloch corporation, you are involved in various operations, from manufacturing to field deployment.",
+        "equipment": "Industrial toolkit, safety gear, employee ID, Dreadloch gadget."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Scavenger",
+        "description": "Living on the fringes, you adeptly salvage valuable materials and artifacts from Rubi-Ka's wastelands, always looking for the next big find.",
+        "equipment": "Scavenging tools, rugged attire, portable detector, collected artifacts."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Smuggler",
+        "description": "Navigating the shadowy side of commerce, you deal in illicit goods and information, always staying one step ahead of authorities and competitors.",
+        "equipment": "Concealed armor, forged documents, stealth comms, smuggled goods."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Lowlife",
+        "description": "Engaging in covert and often illegal activities, you operate within a gang, manipulating the underground networks of Rubi-Ka.",
+        "equipment": "Street gear, encrypted devices, hidden weaponry, contact list."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "neutral",
+    "type": {
+      "value": "neutral",
+      "subtype": "neutral",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!TNJHzIiAyATsxPqf"
+}
