@@ -1,0 +1,87 @@
+{
+  "_id": "TNJHzIiAyATsxPqf",
+  "name": "Omni-Tek",
+  "type": "faction",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "<p>Omni-Tek is synonymous with advanced technology, structured organization, and corporate might. Characters associated with Omni-Tek benefit from advanced resources and operate within a system of corporate power and efficiency.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "money_mult": 5,
+    "life_path": [
+      {
+        "low": 1,
+        "high": 2,
+        "name": "Omni-Pol Officer",
+        "description": "As a member of Omni-Tek's corporate police force, you uphold the law within corporate territories, balancing combat skills with law enforcement strategies.",
+        "equipment": "Omni-Pol armor, standard-issue firearm, enforcement badge, secured communicator."
+      },
+      {
+        "low": 3,
+        "high": 4,
+        "name": "Omni-AF (Armed Forces) Trooper",
+        "description": "Serving in Omni-Tek's military arm, you are trained for various combat scenarios, from defending corporate assets to engaging in offensive operations.",
+        "equipment": "Military-grade armor, Omni-AF issued rifle, tactical gear, communication headset."
+      },
+      {
+        "low": 5,
+        "high": 6,
+        "name": "Omni-Admin",
+        "description": "As a vital part of Omni-Tek's administrative division, you manage key corporate operations, from logistics to personnel, ensuring the smooth running of the corporate machine.",
+        "equipment": "Business attire, high-security data pad, Omni-Admin access card, corporate vehicle access."
+      },
+      {
+        "low": 7,
+        "high": 8,
+        "name": "Omni-Med Technician",
+        "description": "In the forefront of medical innovation, you work on advanced healthcare solutions, contributing to both field medicine and groundbreaking medical research.",
+        "equipment": "Omni-Med kit, laboratory coat, medical scanning devices, secure medical database access."
+      },
+      {
+        "low": 9,
+        "high": 10,
+        "name": "Omni-Mining Foreman",
+        "description": "Working in the resource extraction division, you are involved in mining operations, from planetary excavation to resource processing and management.",
+        "equipment": "Mining gear, resource scanning tools, heavy-duty protective suit, Omni-Mining access credentials."
+      },
+      {
+        "low": 11,
+        "high": 12,
+        "name": "Diplomatic Liaison",
+        "description": "Bridging Omni-Tek with other factions, governments, and organizations, you are pivotal in diplomatic negotiations and strategic alliance building.",
+        "equipment": "Formal diplomatic attire, secure communication device, encrypted data portfolio, Omni-Tek diplomatic ID."
+      }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "omnitek",
+    "type": {
+      "value": "omnitek",
+      "subtype": "omnitek",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!TNJHzIiAyATsxPqf"
+}

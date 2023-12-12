@@ -2,6 +2,7 @@ import { TemplatePreloader } from "./module/helper/TemplatePreloader";
 import { EoABreedSheet } from "./module/items/BreedSheet";
 import { EoAProfessionSheet } from "./module/items/ProfessionSheet";
 import { EoAOriginSheet } from "./module/items/OriginSheet";
+import { EoAFactionSheet } from "./module/items/FactionSheet";
 
 Hooks.once("init", async () => {
     console.log("========================Edge of Anarchy=====================")
@@ -18,6 +19,10 @@ Hooks.once("init", async () => {
     });
     Items.registerSheet("eoa", EoAOriginSheet, {
         types: ["origin"],
+        makeDefault: true
+    });
+    Items.registerSheet("eoa", EoAFactionSheet, {
+        types: ["faction"],
         makeDefault: true
     });
 });

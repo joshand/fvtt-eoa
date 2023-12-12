@@ -34,6 +34,15 @@
       "flags": {}
     },
     {
+      "name": "factions",
+      "label": "Factions",
+      "system": "eoa",
+      "path": "packs/factions.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
       "name": "origins",
       "label": "Origins",
       "system": "eoa",
