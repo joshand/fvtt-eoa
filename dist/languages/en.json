@@ -1466,8 +1466,8 @@
       } ,
 
       "OPTION_CUSTOM_DANGER_DICE_ICON": {
-        "Name": "Custom Danger Dice Icon",
-        "Hint": "Path to custom icon for Danger Dice. Leave blank for default"
+        "Name": "Custom Edge Dice Icon",
+        "Hint": "Path to custom icon for Edge Dice. Leave blank for default"
       } ,
 
       "SYSTEM_VARIANT_FU_CLASSIC":"FU Classic",
