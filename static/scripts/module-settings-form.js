@@ -47,6 +47,7 @@ export class ModuleSettingsForm extends FormApplication {
     let nsetting;
     let dtype;
     let mapSettings=game.settings.settings;
+    console.log(mapSettings);
     
     for(let k of mapSettings.keys()){ 
       let isCheckbox=false;     

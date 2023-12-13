@@ -1,5 +1,5 @@
 import { FUX_CONST } from   './fux-dice-roller-constants.js';
-const _module_id = 'fux-dice-roller';  // modules true name(id)
+const _module_id = 'eoa';  // modules true name(id)
 async function RollD6s(faces){
   let roll=await new Roll(faces + "d6").roll({async: true});
   return roll;
@@ -555,7 +555,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
         {
           faces:6,
           flavor:'black',
-          formula:'Danger Dice',
+          formula:'Edge Dice',
           rolls:dangerrolls,
           total:dangerdice
         }
@@ -584,6 +584,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
         summary: submsg + ' => ' + oracle
       };
 
+      // console.log(rollData);
       renderTemplate(`modules/${_module_id}/templates/fux-dice-roller-chatmsg-core.hbs`, rollData).then(html => {
         let messageData = {
           content: html,

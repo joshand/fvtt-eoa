@@ -3,6 +3,7 @@ import { EoABreedSheet } from "./module/items/BreedSheet";
 import { EoAProfessionSheet } from "./module/items/ProfessionSheet";
 import { EoAOriginSheet } from "./module/items/OriginSheet";
 import { EoAFactionSheet } from "./module/items/FactionSheet";
+import * as Dice from "./helpers/dice.js";
 
 Hooks.once("init", async () => {
     console.log("========================Edge of Anarchy=====================")
@@ -24,6 +25,15 @@ Hooks.once("init", async () => {
     Items.registerSheet("eoa", EoAFactionSheet, {
         types: ["faction"],
         makeDefault: true
+    });
+
+    Handlebars.registerHelper("face", Dice.diceToFaces);
+
+    Handlebars.registerHelper('ifCond', function(v1, v2, options) {
+      if(v1 === v2) {
+        return options.fn(this);
+      }
+      return options.inverse(this);
     });
 });
 

@@ -1,6 +1,6 @@
 // export const needed by ModuleSettingsForm
 export const _module_id = 'eoa';  // modules true name(id)
-export const _module_ignore_settings = [];       // array of strings containing settings that should not be displayed, can be empty []
+export const _module_ignore_settings = ["OPTION_SYSTEM_VARIANT", "OPTION_SHOW_SEND_TO_COMBAT_TRACKER", "OPTION_HARD_MODE", "OPTION_BOTCH_VALUE", "OPTION_BOTCH_VALUE", "OPTION_FU_CLASSIC_MATCHING_DICE"];       // array of strings containing settings that should not be displayed, can be empty []
 
 import { ModuleSettingsForm } from "./module-settings-form.js";
 import { FUxDiceRollerForm } from "./fux-dice-roller-form.js";
@@ -248,7 +248,8 @@ Hooks.on("renderSidebarTab", async (app, html) => {
     // get rid of the d20 icon                             
     icon[0].innerHTML = '';
     // add the fu icon
-    icon.after('<img id="fux-dice-roller-show" class="btn-fux-dice-roller-show"  src="modules/eoa/images/fux-dice-roller.svg" alt="FU" title="Show FUx Dice Roller">');
+    icon.after('<i id="fux-dice-roller-show" class="fas fa-dice-d20 btn-fux-dice-roller-show"></i>');
+    // icon.after('<img id="fux-dice-roller-show" class="btn-fux-dice-roller-show"  src="modules/eoa/images/fux-dice-roller.svg" alt="FU" title="Show Dice Roller">');
     // add event listener t0 icon  
     html.find('#fux-dice-roller-show').click(ev => {
       //console.log('clicked it');   
