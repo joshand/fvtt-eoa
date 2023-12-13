@@ -248,7 +248,7 @@ Hooks.on("renderSidebarTab", async (app, html) => {
     // get rid of the d20 icon                             
     icon[0].innerHTML = '';
     // add the fu icon
-    icon.after('<img id="fux-dice-roller-show" class="btn-fux-dice-roller-show"  src="modules/fux-dice-roller/images/fux-dice-roller.svg" alt="FU" title="Show FUx Dice Roller">');
+    icon.after('<img id="fux-dice-roller-show" class="btn-fux-dice-roller-show"  src="modules/eoa/images/fux-dice-roller.svg" alt="FU" title="Show FUx Dice Roller">');
     // add event listener t0 icon  
     html.find('#fux-dice-roller-show').click(ev => {
       //console.log('clicked it');   

@@ -17,7 +17,7 @@ export class FUxDiceRollerForm extends FormApplication {
       height: 'auto',
       width: 'auto',
       id: 'fux-dice-roller-form',
-      template: `modules/fux-dice-roller/templates/fux-dice-roller-form.hbs`,
+      template: `modules/${_module_id}/templates/fux-dice-roller-form.hbs`,
       title: this.title,
       userId: game.userId,
       closeOnSubmit: false, // do not close when submitted
@@ -46,8 +46,8 @@ export class FUxDiceRollerForm extends FormApplication {
     let data;
     let availabledice = game.settings.get(_module_id, 'OPTION_DICE_AVAILABLE');
     let showInitiativeOption = game.settings.get(_module_id, 'OPTION_SHOW_SEND_TO_COMBAT_TRACKER');
-    let actiondiceicon='modules/fux-dice-roller/images/actiondie.svg';
-    let dangerdiceicon='modules/fux-dice-roller/images/dangerdie.svg';
+    let actiondiceicon=`modules/${_module_id}/images/actiondie.svg`;
+    let dangerdiceicon=`modules/${_module_id}/images/dangerdie.svg`;
     let customactiondiceicon=game.settings.get(_module_id, 'OPTION_CUSTOM_ACTION_DICE_ICON');
     let customdangerdiceicon=game.settings.get(_module_id, 'OPTION_CUSTOM_DANGER_DICE_ICON');
     if(customactiondiceicon.length>0){
@@ -61,7 +61,7 @@ export class FUxDiceRollerForm extends FormApplication {
     let actiondie;
     let dangerdie;
     let actiondice_title = 'Action Dice';
-    let dangerdice_title = 'Danger Dice';
+    let dangerdice_title = 'Edge Dice';
     let systemvariant = game.settings.get(_module_id, 'OPTION_SYSTEM_VARIANT');
     let systemvariantname = SystemVariantName(systemvariant);
     let diceselection=game.user.getFlag('world','fux-dice-roller-form-selection');

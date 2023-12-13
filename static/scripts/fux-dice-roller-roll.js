@@ -12,17 +12,20 @@ export async function RollFuxDice(actiondice, dangerdice) {
       //no dice, abort
       return;
     }
-
-    let hardmode = getGameSetting('OPTION_HARD_MODE');
-    let systemvariant = getGameSetting('OPTION_SYSTEM_VARIANT');
-    let botch_value = getGameSetting('OPTION_BOTCH_VALUE');
-    let option_matchingdice = getGameSetting('OPTION_FU_CLASSIC_MATCHING_DICE');
+    // let hardmode = getGameSetting('OPTION_HARD_MODE');
+    let hardmode = false;
+    // let systemvariant = getGameSetting('OPTION_SYSTEM_VARIANT');
+    let systemvariant = FUX_CONST.SYSTEM_VARIANTS.FU_V2;
+    // let botch_value = getGameSetting('OPTION_BOTCH_VALUE');
+    let botch_value = 1;
+    // let option_matchingdice = getGameSetting('OPTION_FU_CLASSIC_MATCHING_DICE');
+    let option_matchingdice = false;
 
     // reduce dice if FU Classic    
     if (systemvariant == FUX_CONST.SYSTEM_VARIANTS.FU_CLASSIC) {
       // 5a, 3d => 2a
       // 2a, 3d => 1d
-      // 2a, 2d => 
+      // 2a, 2d =>
       if (dangerdice == actiondice) {
         actiondice = 0;
         dangerdice = 2;
@@ -36,13 +39,14 @@ export async function RollFuxDice(actiondice, dangerdice) {
         dangerdice = 0;
       }
     }
+
     // reduce dice if Earthdawn Age of legend
     if (systemvariant == FUX_CONST.SYSTEM_VARIANTS.EARTHDAWN_AGE_OF_LEGEND) {
       // in EDAoL, the roll is always 1d6 plus a reduced set of negative and/or positive fudge dice(1d6 where 5-6 means +/- else ignored)
       if(actiondice>1 && dangerdice>0){
         if (actiondice==dangerdice){
           actiondice=1;
-          dangerdice=1;         
+          dangerdice=1;
         } else if(actiondice>dangerdice){
           actiondice=actiondice - dangerdice;
           dangerdice=0;
@@ -214,7 +218,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
       submsg = 'Result: ' + rollvalue;
       switch (rollvalue) {
         // in NCO BOTCH: If all the action dice have been canceled out, or the only remaining 
-        // action dice are 1’s, you have critically failed. Things have gone very wrong and 
+        // action dice are 1ï¿½s, you have critically failed. Things have gone very wrong and 
         // the consequences will be terrible.
         case 0:
         case 1:
@@ -333,7 +337,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
       submsg = 'Result: ' + rollvalue;
       switch (rollvalue) {
         // In FU2 Botch: if all the ( are cancelled, 
-        // the result counts as a roll of “1”.
+        // the result counts as a roll of ï¿½1ï¿½.
         case 0:
           oracle = 'BOTCH';
           hasfumble = true;
@@ -485,7 +489,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
         summary: submsg + ' => ' + oracle
       };
 
-      renderTemplate("modules/fux-dice-roller/templates/fux-dice-roller-chatmsg-sandbox.hbs", rollData).then(html => {
+      renderTemplate(`modules/${_module_id}/templates/fux-dice-roller-chatmsg-sandbox.hbs`, rollData).then(html => {
         let messageData = {
           content: html,
           type: rvalue,
@@ -580,7 +584,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
         summary: submsg + ' => ' + oracle
       };
 
-      renderTemplate("modules/fux-dice-roller/templates/fux-dice-roller-chatmsg-core.hbs", rollData).then(html => {
+      renderTemplate(`modules/${_module_id}/templates/fux-dice-roller-chatmsg-core.hbs`, rollData).then(html => {
         let messageData = {
           content: html,
           type: rvalue,
