@@ -22,8 +22,7 @@
   },
   "Item": {
     "types": ["breed", "profession", "origin", "faction"],
-    "templates": {}
-    },
+    "templates": {},
     "breed": {
       "templates": ["base"]
     },
