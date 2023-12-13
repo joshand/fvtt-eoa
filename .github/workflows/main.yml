@@ -126,8 +126,10 @@ jobs:
              ../system.zip                       \
             `# The files that will be included.` \
             icons/                               \
+            images/                              \
             languages/                           \
             packs/                               \
+            scripts/                             \
             styles/                              \
             templates/                           \
             eoa.js                               \
