@@ -82,9 +82,9 @@ export async function RollFuxDice(actiondice, dangerdice) {
     // build result string for action dice
     for (let i = 0; i < actionssorted.length; i++) {
       if (i == 0) {
-        actionresult = '<img src="modules/fux-dice-roller/images/actiondie_value_' + actionssorted[i] + '.png" style="margin-top:-3px;margin-left:2px;">';
+        actionresult = '<img src="systems/eoa/images/actiondie_value_' + actionssorted[i] + '.png" style="margin-top:-3px;margin-left:2px;">';
       } else {
-        actionresult = actionresult + '' + '<img src="modules/fux-dice-roller/images/actiondie_value_' + actionssorted[i] + '.png" style="margin-top:-3px;margin-left:2px;">';
+        actionresult = actionresult + '' + '<img src="systems/eoa/images/actiondie_value_' + actionssorted[i] + '.png" style="margin-top:-3px;margin-left:2px;">';
       }
     }
     //danger dice
@@ -109,9 +109,9 @@ export async function RollFuxDice(actiondice, dangerdice) {
     // build result string for danger dice
     for (let i = 0; i < dangersorted.length; i++) {
       if (i == 0) {
-        dangerresult = '<img src="modules/fux-dice-roller/images/dangerdie_value_' + dangersorted[i] + '.png" style="margin-top:0px;margin-left:2px;">';
+        dangerresult = '<img src="systems/eoa/images/dangerdie_value_' + dangersorted[i] + '.png" style="margin-top:0px;margin-left:2px;">';
       } else {
-        dangerresult = dangerresult + '' + '<img src="modules/fux-dice-roller/images/dangerdie_value_' + dangersorted[i] + '.png" style="margin-top:0px;margin-left:2px;">';        
+        dangerresult = dangerresult + '' + '<img src="systems/eoa/images/dangerdie_value_' + dangersorted[i] + '.png" style="margin-top:0px;margin-left:2px;">';
       }
     }
     // find highest remaining positive in finals
@@ -256,7 +256,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
           if (i == 0) {
             // the first action dice is the base die
             rollvalue= actiondiceresults.terms[0].results[0].result;            
-            actionresult = '<img src="modules/fux-dice-roller/images/actiondie_value_' + actiondiceresults.terms[0].results[i].result + '.png" style="margin-top:-3px;margin-left:2px;">';
+            actionresult = '<img src="systems/eoa/images/actiondie_value_' + actiondiceresults.terms[0].results[i].result + '.png" style="margin-top:-3px;margin-left:2px;">';
           } else {
             // now look for bonus dice that have result 5-6
             if(actiondiceresults.terms[0].results[i].result>=5){
@@ -266,9 +266,9 @@ export async function RollFuxDice(actiondice, dangerdice) {
               } else{
                 boons=boons+1;
               }
-              actionresult = actionresult + '' + '<img src="modules/fux-dice-roller/images/actiondie_value_fudge_success.png" style="margin-top:-3px;margin-left:2px;">'; 
+              actionresult = actionresult + '' + '<img src="systems/eoa/images/actiondie_value_fudge_success.png" style="margin-top:-3px;margin-left:2px;">';
             } else{
-              actionresult = actionresult + '' + '<img src="modules/fux-dice-roller/images/actiondie_value_blank.png" style="margin-top:-3px;margin-left:2px;">';  
+              actionresult = actionresult + '' + '<img src="systems/eoa/images/actiondie_value_blank.png" style="margin-top:-3px;margin-left:2px;">';
             }
             
           }
@@ -291,9 +291,9 @@ export async function RollFuxDice(actiondice, dangerdice) {
             imagefile='dangerdie_value_blank';
           }          
           if (i == 0) {
-            dangerresult = '<img src="modules/fux-dice-roller/images/' + imagefile + '.png" style="margin-top:0px;margin-left:2px;">';
+            dangerresult = '<img src="systems/eoa/images/' + imagefile + '.png" style="margin-top:0px;margin-left:2px;">';
           } else {
-            dangerresult = dangerresult + '' + '<img src="modules/fux-dice-roller/images/' + imagefile + '.png" style="margin-top:0px;margin-left:2px;">';            
+            dangerresult = dangerresult + '' + '<img src="systems/eoa/images/' + imagefile + '.png" style="margin-top:0px;margin-left:2px;">';
           }
           
         }
@@ -489,7 +489,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
         summary: submsg + ' => ' + oracle
       };
 
-      renderTemplate(`modules/${_module_id}/templates/fux-dice-roller-chatmsg-sandbox.hbs`, rollData).then(html => {
+      renderTemplate(`systems/${_module_id}/templates/fux-dice-roller-chatmsg-sandbox.hbs`, rollData).then(html => {
         let messageData = {
           content: html,
           type: rvalue,
@@ -585,7 +585,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
       };
 
       // console.log(rollData);
-      renderTemplate(`modules/${_module_id}/templates/fux-dice-roller-chatmsg-core.hbs`, rollData).then(html => {
+      renderTemplate(`systems/${_module_id}/templates/fux-dice-roller-chatmsg-core.hbs`, rollData).then(html => {
         let messageData = {
           content: html,
           type: rvalue,

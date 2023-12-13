@@ -17,7 +17,7 @@ export class FUxDiceRollerForm extends FormApplication {
       height: 'auto',
       width: 'auto',
       id: 'fux-dice-roller-form',
-      template: `modules/${_module_id}/templates/fux-dice-roller-form.hbs`,
+      template: `systems/${_module_id}/templates/fux-dice-roller-form.hbs`,
       title: this.title,
       userId: game.userId,
       closeOnSubmit: false, // do not close when submitted
@@ -46,8 +46,8 @@ export class FUxDiceRollerForm extends FormApplication {
     let data;
     let availabledice = game.settings.get(_module_id, 'OPTION_DICE_AVAILABLE');
     let showInitiativeOption = game.settings.get(_module_id, 'OPTION_SHOW_SEND_TO_COMBAT_TRACKER');
-    let actiondiceicon=`modules/${_module_id}/images/actiondie.svg`;
-    let dangerdiceicon=`modules/${_module_id}/images/dangerdie.svg`;
+    let actiondiceicon=`systems/${_module_id}/images/actiondie.svg`;
+    let dangerdiceicon=`systems/${_module_id}/images/dangerdie.svg`;
     let customactiondiceicon=game.settings.get(_module_id, 'OPTION_CUSTOM_ACTION_DICE_ICON');
     let customdangerdiceicon=game.settings.get(_module_id, 'OPTION_CUSTOM_DANGER_DICE_ICON');
     if(customactiondiceicon.length>0){

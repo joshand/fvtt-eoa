@@ -22,7 +22,7 @@ export class ModuleSettingsForm extends FormApplication {
     const overrides = {
       height: 'auto',
       id: 'module-settings-form',
-      template: `modules/${this.ModuleID}/templates/module-settings-form.hbs`,
+      template: `systems/${this.ModuleID}/templates/module-settings-form.hbs`,
       title: `Configure Module Settings`,
       userId: game.userId,
       closeOnSubmit: false, // do not close when submitted
