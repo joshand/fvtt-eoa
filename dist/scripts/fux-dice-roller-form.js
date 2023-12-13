@@ -5,7 +5,7 @@ import { FUxDiceRollerCombatHelperForm } from "./fux-dice-roller-combat-helper-f
 import { FUX_CONST } from   './fux-dice-roller-constants.js';
 import { SystemVariantName } from   './fux-dice-roller-constants.js';
 export class FUxDiceRollerForm extends FormApplication {
-  static title = 'FUx Dice Roller'
+  static title = 'Dice Roller'
   static initialize() {
     //console.log('Initialized FUxDiceRollerForm' ); 
     
