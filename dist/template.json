@@ -4,42 +4,31 @@
     "templates": {
       "background": {
         "biography": "",
-        "alias": ""
-      },
-      "resources": {
-        "health": {
-          "min": 0,
-          "value": 10,
-          "max": 10
-        },
-        "power": {
-          "min": 0,
-          "value": 1,
-          "max": 3
+        "alias": "",
+        "breed_lifepath": "",
+        "origin_lifepath": "",
+        "faction_lifepath": "",
+        "profession": {
+          "skills": []
         }
       }
     },
     "hero": {
-      "templates": ["background", "resources"]
+      "templates": ["background"]
     },
     "npc": {
-      "templates": ["resources"]
+      "templates": ["background"]
     }
   },
   "Item": {
     "types": ["breed", "profession", "origin", "faction"],
-    "templates": {
-      "rarity": {
-        "rarity": "Common",
-        "price": 20
-      }
+    "templates": {}
     },
     "breed": {
       "templates": ["base"]
     },
     "profession": {
-      "templates": ["base"],
-      "skills": []
+      "templates": ["base"]
     },
     "origin": {
       "templates": ["base"]
