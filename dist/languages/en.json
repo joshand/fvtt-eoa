@@ -1413,18 +1413,18 @@
   "fux-dice-roller":  {
     "settings": {
       "SETTINGS_FORM": {
-        "Name": "FUx Dice Roller Settings",
-        "Hint": "Displays settings form for FUx Dice Roller"
+        "Name": "Dice Roller Settings",
+        "Hint": "Displays settings form for Dice Roller"
       },
 
       "ROLLER_FORM": {
-        "Name": "FUx Dice Roller",
-        "Hint": "Displays FUx Dice Roller"
+        "Name": "Dice Roller",
+        "Hint": "Displays Dice Roller"
       },
 
       "OPTION_SYSTEM_VARIANT": {
-        "Name": "FUx System Variant",
-        "Hint": "Variant of FreeForm Universal(FU) used"
+        "Name": "System Variant",
+        "Hint": "Variant of FreeForm Universal used"
       },
 
       "OPTION_CHATMSG_STYLE": {
