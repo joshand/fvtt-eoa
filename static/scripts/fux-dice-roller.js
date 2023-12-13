@@ -1,5 +1,5 @@
 // export const needed by ModuleSettingsForm
-export const _module_id = 'fux-dice-roller';  // modules true name(id)
+export const _module_id = 'eoa';  // modules true name(id)
 export const _module_ignore_settings = [];       // array of strings containing settings that should not be displayed, can be empty []
 
 import { ModuleSettingsForm } from "./module-settings-form.js";
