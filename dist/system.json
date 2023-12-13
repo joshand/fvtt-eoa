@@ -2,14 +2,14 @@
   "id": "eoa",
   "title": "Edge of Anarchy",
   "description": "A system for playing the Edge of Anarchy game system in the Foundry Virtual Tabletop environment.",
-  "version": "0.0.67",
+  "version": "0.0.68",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
   },
   "url": "https://github.com/joshand/fvtt-eoa/",
   "manifest": "https://raw.githubusercontent.com/joshand/fvtt-eoa/main/static/system.json",
-  "download": "https://github.com/joshand/fvtt-eoa/releases/download/0.0.67/system.zip",
+  "download": "https://github.com/joshand/fvtt-eoa/releases/download/0.0.68/system.zip",
   "authors": [
     {
       "name": "Josh",
@@ -18,10 +18,18 @@
     }
   ],
   "esmodules": [
-    "eoa.js"
+    "eoa.js",
+    "scripts/fux-dice-roller.js",
+    "scripts/fux-dice-roller-roll.js",
+    "scripts/fux-dice-roller-form.js",
+    "scripts/module-settings-form.js",
+    "scripts/fux-dice-roller-combat-helper-form.js",
+    "scripts/fux-dice-roller-constants.js"
   ],
   "styles": [
-    "/styles/eoa.css"
+    "/styles/eoa.css",
+    "/styles/fux-dice-roller.css",
+    "/styles/w3-only.css"
   ],
   "packs": [
     {
