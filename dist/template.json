@@ -4,7 +4,7 @@
     "templates": {
       "background": {
         "biography": "",
-        "hairColor": "blue"
+        "alias": ""
       },
       "resources": {
         "health": {
@@ -21,10 +21,7 @@
     },
     "hero": {
       "templates": ["background", "resources"],
-      "goodness": {
-        "value": 5,
-        "max": 10
-      }
+      "alias": ""
     },
     "npc": {
       "templates": ["resources"]
