@@ -40,60 +40,66 @@ export class EoAActorSheet extends ActorSheet {
         context.config = CONFIG.eoa;
         context.breed = context.items.filter(function(item) { return item.type === "breed" })
         context.breed_dict = {};
-        context.breed[0].system.skills.forEach((el) => {
-            context.breed_dict[el.name] = `
-                <div class="form-group" style="width: 100%">
-                    <div class="flex1">
-                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+        if (context.breed.length > 0) {
+            context.breed[0].system.skills.forEach((el) => {
+                context.breed_dict[el.name] = `
+                    <div class="form-group" style="width: 100%">
+                        <div class="flex1">
+                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+                        </div>
+                        <div class="form-fields flex1">
+                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
+                        </div>
+                        <div class="form-fields flex4">
+                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
+                        </div>
                     </div>
-                    <div class="form-fields flex1">
-                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
-                    </div>
-                    <div class="form-fields flex4">
-                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
-                    </div>
-                </div>
-            `;
-        });
-        context.breed_lifepath = context.data.system.background.breed_lifepath;
+                `;
+            });
+        }
+        context.breed_lifepath = context.data.system.breed_lifepath;
         context.origin = context.items.filter(function(item) { return item.type === "origin" })
         context.origin_dict = {};
-        context.origin[0].system.life_path.forEach((el) => {
-            context.origin_dict[el.name] = `
-                <div class="form-group" style="width: 100%">
-                    <div class="flex1">
-                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+        if (context.origin.length > 0) {
+            context.origin[0].system.life_path.forEach((el) => {
+                context.origin_dict[el.name] = `
+                    <div class="form-group" style="width: 100%">
+                        <div class="flex1">
+                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+                        </div>
+                        <div class="form-fields flex1">
+                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
+                        </div>
+                        <div class="form-fields flex4">
+                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
+                        </div>
                     </div>
-                    <div class="form-fields flex1">
-                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
-                    </div>
-                    <div class="form-fields flex4">
-                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
-                    </div>
-                </div>
-            `;
-        });
-        context.origin_lifepath = context.data.system.background.origin_lifepath;
+                `;
+            });
+        }
+        context.origin_lifepath = context.data.system.origin_lifepath;
         context.profession = context.items.filter(function(item) { return item.type === "profession" })
         context.skill = context.items.filter(function(item) { return item.type === "skill" })
         context.faction = context.items.filter(function(item) { return item.type === "faction" })
         context.faction_dict = {};
-        context.faction[0].system.life_path.forEach((el) => {
-            context.faction_dict[el.name] = `
-                <div class="form-group" style="width: 100%">
-                    <div class="flex1">
-                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+        if (context.faction.length > 0) {
+            context.faction[0].system.life_path.forEach((el) => {
+                context.faction_dict[el.name] = `
+                    <div class="form-group" style="width: 100%">
+                        <div class="flex1">
+                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+                        </div>
+                        <div class="form-fields flex1">
+                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
+                        </div>
+                        <div class="form-fields flex4">
+                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
+                        </div>
                     </div>
-                    <div class="form-fields flex1">
-                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
-                    </div>
-                    <div class="form-fields flex4">
-                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
-                    </div>
-                </div>
-            `;
-        });
-        context.faction_lifepath = context.data.system.background.faction_lifepath;
+                `;
+            });
+        }
+        context.faction_lifepath = context.data.system.faction_lifepath;
         // context.items = context.items.filter(function(item) { return ["breed", "origin", "profession", "faction"].includes(item) })
         console.log("getData");
         console.log(context);

@@ -199,7 +199,7 @@
         <div class="tab flexrow active" data-group="primary" data-tab="description">
             <div class="form-fields flex1" style="flex-direction: column !important;">
                 <label>Biography</label>
-                {{editor data.system.background.biography target="system.background.biography" button=true owner=owner editable=editable}}
+                {{editor data.system.biography target="system.biography" button=true owner=owner editable=editable}}
             </div>
         </div>
 
@@ -209,11 +209,11 @@
                 <label><strong>Description</strong></label>
                 {{editor breed.0.system.description.value target="breed.0.system.description.value" button=true owner=owner editable=false}}
                 <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label><br>
-                {{radioBoxes "data.background.breed_lifepath" breed_dict checked=breed_lifepath localize=true}}
+                {{radioBoxes "data.breed_lifepath" breed_dict checked=breed_lifepath localize=true}}
 <!--                <table><tr><td>&nbsp;</td><td>Range</td><td>Name</td><td>Description</td></tr>-->
 <!--                {{#each breed.0.system.skills as | skill |}}-->
 <!--                    <tr>-->
-<!--                        <td><input type="radio" name="data.system.background.breed_lifepath" value="{{data.system.background.breed_lifepath}}"></td>-->
+<!--                        <td><input type="radio" name="data.system.breed_lifepath" value="{{data.system.breed_lifepath}}"></td>-->
 <!--                        <td>{{skill.low}}-{{skill.high}}</td>-->
 <!--                        <td>{{skill.name}}</td>-->
 <!--                        <td>{{skill.description}}</td>-->
@@ -247,7 +247,7 @@
                 {{/each}}
                 </ul>
                 <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label>
-                {{radioBoxes "data.background.origin_lifepath" origin_dict checked=origin_lifepath localize=true}}
+                {{radioBoxes "data.origin_lifepath" origin_dict checked=origin_lifepath localize=true}}
 <!--                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>-->
 <!--                {{#each origin.0.system.life_path as | skill |}}-->
 <!--                    <tr>-->
@@ -325,7 +325,7 @@
                     <label>{{faction.0.system.money_mult}}</label>
                 </div>
                 <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label>
-                {{radioBoxes "data.background.faction_lifepath" faction_dict checked=faction_lifepath localize=true}}
+                {{radioBoxes "data.faction_lifepath" faction_dict checked=faction_lifepath localize=true}}
 <!--                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>-->
 <!--                {{#each faction.0.system.life_path as | skill |}}-->
 <!--                    <tr>-->
