@@ -305,7 +305,20 @@ export class EoAActorSheet extends ActorSheet {
             });
             if (itemData.type === "profession") {
                 console.log("profession change");
-                all_items.data.system.background.profession.skills = {};
+                let del_items = all_items.items.filter(function(item) { return (item.type === "profession") });
+                // if skills are assigned, delete them on profession change
+                // if (del_items) {
+                //     del_items.forEach((el) => {
+                //         item = this.actor.items.get(el._id);
+                //         if (item) {
+                //             item.delete();
+                //         }
+                //     });
+                // }
+                console.log(all_items);
+                console.log(game.packs.get("eoa.skills"));
+                // let add_items = all_items.items.filter(function(item) { return ((item.type === "profession") && (item.system.data.professions.includes(all_items.system.data.))) });
+
             }
         }
         console.log("post change data & list");
