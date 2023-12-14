@@ -3,6 +3,7 @@
   "name": "Technical Repair",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["engineer"],
     "description": "Competence in diagnosing and fixing technological equipment and machinery.",

@@ -3,6 +3,7 @@
   "name": "Empathy",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["keeper"],
     "description": "Ability to understand and share the feelings of others, crucial for effective communication and team cohesion.",

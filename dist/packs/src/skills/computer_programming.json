@@ -3,6 +3,7 @@
   "name": "Computer Programming",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["engineer"],
     "description": "Skills in writing, testing, and maintaining software programs.",

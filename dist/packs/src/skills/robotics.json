@@ -3,6 +3,7 @@
   "name": "Robotics",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["engineer"],
     "description": "Ability to communicate effectively with AI and machine interfaces, enhancing interactions with automated systems.",

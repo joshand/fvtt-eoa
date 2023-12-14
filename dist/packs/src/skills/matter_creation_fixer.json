@@ -3,6 +3,7 @@
   "name": "Matter Creation (Fixer)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["fixer"],
     "description": "Using nanotechnology to manipulate matter for various purposes, including healing and object creation.",

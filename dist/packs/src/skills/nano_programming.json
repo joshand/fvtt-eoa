@@ -3,6 +3,7 @@
   "name": "Nano Programming",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["engineer"],
     "description": "Skills in developing and modifying nanoprograms for various applications.",

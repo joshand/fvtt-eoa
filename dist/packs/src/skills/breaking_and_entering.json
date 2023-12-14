@@ -3,6 +3,7 @@
   "name": "Breaking & Entering",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["fixer"],
     "description": "Expertise in bypassing security systems and physically infiltrating secured areas.",

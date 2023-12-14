@@ -3,6 +3,7 @@
   "name": "Skullduggery",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["fixer"],
     "description": "Proficiency in underhanded tactics, deception, and trickery.",

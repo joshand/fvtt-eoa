@@ -3,6 +3,7 @@
   "name": "Time & Space",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["fixer"],
     "description": "Mastery of nanotechnology related to teleportation, portals and speed manipulation.",

@@ -3,6 +3,7 @@
   "name": "Matter Creation (Soldier)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["soldier"],
     "description": "Using nanotechnology to manipulate matter for various purposes, including healing and object creation.",

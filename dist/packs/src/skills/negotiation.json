@@ -3,6 +3,7 @@
   "name": "Negotiation",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["bureaucrat"],
     "description": "Expertise in brokering deals, resolving conflicts, and achieving desired outcomes through dialogue.",

@@ -3,6 +3,7 @@
   "name": "Leadership (Bureaucrat)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["bureaucrat"],
     "description": "Use your Cult of personality to sway public opinion and inspire loyalty.",

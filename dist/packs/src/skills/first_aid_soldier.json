@@ -3,6 +3,7 @@
   "name": "First Aid (Soldier)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["soldier"],
     "description": "Basic medical skills for battlefield injuries.",
