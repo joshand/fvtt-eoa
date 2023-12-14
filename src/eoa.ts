@@ -5,6 +5,7 @@ import { EoAProfessionSheet } from "./module/items/ProfessionSheet";
 import { EoAOriginSheet } from "./module/items/OriginSheet";
 import { EoAFactionSheet } from "./module/items/FactionSheet";
 import { EoAActorSheet } from "./module/actors/ActorSheet";
+import { EoASkillSheet } from "./module/actors/SkillSheet";
 import * as Dice from "./helpers/dice.js";
 
 Hooks.once("init", async () => {
@@ -29,6 +30,11 @@ Hooks.once("init", async () => {
         types: ["faction"],
         makeDefault: true
     });
+    Items.registerSheet("eoa", EoASkillSheet, {
+        types: ["skill"],
+        makeDefault: true
+    });
+
     Actors.registerSheet("eoa", EoAActorSheet, {
         types: ["hero"],
         makeDefault: true
