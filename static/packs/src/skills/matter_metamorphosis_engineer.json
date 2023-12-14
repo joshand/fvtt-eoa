@@ -1,0 +1,38 @@
+{
+  "_id": "epxjl8Pf2RHXVdV3",
+  "name": "Matter Metamorphosis",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["engineer"],
+    "description": "Ability to manipulate physical matter at the nano level, useful for creating shields and enhancing equipment.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "matter_metamorphosis",
+    "type": {
+      "value": "matter_metamorphosis",
+      "subtype": "matter_metamorphosis",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!epxjl8Pf2RHXVdV3"
+}

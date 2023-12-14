@@ -1,0 +1,38 @@
+{
+  "_id": "kBgTbTvByRGaABWv",
+  "name": "First Aid",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["keeper"],
+    "description": "Basic medical skills for providing immediate care and stabilizing injuries.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "first_aid",
+    "type": {
+      "value": "first_aid",
+      "subtype": "first_aid",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!kBgTbTvByRGaABWv"
+}

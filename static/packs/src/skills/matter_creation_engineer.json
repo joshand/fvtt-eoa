@@ -1,0 +1,38 @@
+{
+  "_id": "7qDYDrfZ7pb8rr1J",
+  "name": "Matter Creation",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["engineer"],
+    "description": "Using nanotechnology for constructing androids and other complex machinery.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "matter_creation",
+    "type": {
+      "value": "matter_creation",
+      "subtype": "matter_creation",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!7qDYDrfZ7pb8rr1J"
+}
