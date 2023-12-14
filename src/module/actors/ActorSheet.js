@@ -75,6 +75,7 @@ export class EoAActorSheet extends ActorSheet {
         });
         context.origin_lifepath = context.data.system.background.origin_lifepath;
         context.profession = context.items.filter(function(item) { return item.type === "profession" })
+        context.skill = context.items.filter(function(item) { return item.type === "skill" })
         context.faction = context.items.filter(function(item) { return item.type === "faction" })
         context.faction_dict = {};
         context.faction[0].system.life_path.forEach((el) => {
@@ -305,25 +306,50 @@ export class EoAActorSheet extends ActorSheet {
             });
             if (itemData.type === "profession") {
                 console.log("profession change");
-                let del_items = all_items.items.filter(function(item) { return (item.type === "profession") });
+                let del_items = all_items.items.filter(function(item) { return (item.type === "skill") });
                 // if skills are assigned, delete them on profession change
-                // if (del_items) {
-                //     del_items.forEach((el) => {
-                //         item = this.actor.items.get(el._id);
-                //         if (item) {
-                //             item.delete();
-                //         }
-                //     });
-                // }
-                console.log(all_items);
-                console.log(game.packs.get("eoa.skills"));
+                if (del_items.length > 0) {
+                    del_items.forEach((el) => {
+                        item = this.actor.items.get(el._id);
+                        if (item) {
+                            item.delete();
+                        }
+                    });
+                }
+                // take skills for this profession from the compendium and add them to the character
+                let skill_pack = game.packs.get("eoa.skills")
+                let skill_index = Array.from(skill_pack.index)
+                for (let skill of skill_index) {
+                    let item = await skill_pack.getDocument(skill._id)
+                    if (item.system.professions.includes(itemData.system.identifier)) {
+                        // console.log(skill);
+                        // this.actor.createOwnedItem(skill)
+                        await this.actor.createEmbeddedDocuments('Item', [item])
+                    }
+                    // console.log(act.system.professions);
+                    // let items = Array.from(act.items)
+                    // let updates = []
+                    // for (let item of items) {
+                    //     console.log(item);
+                    // }
+                }
+                // console.log(all_items);
+                // const pack = game.packs.get("eoa.skills");
+                // await pack.getIndex();
+                // // const effectId = pack.index.find(e => e.name === effectName)._id;
+                // const actor = game.user.character;
+                // console.log(pack.index);
+                // let e = null;
+                // pack.index.forEach((el) => {
+                //     e = pack.getEntry(el._id);
+                // });
                 // let add_items = all_items.items.filter(function(item) { return ((item.type === "profession") && (item.system.data.professions.includes(all_items.system.data.))) });
 
             }
         }
-        console.log("post change data & list");
-        console.log(itemData);
-        console.log(all_items);
+        // console.log("post change data & list");
+        // console.log(itemData);
+        // console.log(all_items);
         return super._onDropItemCreate(itemData);
     }
 
