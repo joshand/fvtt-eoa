@@ -1,13 +1,16 @@
+import { eoa } from "./module/config.js";
 import { TemplatePreloader } from "./module/helper/TemplatePreloader";
 import { EoABreedSheet } from "./module/items/BreedSheet";
 import { EoAProfessionSheet } from "./module/items/ProfessionSheet";
 import { EoAOriginSheet } from "./module/items/OriginSheet";
 import { EoAFactionSheet } from "./module/items/FactionSheet";
+import { EoAActorSheet } from "./module/actors/ActorSheet";
 import * as Dice from "./helpers/dice.js";
 
 Hooks.once("init", async () => {
     console.log("========================Edge of Anarchy=====================")
     console.log("============================Load============================")
+    CONFIG["eoa"] = eoa;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("eoa", EoABreedSheet, {
@@ -26,15 +29,13 @@ Hooks.once("init", async () => {
         types: ["faction"],
         makeDefault: true
     });
-
-    Handlebars.registerHelper("face", Dice.diceToFaces);
-
-    Handlebars.registerHelper('ifCond', function(v1, v2, options) {
-      if(v1 === v2) {
-        return options.fn(this);
-      }
-      return options.inverse(this);
+    Actors.registerSheet("eoa", EoAActorSheet, {
+        types: ["hero"],
+        makeDefault: true
     });
+
+    // await TemplatePreloader.preloadHandlebarsTemplates();
+    Handlebars.registerHelper("face", Dice.diceToFaces);
 });
 
 Hooks.once("ready", async () => {

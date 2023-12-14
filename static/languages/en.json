@@ -1,4 +1,10 @@
 {
+  "eoa": {
+    "attack": {
+      "guns": "Guns",
+      "knives": "Knives"
+    }
+  },
   "submitText": "Save",
 
   "ACTOR.TypeCharacter": "Player Character",

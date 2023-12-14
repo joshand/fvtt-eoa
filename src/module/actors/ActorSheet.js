@@ -9,10 +9,10 @@ export class EoAActorSheet extends ActorSheet {
         return mergeObject(super.defaultOptions, {
             classes: ["boilerplate", "sheet", "actor"],
             template: "systems/eoa/templates/actor/actor-sheet.html",
-            width: 600,
-            height: 600,
+            width: 800,
+            height: 800,
             dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}],
-            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features"}]
+            tabs: [{navSelector: ".sheet-navigation", contentSelector: ".sheet-body", initial: "features"}]
         });
     }
 
@@ -35,21 +35,76 @@ export class EoAActorSheet extends ActorSheet {
         const actorData = this.actor.toObject(false);
 
         // Add the actor's data to context.data for easier access, as well as flags.
-        console.log(actorData.system);
-        // context["data"] = actorData.data;
-        // context["flags"] = actorData.flags;
-        context["config"] = CONFIG["eoa"];
+        // context.data = actorData.system;
+        // context.flags = actorData.flags;
+        context.config = CONFIG.eoa;
+        context.breed = context.items.filter(function(item) { return item.type === "breed" })
+        context.breed_dict = {};
+        context.breed[0].system.skills.forEach((el) => {
+            context.breed_dict[el.name] = `
+                <div class="form-group" style="width: 100%">
+                    <div class="flex1">
+                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+                    </div>
+                    <div class="form-fields flex1">
+                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
+                    </div>
+                    <div class="form-fields flex4">
+                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
+                    </div>
+                </div>
+            `;
+        });
+        context.breed_lifepath = context.data.system.background.breed_lifepath;
+        context.origin = context.items.filter(function(item) { return item.type === "origin" })
+        context.origin_dict = {};
+        context.origin[0].system.life_path.forEach((el) => {
+            context.origin_dict[el.name] = `
+                <div class="form-group" style="width: 100%">
+                    <div class="flex1">
+                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+                    </div>
+                    <div class="form-fields flex1">
+                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
+                    </div>
+                    <div class="form-fields flex4">
+                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
+                    </div>
+                </div>
+            `;
+        });
+        context.origin_lifepath = context.data.system.background.origin_lifepath;
+        context.profession = context.items.filter(function(item) { return item.type === "profession" })
+        context.faction = context.items.filter(function(item) { return item.type === "faction" })
+        context.faction_dict = {};
+        context.faction[0].system.life_path.forEach((el) => {
+            context.faction_dict[el.name] = `
+                <div class="form-group" style="width: 100%">
+                    <div class="flex1">
+                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+                    </div>
+                    <div class="form-fields flex1">
+                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
+                    </div>
+                    <div class="form-fields flex4">
+                        <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
+                    </div>
+                </div>
+            `;
+        });
+        context.faction_lifepath = context.data.system.background.faction_lifepath;
+        // context.items = context.items.filter(function(item) { return ["breed", "origin", "profession", "faction"].includes(item) })
         console.log("getData");
         console.log(context);
 
         // Prepare character data and items.
-        if (actorData.type == 'hero') {
+        if (actorData.type === 'hero') {
             this._prepareItems(context);
-            this._prepareCharacterData(context);
+            // this._prepareCharacterData(context);
         }
 
         // Prepare NPC data and items.
-        if (actorData.type == 'npc') {
+        if (actorData.type === 'npc') {
             this._prepareItems(context);
         }
 
@@ -156,6 +211,35 @@ export class EoAActorSheet extends ActorSheet {
             }
             li.slideUp(200, () => this.render(false));
         });
+
+        html.find('.btn-minus').click(ev => {
+            let input = $(ev.currentTarget).parents().siblings('input[type="text"]');
+            let value = parseInt(input.val());
+            if (value > 0) {
+                input.val(value - 1);
+            }
+            console.log(input.data("skill"));
+        });
+
+        html.find('.btn-plus').click(ev => {
+            let input = $(ev.currentTarget).parents().siblings('input[type="text"]');
+            let value = parseInt(input.val());
+            if (value < 10) {
+                input.val(value + 1);
+            }
+            console.log(input.data("skill"));
+        });
+
+        html.find('.txt-skill').change(ev => {
+            let input = $(ev.currentTarget);
+            let value = parseInt(input.val());
+            if (isNaN(value) || value < 0) {
+                input.val(0);
+            } else if (value > 10) {
+                input.val(10);
+            }
+            console.log(input.data("skill"));
+        });
     }
 
     /* -------------------------------------------- */
@@ -188,10 +272,56 @@ export class EoAActorSheet extends ActorSheet {
     }
 
     /** @override */
-    _onDropItemCreate(itemData) {
-        console.log("_onDropItemCreate");
-        console.log(itemData);
+    async _onDropItemCreate(itemData) {
+        // let items = itemData instanceof Array ? itemData : [itemData];
+        // console.log(items);
+        // const toCreate = [];
+        // for ( const item of items ) {
+        //     const result = await this._onDropSingleItem(item);
+        //     if ( result ) toCreate.push(result);
+        // }
+        //
+        // // Create the owned items as normal
+        // return this.actor.createEmbeddedDocuments("Item", toCreate);
 
+        // console.log("_onDropItemCreate");
+        // console.log(itemData);
+        console.log("dropped item data");
+        console.log(itemData);
+        let all_items = this.getData();
+        let item = null;
+        if (["breed", "origin", "profession", "faction"].includes(itemData.type)) {
+            let del_items = all_items.items.filter(function(item) { return ((item.type === itemData.type) && (item.id === itemData.id)) });
+            console.log("delete");
+            del_items.forEach((el) => {
+                console.log(el);
+                item = this.actor.items.get(el._id);
+                if (item) {
+                    console.log("item deleted");
+                    item.delete();
+                } else {
+                    console.log("item not found");
+                }
+            });
+            if (itemData.type === "profession") {
+                console.log("profession change");
+                all_items.data.system.background.profession.skills = {};
+            }
+        }
+        console.log("post change data & list");
+        console.log(itemData);
+        console.log(all_items);
         return super._onDropItemCreate(itemData);
     }
+
+    async _onDropSingleItem(itemData) {
+        return super._onDropSingleItem(itemData);
+    }
+
+    // async function freeSkillRank(skill: GenesysItem<SkillDataModel>, adjustment: number) {
+    //     await toRaw(skill).update({
+    //         'system.rank': Math.max(0, skill.systemData.rank + adjustment),
+    //     });
+    // }
+
 }

@@ -1,62 +1,345 @@
-<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+<style>
+    .editor {
+        min-height: 100px !important;
+        height: 100px;
+        background-color: lightgray;
+        border: 1px solid darkgray;
+    }
+    td {
+        padding: 2px !important;
+    }
+    label.checkbox {
+        padding: 0;
+        height: 40px;
+        line-height: 0 !important;
+    }
+    .checkbox {
+        display: flex;
+        align-items: center;
+    }
+    .checkbox input[type="radio"] {
+        position: relative;
+        top: 0; /* Adjust the vertical position as needed */
+        margin-right: 5px; /* Adjust the spacing between radio button and content */
+    }
+    form .form-group label {
+        line-height: 15px;
+    }
+    .number-spinner .input-group-btn:last-child>.btn {
+        margin-left: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .number-spinner .form-control {
+        width: 30px;
+        text-align: center;
+    }
+    .btn-plus,
+    .btn-minus {
+        width: 20px;
+    }
+</style>
 
+<form class="{{cssClass}} flexcol" autocomplete="off" style="flex: none !important;">
     {{!-- Sheet Header --}}
     <header class="sheet-header">
         {{!-- Header stuff goes here --}}
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-            <h1 class="charalias"><input name="name" type="text" value="{{actor.alias}}" placeholder="Alias"/></h1>
-            <div class="resources grid grid-2col">
-                <div class="resource flex-group-center">
-                    <label for="system.health.value" class="resource-label">Health</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
-                        <span> / </span>
-                        <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
-                    </div>
-                </div>
+<!--            <h1 class="charalias"><input name="system.alias" type="text" value="{{data.system.alias}}" placeholder="Alias"/></h1>-->
 
-                <div class="resource flex-group-center">
-                    <label for="system.power.value" class="resource-label">Power</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
-                        <span> / </span>
-                        <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
-                    </div>
-                </div>
+<!--                <div class="form-group">-->
+<!--                    <div class="form-fields flex1" style="flex-direction: column !important;">-->
+<!--                        <label>Breed</label>-->
+<!--                        {{#if (eq breed.length 0)}}-->
+<!--                        <img src="icons/svg/mystery-man.svg" />-->
+<!--                        <label>Unspecified</label>-->
+<!--                        {{else}}-->
+<!--                        <img src="{{breed.0.img}}" />-->
+<!--                        <label>{{breed.0.name}}</label>-->
+<!--                        {{/if}}-->
+<!--                    </div>-->
+<!--                    <div class="form-fields flex1" style="flex-direction: column !important;">-->
+<!--                        <label>Origin</label>-->
+<!--                        {{#if (eq origin.length 0)}}-->
+<!--                        <img src="icons/svg/mystery-man.svg" />-->
+<!--                        <label>Unspecified</label>-->
+<!--                        {{else}}-->
+<!--                        <img src="{{origin.0.img}}" />-->
+<!--                        <label>{{origin.0.name}}</label>-->
+<!--                        {{/if}}-->
+<!--                    </div>-->
+<!--                    <div class="form-fields flex1" style="flex-direction: column !important;">-->
+<!--                        <label>Profession</label>-->
+<!--                        {{#if (eq profession.length 0)}}-->
+<!--                        <img src="icons/svg/mystery-man.svg" />-->
+<!--                        <label>Unspecified</label>-->
+<!--                        {{else}}-->
+<!--                        <img src="{{profession.0.img}}" />-->
+<!--                        <label>{{profession.0.name}}</label>-->
+<!--                        {{/if}}-->
+<!--                    </div>-->
+<!--                    <div class="form-fields flex1" style="flex-direction: column !important;">-->
+<!--                        <label>Faction</label>-->
+<!--                        {{#if (eq faction.length 0)}}-->
+<!--                        <img src="icons/svg/mystery-man.svg" />-->
+<!--                        <label>Unspecified</label>-->
+<!--                        {{else}}-->
+<!--                        <img src="{{faction.0.img}}" />-->
+<!--                        <label>{{faction.0.name}}</label>-->
+<!--                        {{/if}}-->
+<!--                    </div>-->
+<!--                </div>-->
 
-            </div> {{!-- closes the "resources" div --}}
+<!--            <div class="resources grid grid-2col">-->
+<!--                <div class="resource flex-group-center">-->
+<!--                    <label for="system.health.value" class="resource-label">Health</label>-->
+<!--                    <div class="resource-content flexrow flex-center flex-between">-->
+<!--                        <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>-->
+<!--                        <span> / </span>-->
+<!--                        <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-            <div class="abilities grid grid-3col">
-                {{#each system.abilities as |ability key|}}
-                <div class="ability flexrow flex-group-center">
-                    <label for="system.abilities.{{key}}.value" class="resource-label">{{key}}</label>
-                    <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                    <span class="ability-mod">{{numberFormat ability.mod decimals=0 sign=true}}</span>
-                </div>
-                {{/each}}
-            </div>
+<!--                <div class="resource flex-group-center">-->
+<!--                    <label for="system.power.value" class="resource-label">Power</label>-->
+<!--                    <div class="resource-content flexrow flex-center flex-between">-->
+<!--                        <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>-->
+<!--                        <span> / </span>-->
+<!--                        <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div> {{!&#45;&#45; closes the "resources" div &#45;&#45;}}-->
+
+<!--            <div class="abilities grid grid-3col">-->
+<!--                {{#each system.abilities as |ability key|}}-->
+<!--                <div class="ability flexrow flex-group-center">-->
+<!--                    <label for="system.abilities.{{key}}.value" class="resource-label">{{key}}</label>-->
+<!--                    <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>-->
+<!--                    <span class="ability-mod">{{numberFormat ability.mod decimals=0 sign=true}}</span>-->
+<!--                </div>-->
+<!--                {{/each}}-->
+<!--            </div>-->
 
         </div> {{!-- closes the "header-fields" div --}}
     </header>
 
     {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="items">Items</a>
+    <nav class="sheet-navigation tabs form-group" data-group="primary">
+        <a class="item active" data-tab="description" style="padding: 10px;">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label>Description</label>
+                <img src="/icons/history.png" />
+                <label>&nbsp;</label>
+            </div>
+        </a>
+        <a class="item" data-tab="breed" style="padding: 10px;">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label>Breed</label>
+                {{#if (eq breed.length 0)}}
+                <img src="icons/svg/mystery-man.svg" />
+                <label>Unspecified</label>
+                {{else}}
+                <img src="{{breed.0.img}}" />
+                <label>{{breed.0.name}}</label>
+                {{/if}}
+            </div>
+        </a>
+        <a class="item" data-tab="origin" style="padding: 10px;">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label>Origin</label>
+                {{#if (eq origin.length 0)}}
+                <img src="icons/svg/mystery-man.svg" />
+                <label>Unspecified</label>
+                {{else}}
+                <img src="{{origin.0.img}}" />
+                <label>{{origin.0.name}}</label>
+                {{/if}}
+            </div>
+        </a>
+        <a class="item" data-tab="profession" style="padding: 10px;">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label>Profession</label>
+                {{#if (eq profession.length 0)}}
+                <img src="icons/svg/mystery-man.svg" />
+                <label>Unspecified</label>
+                {{else}}
+                <img src="{{profession.0.img}}" />
+                <label>{{profession.0.name}}</label>
+                {{/if}}
+            </div>
+        </a>
+        <a class="item" data-tab="faction" style="padding: 10px;">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label>Faction</label>
+                {{#if (eq faction.length 0)}}
+                <img src="icons/svg/mystery-man.svg" />
+                <label>Unspecified</label>
+                {{else}}
+                <img src="{{faction.0.img}}" />
+                <label>{{faction.0.name}}</label>
+                {{/if}}
+            </div>
+        </a>
+        <a class="item" data-tab="items" style="padding: 10px;">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label>Items</label>
+                <img src="/icons/items.png" />
+                <label>&nbsp;</label>
+            </div>
+        </a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
         {{!-- Biography Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="description">
-            {{editor content=system.biography target="system.biography" button=true owner=owner editable=editable}}
+        <div class="tab flexrow active" data-group="primary" data-tab="description">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label>Biography</label>
+                {{editor data.system.background.biography target="system.background.biography" button=true owner=owner editable=editable}}
+            </div>
+        </div>
+
+        {{!-- Breed Tab --}}
+        <div class="tab flexrow" data-group="primary" data-tab="breed">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label><strong>Description</strong></label>
+                {{editor breed.0.system.description.value target="breed.0.system.description.value" button=true owner=owner editable=false}}
+                <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label><br>
+                {{radioBoxes "data.background.breed_lifepath" breed_dict checked=breed_lifepath localize=true}}
+<!--                <table><tr><td>&nbsp;</td><td>Range</td><td>Name</td><td>Description</td></tr>-->
+<!--                {{#each breed.0.system.skills as | skill |}}-->
+<!--                    <tr>-->
+<!--                        <td><input type="radio" name="data.system.background.breed_lifepath" value="{{data.system.background.breed_lifepath}}"></td>-->
+<!--                        <td>{{skill.low}}-{{skill.high}}</td>-->
+<!--                        <td>{{skill.name}}</td>-->
+<!--                        <td>{{skill.description}}</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>&nbsp;</td>-->
+<!--                        <td>&nbsp;</td>-->
+<!--                        <td colspan="2"><strong>Attributes:</strong> Str {{skill.str}}, Sta {{skill.sta}}, Agi {{skill.agi}}, Int {{skill.int}}, Sen {{skill.sen}}, Psy {{skill.psy}}</td>-->
+<!--                    </tr>-->
+<!--                {{/each}}-->
+<!--                </table>-->
+            </div>
+        </div>
+
+        {{!-- Origin Tab --}}
+        <div class="tab flexrow" data-group="primary" data-tab="origin">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label><strong>Description</strong></label>
+                {{editor origin.0.system.description.value target="origin.0.system.description.value" button=true owner=owner editable=false}}
+                <div class="form-fields flex1">
+                    <label><strong>Starting Money: </strong></label>
+                    <label>{{origin.0.system.starting_money}}</label>
+                </div>
+                <div class="form-fields flex1">
+                    <label><strong>Origin Skills (Choose 3): </strong></label>
+                    <label>{{origin.0.system.origin_skills}}</label>
+                </div>
+                <label><strong>Ideals</strong></label><ul>
+                {{#each origin.0.system.ideals as | skill |}}
+                    <li><label>{{skill.description}}</label></li>
+                {{/each}}
+                </ul>
+                <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label>
+                {{radioBoxes "data.background.origin_lifepath" origin_dict checked=origin_lifepath localize=true}}
+<!--                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>-->
+<!--                {{#each origin.0.system.life_path as | skill |}}-->
+<!--                    <tr>-->
+<!--                        <td>{{skill.low}}-{{skill.high}}</td>-->
+<!--                        <td>{{skill.name}}</td>-->
+<!--                        <td>{{skill.description}}</td>-->
+<!--                    </tr>-->
+<!--                {{/each}}-->
+<!--                </table>-->
+            </div>
+        </div>
+
+        {{!-- Profession Tab --}}
+        <div class="tab flexrow" data-group="primary" data-tab="profession">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label><strong>Description</strong></label>
+                {{editor profession.0.system.description.overview target="profession.0.system.description.overview" button=true owner=owner editable=false}}
+                <label><strong>Flashback Ability</strong></label>
+                <div class="form-group">
+                    <div class="form-fields flex1">
+                        {{editor profession.0.system.flashback_ability target="profession.0.system.flashback_ability" button=true owner=owner editable=false}}
+                    </div>
+                    <div class="form-fields flex3">
+                        {{editor profession.0.system.flashback_trigger target="profession.0.system.flashback_trigger" button=true owner=owner editable=false}}
+                    </div>
+                    <div class="form-fields flex3">
+                        {{editor profession.0.system.flashback_effect target="profession.0.system.flashback_effect" button=true owner=owner editable=false}}
+                    </div>
+                </div>
+                <label><strong>Signature Traits</strong></label>
+                {{#each profession.0.system.signature_traits as | skill |}}
+                <div class="form-group">
+                    <div class="form-fields flex1">
+                        {{editor skill.name target="skill.name" button=true owner=owner editable=false}}
+                    </div>
+                    <div class="form-fields flex4">
+                        {{editor skill.description target="skill.description" button=true owner=owner editable=false}}
+                    </div>
+                </div>
+                {{/each}}
+                <label><strong>Skill List</strong> (Starting characters divide 10 points around this list. No skill can be higher than 2 at character creation)</label>
+                <table><tr><td>&nbsp;</td><td>Name</td><td>Description</td></tr>
+                {{#each profession.0.system.skill_list as | skill |}}
+                    <tr>
+                        <td style="width: 100px;">
+                            <div class="input-group number-spinner">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-minus" type="button">-</button>
+                                </span>
+                                <input type="text" name="data.background.profession.skills.{{skill.name}}" value="0"
+                                       placeholder="0" class="form-control text-center txt-skill" min="0" max="10"
+                                       data-skill="{{skill.name}}">
+
+                                <!--                                <input type="text" class="form-control text-center txt-skill" value="0" min="0" max="10" data-skill="{{skill.name}}">-->
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-plus" type="button">+</button>
+                                </span>
+                            </div>
+                        </td>
+                        <td>{{skill.name}}</td>
+                        <td>{{skill.description}}</td>
+                    </tr>
+                {{/each}}
+                </table>
+            </div>
+        </div>
+
+        {{!-- Faction Tab --}}
+        <div class="tab flexrow" data-group="primary" data-tab="faction">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label><strong>Description</strong></label>
+                {{editor faction.0.system.description.value target="faction.0.system.description.value" button=true owner=owner editable=false}}
+                <div class="form-fields flex1">
+                    <label><strong>Money Multiplier (* starting Origin money.): </strong></label>
+                    <label>{{faction.0.system.money_mult}}</label>
+                </div>
+                <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label>
+                {{radioBoxes "data.background.faction_lifepath" faction_dict checked=faction_lifepath localize=true}}
+<!--                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>-->
+<!--                {{#each faction.0.system.life_path as | skill |}}-->
+<!--                    <tr>-->
+<!--                        <td>{{skill.low}}-{{skill.high}}</td>-->
+<!--                        <td>{{skill.name}}</td>-->
+<!--                        <td>{{skill.description}}</td>-->
+<!--                    </tr>-->
+<!--                {{/each}}-->
+<!--                </table>-->
+            </div>
         </div>
 
         {{!-- Owned Items Tab --}}
-        <div class="tab items" data-group="primary" data-tab="items">
+        <div class="tab flexrow" data-group="primary" data-tab="items">
             <ol class="items-list">
                 <li class="item flexrow item-header">
                     <div class="item-image"></div>
