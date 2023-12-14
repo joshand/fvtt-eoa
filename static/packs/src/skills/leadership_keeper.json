@@ -3,6 +3,7 @@
   "name": "Leadership (Keeper)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["keeper"],
     "description": "Skill in guiding, motivating, and leading others effectively.",

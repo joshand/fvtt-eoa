@@ -3,6 +3,7 @@
   "name": "Psychological Modifications",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["bureaucrat"],
     "description": "Using nanotechnology to influence and modify psychological states, enhancing persuasion and control.",

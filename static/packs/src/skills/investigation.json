@@ -3,6 +3,7 @@
   "name": "Investigation",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["keeper"],
     "description": "Aptitude for collecting and analyzing information, crucial for uncovering truths.",

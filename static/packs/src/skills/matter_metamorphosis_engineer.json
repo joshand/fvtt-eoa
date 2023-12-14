@@ -3,6 +3,7 @@
   "name": "Matter Metamorphosis (Engineer)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["engineer"],
     "description": "Ability to manipulate physical matter at the nano level, useful for creating shields and enhancing equipment.",

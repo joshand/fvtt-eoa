@@ -3,6 +3,7 @@
   "name": "Mechanical Engineering",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["engineer"],
     "description": "Knowledge and skill in designing, building, and maintaining mechanical systems and constructs.",

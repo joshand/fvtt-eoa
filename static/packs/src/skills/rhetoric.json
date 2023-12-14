@@ -3,6 +3,7 @@
   "name": "Rhetoric",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["bureaucrat"],
     "description": "Ability to use language effectively for persuasion or influence in speeches and discussions.",

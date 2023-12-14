@@ -3,6 +3,7 @@
   "name": "Demolitions & Trap Disarm",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["soldier"],
     "description": "Knowledge in handling and deploying explosives safely and effectively.",

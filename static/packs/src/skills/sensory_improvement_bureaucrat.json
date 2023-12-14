@@ -3,6 +3,7 @@
   "name": "Sensory Improvement (Bureaucrat)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["bureaucrat"],
     "description": "Enhancing sensory perceptions and awareness through nanotechnology, aiding in gathering information and detecting subtleties in social interactions.",

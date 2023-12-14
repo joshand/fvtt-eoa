@@ -3,6 +3,7 @@
   "name": "Psychology",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["bureaucrat"],
     "description": "Understanding of human behavior and psychology, useful in predicting and manipulating responses.",

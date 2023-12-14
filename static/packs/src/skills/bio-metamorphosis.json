@@ -3,6 +3,7 @@
   "name": "Bio-Metamorphosis",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["keeper"],
     "description": "Ability to use nano skills to alter biological functions, either for healing, adaptation, or enhancement.",

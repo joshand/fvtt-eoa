@@ -3,6 +3,7 @@
   "name": "Diplomacy (Bureaucrat)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["bureaucrat"],
     "description": "Skill in managing relations and communications, both within organizations and between factions.",

@@ -3,6 +3,7 @@
   "name": "Social Networking",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["bureaucrat"],
     "description": "Building and maintaining a network of contacts and allies for information and support.",

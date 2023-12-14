@@ -3,6 +3,7 @@
   "name": "Data Analysis",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["fixer"],
     "description": "Capability to analyze and interpret complex datasets for valuable insights.",

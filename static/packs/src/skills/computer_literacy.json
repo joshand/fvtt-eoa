@@ -3,6 +3,7 @@
   "name": "Computer Literacy",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["fixer"],
     "description": "Skills in using and understanding advanced computer systems and software.",

@@ -3,6 +3,7 @@
   "name": "Weapon Smithing (Soldier)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["soldier"],
     "description": "Knowledge of a wide range of weaponry and their maintenance.",

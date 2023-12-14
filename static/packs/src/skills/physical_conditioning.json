@@ -3,6 +3,7 @@
   "name": "Physical Conditioning",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["soldier"],
     "description": "Maintaining peak physical fitness and combat readiness.",

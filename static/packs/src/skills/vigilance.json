@@ -3,6 +3,7 @@
   "name": "Vigilance",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["keeper"],
     "description": "Keen awareness and ability to detect hidden dangers or important details.",

@@ -3,6 +3,7 @@
   "name": "Parkour",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["fixer"],
     "description": "Physical agility and skill in navigating urban environments quickly and efficiently.",

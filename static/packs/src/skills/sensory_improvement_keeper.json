@@ -3,6 +3,7 @@
   "name": "Sensory Improvement (Keeper)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["keeper"],
     "description": "Mastery in using nano skills to enhance sensory perceptions, aiding in detection and awareness.",

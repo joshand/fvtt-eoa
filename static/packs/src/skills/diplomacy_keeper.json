@@ -3,6 +3,7 @@
   "name": "Diplomacy (Keeper)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["keeper"],
     "description": "Proficiency in peaceful negotiation and conflict resolution.",

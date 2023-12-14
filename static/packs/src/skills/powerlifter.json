@@ -3,6 +3,7 @@
   "name": "Powerlifter",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["keeper"],
     "description": "Honed Physical might and skill in handling heavy equipment and objects.",

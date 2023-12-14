@@ -3,6 +3,7 @@
   "name": "First Aid (Keeper)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["keeper"],
     "description": "Basic medical skills for providing immediate care and stabilizing injuries.",

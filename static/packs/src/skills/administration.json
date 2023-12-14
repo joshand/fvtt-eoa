@@ -3,6 +3,7 @@
   "name": "Administration",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["bureaucrat"],
     "description": "Proficiency in organizational management, including logistics, planning, and resource allocation.",

@@ -3,6 +3,7 @@
   "name": "Quantum Force Field Technology",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "rank": 0,
   "system": {
     "professions": ["engineer"],
     "description": "Knowledge of advanced shield technologies and their applications for defense and utility.",
