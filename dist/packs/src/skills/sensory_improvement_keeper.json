@@ -1,0 +1,38 @@
+{
+  "_id": "9DTonIYGOeseJW5J",
+  "name": "Sensory Improvement (Keeper)",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["keeper"],
+    "description": "Mastery in using nano skills to enhance sensory perceptions, aiding in detection and awareness.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "sensory_improvement_keeper",
+    "type": {
+      "value": "sensory_improvement_keeper",
+      "subtype": "sensory_improvement_keeper",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!9DTonIYGOeseJW5J"
+}

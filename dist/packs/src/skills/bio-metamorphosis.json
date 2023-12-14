@@ -1,0 +1,38 @@
+{
+  "_id": "ldvOCxjpXq2xvekH",
+  "name": "Bio-Metamorphosis",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["keeper"],
+    "description": "Ability to use nano skills to alter biological functions, either for healing, adaptation, or enhancement.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "bio-metamorphosis",
+    "type": {
+      "value": "bio-metamorphosis",
+      "subtype": "bio-metamorphosis",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!ldvOCxjpXq2xvekH"
+}

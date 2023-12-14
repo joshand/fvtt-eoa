@@ -1,0 +1,38 @@
+{
+  "_id": "mLdQOfZGQ7K5BC1g",
+  "name": "Technical Repair",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["engineer"],
+    "description": "Competence in diagnosing and fixing technological equipment and machinery.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "technical_repair",
+    "type": {
+      "value": "technical_repair",
+      "subtype": "technical_repair",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!mLdQOfZGQ7K5BC1g"
+}

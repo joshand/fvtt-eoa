@@ -1,0 +1,38 @@
+{
+  "_id": "6qcFLyls2syazJtM",
+  "name": "Computer Programming",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["engineer"],
+    "description": "Skills in writing, testing, and maintaining software programs.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "computer_programming",
+    "type": {
+      "value": "computer_programming",
+      "subtype": "computer_programming",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!6qcFLyls2syazJtM"
+}

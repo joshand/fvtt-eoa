@@ -1,0 +1,38 @@
+{
+  "_id": "RxIx00gDEtyeFmZ9",
+  "name": "Interrogation Techniques",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["soldier"],
+    "description": "Skills in extracting information from captives or informants.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "interrogation_techniques",
+    "type": {
+      "value": "interrogation_techniques",
+      "subtype": "interrogation_techniques",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!RxIx00gDEtyeFmZ9"
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "E2Yg5lEz3cSJGlT8",
+  "name": "Physical Conditioning",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["soldier"],
+    "description": "Maintaining peak physical fitness and combat readiness.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "physical_conditioning",
+    "type": {
+      "value": "physical_conditioning",
+      "subtype": "physical_conditioning",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!E2Yg5lEz3cSJGlT8"
+}

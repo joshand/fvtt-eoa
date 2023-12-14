@@ -1,0 +1,38 @@
+{
+  "_id": "Am6ghRMVrF0JYQJB",
+  "name": "Negotiation",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["bureaucrat"],
+    "description": "Expertise in brokering deals, resolving conflicts, and achieving desired outcomes through dialogue.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "negotiation",
+    "type": {
+      "value": "negotiation",
+      "subtype": "negotiation",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!Am6ghRMVrF0JYQJB"
+}

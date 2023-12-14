@@ -1,0 +1,38 @@
+{
+  "_id": "4zb9eQXYxY2mDRAy",
+  "name": "Parkour",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["fixer"],
+    "description": "Physical agility and skill in navigating urban environments quickly and efficiently.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "parkour",
+    "type": {
+      "value": "parkour",
+      "subtype": "parkour",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!4zb9eQXYxY2mDRAy"
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "Sie88l96XERIqIkt",
+  "name": "Matter Creation (Soldier)",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["soldier"],
+    "description": "Using nanotechnology to manipulate matter for various purposes, including healing and object creation.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "matter_creation_soldier",
+    "type": {
+      "value": "matter_creation_soldier",
+      "subtype": "matter_creation_soldier",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!Sie88l96XERIqIkt"
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "dKXOttjYHHg7VzDZ",
+  "name": "Leadership (Keeper)",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["keeper"],
+    "description": "Skill in guiding, motivating, and leading others effectively.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "leadership_keeper",
+    "type": {
+      "value": "leadership_keeper",
+      "subtype": "leadership_keeper",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!dKXOttjYHHg7VzDZ"
+}

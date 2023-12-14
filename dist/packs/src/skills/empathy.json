@@ -1,0 +1,38 @@
+{
+  "_id": "SdKpJU6F7gLF8gMa",
+  "name": "Empathy",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["keeper"],
+    "description": "Ability to understand and share the feelings of others, crucial for effective communication and team cohesion.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "empathy",
+    "type": {
+      "value": "empathy",
+      "subtype": "empathy",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!SdKpJU6F7gLF8gMa"
+}

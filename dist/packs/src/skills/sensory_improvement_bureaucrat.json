@@ -1,0 +1,38 @@
+{
+  "_id": "LyvXo0wN1BTDqIFr",
+  "name": "Sensory Improvement (Bureaucrat)",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["bureaucrat"],
+    "description": "Enhancing sensory perceptions and awareness through nanotechnology, aiding in gathering information and detecting subtleties in social interactions.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "sensory_improvement_bureaucrat",
+    "type": {
+      "value": "sensory_improvement_bureaucrat",
+      "subtype": "sensory_improvement_bureaucrat",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!LyvXo0wN1BTDqIFr"
+}

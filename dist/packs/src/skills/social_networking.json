@@ -1,0 +1,38 @@
+{
+  "_id": "HFW9QS2dEDAo8xem",
+  "name": "Social Networking",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["bureaucrat"],
+    "description": "Building and maintaining a network of contacts and allies for information and support.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "social_networking",
+    "type": {
+      "value": "social_networking",
+      "subtype": "social_networking",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!HFW9QS2dEDAo8xem"
+}

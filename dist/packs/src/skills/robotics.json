@@ -1,0 +1,38 @@
+{
+  "_id": "UfFJYgjPi0nfPDEZ",
+  "name": "Robotics",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["engineer"],
+    "description": "Ability to communicate effectively with AI and machine interfaces, enhancing interactions with automated systems.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "robotics",
+    "type": {
+      "value": "robotics",
+      "subtype": "robotics",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!UfFJYgjPi0nfPDEZ"
+}
