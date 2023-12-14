@@ -36,7 +36,8 @@
       "templates": ["base"]
     },
     "skill": {
-      "templates": ["base"]
+      "templates": ["base"],
+      "rank": 0
     }
   }
 }
