@@ -218,8 +218,9 @@ export class EoAActorSheet extends ActorSheet {
             let value = parseInt(input.val());
             if (value > 0) {
                 input.val(value - 1);
+            } else if (input.val() === "") {
+                input.val(0);
             }
-            console.log(input.data("skill"));
         });
 
         html.find('.btn-plus').click(ev => {
@@ -227,8 +228,9 @@ export class EoAActorSheet extends ActorSheet {
             let value = parseInt(input.val());
             if (value < 10) {
                 input.val(value + 1);
+            } else if (input.val() === "") {
+                input.val(1);
             }
-            console.log(input.data("skill"));
         });
 
         html.find('.txt-skill').change(ev => {
@@ -239,7 +241,6 @@ export class EoAActorSheet extends ActorSheet {
             } else if (value > 10) {
                 input.val(10);
             }
-            console.log(input.data("skill"));
         });
     }
 
