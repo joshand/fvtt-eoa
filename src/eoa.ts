@@ -5,7 +5,7 @@ import { EoAProfessionSheet } from "./module/items/ProfessionSheet";
 import { EoAOriginSheet } from "./module/items/OriginSheet";
 import { EoAFactionSheet } from "./module/items/FactionSheet";
 import { EoAActorSheet } from "./module/actors/ActorSheet";
-import { EoASkillSheet } from "./module/actors/SkillSheet";
+import { EoASkillSheet } from "./module/items/SkillSheet";
 import * as Dice from "./helpers/dice.js";
 
 Hooks.once("init", async () => {
