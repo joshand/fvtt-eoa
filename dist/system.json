@@ -2,14 +2,14 @@
   "id": "eoa",
   "title": "Edge of Anarchy",
   "description": "A system for playing the Edge of Anarchy game system in the Foundry Virtual Tabletop environment.",
-  "version": "0.0.82",
+  "version": "0.0.83",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
   },
   "url": "https://github.com/joshand/fvtt-eoa/",
   "manifest": "https://raw.githubusercontent.com/joshand/fvtt-eoa/main/static/system.json",
-  "download": "https://github.com/joshand/fvtt-eoa/releases/download/0.0.82/system.zip",
+  "download": "https://github.com/joshand/fvtt-eoa/releases/download/0.0.83/system.zip",
   "authors": [
     {
       "name": "Josh",
@@ -68,6 +68,15 @@
       "type": "Item",
       "private": false,
       "flags": {}
+    },
+    {
+      "name": "skills",
+      "label": "Skills",
+      "system": "eoa",
+      "path": "packs/skills.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -79,7 +88,8 @@
         "breeds",
         "factions",
         "origins",
-        "professions"
+        "professions",
+        "skills"
       ]
     }
   ],
