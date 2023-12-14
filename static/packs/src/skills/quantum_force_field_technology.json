@@ -1,0 +1,38 @@
+{
+  "_id": "6zpN519fP14PuRpP",
+  "name": "Quantum Force Field Technology",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["engineer"],
+    "description": "Knowledge of advanced shield technologies and their applications for defense and utility.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "quantum_force_field_technology",
+    "type": {
+      "value": "quantum_force_field_technology",
+      "subtype": "quantum_force_field_technology",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!6zpN519fP14PuRpP"
+}

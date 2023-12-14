@@ -1,0 +1,38 @@
+{
+  "_id": "UcBFFrFayd8EDLLD",
+  "name": "Legal Knowledge",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["bureaucrat"],
+    "description": "Familiarity with laws, regulations, and bureaucratic procedures, essential for navigating and exploiting legal systems.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "legal_knowledge",
+    "type": {
+      "value": "legal_knowledge",
+      "subtype": "legal_knowledge",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!UcBFFrFayd8EDLLD"
+}

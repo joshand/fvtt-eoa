@@ -1,11 +1,11 @@
 {
-  "_id": "Am6ghRMVrF0JYQJB",
-  "name": "Negotiation",
+  "_id": "ldvOCxjpXq2xvekH",
+  "name": "Bio-Metamorphosis",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
   "system": {
-    "professions": ["bureaucrat"],
-    "description": "Expertise in brokering deals, resolving conflicts, and achieving desired outcomes through dialogue.",
+    "professions": ["keeper"],
+    "description": "Ability to use nano skills to alter biological functions, either for healing, adaptation, or enhancement.",
     "source": {
       "custom": "",
       "book": "GDoc",
@@ -13,10 +13,10 @@
       "uuid": "",
       "license": "CC-BY-4.0"
     },
-    "identifier": "negotiation",
+    "identifier": "bio-metamorphosis",
     "type": {
-      "value": "negotiation",
-      "subtype": "negotiation",
+      "value": "bio-metamorphosis",
+      "subtype": "bio-metamorphosis",
       "custom": ""
     }
   },
@@ -34,5 +34,5 @@
   },
   "sort": 0,
   "folder": null,
-  "_key": "!items!Am6ghRMVrF0JYQJB"
+  "_key": "!items!ldvOCxjpXq2xvekH"
 }

@@ -1,6 +1,6 @@
 {
   "_id": "0w3W24QSTVkH5tfX",
-  "name": "Leadership",
+  "name": "Leadership (Bureaucrat)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
   "system": {
@@ -13,10 +13,10 @@
       "uuid": "",
       "license": "CC-BY-4.0"
     },
-    "identifier": "leadership",
+    "identifier": "leadership_bureaucrat",
     "type": {
-      "value": "leadership",
-      "subtype": "leadership",
+      "value": "leadership_bureaucrat",
+      "subtype": "leadership_bureaucrat",
       "custom": ""
     }
   },

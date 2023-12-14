@@ -1,6 +1,6 @@
 {
   "_id": "pHjOdWTXzfZWJtV3",
-  "name": "Weapon Smithing",
+  "name": "Weapon Smithing (Engineer)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
   "system": {
@@ -13,10 +13,10 @@
       "uuid": "",
       "license": "CC-BY-4.0"
     },
-    "identifier": "weapon_smithing",
+    "identifier": "weapon_smithing_engineer",
     "type": {
-      "value": "weapon_smithing",
-      "subtype": "weapon_smithing",
+      "value": "weapon_smithing_engineer",
+      "subtype": "weapon_smithing_engineer",
       "custom": ""
     }
   },

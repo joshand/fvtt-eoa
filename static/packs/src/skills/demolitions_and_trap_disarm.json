@@ -1,0 +1,38 @@
+{
+  "_id": "Rh1huikQAbqAmXps",
+  "name": "Demolitions & Trap Disarm",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["soldier"],
+    "description": "Knowledge in handling and deploying explosives safely and effectively.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "demolitions_and_trap_disarm",
+    "type": {
+      "value": "demolitions_and_trap_disarm",
+      "subtype": "demolitions_and_trap_disarm",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!Rh1huikQAbqAmXps"
+}

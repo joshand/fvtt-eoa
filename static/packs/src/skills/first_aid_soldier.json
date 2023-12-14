@@ -1,0 +1,38 @@
+{
+  "_id": "P4nT3CTFun0WILcS",
+  "name": "First Aid (Soldier)",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["soldier"],
+    "description": "Basic medical skills for battlefield injuries.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "first_aid_soldier",
+    "type": {
+      "value": "first_aid_soldier",
+      "subtype": "first_aid_soldier",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!P4nT3CTFun0WILcS"
+}

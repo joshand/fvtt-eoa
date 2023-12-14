@@ -1,0 +1,38 @@
+{
+  "_id": "Am6ghRMVrF0JYQJB",
+  "name": "Rhetoric",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["bureaucrat"],
+    "description": "Ability to use language effectively for persuasion or influence in speeches and discussions.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "rhetoric",
+    "type": {
+      "value": "rhetoric",
+      "subtype": "rhetoric",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!Am6ghRMVrF0JYQJB"
+}

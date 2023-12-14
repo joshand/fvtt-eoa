@@ -1,6 +1,6 @@
 {
   "_id": "epxjl8Pf2RHXVdV3",
-  "name": "Matter Metamorphosis",
+  "name": "Matter Metamorphosis (Engineer)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
   "system": {
@@ -13,10 +13,10 @@
       "uuid": "",
       "license": "CC-BY-4.0"
     },
-    "identifier": "matter_metamorphosis",
+    "identifier": "matter_metamorphosis_engineer",
     "type": {
-      "value": "matter_metamorphosis",
-      "subtype": "matter_metamorphosis",
+      "value": "matter_metamorphosis_engineer",
+      "subtype": "matter_metamorphosis_engineer",
       "custom": ""
     }
   },

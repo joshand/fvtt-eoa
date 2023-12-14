@@ -1,0 +1,38 @@
+{
+  "_id": "uHFWhWIddrwJ2TWv",
+  "name": "Mechanical Engineering",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["engineer"],
+    "description": "Knowledge and skill in designing, building, and maintaining mechanical systems and constructs.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "mechanical_engineering",
+    "type": {
+      "value": "mechanical_engineering",
+      "subtype": "mechanical_engineering",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!uHFWhWIddrwJ2TWv"
+}

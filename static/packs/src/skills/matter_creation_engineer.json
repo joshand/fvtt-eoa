@@ -1,6 +1,6 @@
 {
   "_id": "7qDYDrfZ7pb8rr1J",
-  "name": "Matter Creation",
+  "name": "Matter Creation (Engineer)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
   "system": {
@@ -13,10 +13,10 @@
       "uuid": "",
       "license": "CC-BY-4.0"
     },
-    "identifier": "matter_creation",
+    "identifier": "matter_creation_engineer",
     "type": {
-      "value": "matter_creation",
-      "subtype": "matter_creation",
+      "value": "matter_creation_engineer",
+      "subtype": "matter_creation_engineer",
       "custom": ""
     }
   },

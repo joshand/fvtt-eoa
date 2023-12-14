@@ -1,0 +1,38 @@
+{
+  "_id": "jwkGJ6Fm737YsKMG",
+  "name": "Psychological Modifications",
+  "type": "skill",
+  "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
+  "system": {
+    "professions": ["bureaucrat"],
+    "description": "Using nanotechnology to influence and modify psychological states, enhancing persuasion and control.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "psychological_modifications",
+    "type": {
+      "value": "psychological_modifications",
+      "subtype": "psychological_modifications",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!jwkGJ6Fm737YsKMG"
+}

@@ -1,6 +1,6 @@
 {
   "_id": "kBgTbTvByRGaABWv",
-  "name": "First Aid",
+  "name": "First Aid (Keeper)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
   "system": {
@@ -13,10 +13,10 @@
       "uuid": "",
       "license": "CC-BY-4.0"
     },
-    "identifier": "first_aid",
+    "identifier": "first_aid_keeper",
     "type": {
-      "value": "first_aid",
-      "subtype": "first_aid",
+      "value": "first_aid_keeper",
+      "subtype": "first_aid_keeper",
       "custom": ""
     }
   },

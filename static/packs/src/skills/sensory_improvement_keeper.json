@@ -1,6 +1,6 @@
 {
   "_id": "9DTonIYGOeseJW5J",
-  "name": "Sensory Improvement",
+  "name": "Sensory Improvement (Keeper)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
   "system": {
@@ -13,10 +13,10 @@
       "uuid": "",
       "license": "CC-BY-4.0"
     },
-    "identifier": "sensory_improvement",
+    "identifier": "sensory_improvement_keeper",
     "type": {
-      "value": "sensory_improvement",
-      "subtype": "sensory_improvement",
+      "value": "sensory_improvement_keeper",
+      "subtype": "sensory_improvement_keeper",
       "custom": ""
     }
   },

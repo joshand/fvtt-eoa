@@ -1,6 +1,6 @@
 {
   "_id": "9sV9l1YPEWgPIzOR",
-  "name": "Diplomacy",
+  "name": "Diplomacy (Bureaucrat)",
   "type": "skill",
   "img": "icons/skills/trades/academics-scribe-quill-gray.webp",
   "system": {
@@ -13,10 +13,10 @@
       "uuid": "",
       "license": "CC-BY-4.0"
     },
-    "identifier": "diplomacy",
+    "identifier": "diplomacy_bureaucrat",
     "type": {
-      "value": "diplomacy",
-      "subtype": "diplomacy",
+      "value": "diplomacy_bureaucrat",
+      "subtype": "diplomacy_bureaucrat",
       "custom": ""
     }
   },
