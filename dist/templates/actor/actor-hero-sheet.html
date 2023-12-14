@@ -8,6 +8,36 @@
     td {
         padding: 2px !important;
     }
+    label.checkbox {
+        padding: 0;
+        height: 40px;
+        line-height: 0 !important;
+    }
+    .checkbox {
+        display: flex;
+        align-items: center;
+    }
+    .checkbox input[type="radio"] {
+        position: relative;
+        top: 0; /* Adjust the vertical position as needed */
+        margin-right: 5px; /* Adjust the spacing between radio button and content */
+    }
+    form .form-group label {
+        line-height: 15px;
+    }
+    .number-spinner .input-group-btn:last-child>.btn {
+        margin-left: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .number-spinner .form-control {
+        width: 30px;
+        text-align: center;
+    }
+    .btn-plus,
+    .btn-minus {
+        width: 20px;
+    }
 </style>
 
 <form class="{{cssClass}} flexcol" autocomplete="off" style="flex: none !important;">
@@ -176,22 +206,25 @@
         {{!-- Breed Tab --}}
         <div class="tab flexrow" data-group="primary" data-tab="breed">
             <div class="form-fields flex1" style="flex-direction: column !important;">
-                <label>Description</label>
+                <label><strong>Description</strong></label>
                 {{editor breed.0.system.description.value target="breed.0.system.description.value" button=true owner=owner editable=false}}
-                <label>Lifepath Table (Roll 2d6 or Choose)</label>
-                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>
-                {{#each breed.0.system.skills as | skill |}}
-                    <tr>
-                        <td>{{skill.low}}-{{skill.high}}</td>
-                        <td>{{skill.name}}</td>
-                        <td>{{skill.description}}</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="2"><strong>Attributes:</strong> Str {{skill.str}}, Sta {{skill.sta}}, Agi {{skill.agi}}, Int {{skill.int}}, Sen {{skill.sen}}, Psy {{skill.psy}}</td>
-                    </tr>
-                {{/each}}
-                </table>
+                <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label><br>
+                {{radioBoxes "data.background.breed_lifepath" breed_dict checked=breed_lifepath localize=true}}
+<!--                <table><tr><td>&nbsp;</td><td>Range</td><td>Name</td><td>Description</td></tr>-->
+<!--                {{#each breed.0.system.skills as | skill |}}-->
+<!--                    <tr>-->
+<!--                        <td><input type="radio" name="data.system.background.breed_lifepath" value="{{data.system.background.breed_lifepath}}"></td>-->
+<!--                        <td>{{skill.low}}-{{skill.high}}</td>-->
+<!--                        <td>{{skill.name}}</td>-->
+<!--                        <td>{{skill.description}}</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>&nbsp;</td>-->
+<!--                        <td>&nbsp;</td>-->
+<!--                        <td colspan="2"><strong>Attributes:</strong> Str {{skill.str}}, Sta {{skill.sta}}, Agi {{skill.agi}}, Int {{skill.int}}, Sen {{skill.sen}}, Psy {{skill.psy}}</td>-->
+<!--                    </tr>-->
+<!--                {{/each}}-->
+<!--                </table>-->
             </div>
         </div>
 
@@ -213,16 +246,17 @@
                     <li><label>{{skill.description}}</label></li>
                 {{/each}}
                 </ul>
-                <label><strong>Lifepath Table (Roll 2d6 or Choose)</strong></label>
-                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>
-                {{#each origin.0.system.life_path as | skill |}}
-                    <tr>
-                        <td>{{skill.low}}-{{skill.high}}</td>
-                        <td>{{skill.name}}</td>
-                        <td>{{skill.description}}</td>
-                    </tr>
-                {{/each}}
-                </table>
+                <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label>
+                {{radioBoxes "data.background.origin_lifepath" origin_dict checked=origin_lifepath localize=true}}
+<!--                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>-->
+<!--                {{#each origin.0.system.life_path as | skill |}}-->
+<!--                    <tr>-->
+<!--                        <td>{{skill.low}}-{{skill.high}}</td>-->
+<!--                        <td>{{skill.name}}</td>-->
+<!--                        <td>{{skill.description}}</td>-->
+<!--                    </tr>-->
+<!--                {{/each}}-->
+<!--                </table>-->
             </div>
         </div>
 
@@ -258,7 +292,17 @@
                 <table><tr><td>&nbsp;</td><td>Name</td><td>Description</td></tr>
                 {{#each profession.0.system.skill_list as | skill |}}
                     <tr>
-                        <td>&nbsp;</td>
+                        <td style="width: 100px;">
+                            <div class="input-group number-spinner">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-minus" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control text-center txt-skill" value="0" min="0" max="10" data-skill="{{skill.name}}">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-plus" type="button">+</button>
+                                </span>
+                            </div>
+                        </td>
                         <td>{{skill.name}}</td>
                         <td>{{skill.description}}</td>
                     </tr>
@@ -276,16 +320,17 @@
                     <label><strong>Money Multiplier (* starting Origin money.): </strong></label>
                     <label>{{faction.0.system.money_mult}}</label>
                 </div>
-                <label><strong>Lifepath Table (Roll 2d6 or Choose)</strong></label>
-                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>
-                {{#each faction.0.system.life_path as | skill |}}
-                    <tr>
-                        <td>{{skill.low}}-{{skill.high}}</td>
-                        <td>{{skill.name}}</td>
-                        <td>{{skill.description}}</td>
-                    </tr>
-                {{/each}}
-                </table>
+                <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label>
+                {{radioBoxes "data.background.faction_lifepath" faction_dict checked=faction_lifepath localize=true}}
+<!--                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>-->
+<!--                {{#each faction.0.system.life_path as | skill |}}-->
+<!--                    <tr>-->
+<!--                        <td>{{skill.low}}-{{skill.high}}</td>-->
+<!--                        <td>{{skill.name}}</td>-->
+<!--                        <td>{{skill.description}}</td>-->
+<!--                    </tr>-->
+<!--                {{/each}}-->
+<!--                </table>-->
             </div>
         </div>
 

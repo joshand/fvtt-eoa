@@ -9,7 +9,7 @@
         "origin_lifepath": "",
         "faction_lifepath": "",
         "profession": {
-          "skills": []
+          "skills": {}
         }
       }
     },
