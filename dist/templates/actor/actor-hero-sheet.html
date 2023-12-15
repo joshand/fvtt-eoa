@@ -81,6 +81,30 @@
             </h3>
             {{/if}}
             {{/each}}
+            <h3 style="padding: 0 15px">
+                <table style="border: 1px black solid">
+                    <tr>
+                        <td>
+                            <label>HP</label><input type="text" name="system.current_hp" value="{{system.current_hp}}" placeholder="0">
+                        </td>
+                        <td>
+                            <label>/</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{system.max_hp}}</label>
+                        </td>
+                        <td>
+                            <label>NP</label><input type="text" name="system.current_np" value="{{system.current_np}}" placeholder="0">
+                        </td>
+                        <td>
+                            <label>/</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{system.max_np}}</label>
+                        </td>
+                        <td>
+                            <label>Init</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{system.init}}</label>
+                        </td>
+                        <td>
+                            <label>IP</label><input type="text" name="system.current_ip" value="{{system.current_ip}}" placeholder="0">
+                        </td>
+                    </tr>
+                </table>
+            </h3>
 
 <!--            <h1 class="charalias"><input name="system.alias" type="text" value="{{data.system.alias}}" placeholder="Alias"/></h1>-->
 
