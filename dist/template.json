@@ -8,9 +8,8 @@
         "breed_lifepath": "",
         "origin_lifepath": "",
         "faction_lifepath": "",
-        "profession": {
-          "skills": {}
-        }
+        "origin_skills": {},
+        "skill": {}
       }
     },
     "hero": {
