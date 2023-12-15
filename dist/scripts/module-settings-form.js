@@ -11,10 +11,11 @@ export class ModuleSettingsForm extends FormApplication {
   static ModuleName='';
   static ModuleSettingIgnoreList;
   static initialize() {
-    console.log('Initializing ModuleSettingsForm for module ' + this.ModuleID );
     this.ModuleID=_module_id;
+    console.log('Initializing ModuleSettingsForm for module ' + this.ModuleID );
     this.ModuleSettingIgnoreList=_module_ignore_settings;
-    this.ModuleName=game.modules.get(_module_id).title;
+    // this.ModuleName=game.modules.get(_module_id).title;
+    this.ModuleName=game.system.title;
     console.log('Initialization Complete!');
   }
     
