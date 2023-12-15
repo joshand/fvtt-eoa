@@ -45,13 +45,18 @@ export class EoAActorSheet extends ActorSheet {
                 context.breed_dict[el.name] = `
                     <div class="form-group" style="width: 100%">
                         <div class="flex1">
-                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.low}-${el.high}</label>
+                            <label style="width: 100%; flex: none !important; text-align: left !important;">${el.low}-${el.high}</label>
                         </div>
                         <div class="form-fields flex1">
                             <label style="width: 100%; flex: none !important; text-align: left !important">${el.name}</label>
                         </div>
-                        <div class="form-fields flex4">
-                            <label style="width: 100%; flex: none !important; text-align: left !important">${el.description}</label>
+                        <div class="wrapper" style="width: 100%; display: flex; flex-direction: column !important; align-items: flex-start;">
+                            <div class="form-fields flex4">
+                                <label style="width: 100%; flex: none !important; text-align: left !important;">${el.description}</label>
+                            </div>
+                            <div class="form-fields flex4">
+                                <label style="width: 100%; flex: none !important; text-align: left !important;"><strong>Attributes:</strong> Str ${el.str}, Sta ${el.sta}, Agi ${el.agi}, Int ${el.int}, Sen ${el.sen}, Psy ${el.psy}</label>
+                            </div>
                         </div>
                     </div>
                 `;

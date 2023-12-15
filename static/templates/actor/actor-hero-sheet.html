@@ -47,6 +47,35 @@
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+            {{#each breed.0.system.skills as | skill |}}
+            {{#if (eq skill.name ../data.system.breed_lifepath)}}
+            <h3 style="padding: 0 15px">
+                <table style="border: 1px black solid">
+                    <tr>
+                        <td>
+                            <label>STR</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.str}}</label>
+                        </td>
+                        <td>
+                            <label>STA</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.sta}}</label>
+                        </td>
+                        <td>
+                            <label>AGI</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.agi}}</label>
+                        </td>
+                        <td>
+                            <label>INT</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.int}}</label>
+                        </td>
+                        <td>
+                            <label>SEN</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.sen}}</label>
+                        </td>
+                        <td>
+                            <label>PSY</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.psy}}</label>
+                        </td>
+                    </tr>
+                </table>
+            </h3>
+            {{/if}}
+            {{/each}}
+
 <!--            <h1 class="charalias"><input name="system.alias" type="text" value="{{data.system.alias}}" placeholder="Alias"/></h1>-->
 
 <!--                <div class="form-group">-->
