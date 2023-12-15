@@ -239,7 +239,11 @@
                 </div>
                 <div class="form-fields flex1">
                     <label><strong>Origin Skills (Choose 3): </strong></label>
-                    <label>{{origin.0.system.origin_skills}}</label>
+<!--                    <label>{{origin.0.system.origin_skills}}</label>-->
+<!--                    <input type="text" name="system.skill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.skill sk._id) 'rank' }}"-->
+                    {{#each origin.0.system.origin_skills as | oskill |}}
+                        <input type="checkbox" name="system.origin_skills.{{oskill}}" {{checked (lookup ../data.system.origin_skills oskill)}}>{{oskill}}
+                    {{/each}}
                 </div>
                 <label><strong>Ideals</strong></label><ul>
                 {{#each origin.0.system.ideals as | skill |}}
@@ -290,14 +294,17 @@
                 {{/each}}
                 <label><strong>Skill List</strong> (Starting characters divide 10 points around this list. No skill can be higher than 2 at character creation)</label>
                 <table><tr><td>&nbsp;</td><td>Name</td><td>Description</td></tr>
-                {{#each skill}}
+                {{#each skill as | sk |}}
                     <tr>
                         <td style="width: 100px;">
                             <div class="input-group number-spinner">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default btn-minus" type="button">-</button>
                                 </span>
-                                <input type="text" name="{{name}}" value="{{rank}}"
+<!--                                <input type="text" name="system.skill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.skill sk._id) 'rank' }}"-->
+<!--                                       placeholder="0">-->
+
+                                <input type="text" name="system.skill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.skill sk._id) 'rank' }}"
                                        placeholder="0" class="form-control text-center txt-skill" min="0" max="10"
                                        data-skill="{{name}}">
 
@@ -307,8 +314,8 @@
                                 </span>
                             </div>
                         </td>
-                        <td>{{name}}</td>
-                        <td>{{system.description}}</td>
+                        <td>{{sk.name}}</td>
+                        <td>{{sk.system.description}}</td>
                     </tr>
                 {{/each}}
                 </table>
