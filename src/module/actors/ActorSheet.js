@@ -7,7 +7,7 @@ export class EoAActorSheet extends ActorSheet {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["boilerplate", "sheet", "actor"],
+            classes: ["eoa", "sheet", "actor"],
             template: "systems/eoa/templates/actor/actor-sheet.html",
             width: 800,
             height: 800,
@@ -40,7 +40,14 @@ export class EoAActorSheet extends ActorSheet {
         context.config = CONFIG.eoa;
         context.breed = context.items.filter(function(item) { return item.type === "breed" })
         context.breed_dict = {};
+        context.max_hp = 0;
+        context.max_np = 0;
+        context.init = 0;
         if (context.breed.length > 0) {
+            let attr_vals = context.breed[0].system.skills;
+            context.max_hp = (parseInt(attr_vals.str) + parseInt(attr_vals.sta)) * 5;
+            context.max_np = (parseInt(attr_vals.int) + parseInt(attr_vals.psy)) * 5;
+            context.init = (parseInt(attr_vals.sen) + parseInt(attr_vals.agl));
             context.breed[0].system.skills.forEach((el) => {
                 context.breed_dict[el.name] = `
                     <div class="form-group" style="width: 100%">

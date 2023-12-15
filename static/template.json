@@ -8,7 +8,10 @@
         "origin_lifepath": "",
         "faction_lifepath": "",
         "origin_skills": {},
-        "skill": {}
+        "skill": {},
+        "current_hp": 0,
+        "current_np": 0,
+        "current_ip": 0
       }
     },
     "hero": {
