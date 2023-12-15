@@ -23,7 +23,6 @@
     "scripts/fux-dice-roller-roll.js",
     "scripts/fux-dice-roller-form.js",
     "scripts/module-settings-form.js",
-    "scripts/fux-dice-roller-combat-helper-form.js",
     "scripts/fux-dice-roller-constants.js"
   ],
   "styles": [
