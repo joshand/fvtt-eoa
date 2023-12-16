@@ -9,6 +9,16 @@
       "chat": "",
       "unidentified": ""
     },
+    "bonus": {
+      "init": 0,
+      "movement": 0,
+      "ip": 0,
+      "implant_skill": 0,
+      "ncu": 5,
+      "np": 10,
+      "hp": 0,
+      "items": 0
+    },
     "skills": [
       {
         "low": 1,
