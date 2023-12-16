@@ -7,7 +7,7 @@ export class EoAActorSheet extends ActorSheet {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["eoa", "sheet", "actor"],
+            classes: ["boilerplate", "sheet", "actor"],
             template: "systems/eoa/templates/actor/actor-sheet.html",
             width: 800,
             height: 800,
@@ -38,16 +38,24 @@ export class EoAActorSheet extends ActorSheet {
         // context.data = actorData.system;
         // context.flags = actorData.flags;
         context.config = CONFIG.eoa;
-        context.breed = context.items.filter(function(item) { return item.type === "breed" })
-        context.breed_dict = {};
         context.max_hp = 0;
         context.max_np = 0;
         context.init = 0;
+        context.breed = context.items.filter(function(item) { return item.type === "breed" })
+        context.breed_dict = {};
+        context.breed_lifepath = context.data.system.breed_lifepath;
         if (context.breed.length > 0) {
-            let attr_vals = context.breed[0].system.skills;
-            context.max_hp = (parseInt(attr_vals.str) + parseInt(attr_vals.sta)) * 5;
-            context.max_np = (parseInt(attr_vals.int) + parseInt(attr_vals.psy)) * 5;
-            context.init = (parseInt(attr_vals.sen) + parseInt(attr_vals.agl));
+            if (context.breed_lifepath !== "") {
+                // console.log(context.breed_lifepath);
+                // console.log(context.breed[0].system.skills);
+                let attr_vals = context.breed[0].system.skills.filter(e => e["name"] === context.breed_lifepath);
+                if (attr_vals.length > 0) {
+                    // console.log(attr_vals[0]);
+                    context.max_hp = (parseInt(attr_vals[0].str) + parseInt(attr_vals[0].sta)) * 5;
+                    context.max_np = (parseInt(attr_vals[0].int) + parseInt(attr_vals[0].psy)) * 5;
+                    context.init = (parseInt(attr_vals[0].sen) + parseInt(attr_vals[0].agi));
+                }
+            }
             context.breed[0].system.skills.forEach((el) => {
                 context.breed_dict[el.name] = `
                     <div class="form-group" style="width: 100%">
@@ -69,7 +77,11 @@ export class EoAActorSheet extends ActorSheet {
                 `;
             });
         }
-        context.breed_lifepath = context.data.system.breed_lifepath;
+        if ((context.breed.length > 0) && (context.breed_lifepath !== "")) {
+            context.has_stats = true;
+        } else {
+            context.has_stats = false;
+        }
         context.origin = context.items.filter(function(item) { return item.type === "origin" })
         context.origin_dict = {};
         if (context.origin.length > 0) {

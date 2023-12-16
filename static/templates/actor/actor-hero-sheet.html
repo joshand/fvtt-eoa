@@ -53,54 +53,92 @@
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" style="height: 128px !important; width: 128px !important;"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-            {{#each breed.0.system.skills as | skill |}}
-            {{#if (eq skill.name ../data.system.breed_lifepath)}}
-            <h3 style="padding: 0 15px">
-                <table style="border: 1px black solid">
-                    <tr>
-                        <td>
-                            <label>STR</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.str}}</label>
-                        </td>
-                        <td>
-                            <label>STA</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.sta}}</label>
-                        </td>
-                        <td>
-                            <label>AGI</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.agi}}</label>
-                        </td>
-                        <td>
-                            <label>INT</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.int}}</label>
-                        </td>
-                        <td>
-                            <label>SEN</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.sen}}</label>
-                        </td>
-                        <td>
-                            <label>PSY</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.psy}}</label>
-                        </td>
-                    </tr>
-                </table>
-            </h3>
+            {{#if has_stats}}
+                {{#each breed.0.system.skills as | skill |}}
+                    {{#if (eq skill.name ../data.system.breed_lifepath)}}
+                    <h3 style="padding: 0 15px; border-bottom: none !important;">
+                        <table style="border: 1px black solid">
+                            <tr>
+                                <td>
+                                    <label>STR</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.str}}</label>
+                                </td>
+                                <td>
+                                    <label>STA</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.sta}}</label>
+                                </td>
+                                <td>
+                                    <label>AGI</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.agi}}</label>
+                                </td>
+                                <td>
+                                    <label>INT</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.int}}</label>
+                                </td>
+                                <td>
+                                    <label>SEN</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.sen}}</label>
+                                </td>
+                                <td>
+                                    <label>PSY</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{skill.psy}}</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </h3>
+                    {{/if}}
+                {{/each}}
+            {{else}}
+                <h3 style="padding: 0 15px; border-bottom: none !important;">
+                    <table style="border: 1px black solid">
+                        <tr>
+                            <td>
+                                <label>STR</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">0</label>
+                            </td>
+                            <td>
+                                <label>STA</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">0</label>
+                            </td>
+                            <td>
+                                <label>AGI</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">0</label>
+                            </td>
+                            <td>
+                                <label>INT</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">0</label>
+                            </td>
+                            <td>
+                                <label>SEN</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">0</label>
+                            </td>
+                            <td>
+                                <label>PSY</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">0</label>
+                            </td>
+                        </tr>
+                    </table>
+                </h3>
             {{/if}}
-            {{/each}}
+
             <h3 style="padding: 0 15px">
                 <table style="border: 1px black solid">
                     <tr>
                         <td>
-                            <label>HP</label><input type="text" name="system.current_hp" value="{{system.current_hp}}" placeholder="0">
+                            <div class="form-fields flex1">
+                                <label>HP</label>
+                                <input type="text" name="system.current_hp" value="{{data.system.current_hp}}" placeholder="0" style="width: 45px;">
+                                <label>/</label>
+                                <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_hp}}</label>
+                            </div>
                         </td>
                         <td>
-                            <label>/</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{system.max_hp}}</label>
+                            <div class="form-fields flex1">
+                                <label>NP</label>
+                                <input type="text" name="system.current_np" value="{{data.system.current_np}}" placeholder="0" style="width: 45px;">
+                                <label>/</label>
+                                <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_np}}</label>
+                            </div>
                         </td>
                         <td>
-                            <label>NP</label><input type="text" name="system.current_np" value="{{system.current_np}}" placeholder="0">
+                            <div class="form-fields flex1">
+                                <label>Init</label>
+                                <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{init}}</label>
+                            </div>
                         </td>
                         <td>
-                            <label>/</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{system.max_np}}</label>
-                        </td>
-                        <td>
-                            <label>Init</label><label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{system.init}}</label>
-                        </td>
-                        <td>
-                            <label>IP</label><input type="text" name="system.current_ip" value="{{system.current_ip}}" placeholder="0">
+                            <div class="form-fields flex1">
+                                <label>IP</label>
+                                <input type="text" name="system.current_ip" value="{{data.system.current_ip}}" placeholder="0" style="width: 45px;">
+                            </div>
                         </td>
                     </tr>
                 </table>
