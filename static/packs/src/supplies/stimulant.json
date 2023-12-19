@@ -1,0 +1,38 @@
+{
+  "_id": "6H3DQdmuXQO1uX3x",
+  "name": "Stimulant",
+  "type": "supply",
+  "img": "icons/consumables/food/berries-ration-round-red.webp",
+  "system": {
+    "cost": 2,
+    "description": "One creature recovers from a single status effect.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "stimulant",
+    "type": {
+      "value": "stimulant",
+      "subtype": "stimulant",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!6H3DQdmuXQO1uX3x"
+}

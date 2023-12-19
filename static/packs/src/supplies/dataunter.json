@@ -1,0 +1,38 @@
+{
+  "_id": "uhRb8VHH532tVeII",
+  "name": "Da’Taunter",
+  "type": "supply",
+  "img": "icons/consumables/food/berries-ration-round-red.webp",
+  "system": {
+    "cost": 1,
+    "description": "It increases the influx of adrenalin in the amygdala while cognitively activating your image while generating subliminal foul language. A target gains Hatred of you for 1 round.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "stimulant",
+    "type": {
+      "value": "stimulant",
+      "subtype": "stimulant",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!uhRb8VHH532tVeII"
+}

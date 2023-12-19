@@ -76,6 +76,15 @@
       "type": "Item",
       "private": false,
       "flags": {}
+    },
+    {
+      "name": "supplies",
+      "label": "Supplies",
+      "system": "eoa",
+      "path": "packs/supplies.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -88,7 +97,8 @@
         "factions",
         "origins",
         "professions",
-        "skills"
+        "skills",
+        "supplies"
       ]
     }
   ],

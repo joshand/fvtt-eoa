@@ -1,0 +1,38 @@
+{
+  "_id": "D4TVOQbdDdEfgY7H",
+  "name": "Wen-Wen",
+  "type": "supply",
+  "img": "icons/consumables/food/berries-ration-round-red.webp",
+  "system": {
+    "cost": 1,
+    "description": "Locked and loaded! A small floating target assistant paints a target. Attacks you make gain a +1 against them.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "wen-wen",
+    "type": {
+      "value": "wen-wen",
+      "subtype": "wen-wen",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!D4TVOQbdDdEfgY7H"
+}

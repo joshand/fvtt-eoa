@@ -1,0 +1,38 @@
+{
+  "_id": "GGRgMuRuuZnKOmZ8",
+  "name": "Bio Eye Charge",
+  "type": "supply",
+  "img": "icons/consumables/food/berries-ration-round-red.webp",
+  "system": {
+    "cost": 1,
+    "description": "Change your vision to your choice (Night, Thermal, X-ray) for 2 hours.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "bio_eye_charge",
+    "type": {
+      "value": "bio_eye_charge",
+      "subtype": "bio_eye_charge",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!GGRgMuRuuZnKOmZ8"
+}
