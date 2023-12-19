@@ -51,9 +51,10 @@ export class EoAActorSheet extends ActorSheet {
                 let attr_vals = context.breed[0].system.skills.filter(e => e["name"] === context.breed_lifepath);
                 if (attr_vals.length > 0) {
                     // console.log(attr_vals[0]);
-                    context.max_hp = (parseInt(attr_vals[0].str) + parseInt(attr_vals[0].sta)) * 5;
-                    context.max_np = (parseInt(attr_vals[0].int) + parseInt(attr_vals[0].psy)) * 5;
+                    context.max_hp = (parseInt(attr_vals[0].str) + parseInt(attr_vals[0].sta)) * 10;
+                    context.max_np = (parseInt(attr_vals[0].int) + parseInt(attr_vals[0].psy)) * 10;
                     context.init = (parseInt(attr_vals[0].sen) + parseInt(attr_vals[0].agi));
+                    context.max_sp = 6;
                 }
             }
             context.breed[0].system.skills.forEach((el) => {
