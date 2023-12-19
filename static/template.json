@@ -16,7 +16,9 @@
         "current_np": 0,
         "current_ip": 0,
         "current_sp": 0,
-        "current_tl": 1
+        "current_tl": 1,
+        "current_ncu": 0,
+        "current_money": 0
       }
     },
     "hero": {
