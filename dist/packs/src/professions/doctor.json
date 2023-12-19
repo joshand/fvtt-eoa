@@ -6,99 +6,17 @@
   "system": {
     "description": {
       "overview": "<p>Doctors are the lifeblood of any team, keeping allies in fighting shape and turning the tides of battle with their medical expertise. They are as skilled with a scalpel as they are with nanoprograms, making them vital for any mission requiring endurance and recovery.</p>",
-      "signature_ability": "Diagnosis",
-      "signature_description": "<p>When any character uses Edge. Doctors can Focus to diagnose a target, applying a medical mark that reveals key vulnerabilities or potential cures and symptoms.</p><p><strong>Mark Utilization:</strong> Consuming the mark enhances the next nanoprogram, whether for healing, debuffing, or damaging.</p><p><strong>Strategic Application:</strong> Requires tactical decision-making to maximize the effectiveness of the mark.</p>",
       "chat": "",
       "unidentified": ""
     },
     "flashback_ability": "Unknown",
     "flashback_trigger": "Unknown",
     "flashback_effect": "Unknown",
+    "signature_resource": "Unknown",
+    "signature_resource_desc": "Unknown",
+    "signature_resource_effect": "Unknown",
     "skill_list": [],
     "signature_traits": [],
-    "skills": [
-        {
-          "name": "Pharma Tech",
-          "description": "Rapid and emergency healing techniques.",
-          "programs": [
-            {
-              "name": "Complete Healing",
-              "description": "",
-              "np": 40,
-              "ncu": 1,
-              "effect": "Completely restores health, vital for critical situations."
-            },
-            {
-              "name": "Team Heal",
-              "description": "",
-              "np": 15,
-              "ncu": 1,
-              "effect": "Area-of-effect healing for all nearby team members."
-            },
-            {
-              "name": "Defibrillate",
-              "description": "Capable of reviving incapacitated allies, crucial in battle.",
-              "np": 20,
-              "ncu": 1,
-              "effect": "Capable of reviving incapacitated allies."
-            }
-          ]
-        },
-        {
-          "name": "Preventative Medicine",
-          "description": "Enhancing allies' resistance and preventive health care.",
-          "programs": [
-            {
-              "name": "Superior First Aid",
-              "description": "Significantly boosts the target's Treatment Skill for enhanced healing.",
-              "np": 15,
-              "ncu": 6,
-              "effect": "Significantly boosts the target's Treatment Skill by 2+."
-            },
-            {
-              "name": "Bio Regrowth",
-              "description": "Provides ongoing healing over time.",
-              "np": 15,
-              "ncu": 7,
-              "effect": "Provides ongoing healing over time."
-            },
-            {
-              "name": "Adrenal Overload",
-              "description": "",
-              "np": 15,
-              "ncu": 4,
-              "effect": "Temporarily increases an ally's Stamina"
-            }
-          ]
-        },
-        {
-          "name": "Toxicology",
-          "description": "Offensive medical nanotech for weakening enemies",
-          "programs": [
-            {
-              "name": "Uncontrollable Body Tremors (UBT)",
-              "description": "",
-              "np": 20,
-              "ncu": 1,
-              "effect": "Causes damaging tremors in enemies, reducing their combat effectiveness."
-            },
-            {
-              "name": "Neurological Disruption",
-              "description": "",
-              "np": 10,
-              "ncu": 1,
-              "effect": "Disorients enemies, impairing their combat skills."
-            },
-            {
-              "name": "Metabolic Corruption",
-              "description": "",
-              "np": 15,
-              "ncu": 1,
-              "effect": "Reduces enemy attack and movement speed."
-            }
-          ]
-        }
-      ],
     "source": {
       "custom": "",
       "book": "GDoc",

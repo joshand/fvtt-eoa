@@ -6,61 +6,265 @@
   "system": {
     "description": {
       "overview": "<p>Fixers are tech-savvy rogues and experts in digital warfare who excel in infiltration, extraction, and control of the battlefield. With their unique Grid Armor and advanced understanding of nanotechnology, they serve as the linchpins of any strategic operation.</p>",
-      "signature_ability": "Grid Armor",
-      "signature_description": "<p><strong>Activation:</strong> Costs 10 NP, uses 2 NCU slots.</p><br><p><strong>Effect:</strong> You have a Power Die, set a d6 down starting at 1. Each time you end your turn in Grid Armor, tick the die by 1. While Grid Armor is active you gain the following benefits.</p><p>+1 to DR and +1 Initiative for each Power Die level. When the die is at 3, you gain the Phasing ability and can move through solid objects but cannot end your turn in the object.</p><p><strong>Risks:</strong> Exceeding Power Die level 6 leads to 'Fading'.</p><p><strong>Nanocasting Skill:</strong> Breaking & Entering (Agility) or Computer Literacy (Intelligence)</p>",
       "chat": "",
       "unidentified": ""
     },
     "flashback_ability": "Advance Setup",
     "flashback_trigger": "When earlier hacking or technical setup could have solved a current obstacle.",
     "flashback_effect": "Roll to disclose that you had already hacked a system or set up equipment to aid in your current goal.",
-    "skill_list": [
+    "signature_resource": "Grid Armor",
+    "signature_resource_desc": "The Fixer's body is enveloped in shimmering digital code, a visible sign of their consciousness partially phasing into gridspace. This armor not only hardens their physical form against attacks but also blends elements of the digital world into their reality, enhancing their defensive capabilities. With each moment spent in Grid Armor, the fixer’s physical form starts to flicker with static, their voice carries a distorted echo.<br>But as the fixer overextends their stay in Grid Armor, they begin to lose touch with reality. Their form becomes translucent, their movements erratic, as if they are in a state of buffering. This is a process called Fading. When the digital world takes over them, they can struggle to differentiate between the physical and virtual world, causing disorientation and confusion.",
+    "signature_resource_effect": "Starts at d6 Power Die starting at  1. This die represents the Fixer's current level of integration with the Grid Armor's capabilities.<br>As a reaction, the Fixer can tap into Grid armor for the round, gaining the following benefits.<ul><li><strong>Initiative Bonus:</strong> You gain an initiative bonus in combat equal to the current level of the Power Die.</li><li><strong>Physical Evasion Bonus:</strong> you gain a bonus to physical evasion tests equal to the Power Die level.</li><li><strong>Recharge: </strong>Each time you successfully avoid an attack, heal NP equal to 2 x the Power Die level.</li><li><strong>Phasing: </strong>Gain the ability to move through creatures or objects, treating it as difficult terrain, you cannot finish your movement in the phased location. Failing to reach the other end will shunt you back to your original location.</li></ul><br><strong>Usage:</strong> Each time the Fixer taps into the Grid Armor for its benefits, tick the power die by one.<br><strong>Risk: Fading (Overloading the Grid Armor):</strong><br>If the Power Die reaches 6, it indicates the Grid Armor has been pushed to its limits, leading to a state called \"Fading.\"<br>During Fading, the Fixer spends a round buffering – a period of vulnerability where they appear in a random location and cannot move until the start of the next Round.<br>Post-buffering, the Power Die resets to 1, and the Fixer can start using the Grid Armor's capabilities again.",
+    "advancements": [
       {
-        "name": "Hacking",
-        "description": "Advanced skills in breaching and manipulating digital systems."
+        "name": "Profession or Nano Skill",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 to Chosen Skill"
       },
       {
-        "name": "Grid Navigation",
-        "description": "Proficiency in navigating the Grid, leveraging the digital landscape of Rubi-Ka for strategic advantage."
+        "name": "Attribute Improvement",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 to Chosen Attribute up to Breed maximum"
       },
       {
-        "name": "Breaking & Entering",
-        "description": "Expertise in bypassing security systems and physically infiltrating secured areas."
+        "name": "Body Development",
+        "cost_mult": 12,
+        "cost_flat": 0,
+        "effect": "+10 HP"
       },
       {
-        "name": "Computer Literacy",
-        "description": "Skills in using and understanding advanced computer systems and software."
+        "name": "Nanopool",
+        "cost_mult": 12,
+        "cost_flat": 0,
+        "effect": "+10 NP"
+      },
+      {
+        "name": "Morphing Memory",
+        "cost_mult": 0,
+        "cost_flat": 30,
+        "effect": "+5 NCU"
+      },
+      {
+        "name": "Loadout Training",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 in Chosen Loadout"
+      },
+      {
+        "name": "Supply Miniaturization",
+        "cost_mult": 0,
+        "cost_flat": 20,
+        "effect": "+1 Supply Point"
+      },
+      {
+        "name": "Preparation",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 when using your Flashback Ability"
+      },
+      {
+        "name": "Cross Training",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "Learn another  general Profession’s Skill"
+      },
+      {
+        "name": "Evade Close Combat",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by Melee Attacks"
+      },
+      {
+        "name": "Dodge Range",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by Ranged Attacks"
+      },
+      {
+        "name": "Duck Explosives",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by an area of effect attack or explosion"
+      },
+      {
+        "name": "Nano Resist",
+        "cost_mult": 12,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by a hostile nano program"
       },
       {
         "name": "Concealment",
-        "description": "Ability to move unnoticed."
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 when making Stealth Tests"
       },
       {
-        "name": "Skullduggery",
-        "description": "Proficiency in underhanded tactics, deception, and trickery."
+        "name": "Implant Treatment Conditioning",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 for Implant Surgery Tests and using Cybernetic Equipment"
       },
       {
-        "name": "Matter Creation",
-        "description": "Using nanotechnology to manipulate matter for various purposes, including healing and object creation."
+        "name": "Computer Literacy",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 For checks interacting with computers and accessing the Grid"
+      }
+    ],
+    "skill_list": [
+      {
+        "name": "Lifter",
+        "description": "<ul><li>Mastering digital landscapes for navigation and information gathering.</li><li>Expert in utilizing parkour and acrobatic movements.</li><li>Skilled in leveraging shortcuts and pathways.</li></ul>"
       },
       {
-        "name": "Data Analysis",
-        "description": "Capability to analyze and interpret complex datasets for valuable insights."
+        "name": "Thug",
+        "description": "<ul><li>Specializing in physical infiltration of secure spaces.</li><li>Proficient in bypassing locks and security measures.</li><li>Expert in stealth entry and exit strategies.</li></ul>"
       },
       {
-        "name": "Parkour",
-        "description": "Physical agility and skill in navigating urban environments quickly and efficiently."
+        "name": "Broker",
+        "description": "<ul><li>Proficient in using and understanding advanced technology and software.</li><li>Capable of accessing and extracting sensitive data.</li><li>Talented in breaching  digital security and sabotaging systems.</li></ul>"
       },
       {
-        "name": "Time & Space",
-        "description": "Mastery of nanotechnology related to teleportation, portals and speed manipulation."
+        "name": "Doer",
+        "description": "<ul><li>Adept at moving unnoticed and avoiding detection.</li><li>Skilled in executing covert actions discreetly.</li><li>Mastery in blending into various environments.</li></ul>"
+      },
+      {
+        "name": "The Man",
+        "description": "<ul><li>Expertise in deception, manipulation, and underhanded tactics.</li><li>Skilled in social engineering and influencing others.</li><li>Master of trickery and subterfuge in social interactions.</li></ul>"
+      }
+    ],
+    "nano_skill_list": [
+      {
+        "name": "Matter Metamorphosis",
+        "attributes": ["int", "psy"],
+        "nanoprograms": [
+          {
+            "name": "Nanoweb",
+            "np": 10,
+            "ncu": 4,
+            "description": "",
+            "effect": "Target + hits are Rooted. After breaking the Root, they are Snared."
+          },
+          {
+            "name": "Semi-Sentient Augmentation Cloud",
+            "np": 5,
+            "ncu": 4,
+            "description": "",
+            "effect": "Reduces the target’s DEF and RES by 5+Hits"
+          }
+        ]
+      },
+      {
+        "name": "Biological Metamorphosis",
+        "attributes": ["int", "sta"],
+        "nanoprograms": [
+          {
+            "name": "Dr Hack N' Quack",
+            "np": 20,
+            "ncu": 4,
+            "description": "",
+            "effect": "Heal a target, at the start of each turn they gain skill+2 healing per hit"
+          },
+          {
+            "name": "Insurance Hack",
+            "np": 20,
+            "ncu": 4,
+            "description": "",
+            "effect": "Heal a target, at the start of each turn they gain skill+2 NP Healing per hit"
+          }
+        ]
+      },
+      {
+        "name": "Psychological Modifications",
+        "attributes": ["int", "sen"],
+        "nanoprograms": [
+          {
+            "name": "Shadowstep",
+            "np": 10,
+            "ncu": 4,
+            "description": "",
+            "effect": "+2 Upgrade to Concealment and Hacking  based Tests."
+          },
+          {
+            "name": "Frenzy of Shells",
+            "np": 10,
+            "ncu": 4,
+            "description": "",
+            "effect": "Upgrades a target’s ranged loadout skill by 2 and +2 damage per Hit."
+          }
+        ]
+      },
+      {
+        "name": "Sensory Improvement",
+        "attributes": ["int", "str"],
+        "nanoprograms": [
+          {
+            "name": "Ghost Hack",
+            "np": 10,
+            "ncu": 5,
+            "description": "",
+            "effect": "Fills 2 NCU of the target per hit. 5+ hits brick the opponent's NCU."
+          },
+          {
+            "name": "Luck’s Lost Twin",
+            "np": 10,
+            "ncu": 2,
+            "description": "",
+            "effect": "Remove Root and Snare from Target + hits"
+          }
+        ]
+      },
+      {
+        "name": "Time and Space",
+        "attributes": ["int", "agi"],
+        "nanoprograms": [
+          {
+            "name": "Gridspace Freedom",
+            "np": 20,
+            "ncu": 4,
+            "description": "",
+            "effect": "Teleport distance in feet = 15  x number of hits. Targets = 1 + (number of hits)."
+          },
+          {
+            "name": "Reverse Luck",
+            "np": 15,
+            "ncu": 4,
+            "description": "",
+            "effect": "Target’s Evasion dice pool is -1 per hit."
+          },
+          {
+            "name": "Deckrecoder",
+            "np": 15,
+            "ncu": 6,
+            "description": "",
+            "effect": "Boosts target’s NCU by 5+ hits."
+          }
+        ]
+      },
+      {
+        "name": "Matter Creations",
+        "attributes": ["int", "psy"],
+        "nanoprograms": [
+          {
+            "name": "Re-Matrix Grid Vector",
+            "np": 10,
+            "ncu": 2,
+            "description": "",
+            "effect": "Target + Hits reshuffle locations."
+          },
+          {
+            "name": "Shadowweb Spinner",
+            "np": 20,
+            "ncu": 6,
+            "description": "",
+            "effect": "Generate a protective augmenting barrier around you. The spatial displacement grants you 1+Hits on Evasion tests against Nano effects."
+          }
+        ]
       }
     ],
     "signature_traits": [
-      {
-        "name": "Grid Armor",
-        "description": "<p><strong>Activation: </strong>2 NCU slots.<br>The Fixer's body is enveloped in shimmering digital code, a visible sign of their consciousness partially phasing into gridspace. This armor not only hardens their physical form against attacks but also blends elements of the digital world into their reality, enhancing their defensive capabilities. With each moment spent in Grid Armor, the fixer’s physical form starts to flicker with static, their voice carries a distorted echo.</p><p>But as the fixer overextends their stay in Grid Armor, they begin to lose touch with reality. Their form becomes translucent, their movements erratic, as if they are in a state of buffering. This is a process called Fading. When the digital world takes over them, they can struggle to differentiate between the physical and virtual world, causing disorientation and confusion.<br><strong>Effect: </strong>You have a Power Die, set a d6 down starting at 1. Each time you access Grid Armor, tick the die by 1. While Grid Armor is active you gain the following benefits.<br>+1 to DR and +1 Initiative for each Power Die level.<br>When the die is at 4, you gain the Phasing ability and can move through solid objects but cannot end your turn in the object, at this point you need to succeed on an average Breaking & Entering Test to deactivate it.<br><strong>Risks: </strong>Exceeding Power Die level 6 leads to 'Fading'. Here are the common symptoms of Fading.<ul><li><strong>Disorientation: </strong>The player has trouble distinguishing between the digital and real worlds, leading to penalties on perception checks and reaction times.</li><li><strong>Physical Weakness: </strong>As the player's consciousness is more integrated into the digital realm, their physical body becomes weaker, reducing their strength and stamina stats temporarily.</li><li><strong>Delayed Actions: </strong>The player's actions, both in combat and in interactions, are delayed due to the lag between their digital and physical selves, potentially missing turns or acting last in a round.</li><li><strong>Vulnerability to Hacking: </strong>Being more integrated into the digital realm makes the player more susceptible to hacking attacks, which can lead to information theft or control manipulation by enemies.</li><li><strong>Hallucinations: </strong>The player may start experiencing visual or auditory hallucinations, making it difficult to discern reality, which could lead to misinformed decisions or actions.</li></ul></p>"
-      },
       {
         "name": "Fixer Grid",
         "description": "<p>Fixers have access to a “Decommissioned” beta version of the Grid, Version F.1337 and can navigate this specialized digital network exclusive to their profession.<br><strong>Access: </strong>The Fixer can tap into the F Grid, a digital dimension parallel to the physical world, using their unique NCU genetic coding.<br><strong>Navigation: </strong>Within the F Grid, the Fixer can traverse vast distances in the physical world almost instantaneously, effectively teleporting from one location to another.<br><strong>Utility: </strong>The Grid can be used for rapid travel, escaping danger, or reaching otherwise inaccessible areas. It may also serve as a means to gather information or deploy digital assets.<br><strong>Limitations: </strong>Whenever you exit the F Grid, it puts heavy strain on your body, leaving you with 1 HP. Accessing the F Grid more than once a mission is a risk, and can draw attention to malicious code that still exists in the system</p>"
@@ -70,89 +274,6 @@
         "description": "<p>A secret among fixers is the backdoor to Omni-Pol’s supply channels that exists within the grid. During downtime you can bypass sophisticated protocols to access restricted information or resources.<br>You can choose 1 of the following each time during downtime.<ul><li><strong>Advanced Cybersecurity Protocols: </strong>Details on the latest digital defense mechanisms, which could be used to enhance the Fixer's own security or to breach other secure systems.</li><li><strong>Blueprints and Tech Schematics: </strong>Designs for cutting-edge technology, which could be sold, used to create new gadgets, or offered to allies as a bargaining chip.</li><li><strong>Operational Intelligence: </strong>Information on Omni-Pol operations, including troop movements, future plans, or high-value targets, useful for strategic planning in upcoming missions.</li></ul></p><p><strong>Dummy Order Attachment: </strong>To avoid detection, the Fixer must cleverly attach their dummy order to an existing legitimate order. This means the Fixer can specify the category (like information or grid warp weapons and ammo) but cannot control the exact model or type of the weapon or exact piece of information. The outcome depends on the nature of the linked legitimate order, adding an element of unpredictability to the hack. This method greatly reduces the risk of getting caught but introduces a level of uncertainty regarding the specific item to be received.</p>"
       }
     ],
-    "skills": [
-        {
-          "name": "Damage Specialization",
-          "description": "Focuses on enhancing combat abilities, especially with ranged weapons. Modifies Grid Armor for speed.",
-          "programs": [
-            {
-              "name": "Frenzy of Shells",
-              "description": "",
-              "np": 8,
-              "ncu": 2,
-              "effect": "Increases firearm damage."
-            },
-            {
-              "name": "Nanoweb",
-              "description": "",
-              "np": 15,
-              "ncu": 4,
-              "effect": "Immobilizes enemies."
-            }
-          ]
-        },
-        {
-          "name": "Utility Specialization",
-          "description": "Enhances hacking, lockpicking, modifies Grid Armor for greater Grid access",
-          "programs": [
-            {
-              "name": "Ghost Hack",
-              "description": "",
-              "np": 15,
-              "ncu": 3,
-              "effect": "Disables enemy tech."
-            },
-            {
-              "name": "Gridspace Freedom",
-              "description": "",
-              "np": 12,
-              "ncu": 3,
-              "effect": "Teleports the Fixer."
-            },
-            {
-              "name": "Dr Hack N' Quack",
-              "description": "",
-              "np": 20,
-              "ncu": 5,
-              "effect": "Heals the team."
-            },
-            {
-              "name": "Smuggle Item",
-              "description": "",
-              "np": 18,
-              "ncu": 3,
-              "effect": "Summons gear."
-            },
-            {
-              "name": "NCU Team Buff",
-              "description": "",
-              "np": 25,
-              "ncu": 6,
-              "effect": "Boosts team's NCU."
-            }
-          ]
-        },
-        {
-          "name": "Defense Specialization",
-          "description": "Bolsters defensive tactics, modifies Grid armor for evasion.",
-          "programs": [
-            {
-              "name": "Reverse Luck",
-              "description": "",
-              "np": 10,
-              "ncu": 2,
-              "effect": "Reduces enemy evasion."
-            },
-            {
-              "name": "Shadowstep",
-              "description": "",
-              "np": 15,
-              "ncu": 3,
-              "effect": "Enhances stealth or detection"
-            }
-          ]
-        }
-      ],
     "source": {
       "custom": "",
       "book": "GDoc",
