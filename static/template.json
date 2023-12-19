@@ -13,7 +13,9 @@
         "nanoprogram": {},
         "current_hp": 0,
         "current_np": 0,
-        "current_ip": 0
+        "current_ip": 0,
+        "current_sp": 0,
+        "current_tl": 1
       }
     },
     "hero": {

@@ -52,7 +52,12 @@
         {{!-- Header stuff goes here --}}
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" style="height: 128px !important; width: 128px !important;"/>
         <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+            <h1 class="charname">
+                <div class="form-fields flex1">
+                    <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+                    <input name="system.current_tl" type="text" value="{{data.system.current_tl}}" placeholder=""/>
+                </div>
+            </h1>
             {{#if has_stats}}
                 {{#each breed.0.system.skills as | skill |}}
                     {{#if (eq skill.name ../data.system.breed_lifepath)}}
@@ -126,6 +131,14 @@
                                 <input type="text" name="system.current_np" value="{{data.system.current_np}}" placeholder="0" style="width: 45px;">
                                 <label>/</label>
                                 <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_np}}</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-fields flex1">
+                                <label>SP</label>
+                                <input type="text" name="system.current_sp" value="{{data.system.current_sp}}" placeholder="0" style="width: 45px;">
+                                <label>/</label>
+                                <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_sp}}</label>
                             </div>
                         </td>
                         <td>
