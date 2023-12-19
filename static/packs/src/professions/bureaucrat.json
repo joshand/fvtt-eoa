@@ -142,10 +142,12 @@
     ],
     "nano_skill_list": [
       {
+        "_id": "7igHscLGp3YRZVEl",
         "name": "Matter Metamorphosis",
         "attributes": ["int", "psy"],
         "nanoprograms": [
           {
+            "_id": "oUttzfUsP6s0mjH8",
             "name": "Soothing Calm",
             "np": 10,
             "ncu": 2,
@@ -153,6 +155,7 @@
             "effect": "Target + Hits regain 2 Nanopoints at the start of their turn."
           },
           {
+            "_id": "mHZR7BQZDrD9KEZu",
             "name": "Mudslinger",
             "np": 15,
             "ncu": 4,
@@ -162,10 +165,12 @@
         ]
       },
       {
+        "_id": "dEdFLPKS2H0meso0",
         "name": "Biological Metamorphosis",
         "attributes": ["int", "sta"],
         "nanoprograms": [
           {
+            "_id": "nm9Fy6bHYy1pq68k",
             "name": "The Vengeful Butler",
             "np": 10,
             "ncu": 3,
@@ -173,6 +178,7 @@
             "effect": "Enemies Engaged with the Target gain Aggro of the Target and the target reflects damage taken by 2+Hits. "
           },
           {
+            "_id": "Nln7ot2VaUlyi3f3",
             "name": "Weekend Volunteer",
             "np": 15,
             "ncu": 6,
@@ -182,10 +188,12 @@
         ]
       },
       {
+        "_id": "qEMCpj7Mkp5Gnbk6",
         "name": "Psychological Modifications",
         "attributes": ["int", "sen"],
         "nanoprograms": [
           {
+            "_id": "hrSs4DGyNVm3552F",
             "name": "The Choir Fantastic",
             "np": 20,
             "ncu": 6,
@@ -193,6 +201,7 @@
             "effect": "Charms an Enemy.  Each time the Charmed target attacks an ally or takes damage, they can attempt to break the charm, with a TN equal to the number of Hits made on the initial cast."
           },
           {
+            "_id": "JlPD6SW5YrwJC6uV",
             "name": "Cubicle Dweller",
             "np": 15,
             "ncu": 4,
@@ -202,10 +211,12 @@
         ]
       },
       {
+        "_id": "6sOTOky1vLm7XSGO",
         "name": "Sensory Improvement",
         "attributes": ["int", "str"],
         "nanoprograms": [
           {
+            "_id": "rM5Px0f75Qyq2JKK",
             "name": "Baton of Command",
             "np": 10,
             "ncu": 2,
@@ -213,6 +224,7 @@
             "effect": "Target+Hits can all attempt to move once out of turn."
           },
           {
+            "_id": "J6dNnq6sSkMvMekz",
             "name": "Defamation 101",
             "np": 5,
             "ncu": 3,
@@ -222,10 +234,12 @@
         ]
       },
       {
+        "_id": "8NvMebF0D69EgHOp",
         "name": "Time and Space",
         "attributes": ["int", "agi"],
         "nanoprograms": [
           {
+            "_id": "eTCFDwg1ilE4eMNQ",
             "name": "Demotivational Speech: Let’s Make a Committee",
             "np": 15,
             "ncu": 5,
@@ -233,6 +247,7 @@
             "effect": "Target+Hits gain a +Hits penalty to their Initiative"
           },
           {
+            "_id": "MROzSXoVm67xgzEw",
             "name": "Motivational Speech: Implement Through Iteration",
             "np": 15,
             "ncu": 5,
@@ -242,10 +257,12 @@
         ]
       },
       {
+        "_id": "yXcANsIrnPEnLkeE",
         "name": "Matter Creations",
         "attributes": ["int", "psy"],
         "nanoprograms": [
           {
+            "_id": "MFI4ROu9TgLC24oG",
             "name": "Mass Layoffs",
             "np": 25,
             "ncu": 3,
@@ -253,6 +270,7 @@
             "effect": "Target + Hits receive NR x Hits energy damage and are Snared."
           },
           {
+            "_id": "j4z20TfMNqbDkG1A",
             "name": "Performance Review",
             "np": 15,
             "ncu": 4,

@@ -142,10 +142,12 @@
     ],
     "nano_skill_list": [
       {
+        "_id": "l6kYBbHzMJpSqj37",
         "name": "Matter Metamorphosis",
         "attributes": ["int", "psy"],
         "nanoprograms": [
           {
+            "_id": "Bt0OzphimsUJnWNv",
             "name": "Nanoweb",
             "np": 10,
             "ncu": 4,
@@ -153,6 +155,7 @@
             "effect": "Target + hits are Rooted. After breaking the Root, they are Snared."
           },
           {
+            "_id": "IhjEEfvJsT5mEcdd",
             "name": "Semi-Sentient Augmentation Cloud",
             "np": 5,
             "ncu": 4,
@@ -162,10 +165,12 @@
         ]
       },
       {
+        "_id": "hOBZdZe6wdMTOGoh",
         "name": "Biological Metamorphosis",
         "attributes": ["int", "sta"],
         "nanoprograms": [
           {
+            "_id": "SOmzk5gKW20VkCoN",
             "name": "Dr Hack N' Quack",
             "np": 20,
             "ncu": 4,
@@ -173,6 +178,7 @@
             "effect": "Heal a target, at the start of each turn they gain skill+2 healing per hit"
           },
           {
+            "_id": "fdzKTbU0MUBUxp9O",
             "name": "Insurance Hack",
             "np": 20,
             "ncu": 4,
@@ -182,10 +188,12 @@
         ]
       },
       {
+        "_id": "Mjv9wzNY5yaPoTx1",
         "name": "Psychological Modifications",
         "attributes": ["int", "sen"],
         "nanoprograms": [
           {
+            "_id": "wEnL29Bh6Q6k3CVO",
             "name": "Shadowstep",
             "np": 10,
             "ncu": 4,
@@ -193,6 +201,7 @@
             "effect": "+2 Upgrade to Concealment and Hacking  based Tests."
           },
           {
+            "_id": "KFhM7wQRTMz2dhpd",
             "name": "Frenzy of Shells",
             "np": 10,
             "ncu": 4,
@@ -202,10 +211,12 @@
         ]
       },
       {
+        "_id": "gxgEWTRmmNmwtYow",
         "name": "Sensory Improvement",
         "attributes": ["int", "str"],
         "nanoprograms": [
           {
+            "_id": "kZtOGpmmH734qsUN",
             "name": "Ghost Hack",
             "np": 10,
             "ncu": 5,
@@ -213,6 +224,7 @@
             "effect": "Fills 2 NCU of the target per hit. 5+ hits brick the opponent's NCU."
           },
           {
+            "_id": "fC3sybcDgGrH9S5j",
             "name": "Luck’s Lost Twin",
             "np": 10,
             "ncu": 2,
@@ -222,10 +234,12 @@
         ]
       },
       {
+        "_id": "mNuepkgKTEgddQFw",
         "name": "Time and Space",
         "attributes": ["int", "agi"],
         "nanoprograms": [
           {
+            "_id": "L0DR1Bl0Ta1Osn0R",
             "name": "Gridspace Freedom",
             "np": 20,
             "ncu": 4,
@@ -233,6 +247,7 @@
             "effect": "Teleport distance in feet = 15  x number of hits. Targets = 1 + (number of hits)."
           },
           {
+            "_id": "hNFdeuLucrQeRaXx",
             "name": "Reverse Luck",
             "np": 15,
             "ncu": 4,
@@ -240,6 +255,7 @@
             "effect": "Target’s Evasion dice pool is -1 per hit."
           },
           {
+            "_id": "SnPoT2q85uOcquk4",
             "name": "Deckrecoder",
             "np": 15,
             "ncu": 6,
@@ -249,10 +265,12 @@
         ]
       },
       {
+        "_id": "1LeMMjYbduFNKV3D",
         "name": "Matter Creations",
         "attributes": ["int", "psy"],
         "nanoprograms": [
           {
+            "_id": "ydnKy7XHOcOwvpkP",
             "name": "Re-Matrix Grid Vector",
             "np": 10,
             "ncu": 2,
@@ -260,6 +278,7 @@
             "effect": "Target + Hits reshuffle locations."
           },
           {
+            "_id": "tbc2jZWctvfUCsDV",
             "name": "Shadowweb Spinner",
             "np": 20,
             "ncu": 6,

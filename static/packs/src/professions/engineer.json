@@ -142,10 +142,12 @@
     ],
     "nano_skill_list": [
       {
+        "_id": "FdvC438gEi60UnDu",
         "name": "Matter Metamorphosis",
         "attributes": ["int", "psy"],
         "nanoprograms": [
           {
+            "_id": "tFuspOTFtdtECCO4",
             "name": "Plasma Shield",
             "np": 20,
             "ncu": 4,
@@ -153,6 +155,7 @@
             "effect": "Target+Hits gain a shield and are resistant to Energy damage and gains 5+ Hits RES"
           },
           {
+            "_id": "XOMgzziGyLsIn39L",
             "name": "Aegis Barrier",
             "np": 15,
             "ncu": 5,
@@ -162,10 +165,12 @@
         ]
       },
       {
+        "_id": "ghEYW9dOrgoqkWMl",
         "name": "Biological Metamorphosis",
         "attributes": ["int", "sta"],
         "nanoprograms": [
           {
+            "_id": "ViyRI2yhVSyI72CI",
             "name": "A Maker’s Touch",
             "np": 15,
             "ncu": 1,
@@ -175,10 +180,12 @@
         ]
       },
       {
+        "_id": "JZLPFR9uJJPqVVql",
         "name": "Psychological Modifications",
         "attributes": ["int", "sen"],
         "nanoprograms": [
           {
+            "_id": "WhHOsRexTndGb53j",
             "name": "Intrusive Aura of the Humble Servant",
             "np": 15,
             "ncu": 3,
@@ -186,6 +193,7 @@
             "effect": "Targets Engaged with an allied Machine lose 1+Hits Initiative"
           },
           {
+            "_id": "Gk5or648a77AlN9o",
             "name": "Extreme Prejudice",
             "np": 10,
             "ncu": 4,
@@ -195,10 +203,12 @@
         ]
       },
       {
+        "_id": "blet51JWEI4oXtdK",
         "name": "Sensory Improvement",
         "attributes": ["int", "str"],
         "nanoprograms": [
           {
+            "_id": "pf6QVWWigthmjJwR",
             "name": "Philosopher’s Stone",
             "np": 10,
             "ncu": 3,
@@ -206,6 +216,7 @@
             "effect": "Upgrades a target’s Tradeskill Tests by 1+Hits and increases their Supply Point maximum by 2"
           },
           {
+            "_id": "DajYkKAHONZpYTlE",
             "name": "Miniaturization",
             "np": 10,
             "ncu": 2,
@@ -215,10 +226,12 @@
         ]
       },
       {
+        "_id": "Db5BorPQto93yVM0",
         "name": "Time and Space",
         "attributes": ["int", "agi"],
         "nanoprograms": [
           {
+            "_id": "iEVou9wKsYprzouh",
             "name": "Formula 22",
             "np": 20,
             "ncu": 5,
@@ -226,6 +239,7 @@
             "effect": "Target+ machine gain 2 Agility and can perform 1 minor action"
           },
           {
+            "_id": "oD2Tqw1Gg9WZoeKH",
             "name": "Geo-Resonance Field",
             "np": 20,
             "ncu": 3,
@@ -235,10 +249,12 @@
         ]
       },
       {
+        "_id": "vJYMh4MVTcYZDRbY",
         "name": "Matter Creations",
         "attributes": ["int", "psy"],
         "nanoprograms": [
           {
+            "_id": "XqJxiAZKBMxt4yrq",
             "name": "Omni-Pol Pacification Logic System",
             "np": 15,
             "ncu": 5,
@@ -246,6 +262,7 @@
             "effect": "Target machine gain 2 Strength and +Damage"
           },
           {
+            "_id": "GCjI31lwBQu4IxvH",
             "name": "Reactive Harmonic Cocoon",
             "np": 25,
             "ncu": 6,

@@ -9,6 +9,7 @@
         "faction_lifepath": "",
         "origin_skills": {},
         "skill": {},
+        "nanoskill": {},
         "current_hp": 0,
         "current_np": 0,
         "current_ip": 0
