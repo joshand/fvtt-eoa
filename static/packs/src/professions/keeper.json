@@ -116,22 +116,27 @@
     ],
     "skill_list": [
       {
+        "_id": "E0RbY9CQrur1ueun",
         "name": "Empath",
         "description": "<ul><li>Understanding and influencing emotions.</li><li>Reading emotional cues and responding empathetically.</li><li>De-escalating conflicts through emotional insight.</li><li>Building trust and rapport in interpersonal relations.</li></ul>"
       },
       {
+        "_id": "HTX71RtAajAUFtz2",
         "name": "Caretaker",
         "description": "<ul><li>Training others in self-defense or martial techniques.</li><li>Preserving and sharing important historical and cultural knowledge.</li><li>Providing sage advice and guidance based on extensive learning.</li><li>Deciphering ancient texts, symbols, or artifacts.</li></ul>"
       },
       {
+        "_id": "fcwDi4PCRSc19NUx",
         "name": "Vigilante",
         "description": "<ul><li>Upholding justice and protecting the vulnerable, often through unconventional means.</li><li>Investigating and addressing injustices</li><li>Employing stealth tactics to confront or expose wrongdoers.</li><li>Balancing personal ethics with the pursuit of justice.</li></ul>"
       },
       {
+        "_id": "dhHwjgbgRy4Je1Rb",
         "name": "Leader",
         "description": "<ul><li>Inspiring and guiding groups effectively.</li><li>Making decisions for the collective benefit.</li><li>Rallying and motivating people towards common objectives.</li><li>Mediating conflicts and fostering group cohesion.</li></ul>"
       },
       {
+        "_id": "8Rdmww1xBxsRv8ac",
         "name": "Defender",
         "description": "<ul><li>Employing strategic tactics.</li><li>Anticipating potential threats and taking preemptive measures.</li><li>Providing physical or emotional protection to those in need.</li><li>Standing as a steadfast guardian in times of crisis.</li></ul>"
       }

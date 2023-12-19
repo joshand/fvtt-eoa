@@ -115,22 +115,27 @@
     ],
     "skill_list": [
       {
+        "_id": "LQcXQOudxmlbhmzp",
         "name": "Gadgeteer",
         "description": "<ul><li>Designing, modifying, and using a diverse range of gadgets.</li><li>Inventing custom gadgets for surveillance, espionage, or utility.</li><li>Enhancing or repurposing existing devices for specific tasks.</li><li>Rapid on-field gadget improvisation and adaptation.</li></ul>"
       },
       {
+        "_id": "noLGfwMdn1mCNo8o",
         "name": "Tradeskiller",
         "description": "<ul><li>Expertise in a variety of trade skills, including crafting, repair, and construction.</li><li>Crafting and repairing a wide range of items, from simple tools to complex machinery.</li><li>Utilizing trade skills for practical solutions in diverse situations.</li><li>Repairing and upgrading vehicles or mechanical equipment.</li></ul>"
       },
       {
+        "_id": "yEUdwk2OrXNKvHQA",
         "name": "Rigger",
         "description": "<ul><li>Remotely operating and controlling machinery or drones through mental commands.</li><li>Piloting drones or vehicles for reconnaissance, combat, or exploration.</li><li>Utilizing remote machinery for tasks in hazardous or inaccessible areas.</li><li>Coordinating multiple machines or automated systems simultaneously.</li></ul>"
       },
       {
+        "_id": "RmMBXjq8cCjgAJHz",
         "name": "Creator",
         "description": "<ul><li>Innovative invention and groundbreaking technological development.</li><li>Developing new technologies or prototypes.</li><li>Experimenting with advanced materials or energy sources.</li><li>Leading technological projects that push the boundaries of science.</li></ul>"
       },
       {
+        "_id": "NYlUxycTxho2jIO9",
         "name": "Nobel Prize",
         "description": "<ul><li>Achieving recognition for significant contributions to engineering and technology.</li><li>Using facts and logic to convince others.</li><li>Collaborating with elite scientists and tech experts.</li><li>Influencing major technological trends and advancements.</li></ul>"
       }

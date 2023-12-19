@@ -115,22 +115,27 @@
     ],
     "skill_list": [
       {
+        "_id": "2IgZnLEBALO7Mnah",
         "name": "Lifter",
         "description": "<ul><li>Mastering digital landscapes for navigation and information gathering.</li><li>Expert in utilizing parkour and acrobatic movements.</li><li>Skilled in leveraging shortcuts and pathways.</li></ul>"
       },
       {
+        "_id": "Z2SD2eK1YdGV2N3c",
         "name": "Thug",
         "description": "<ul><li>Specializing in physical infiltration of secure spaces.</li><li>Proficient in bypassing locks and security measures.</li><li>Expert in stealth entry and exit strategies.</li></ul>"
       },
       {
+        "_id": "t1lMGf4hMyB5rEfo",
         "name": "Broker",
         "description": "<ul><li>Proficient in using and understanding advanced technology and software.</li><li>Capable of accessing and extracting sensitive data.</li><li>Talented in breaching  digital security and sabotaging systems.</li></ul>"
       },
       {
+        "_id": "WZMe1Ln0VOESfuic",
         "name": "Doer",
         "description": "<ul><li>Adept at moving unnoticed and avoiding detection.</li><li>Skilled in executing covert actions discreetly.</li><li>Mastery in blending into various environments.</li></ul>"
       },
       {
+        "_id": "jVyo7DIRtrvagtjR",
         "name": "The Man",
         "description": "<ul><li>Expertise in deception, manipulation, and underhanded tactics.</li><li>Skilled in social engineering and influencing others.</li><li>Master of trickery and subterfuge in social interactions.</li></ul>"
       }
