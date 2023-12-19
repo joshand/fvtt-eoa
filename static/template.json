@@ -4,6 +4,7 @@
     "templates": {
       "background": {
         "biography": "",
+        "relationships": "",
         "breed_lifepath": "",
         "origin_lifepath": "",
         "faction_lifepath": "",
