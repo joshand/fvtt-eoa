@@ -55,7 +55,7 @@
 
                 <div class="form-group">
                     <div class="form-fields flex2">
-                        <input type="text" name="data.system.flashback_ability" value="{{data.system.flashback_ability}}"
+                        <input type="text" name="system.flashback_ability" value="{{data.system.flashback_ability}}"
                                placeholder="{{data.system.flashback_ability}}">
                     </div>
                     <div class="form-fields flex3">
@@ -67,6 +67,31 @@
 <!--                        <input type="text" name="data.system.flashback_effect" value="{{data.system.flashback_effect}}"-->
 <!--                               placeholder="{{data.system.flashback_effect}}">-->
                         {{editor data.system.flashback_effect target="data.system.flashback_effect" button=true owner=owner editable=editable}}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-fields flex2">
+                        <label>Signature Resource</label>
+                    </div>
+                    <div class="form-fields flex3">
+                        <label>Description</label>
+                    </div>
+                    <div class="form-fields flex3">
+                        <label>Effect</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-fields flex2">
+                        <input type="text" name="system.signature_resource" value="{{data.system.signature_resource}}"
+                               placeholder="{{data.system.signature_resource}}">
+                    </div>
+                    <div class="form-fields flex3">
+                        {{editor data.system.signature_resource_desc target="data.system.signature_resource_desc" button=true owner=owner editable=editable}}
+                    </div>
+                    <div class="form-fields flex3">
+                        {{editor data.system.signature_resource_effect target="data.system.signature_resource_effect" button=true owner=owner editable=editable}}
                     </div>
                 </div>
             </div>
@@ -83,7 +108,7 @@
 
                 <div class="form-group">
                     <div class="form-fields flex2">
-                        <input type="text" name="data.system.signature_traits.{{@index}}.name" value="{{skill.name}}"
+                        <input type="text" name="system.signature_traits.{{@index}}.name" value="{{skill.name}}"
                                placeholder="{{skill.name}}">
                     </div>
                     <div class="form-fields flex4">
@@ -104,16 +129,16 @@
 
             <div class="description">
                 <br>
-                <strong>Skill List</strong> (Starting characters divide 10 points around this list. No skill can be higher than 2 at character creation):<hr>
+                <strong>Skill List</strong> (Starting characters divide 5 points around this list. No skill can be higher than 2 at character creation):<hr>
                 {{#each data.system.skill_list as | skill |}}
 
                 <div class="form-group">
                     <div class="form-fields flex1">
-                        <input type="text" name="data.system.skill_list.{{@index}}.name" value="{{skill.name}}"
+                        <input type="text" name="system.skill_list.{{@index}}.name" value="{{skill.name}}"
                                placeholder="{{skill.name}}">
                     </div>
                     <div class="form-fields flex4">
-                        <input type="text" name="data.system.skill_list.{{@index}}.description" value="{{skill.description}}"
+                        <input type="text" name="system.skill_list.{{@index}}.description" value="{{skill.description}}"
                                placeholder="{{skill.description}}">
                     </div>
                 </div>
