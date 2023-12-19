@@ -391,7 +391,7 @@
                 {{/each}}
                 <label><strong>Skill List</strong> (Starting characters divide 5 points around this list. No skill can be higher than 2 at character creation)</label>
                 <table><tr><td>&nbsp;</td><td>Name</td><td>Description</td></tr>
-                {{#each skill as | sk |}}
+                {{#each profession.0.system.skill_list as | sk |}}
                     <tr>
                         <td style="width: 100px;">
                             <div class="input-group number-spinner">
