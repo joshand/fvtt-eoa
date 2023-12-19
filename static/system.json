@@ -69,15 +69,6 @@
       "flags": {}
     },
     {
-      "name": "skills",
-      "label": "Skills",
-      "system": "eoa",
-      "path": "packs/skills.db",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
       "name": "supplies",
       "label": "Supplies",
       "system": "eoa",
@@ -97,7 +88,6 @@
         "factions",
         "origins",
         "professions",
-        "skills",
         "supplies"
       ]
     }
