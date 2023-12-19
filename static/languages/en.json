@@ -79,6 +79,8 @@
   "TYPES.Item.weaponPl": "Weapons",
 
   "EOA.title": "EOA Game System",
+  "EOA.SupplyName": "Supply",
+  "EOA.SkillName": "Skill",
   "EOA.AbbreviationCR": "CR",
   "EOA.AbbreviationConc": "Conc.",
   "EOA.AbbreviationDC": "DC",
