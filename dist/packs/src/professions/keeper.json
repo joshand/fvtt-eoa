@@ -143,10 +143,12 @@
     ],
     "nano_skill_list": [
       {
+        "_id": "YirzvtM16ITMLrdh",
         "name": "Matter Metamorphosis",
         "attributes": ["int", "psy"],
         "nanoprograms": [
           {
+            "_id": "N9p2yelg9SsC6lEt",
             "name": "Bastion of Health",
             "np": 15,
             "ncu": 6,
@@ -156,10 +158,12 @@
         ]
       },
       {
+        "_id": "dRV7Som57mbc8xDH",
         "name": "Biological Metamorphosis",
         "attributes": ["int", "sta"],
         "nanoprograms": [
           {
+            "_id": "4L6mTfSnY5JwNRTP",
             "name": "Guardian’s Vigor",
             "np": 15,
             "ncu": 5,
@@ -167,6 +171,7 @@
             "effect": "target + hits upgrade +2 Stamina"
           },
           {
+            "_id": "N4VBhzKQt2moRmXP",
             "name": "Lay on Hands",
             "np": 20,
             "ncu": 2,
@@ -176,10 +181,12 @@
         ]
       },
       {
+        "_id": "T05CirDF450Li2rd",
         "name": "Psychological Modifications",
         "attributes": ["int", "sen"],
         "nanoprograms": [
           {
+            "_id": "n59Y8bU7AVipX9nu",
             "name": "Elude Pain",
             "np": 15,
             "ncu": 3,
@@ -189,10 +196,12 @@
         ]
       },
       {
+        "_id": "oyWWfxAGIEXx5n2e",
         "name": "Sensory Improvement",
         "attributes": ["int", "str"],
         "nanoprograms": [
           {
+            "_id": "hxppRzJnWQG11b8M",
             "name": "Calm of The Protector",
             "np": 20,
             "ncu": 5,
@@ -202,10 +211,12 @@
         ]
       },
       {
+        "_id": "yP0MfN7b33sWdKdU",
         "name": "Time and Space",
         "attributes": ["int", "agi"],
         "nanoprograms": [
           {
+            "_id": "Nl21vlf0JIKS6Dnr",
             "name": "Finality Smite",
             "np": 10,
             "ncu": 2,
@@ -213,6 +224,7 @@
             "effect": "Your next melee attack deals damage equal to the NP spent."
           },
           {
+            "_id": "qbKIE9rnncHzrkeY",
             "name": "Vengeance of the Immaculate",
             "np": 10,
             "ncu": 4,
@@ -220,6 +232,7 @@
             "effect": "If you have been damaged in the current round, your next attack deals + hit damage and is a critical hit."
           },
           {
+            "_id": "HNj8mJtV77wf4MED",
             "name": "Grace of the Samurai",
             "np": 10,
             "ncu": 5,
@@ -229,10 +242,12 @@
         ]
       },
       {
+        "_id": "P9XJBAN0G72VRooR",
         "name": "Matter Creations",
         "attributes": ["int", "psy"],
         "nanoprograms": [
           {
+            "_id": "wVbnQB1snO0k8PnH",
             "name": "Colossus of Swords",
             "np": 15,
             "ncu": 4,
@@ -240,6 +255,7 @@
             "effect": "Target + Hits gain +2 upgrade to Melee Loadout skill"
           },
           {
+            "_id": "g9uSDFAx9BS2cK9I",
             "name": "Harmony Strike",
             "np": 10,
             "ncu": 4,

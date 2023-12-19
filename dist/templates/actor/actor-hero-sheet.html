@@ -366,6 +366,18 @@
             <div class="form-fields flex1" style="flex-direction: column !important;">
                 <label><strong>Description</strong></label>
                 {{editor profession.0.system.description.overview target="profession.0.system.description.overview" button=true owner=owner editable=false}}
+                <label><strong>Signature Resource</strong></label>
+                <div class="form-group">
+                    <div class="form-fields flex1">
+                        {{editor profession.0.system.signature_resource target="profession.0.system.signature_resource" button=true owner=owner editable=false}}
+                    </div>
+                    <div class="form-fields flex3">
+                        {{editor profession.0.system.signature_resource_desc target="profession.0.system.signature_resource_desc" button=true owner=owner editable=false}}
+                    </div>
+                    <div class="form-fields flex3">
+                        {{editor profession.0.system.signature_resource_effect target="profession.0.system.signature_resource_effect" button=true owner=owner editable=false}}
+                    </div>
+                </div>
                 <label><strong>Flashback Ability</strong></label>
                 <div class="form-group">
                     <div class="form-fields flex1">
@@ -412,7 +424,35 @@
                             </div>
                         </td>
                         <td>{{sk.name}}</td>
-                        <td>{{sk.system.description}}</td>
+                        <td>{{{sk.description}}}</td>
+                    </tr>
+                {{/each}}
+                </table>
+
+                <label><strong>Nano Skill List</strong> (Starting characters have 2 points to spend on this, gaining a nano program from the selected skill)</label>
+                <table><tr><td>&nbsp;</td><td>Name</td><td>Nanoprograms</td></tr>
+                {{#each profession.0.system.nano_skill_list as | sk |}}
+                    <tr>
+                        <td style="width: 100px;">
+                            <div class="input-group number-spinner">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-minus" type="button">-</button>
+                                </span>
+<!--                                <input type="text" name="system.skill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.skill sk._id) 'rank' }}"-->
+<!--                                       placeholder="0">-->
+
+                                <input type="text" name="system.nanoskill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.nanoskill sk._id) 'rank' }}"
+                                       placeholder="0" class="form-control text-center txt-skill" min="0" max="10"
+                                       data-skill="{{name}}">
+
+                                <!--                                <input type="text" class="form-control text-center txt-skill" value="0" min="0" max="10" data-skill="{{skill.name}}">-->
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-plus" type="button">+</button>
+                                </span>
+                            </div>
+                        </td>
+                        <td>{{sk.name}}</td>
+                        <td>Nanoprograms...</td>
                     </tr>
                 {{/each}}
                 </table>
