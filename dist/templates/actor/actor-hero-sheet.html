@@ -135,6 +135,21 @@
                         </td>
                         <td>
                             <div class="form-fields flex1">
+                                <label>NCU</label>
+                                <input type="text" name="system.current_ncu" value="{{data.system.current_ncu}}" placeholder="0" style="width: 45px;">
+                                <label>/</label>
+                                <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_ncu}}</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </h3>
+
+            <h3 style="padding: 0 15px">
+                <table style="border: 1px black solid">
+                    <tr>
+                        <td>
+                            <div class="form-fields flex1">
                                 <label>SP</label>
                                 <input type="text" name="system.current_sp" value="{{data.system.current_sp}}" placeholder="0" style="width: 45px;">
                                 <label>/</label>
@@ -153,10 +168,15 @@
                                 <input type="text" name="system.current_ip" value="{{data.system.current_ip}}" placeholder="0" style="width: 45px;">
                             </div>
                         </td>
+                        <td>
+                            <div class="form-fields flex1">
+                                <label>Credits</label>
+                                <input type="text" name="system.current_money" value="{{data.system.current_money}}" placeholder="0" style="width: 45px;">
+                            </div>
+                        </td>
                     </tr>
                 </table>
             </h3>
-
 <!--            <h1 class="charalias"><input name="system.alias" type="text" value="{{data.system.alias}}" placeholder="Alias"/></h1>-->
 
 <!--                <div class="form-group">-->
