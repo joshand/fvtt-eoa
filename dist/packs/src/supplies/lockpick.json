@@ -1,0 +1,38 @@
+{
+  "_id": "4kYI3PHsfDl8IFKY",
+  "name": "Lockpick",
+  "type": "supply",
+  "img": "icons/consumables/food/berries-ration-round-red.webp",
+  "system": {
+    "cost": 1,
+    "description": "Reduce the TN of a mechanical lock by 1.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "lockpick",
+    "type": {
+      "value": "lockpick",
+      "subtype": "lockpick",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!4kYI3PHsfDl8IFKY"
+}

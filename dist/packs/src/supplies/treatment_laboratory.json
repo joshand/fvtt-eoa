@@ -1,0 +1,38 @@
+{
+  "_id": "OmrTvrRW5xOO0LJ6",
+  "name": "Treatment Laboratory",
+  "type": "supply",
+  "img": "icons/consumables/food/berries-ration-round-red.webp",
+  "system": {
+    "cost": 3,
+    "description": "One creature recovers 50 Health Points",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "treatment_laboratory",
+    "type": {
+      "value": "treatment_laboratory",
+      "subtype": "treatment_laboratory",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!OmrTvrRW5xOO0LJ6"
+}

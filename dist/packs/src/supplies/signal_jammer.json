@@ -1,0 +1,38 @@
+{
+  "_id": "rX592LbEQ21iK2mG",
+  "name": "Signal Jammer",
+  "type": "supply",
+  "img": "icons/consumables/food/berries-ration-round-red.webp",
+  "system": {
+    "cost": 3,
+    "description": "Disrupts all comlinks and electronic voice channels for 1 hour within a 100 foot radius.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "signal_jammer",
+    "type": {
+      "value": "signal_jammer",
+      "subtype": "signal_jammer",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!rX592LbEQ21iK2mG"
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "rX592LbEQ21iK2mG",
+  "name": "whompah_portal",
+  "type": "supply",
+  "img": "icons/consumables/food/berries-ration-round-red.webp",
+  "system": {
+    "cost": 4,
+    "description": "Allows the entire group to travel to the nearest city Whompah.",
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "whompah_portal",
+    "type": {
+      "value": "whompah_portal",
+      "subtype": "whompah_portal",
+      "custom": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!rX592LbEQ21iK2mG"
+}
