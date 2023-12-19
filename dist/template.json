@@ -22,7 +22,7 @@
     }
   },
   "Item": {
-    "types": ["breed", "profession", "origin", "faction", "skill", "supply"],
+    "types": ["breed", "profession", "origin", "faction", "supply"],
     "templates": {},
     "breed": {
       "templates": ["base"]
@@ -34,9 +34,6 @@
       "templates": ["base"]
     },
     "faction": {
-      "templates": ["base"]
-    },
-    "skill": {
       "templates": ["base"]
     },
     "supply": {
