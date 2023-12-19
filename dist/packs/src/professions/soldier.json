@@ -12,9 +12,9 @@
     "flashback_ability": "Anticipate and Counter",
     "flashback_trigger": "When the team is at risk of walking into an ambush or a strategically disadvantageous situation.",
     "flashback_effect": "The Soldier pauses the current scenario to reveal a flashback where they recognized signs of a potential ambush or trap ahead of time. They then took preventative measures, such as rerouting the team, setting up countermeasures, or neutralizing the threat in advance. The Soldier rolls to determine the success of these preparations in circumventing the ambush and securing a tactical advantage for the current situation.",
-    "signature_resource": "",
-    "signature_resource_desc": "",
-    "signature_resource_effect": "",
+    "signature_resource": "Unknown",
+    "signature_resource_desc": "Unknown",
+    "signature_resource_effect": "Unknown",
     "advancements": [
       {
         "name": "Profession or Nano Skill",
