@@ -452,7 +452,23 @@
                             </div>
                         </td>
                         <td>{{sk.name}}</td>
-                        <td>Nanoprograms...</td>
+                        <td>
+                            <table><tr><td>&nbsp;</td><td>Name</td><td>Description</td></tr>
+                            {{#each sk.nanoprograms as | np |}}
+                                <tr>
+                                    <td style="width:20px;">
+                                        <input type="checkbox" name="system.nanoprogram.{{np._id}}" {{checked (lookup ../../data.system.nanoprogram np._id)}}>
+                                    </td>
+                                    <td style="width:100px;">
+                                        {{np.name}}
+                                    </td>
+                                    <td>
+                                        {{np.effect}}
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </table>
+                        </td>
                     </tr>
                 {{/each}}
                 </table>

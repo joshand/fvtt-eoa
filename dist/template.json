@@ -10,6 +10,7 @@
         "origin_skills": {},
         "skill": {},
         "nanoskill": {},
+        "nanoprogram": {},
         "current_hp": 0,
         "current_np": 0,
         "current_ip": 0
