@@ -44,6 +44,23 @@
     .btn-minus {
         width: 20px;
     }
+    .content {
+        display: flex;
+        align-items: center;
+        /* Style the content div as needed */
+    }
+    .badge {
+        background-color: blue; /* Background color of the badge */
+        color: #fff; /* Text color of the badge */
+        border-radius: 50%; /* To make the badge round */
+        border: 1px solid white;
+        width: 25px; /* Adjust width and height as needed */
+        height: 25px;
+        text-align: center; /* Center the text */
+        margin-left: 5px; /* Adjust margin to place it next to the label */
+        padding-top: 3px;
+        font-size: small;
+    }
 </style>
 
 <form class="{{cssClass}} flexcol" autocomplete="off" style="flex: none !important;">
@@ -118,27 +135,39 @@
                 <table style="border: 1px black solid">
                     <tr>
                         <td>
-                            <div class="form-fields flex1">
+                            <div class="form-fields flex1 content">
                                 <label>HP</label>
                                 <input type="text" name="system.current_hp" value="{{data.system.current_hp}}" placeholder="0" style="width: 45px;">
                                 <label>/</label>
                                 <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_hp}}</label>
+                                {{#if (eq breed.0.system.bonus.hp 0)}}
+                                {{else}}
+                                    <div class="badge">+{{breed.0.system.bonus.hp}}</div>
+                                {{/if}}
                             </div>
                         </td>
                         <td>
-                            <div class="form-fields flex1">
+                            <div class="form-fields flex1 content">
                                 <label>NP</label>
                                 <input type="text" name="system.current_np" value="{{data.system.current_np}}" placeholder="0" style="width: 45px;">
                                 <label>/</label>
                                 <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_np}}</label>
+                                {{#if (eq breed.0.system.bonus.np 0)}}
+                                {{else}}
+                                    <div class="badge">+{{breed.0.system.bonus.np}}</div>
+                                {{/if}}
                             </div>
                         </td>
                         <td>
-                            <div class="form-fields flex1">
+                            <div class="form-fields flex1 content">
                                 <label>NCU</label>
                                 <input type="text" name="system.current_ncu" value="{{data.system.current_ncu}}" placeholder="0" style="width: 45px;">
                                 <label>/</label>
                                 <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_ncu}}</label>
+                                {{#if (eq breed.0.system.bonus.ncu 0)}}
+                                {{else}}
+                                    <div class="badge">+{{breed.0.system.bonus.ncu}}</div>
+                                {{/if}}
                             </div>
                         </td>
                     </tr>
@@ -149,23 +178,35 @@
                 <table style="border: 1px black solid">
                     <tr>
                         <td>
-                            <div class="form-fields flex1">
+                            <div class="form-fields flex1 content">
                                 <label>SP</label>
                                 <input type="text" name="system.current_sp" value="{{data.system.current_sp}}" placeholder="0" style="width: 45px;">
                                 <label>/</label>
                                 <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_sp}}</label>
+                                {{#if (eq breed.0.system.bonus.items 0)}}
+                                {{else}}
+                                    <div class="badge">+{{breed.0.system.bonus.items}}</div>
+                                {{/if}}
                             </div>
                         </td>
                         <td>
-                            <div class="form-fields flex1">
+                            <div class="form-fields flex1 content">
                                 <label>Init</label>
                                 <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{init}}</label>
+                                {{#if (eq breed.0.system.bonus.init 0)}}
+                                {{else}}
+                                    <div class="badge">+{{breed.0.system.bonus.init}}</div>
+                                {{/if}}
                             </div>
                         </td>
                         <td>
-                            <div class="form-fields flex1">
+                            <div class="form-fields flex1 content">
                                 <label>IP</label>
                                 <input type="text" name="system.current_ip" value="{{data.system.current_ip}}" placeholder="0" style="width: 45px;">
+                                {{#if (eq breed.0.system.bonus.ip 0)}}
+                                {{else}}
+                                    <div class="badge">+{{breed.0.system.bonus.ip}}</div>
+                                {{/if}}
                             </div>
                         </td>
                         <td>
@@ -499,7 +540,7 @@
                                         {{np.name}}
                                     </td>
                                     <td>
-                                        {{np.effect}}
+                                        {{np.effect}} (NP: {{np.np}}, NCU: {{np.ncu}})
                                     </td>
                                 </tr>
                             {{/each}}

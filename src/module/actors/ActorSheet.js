@@ -54,9 +54,9 @@ export class EoAActorSheet extends ActorSheet {
                     context.max_hp = (parseInt(attr_vals[0].str) + parseInt(attr_vals[0].sta)) * 10;
                     context.max_np = (parseInt(attr_vals[0].int) + parseInt(attr_vals[0].psy)) * 10;
                     context.init = (parseInt(attr_vals[0].sen) + parseInt(attr_vals[0].agi));
-                    context.max_sp = 6;
-                    context.max_ncu = 10;
                 }
+                context.max_sp = 6;
+                context.max_ncu = 10;
             }
             context.breed[0].system.skills.forEach((el) => {
                 context.breed_dict[el.name] = `
