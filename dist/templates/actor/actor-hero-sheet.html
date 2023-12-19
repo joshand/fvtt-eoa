@@ -53,9 +53,9 @@
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" style="height: 128px !important; width: 128px !important;"/>
         <div class="header-fields">
             <h1 class="charname">
-                <div class="form-fields flex1">
-                    <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
-                    <input name="system.current_tl" type="text" value="{{data.system.current_tl}}" placeholder=""/>
+                <div class="form-fields flex1" style="margin: 0 !important;">
+                    <input name="name" type="text" value="{{actor.name}}" placeholder="Name" style="width:calc(100% - 110px)"/>
+                    <input name="system.current_tl" type="text" value="{{data.system.current_tl}}" placeholder="" style="width:50px;"/>
                 </div>
             </h1>
             {{#if has_stats}}
@@ -310,6 +310,9 @@
             <div class="form-fields flex1 biography-editor" style="flex-direction: column !important;">
                 <label>Biography</label>
                 {{editor data.system.biography target="system.biography" button=true owner=owner editable=editable}}
+
+                <label>Relationships</label>
+                {{editor data.system.relationships target="system.relationships" button=true owner=owner editable=editable}}
             </div>
         </div>
 
