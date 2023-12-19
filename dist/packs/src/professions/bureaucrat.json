@@ -115,22 +115,27 @@
     ],
     "skill_list": [
       {
+        "_id": "jP7mTd8e0UTXsCkT",
         "name": "Networker",
         "description": "<ul><li>Using your reputation to get people to influence others.</li><li>Leveraging connections to gain information, resources, or favors.</li><li>Utilizing social networks for gathering intelligence or support.</li><li>Creating a web of contacts that can be called upon when needed.</li></ul>"
       },
       {
+        "_id": "UEVCfsMxvv1H64RV",
         "name": "Secretary",
         "description": "<ul><li>Expertise in legal systems, protocols, and loopholes.</li><li>Navigating bureaucratic red tape to expedite processes or gain permits.</li><li>Uncovering crucial details buried in plain sight.</li><li>Representing or defending in disputes.</li></ul>"
       },
       {
+        "_id": "65nJ1wCcgfc0VMd0",
         "name": "Liaison",
         "description": "<ul><li>Utilizing diplomatic skills to smooth over tensions and build cooperative relationships.</li><li>Managing relationships and negotiations between factions, organizations, or key individuals.</li><li>Negotiating or resolving conflicts arising from misunderstandings.</li><li>Representing one's own group or interests in a culturally sensitive manner.</li></ul>"
       },
       {
+        "_id": "I0UBuCvy3mFRA7FU",
         "name": "Lobbyist",
         "description": "<ul><li>Skilled in influencing public opinion and disseminating information.</li><li>Crafting persuasive narratives to shape public perception.</li><li>Countering misinformation or enemy propaganda.</li><li>Utilizing media and communication channels for strategic messaging.</li></ul>"
       },
       {
+        "_id": "RwYT7sAAhmRG1FI0",
         "name": "Crisis Manager",
         "description": "<ul><li>Handling emergencies or unexpected situations with composure and efficiency.</li><li>Developing contingency plans for various crisis scenarios.</li><li>Leading effectively during natural disasters, political upheavals, or major incidents.</li><li>Coordinating resources and personnel to mitigate crisis impacts.</li></ul>"
       }

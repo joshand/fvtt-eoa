@@ -115,22 +115,27 @@
     ],
     "skill_list": [
       {
+        "_id": "aSsbruqYQKBayjyH",
         "name": "Demolitionist",
         "description": "<ul><li>Expertise in explosives and demolitions</li><li>Skilled in handling, deploying, and disarming various types of explosives.</li><li>Tactical use of demolitions for breaching, sabotage, or destroying structures.</li><li>Knowledge of explosive materials and their effective applications.</li></ul>"
       },
       {
+        "_id": "7W1rEX3LuKLqkSiU",
         "name": "Recon Ops",
         "description": "<ul><li>Specialization in reconnaissance and intelligence gathering.</li><li>Conducting stealthy surveillance and information collection.</li><li>Knowledgeable of different vehicles and how to hijack or pilot them.</li><li>Skilled in stealth, camouflage, and low-visibility operations.</li></ul>"
       },
       {
+        "_id": "6XCh9qduR9ChJaqO",
         "name": "Gunsmith",
         "description": "<ul><li>Skill Focus: Mastery in firearm creation, maintenance, and modification.</li><li>Designing and crafting custom firearms.</li><li>Repairing and enhancing various types of guns.</li><li>Advanced knowledge of ballistics and ammunition.</li></ul>"
       },
       {
+        "_id": "TgGgIkgwkPohfiZD",
         "name": "Tactician",
         "description": "<ul><li>Strategic planning and tactical command.</li><li>Developing and implementing battle plans and strategies.</li><li>Analyzing enemy tactics to devise counterstrategies.</li><li>Coordinating teams and leading others.</li></ul>"
       },
       {
+        "_id": "JILp4QCQloLNLT98",
         "name": "Survivor",
         "description": "<ul><li>Survival skills in hostile environments.</li><li>Wilderness survival, including foraging, tracking, and sheltering.</li><li>Enduring extreme conditions and scenarios.</li><li>Mending and administering first-aid.</li></ul>"
       }
