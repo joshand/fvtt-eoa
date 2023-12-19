@@ -6,156 +6,256 @@
   "system": {
     "description": {
       "overview": "<p>Engineers are masters of robotics and nanotechnology, capable of deploying and controlling various types of robots for combat, defense, and utility purposes. They also specialize in nanoprogramming for additional support.</p>",
-      "signature_ability": "Robotics",
-      "signature_description": "<p>Specialization in creating and controlling a personal droid. As the Engineer advances in level, the robot will gain further customization and options.</p><br><p><strong><em>Droid Characteristics:</em></strong></p><p><strong>HP: 40+ (20 × Engineer's TL.</strong></p><p><strong>Combat Abilities:</strong> Based on droid type (combat, utility, or defense).</p><p><strong>Commanding the Droid in Combat:</strong></p><p>Issue commands for Attack, Defend, or Special Abilities.</p><p>Effective within a specific range of the Engineer.</p><p>Abilities may have cooldowns.</p>",
       "chat": "",
       "unidentified": ""
     },
     "flashback_ability": "Prepared Gadget",
     "flashback_trigger": "When an earlier invention or repair could be beneficial now.",
     "flashback_effect": "Roll to reveal you had previously crafted or repaired a device that is pivotal in the current scenario.",
+    "signature_resource": "Synchronization Drifting",
+    "signature_resource_desc": "At the start of an encounter or after being deployed, the android begins in a basic operational state. Its abilities and performance are limited due to the need for synchronization with the Engineer.",
+    "signature_resource_effect": "Synchronization Phases:<br><br>Phase 1 (Initial Rounds): The android operates with reduced effectiveness. It might have slower movement, lower attack power, or limited access to its abilities.<br>Phase 2 (Mid-Encounter): As the encounter progresses, the android begins to sync more closely with the Engineer. Its capabilities start to improve, unlocking more actions per turn or gaining access to advanced skills.<br>Phase 3 (Full Synchronization): After several rounds (e.g., after 3-5 rounds), the android reaches full synchronization. It now operates at peak capacity, gaining significant boosts to its abilities, speed, strength, and access to its full range of skills and functions.<br>Mechanics:<br><br>Synchronization Die: Represent the synchronization level with a die (e.g., d6). Start at 1, and at the end of each round, increase the die by 1. Each number represents a phase of synchronization.<br>Bonuses and Abilities: Each phase confers specific bonuses or abilities to the android. For example, at Phase 3, the android might gain double movement speed or a powerful attack ability. Reset: If the android is deactivated, destroyed, or encounters a significant disruption, synchronization resets, requiring the process to start over.<br><strong>Commanding the Droid in Combat:</strong><br>Issue commands for Attack, Defend, or Special Abilities.<br>Effective within a specific range of the Engineer.<br>Abilities may have cooldowns.<br><br>Neural Synchronization: Engineers require a direct neural link to control their robots. This link allows for precise commands and real-time adjustments, but due to its complexity, an Engineer can maintain synchronization with only one robot at a time.",
+    "advancements": [
+      {
+        "name": "Profession or Nano Skill",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 to Chosen Skill"
+      },
+      {
+        "name": "Attribute Improvement",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 to Chosen Attribute up to Breed maximum"
+      },
+      {
+        "name": "Body Development",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+10 HP"
+      },
+      {
+        "name": "Nanopool",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+10 NP"
+      },
+      {
+        "name": "Morphing Memory",
+        "cost_mult": 0,
+        "cost_flat": 35,
+        "effect": "+5 NCU"
+      },
+      {
+        "name": "Loadout Training",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 in Chosen Loadout"
+      },
+      {
+        "name": "Supply Miniaturization",
+        "cost_mult": 0,
+        "cost_flat": 20,
+        "effect": "+1 Supply Point"
+      },
+      {
+        "name": "Preparation",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 when using your Flashback Ability"
+      },
+      {
+        "name": "Cross Training",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "Learn another  general Profession’s Skill"
+      },
+      {
+        "name": "Evade Close Combat",
+        "cost_mult": 12,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by Melee Attacks"
+      },
+      {
+        "name": "Dodge Range",
+        "cost_mult": 12,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by Ranged Attacks"
+      },
+      {
+        "name": "Duck Explosives",
+        "cost_mult": 12,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by an area of effect attack or explosion"
+      },
+      {
+        "name": "Nano Resist",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by a hostile nano program"
+      },
+      {
+        "name": "Concealment",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 when making Stealth Tests"
+      },
+      {
+        "name": "Implant Treatment Conditioning",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 for Implant Surgery Tests and using Cybernetic Equipment"
+      },
+      {
+        "name": "Computer Literacy",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 For checks interacting with computers and accessing the Grid"
+      }
+    ],
     "skill_list": [
       {
-        "name": "Mechanical Engineering",
-        "description": "Knowledge and skill in designing, building, and maintaining mechanical systems and constructs."
+        "name": "Gadgeteer",
+        "description": "<ul><li>Designing, modifying, and using a diverse range of gadgets.</li><li>Inventing custom gadgets for surveillance, espionage, or utility.</li><li>Enhancing or repurposing existing devices for specific tasks.</li><li>Rapid on-field gadget improvisation and adaptation.</li></ul>"
       },
       {
-        "name": "Electrical Engineering",
-        "description": "Expertise in working with electrical systems, circuitry, and power sources."
+        "name": "Tradeskiller",
+        "description": "<ul><li>Expertise in a variety of trade skills, including crafting, repair, and construction.</li><li>Crafting and repairing a wide range of items, from simple tools to complex machinery.</li><li>Utilizing trade skills for practical solutions in diverse situations.</li><li>Repairing and upgrading vehicles or mechanical equipment.</li></ul>"
       },
       {
-        "name": "Nano Programming",
-        "description": "Skills in developing and modifying nanoprograms for various applications."
+        "name": "Rigger",
+        "description": "<ul><li>Remotely operating and controlling machinery or drones through mental commands.</li><li>Piloting drones or vehicles for reconnaissance, combat, or exploration.</li><li>Utilizing remote machinery for tasks in hazardous or inaccessible areas.</li><li>Coordinating multiple machines or automated systems simultaneously.</li></ul>"
       },
       {
-        "name": "Computer Programming",
-        "description": "Skills in writing, testing, and maintaining software programs."
+        "name": "Creator",
+        "description": "<ul><li>Innovative invention and groundbreaking technological development.</li><li>Developing new technologies or prototypes.</li><li>Experimenting with advanced materials or energy sources.</li><li>Leading technological projects that push the boundaries of science.</li></ul>"
       },
       {
-        "name": "Weapon Smithing",
-        "description": "Ability to design, create, and modify a wide range of weaponry."
-      },
-      {
-        "name": "Technical Repair",
-        "description": "Competence in diagnosing and fixing technological equipment and machinery."
-      },
-      {
-        "name": "Quantum Force Field Technology",
-        "description": "Knowledge of advanced shield technologies and their applications for defense and utility."
-      },
-      {
-        "name": "Robotics",
-        "description": "Ability to communicate effectively with AI and machine interfaces, enhancing interactions with automated systems."
-      },
-      {
-        "name": "Matter Creation",
-        "description": "Using nanotechnology for constructing androids and other complex machinery."
-      },
+        "name": "Nobel Prize",
+        "description": "<ul><li>Achieving recognition for significant contributions to engineering and technology.</li><li>Using facts and logic to convince others.</li><li>Collaborating with elite scientists and tech experts.</li><li>Influencing major technological trends and advancements.</li></ul>"
+      }
+    ],
+    "nano_skill_list": [
       {
         "name": "Matter Metamorphosis",
-        "description": "Ability to manipulate physical matter at the nano level, useful for creating shields and enhancing equipment."
+        "attributes": ["int", "psy"],
+        "nanoprograms": [
+          {
+            "name": "Plasma Shield",
+            "np": 20,
+            "ncu": 4,
+            "description": "",
+            "effect": "Target+Hits gain a shield and are resistant to Energy damage and gains 5+ Hits RES"
+          },
+          {
+            "name": "Aegis Barrier",
+            "np": 15,
+            "ncu": 5,
+            "description": "",
+            "effect": "Improves Target + Hits armor by 1 tier."
+          }
+        ]
+      },
+      {
+        "name": "Biological Metamorphosis",
+        "attributes": ["int", "sta"],
+        "nanoprograms": [
+          {
+            "name": "A Maker’s Touch",
+            "np": 15,
+            "ncu": 1,
+            "description": "",
+            "effect": "Target machine is  repaired and heals physically damaged technology. The healing is NR x Hits"
+          }
+        ]
+      },
+      {
+        "name": "Psychological Modifications",
+        "attributes": ["int", "sen"],
+        "nanoprograms": [
+          {
+            "name": "Intrusive Aura of the Humble Servant",
+            "np": 15,
+            "ncu": 3,
+            "description": "",
+            "effect": "Targets Engaged with an allied Machine lose 1+Hits Initiative"
+          },
+          {
+            "name": "Extreme Prejudice",
+            "np": 10,
+            "ncu": 4,
+            "description": "",
+            "effect": "Overloads a piece of technology rigged to explode dealing NR x Hits damage upon triggering."
+          }
+        ]
+      },
+      {
+        "name": "Sensory Improvement",
+        "attributes": ["int", "str"],
+        "nanoprograms": [
+          {
+            "name": "Philosopher’s Stone",
+            "np": 10,
+            "ncu": 3,
+            "description": "",
+            "effect": "Upgrades a target’s Tradeskill Tests by 1+Hits and increases their Supply Point maximum by 2"
+          },
+          {
+            "name": "Miniaturization",
+            "np": 10,
+            "ncu": 2,
+            "description": "",
+            "effect": "Reduce the size of machine target + Hits by 1 step."
+          }
+        ]
+      },
+      {
+        "name": "Time and Space",
+        "attributes": ["int", "agi"],
+        "nanoprograms": [
+          {
+            "name": "Formula 22",
+            "np": 20,
+            "ncu": 5,
+            "description": "",
+            "effect": "Target+ machine gain 2 Agility and can perform 1 minor action"
+          },
+          {
+            "name": "Geo-Resonance Field",
+            "np": 20,
+            "ncu": 3,
+            "description": "",
+            "effect": "Deploys a terrain-altering energy field that creates a barrier that provides cover and hinders movement."
+          }
+        ]
+      },
+      {
+        "name": "Matter Creations",
+        "attributes": ["int", "psy"],
+        "nanoprograms": [
+          {
+            "name": "Omni-Pol Pacification Logic System",
+            "np": 15,
+            "ncu": 5,
+            "description": "",
+            "effect": "Target machine gain 2 Strength and +Damage"
+          },
+          {
+            "name": "Reactive Harmonic Cocoon",
+            "np": 25,
+            "ncu": 6,
+            "description": "",
+            "effect": "Creates a cocoon around you that reflects damage back at the attacker. The attacker receives half the damage they deal back at them."
+          }
+        ]
       }
     ],
     "signature_traits": [
-      {
-        "name": "Robotics (RegiGigas Slow Start)",
-        "description": "<p>Specialization in creating and controlling a personal droid. As the Engineer advances in level, the robot will gain further customization and options.</p><p>Nanobots form a shell of a droid. When you create a droid choose the model which determines the droid’s abilities</p><p><strong>Slayer:</strong><br>Cost: 20 NP<br>HP: 30+20 per success<br>Damage 7+1 Success<br>Special: Taunt Draws enemy attention, reducing damage to the Engineer.</p><p><strong>Mechdog:</strong><br>Cost: 20 NP<br>HP: 20+10 per success<br>Damage 10+2 Success<br>Special: Burst, Spend 10 NP to deliver a powerful attack, increasing the damage by an additional tier.</p><p><strong>Buckethead:</strong><br>Cost: 20 NP<br>HP: 40+10 per success<br>Damage 4+1 Success<br>Special: Shield Projector, Can redirect a portion of damage from the Engineer or allies to itself.</p><p><strong>Droid Stats:</strong><br>AR = your Engineering+Rigging rank<br>DR = Your Engineering + Shield-tech rank<br>NR = Your Engineering +Gadgeteering Rank</p><p><strong>Commanding the Droid in Combat:</strong><br>Issue commands for Attack, Defend, or Special Abilities.<br>Effective within a specific range of the Engineer.<br>Abilities may have cooldowns.</p><p>Neural Synchronization: Engineers require a direct neural link to control their robots. This link allows for precise commands and real-time adjustments, but due to its complexity, an Engineer can maintain synchronization with only one robot at a time.</p>"
-      },
       {
         "name": "Rigging",
         "description": "<p>Rigging is an advanced form of technological control that Engineers use to connect their consciousness directly with their mechanical creations. Through their specialized NCU, Engineers can 'jump in' to their drones or robots, experiencing the world through their sensors and exerting precise control over their actions. This direct link allows for intricate maneuvers and strategic deployment in various scenarios.</p><p><strong>Rigging Actions: (Costs 10 NP)</strong></p><ul><li><strong>Jump In/Out: </strong>Switch control between the Engineer and a machine.</li><li><strong>Command: </strong>Issue a basic command (e.g., attack, move, defend). Using your Intelligence + Piloting or Heavy Weapons skill</li><li><strong>Reconfigure: </strong>Change rigged machine’s operational mode (e.g., stealth, aggressive).</li></ul><p>Dice pools are based on the Engineer's relevant skill (e.g., Pilot, Heavy Weapons) but using the Engineer’s intelligence as the main attribute.<br>However, rigging is not without its risks, as it requires an Engineer to divide their attention between their physical body and the controlled machine, making them vulnerable to both physical and cyber threats<br><strong>Risks/Downsides:</strong><ul><li><strong>Noise Interference: </strong>Risk of losing control or reduced effectiveness in areas with high electronic noise. On a Glitch, your sensors get overwhelmed by interference for a round.</li><li><strong>System Overload: </strong>Continuously operating or switching from machine to machine rapidly can lead to system overload. After three consecutive actions without rest, roll 1d6; a roll of 1 or 2 results in a temporary system shutdown.</li><li><strong>Vulnerability: </strong>While 'jumped in', the Engineer's physical body is more vulnerable to attacks.</li></ul></p>"
       }
     ],
-    "skills": [
-        {
-          "name": "Offensive Engineering",
-          "description": "Focuses on enhancing the attack capabilities of robots, like increased damage output or special attacks.",
-          "programs": [
-            {
-              "name": "Formula 22",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Boosts Droid combat response speed."
-            },
-            {
-              "name": "Offensive Protocol",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Enhances Droid’s offense."
-            },
-            {
-              "name": "Nano-Overhaul",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Temporarily supercharges the Slayerdroid."
-            },
-            {
-              "name": "Explosive Overload (Demolitionist)",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Slayerdroid executes a powerful explosive attack."
-            },
-            {
-              "name": "Siege Mode Configuration (Demolitionist)",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Enhances Droid for siege combat."
-            },
-            {
-              "name": "Deconstructive Barrage (Demolitionist)",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Empowers Droid for destructive attacks."
-            }
-          ]
-        },
-        {
-          "name": "Utility Engineering",
-          "description": "Enhances the utility aspects of robots, such as reconnaissance, hacking, or repair functions.",
-          "programs": [
-            {
-              "name": "Construct Companion",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Creates a recon drone."
-            },
-            {
-              "name": "Master's Repairs",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Repairs and heals physically damaged technology."
-            },
-            {
-              "name": "Resource Redistribution",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Optimizes resource usage."
-            }
-          ]
-        },
-        {
-          "name": "Defensive Engineering",
-          "description": "Concentrates on bolstering the tanking and defensive abilities of robots, improving their durability and protective features.",
-          "programs": [
-            {
-              "name": "Defensive Maneuvers",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Programs the Droid for defense."
-            }
-          ]
-        }
-      ],
     "source": {
       "custom": "",
       "book": "GDoc",

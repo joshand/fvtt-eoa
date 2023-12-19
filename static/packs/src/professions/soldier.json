@@ -6,54 +6,255 @@
   "system": {
     "description": {
       "overview": "<p>Soldiers are the embodiment of military might on the battlefield, equipped with the knowledge and gear to engage in prolonged combat. They specialize in various weapons and are adept at creating strategic advantages through firepower and defensive tactics.</p>",
-      "signature_ability": "Offensive Steamroller",
-      "signature_description": "<p><strong>Mechanic:</strong> Employs the Power Die to gain more Initiative after each successful attack.</p><p>Function: As the Soldier successfully lands attacks, their momentum builds, represented by the Power Die incrementing. Each increase in the Power Die level grants additional Initiative, making the Soldier quicker and more aggressive in combat.</p><p>Risk: As the Power Die level increases, the Soldier may become more vulnerable to counter-attacks or lose precision, representing the trade-off between aggression and control.</p>",
       "chat": "",
       "unidentified": ""
     },
     "flashback_ability": "Anticipate and Counter",
     "flashback_trigger": "When the team is at risk of walking into an ambush or a strategically disadvantageous situation.",
     "flashback_effect": "The Soldier pauses the current scenario to reveal a flashback where they recognized signs of a potential ambush or trap ahead of time. They then took preventative measures, such as rerouting the team, setting up countermeasures, or neutralizing the threat in advance. The Soldier rolls to determine the success of these preparations in circumventing the ambush and securing a tactical advantage for the current situation.",
+    "signature_resource": "",
+    "signature_resource_desc": "",
+    "signature_resource_effect": "",
+    "advancements": [
+      {
+        "name": "Profession or Nano Skill",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 to Chosen Skill"
+      },
+      {
+        "name": "Attribute Improvement",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 to Chosen Attribute up to Breed maximum"
+      },
+      {
+        "name": "Body Development",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+10 HP"
+      },
+      {
+        "name": "Nanopool",
+        "cost_mult": 12,
+        "cost_flat": 0,
+        "effect": "+10 NP"
+      },
+      {
+        "name": "Morphing Memory",
+        "cost_mult": 0,
+        "cost_flat": 30,
+        "effect": "+5 NCU"
+      },
+      {
+        "name": "Loadout Training",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 in Chosen Loadout"
+      },
+      {
+        "name": "Supply Miniaturization",
+        "cost_mult": 0,
+        "cost_flat": 30,
+        "effect": "+1 Supply Point"
+      },
+      {
+        "name": "Preparation",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 when using your Flashback Ability"
+      },
+      {
+        "name": "Cross Training",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "Learn another  general Profession’s Skill"
+      },
+      {
+        "name": "Evade Close Combat",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by Melee Attacks"
+      },
+      {
+        "name": "Dodge Range",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by Ranged Attacks"
+      },
+      {
+        "name": "Duck Explosives",
+        "cost_mult": 5,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by an area of effect attack or explosion"
+      },
+      {
+        "name": "Nano Resist",
+        "cost_mult": 12,
+        "cost_flat": 0,
+        "effect": "+1 ER when targeted by a hostile nano program"
+      },
+      {
+        "name": "Concealment",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 when making Stealth Tests"
+      },
+      {
+        "name": "Implant Treatment Conditioning",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 for Implant Surgery Tests and using Cybernetic Equipment"
+      },
+      {
+        "name": "Computer Literacy",
+        "cost_mult": 10,
+        "cost_flat": 0,
+        "effect": "+1 For checks interacting with computers and accessing the Grid"
+      }
+    ],
     "skill_list": [
       {
-        "name": "Tactics",
-        "description": "Skill in assessing situations and devising effective strategies."
+        "name": "Demolitionist",
+        "description": "<ul><li>Expertise in explosives and demolitions</li><li>Skilled in handling, deploying, and disarming various types of explosives.</li><li>Tactical use of demolitions for breaching, sabotage, or destroying structures.</li><li>Knowledge of explosive materials and their effective applications.</li></ul>"
       },
       {
-        "name": "Survival Training",
-        "description": "Expertise in survival techniques for various environments."
+        "name": "Recon Ops",
+        "description": "<ul><li>Specialization in reconnaissance and intelligence gathering.</li><li>Conducting stealthy surveillance and information collection.</li><li>Knowledgeable of different vehicles and how to hijack or pilot them.</li><li>Skilled in stealth, camouflage, and low-visibility operations.</li></ul>"
       },
       {
-        "name": "Weapon Smithing",
-        "description": "Knowledge of a wide range of weaponry and their maintenance."
+        "name": "Gunsmith",
+        "description": "<ul><li>Skill Focus: Mastery in firearm creation, maintenance, and modification.</li><li>Designing and crafting custom firearms.</li><li>Repairing and enhancing various types of guns.</li><li>Advanced knowledge of ballistics and ammunition.</li></ul>"
       },
       {
-        "name": "Physical Conditioning",
-        "description": "Maintaining peak physical fitness and combat readiness."
+        "name": "Tactician",
+        "description": "<ul><li>Strategic planning and tactical command.</li><li>Developing and implementing battle plans and strategies.</li><li>Analyzing enemy tactics to devise counterstrategies.</li><li>Coordinating teams and leading others.</li></ul>"
       },
       {
-        "name": "Leadership",
-        "description": "Ability to lead and inspire comrades in challenging situations."
+        "name": "Survivor",
+        "description": "<ul><li>Survival skills in hostile environments.</li><li>Wilderness survival, including foraging, tracking, and sheltering.</li><li>Enduring extreme conditions and scenarios.</li><li>Mending and administering first-aid.</li></ul>"
+      }
+    ],
+    "nano_skill_list": [
+      {
+        "name": "Matter Metamorphosis",
+        "attributes": ["int", "psy"],
+        "nanoprograms": [
+          {
+            "name": "Gazump Fight",
+            "np": 10,
+            "ncu": 5,
+            "description": "",
+            "effect": "Target + Hits deal +10 damage on their next attack."
+          },
+          {
+            "name": "Helepolis of the Besieger",
+            "np": 10,
+            "ncu": 3,
+            "description": "",
+            "effect": "Snare yourself. Your attacks gain the Blast quality and you gain 5 DEF + Hits armor."
+          }
+        ]
       },
       {
-        "name": "First Aid",
-        "description": "Basic medical skills for battlefield injuries."
+        "name": "Biological Metamorphosis",
+        "attributes": ["int", "sta"],
+        "nanoprograms": [
+          {
+            "name": "Total Combat Survival",
+            "np": 10,
+            "ncu": 4,
+            "description": "",
+            "effect": "Target temporarily increases their maximum HP by 20, and gains 1+hits hp at the start of each turn."
+          },
+          {
+            "name": "Remedy Inhibitor",
+            "np": 15,
+            "ncu": 3,
+            "description": "",
+            "effect": "Prevents target + hits from receiving the benefit of healing and regeneration."
+          }
+        ]
       },
       {
-        "name": "Interrogation Techniques",
-        "description": "Skills in extracting information from captives or informants."
+        "name": "Psychological Modifications",
+        "attributes": ["int", "sen"],
+        "nanoprograms": [
+          {
+            "name": "Unmistakable Victim",
+            "np": 5,
+            "ncu": 3,
+            "description": "",
+            "effect": "Target + Hits have Aggro towards you."
+          },
+          {
+            "name": "Full Automatic Targeting",
+            "np": 5,
+            "ncu": 2,
+            "description": "",
+            "effect": "Reroll 1+hits number of dice in an attack test, keeping the better result."
+          }
+        ]
       },
       {
-        "name": "Demolitions and Trap Disarm",
-        "description": "Knowledge in handling and deploying explosives safely and effectively."
+        "name": "Sensory Improvement",
+        "attributes": ["int", "str"],
+        "nanoprograms": [
+          {
+            "name": "Art of War",
+            "np": 10,
+            "ncu": 5,
+            "description": "",
+            "effect": "Upgrades target + hits Ranged Loadout skill by +2"
+          },
+          {
+            "name": "Metal Barrage",
+            "np": 15,
+            "ncu": 4,
+            "description": "",
+            "effect": "AOE attack reducing enemy movement and attack speed."
+          }
+        ]
       },
       {
-        "name": "Matter Metamorphosis (Nano Skill)",
-        "description": "Using nanotechnology for enhancing physical capabilities."
+        "name": "Time and Space",
+        "attributes": ["int", "agi"],
+        "nanoprograms": [
+          {
+            "name": "Pierce Nerves",
+            "np": 15,
+            "ncu": 4,
+            "description": "",
+            "effect": "Target gains 1+Hits penalty on melee attack rolls."
+          },
+          {
+            "name": "Phalanx",
+            "np": 10,
+            "ncu": 2,
+            "description": "",
+            "effect": "You and Allies gain 1+Hits increased DEF and RES for each ally engaged with you for the duration of the program."
+          }
+        ]
       },
       {
-        "name": "Matter Creation (Nano Skill)",
-        "description": "Skill in utilizing nanotechnology to create shields and barriers."
+        "name": "Matter Creations",
+        "attributes": ["int", "psy"],
+        "nanoprograms": [
+          {
+            "name": "Augmented Mirror Shield",
+            "np": 20,
+            "ncu": 5,
+            "description": "",
+            "effect": "Create a powerful shield that absorbs 5 x hits damage and returns it back to the attacker. This can only be used once every 2 minutes."
+          },
+          {
+            "name": "Reactive Reflective Field",
+            "np": 15,
+            "ncu": 6,
+            "description": "",
+            "effect": "Grants a target a defensive barrier. Characters with the barrier absorb 2 x hits damage and returns it to the attacker."
+          }
+        ]
       }
     ],
     "signature_traits": [
@@ -62,89 +263,6 @@
         "description": "<p><strong>Mechanic: </strong>Employs the Power Die to gain more Initiative after each successful attack.</p><p>Function: As the Soldier successfully lands attacks, their momentum builds, represented by the Power Die incrementing. Each increase in the Power Die level grants additional Initiative, making the Soldier quicker and more aggressive in combat.\nRisk: As the Power Die level increases, the Soldier may become more vulnerable to counter-attacks or lose precision, representing the trade-off between aggression and control.</p>"
       }
     ],
-    "skills": [
-        {
-          "name": "Firepower",
-          "description": "Focuses on maximizing damage output with various weapons.",
-          "programs": [
-            {
-              "name": "Gazump Fight",
-              "description": "",
-              "np": 20,
-              "ncu": 5,
-              "effect": "Enhances the entire team's damage output."
-            },
-            {
-              "name": "Offensive Insult",
-              "description": "",
-              "np": 15,
-              "ncu": 1,
-              "effect": "Delivers a powerful attack with a debuff effect."
-            },
-            {
-              "name": "Combat Stimulants",
-              "description": "",
-              "np": 10,
-              "ncu": 4,
-              "effect": "Temporarily enhances physical abilities for combat."
-            }
-          ]
-        },
-        {
-          "name": "Tactics",
-          "description": "Enhances the Soldier's durability and tanking capabilities.",
-          "programs": [
-            {
-              "name": "Augmented Mirror Shield",
-              "description": "",
-              "np": 15,
-              "ncu": 4,
-              "effect": "Significantly boosts defense."
-            },
-            {
-              "name": "Unmistakable Victim",
-              "description": "",
-              "np": 5,
-              "ncu": 3,
-              "effect": "Draws enemy attention for tanking."
-            },
-            {
-              "name": "Desist Me",
-              "description": "",
-              "np": 15,
-              "ncu": 7,
-              "effect": "Reduces effectiveness of incoming attacks."
-            }
-          ]
-        },
-        {
-          "name": "Maneuvering",
-          "description": "Skills in strategic positioning and battlefield control.",
-          "programs": [
-            {
-              "name": "Rallying Cry",
-              "description": "",
-              "np": 15,
-              "ncu": 4,
-              "effect": "Improves allies' combat performance."
-            },
-            {
-              "name": "Adaptive Camouflage",
-              "description": "",
-              "np": 10,
-              "ncu": 2,
-              "effect": "Temporarily improves stealth."
-            },
-            {
-              "name": "Suppressive Fire",
-              "description": "",
-              "np": 10,
-              "ncu": 4,
-              "effect": "AOE attack reducing enemy movement and attack speed."
-            }
-          ]
-        }
-      ],
     "source": {
       "custom": "",
       "book": "GDoc",

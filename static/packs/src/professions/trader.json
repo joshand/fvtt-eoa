@@ -6,101 +6,17 @@
   "system": {
     "description": {
       "overview": "<p>Traders are known for their ability to manipulate markets, but they also have unique skills that allow them to drain and transfer skills, buffs, and even health from their foes to themselves and their allies. They are the ultimate opportunists, turning the tide of battle by weakening foes and strengthening friends.</p>",
-      "signature_ability": "Specialist Commerce",
-      "signature_description": "<p>Function: Accesses a portable shop for resource management.</p>",
       "chat": "",
       "unidentified": ""
     },
     "flashback_ability": "Unknown",
     "flashback_trigger": "Unknown",
     "flashback_effect": "Unknown",
+    "signature_resource": "Unknown",
+    "signature_resource_desc": "Unknown",
+    "signature_resource_effect": "Unknown",
     "skill_list": [],
     "signature_traits": [],
-    "skills": [
-        {
-          "name": "Economic Strategy",
-          "description": "Market manipulation and strategic trading.",
-          "programs": [
-            {
-              "name": "Corporate Protection",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Lowers an enemy's offensive abilities."
-            },
-            {
-              "name": "Industrial Sabotage",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Reduces an enemy's defensive capabilities."
-            },
-            {
-              "name": "Divest Damage",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Decreases a target's damage output."
-            },
-            {
-              "name": "Shutdown Skills",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Temporarily impairs a target's skills."
-            },
-            {
-              "name": "Your Enemy's Enemy is Your Friend",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Buffs allies by supporting an enemy's opponent."
-            },
-            {
-              "name": "Wrangle",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Lowers the Trader's abilities to significantly enhance another character's."
-            },
-            {
-              "name": "Relentless Slayer",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Increases the entire team's damage."
-            },
-            {
-              "name": "Grand Theft Humidity",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Drains nano points from a target, benefiting the Trader."
-            },
-            {
-              "name": "Forced Bankruptcy",
-              "description": "",
-              "np": 0,
-              "ncu": 0,
-              "effect": "Continuously depletes a target's resources over time."
-            }
-          ]
-        },
-        {
-          "name": "Resource Management",
-          "description": "Efficient use of resources in various scenarios.",
-          "programs": [
-
-          ]
-        },
-        {
-          "name": "Combat Trading",
-          "description": "Blends trading acumen with combat skills.",
-          "programs": [
-
-          ]
-        }
-      ],
     "source": {
       "custom": "",
       "book": "GDoc",
