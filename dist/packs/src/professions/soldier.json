@@ -12,9 +12,9 @@
     "flashback_ability": "Anticipate and Counter",
     "flashback_trigger": "When the team is at risk of walking into an ambush or a strategically disadvantageous situation.",
     "flashback_effect": "The Soldier pauses the current scenario to reveal a flashback where they recognized signs of a potential ambush or trap ahead of time. They then took preventative measures, such as rerouting the team, setting up countermeasures, or neutralizing the threat in advance. The Soldier rolls to determine the success of these preparations in circumventing the ambush and securing a tactical advantage for the current situation.",
-    "signature_resource": "Unknown",
-    "signature_resource_desc": "Unknown",
-    "signature_resource_effect": "Unknown",
+    "signature_resource": "Offensive Steamroller",
+    "signature_resource_desc": "With each clash of steel and burst of gunfire, the Soldier’s unit and presence on the battlefield grows more formidable. Like a juggernaut gaining speed, their attacks become increasingly aggressive and precise. The sound of their gunfire and the rhythm of their movements resonate like a drumbeat of war, instilling fear in their enemies and rallying courage in their allies.",
+    "signature_resource_effect": "During a battle you accumulate Tension Points, each time you make a successful attack or generate Edge you gain a Tension point up to a maximum of 6.<br>You and your  allies upgrade a number of dice equal to accumulated Tension points. Only dice tests made in combat on your turn get upgraded by tension points.<br><br>Reset: If you fail to deal damage with an attack or if you personally roll a Glitch, your Tension points are reset back to 0.",
     "advancements": [
       {
         "name": "Profession or Nano Skill",

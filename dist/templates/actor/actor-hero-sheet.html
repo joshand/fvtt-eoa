@@ -413,8 +413,6 @@
                 </div>
                 <div class="form-fields flex1">
                     <label><strong>Origin Skills (Choose 3): </strong></label>
-<!--                    <label>{{origin.0.system.origin_skills}}</label>-->
-<!--                    <input type="text" name="system.skill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.skill sk._id) 'rank' }}"-->
                     {{#each origin.0.system.origin_skills as | oskill |}}
                         <input type="checkbox" name="system.origin_skills.{{oskill}}" {{checked (lookup ../data.system.origin_skills oskill)}}>{{oskill}}
                     {{/each}}
@@ -426,15 +424,6 @@
                 </ul>
                 <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label>
                 {{radioBoxes "system.origin_lifepath" origin_dict checked=origin_lifepath localize=true}}
-<!--                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>-->
-<!--                {{#each origin.0.system.life_path as | skill |}}-->
-<!--                    <tr>-->
-<!--                        <td>{{skill.low}}-{{skill.high}}</td>-->
-<!--                        <td>{{skill.name}}</td>-->
-<!--                        <td>{{skill.description}}</td>-->
-<!--                    </tr>-->
-<!--                {{/each}}-->
-<!--                </table>-->
             </div>
         </div>
 
@@ -487,14 +476,9 @@
                                 <span class="input-group-btn">
                                     <button class="btn btn-default btn-minus" type="button">-</button>
                                 </span>
-<!--                                <input type="text" name="system.skill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.skill sk._id) 'rank' }}"-->
-<!--                                       placeholder="0">-->
-
                                 <input type="text" name="system.skill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.skill sk._id) 'rank' }}"
                                        placeholder="0" class="form-control text-center txt-skill" min="0" max="10"
                                        data-skill="{{name}}">
-
-                                <!--                                <input type="text" class="form-control text-center txt-skill" value="0" min="0" max="10" data-skill="{{skill.name}}">-->
                                 <span class="input-group-btn">
                                     <button class="btn btn-default btn-plus" type="button">+</button>
                                 </span>
@@ -515,14 +499,9 @@
                                 <span class="input-group-btn">
                                     <button class="btn btn-default btn-minus" type="button">-</button>
                                 </span>
-<!--                                <input type="text" name="system.skill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.skill sk._id) 'rank' }}"-->
-<!--                                       placeholder="0">-->
-
                                 <input type="text" name="system.nanoskill.{{sk._id}}.rank" value="{{lookup (lookup ../data.system.nanoskill sk._id) 'rank' }}"
                                        placeholder="0" class="form-control text-center txt-skill" min="0" max="10"
                                        data-skill="{{name}}">
-
-                                <!--                                <input type="text" class="form-control text-center txt-skill" value="0" min="0" max="10" data-skill="{{skill.name}}">-->
                                 <span class="input-group-btn">
                                     <button class="btn btn-default btn-plus" type="button">+</button>
                                 </span>
@@ -534,6 +513,7 @@
                             {{#each sk.nanoprograms as | np |}}
                                 <tr>
                                     <td style="width:20px;">
+                                        <img src="systems/eoa/images/die_icon.png" alt="Roll Nanoprogram">
                                         <input type="checkbox" name="system.nanoprogram.{{np._id}}" {{checked (lookup ../../data.system.nanoprogram np._id)}}>
                                     </td>
                                     <td style="width:100px;">
