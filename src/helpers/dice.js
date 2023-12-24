@@ -75,3 +75,36 @@ export function diceToFaces(value, content)
 
     return "fa-dice-d6";
 }
+
+export function diceToFacesAlt(value, content)
+{
+    switch (value)
+    {
+        case 1:
+            return "eoa-dice-one";
+        case 2:
+            return "eoa-dice-two";
+        case 3:
+            return "eoa-dice-three";
+        case 4:
+            return "eoa-dice-four";
+        case 5:
+            return "eoa-dice-five";
+        case 6:
+            return "eoa-dice-six";
+        case 7:
+            return "eoa-dice-seven";
+        case 8:
+            return "eoa-dice-eight";
+        case 9:
+            return "eoa-dice-nine";
+        case 10:
+            return "eoa-dice-ten";
+        case 11:
+            return "eoa-dice-eleven";
+        case 12:
+            return "eoa-dice-twelve";
+    }
+
+    return "fa-dice-d6";
+}

@@ -1,3 +1,10 @@
+{{#*inline "augmentdiePartial"}}
+  {{#if this.isSelected}}
+    <input id="fux-dice-roller-form-FUAugmentDie{{this.number}}" type="image" class="btn-fux-dice-roller-form-die" style="opacity:1;" onclick="this.style.opacity = (this.style.opacity!==&quot;0.4&quot; ? &quot;0.4&quot; : &quot;1&quot;);" alt="Augment" src="{{this.augmentdiceicon}}">
+  {{else}}
+    <input id="fux-dice-roller-form-FUAugmentDie{{this.number}}" type="image" class="btn-fux-dice-roller-form-die" style="opacity:0.4;" onclick="this.style.opacity = (this.style.opacity!==&quot;0.4&quot; ? &quot;0.4&quot; : &quot;1&quot;);" alt="Augment" src="{{this.augmentdiceicon}}">
+  {{/if}}
+{{/inline}}
 {{#*inline "actiondiePartial"}}
   {{#if this.isSelected}}
     <input id="fux-dice-roller-form-FUActionDie{{this.number}}" type="image" class="btn-fux-dice-roller-form-die" style="opacity:1;" onclick="this.style.opacity = (this.style.opacity!==&quot;0.4&quot; ? &quot;0.4&quot; : &quot;1&quot;);" alt="Action" src="{{this.actiondiceicon}}">
@@ -7,9 +14,9 @@
 {{/inline}}
 {{#*inline "dangerdiePartial"}}
   {{#if this.isSelected}}      
-    <input id="fux-dice-roller-form-FUDangerDie{{this.number}}" type="image" class="btn-fux-dice-roller-form-die" style="opacity:1;" onclick="this.style.opacity = (this.style.opacity!==&quot;0.4&quot; ? &quot;0.4&quot; : &quot;1&quot;);" alt="Danger" src="{{this.dangerdiceicon}}">
+    <input id="fux-dice-roller-form-FUDangerDie{{this.number}}" type="image" class="btn-fux-dice-roller-form-die" style="opacity:1;" onclick="this.style.opacity = (this.style.opacity!==&quot;0.4&quot; ? &quot;0.4&quot; : &quot;1&quot;);" alt="Edge" src="{{this.dangerdiceicon}}">
   {{else}} 
-    <input id="fux-dice-roller-form-FUDangerDie{{this.number}}" type="image" class="btn-fux-dice-roller-form-die" style="opacity:0.4;" onclick="this.style.opacity = (this.style.opacity!==&quot;0.4&quot; ? &quot;0.4&quot; : &quot;1&quot;);" alt="Danger" src="{{this.dangerdiceicon}}">
+    <input id="fux-dice-roller-form-FUDangerDie{{this.number}}" type="image" class="btn-fux-dice-roller-form-die" style="opacity:0.4;" onclick="this.style.opacity = (this.style.opacity!==&quot;0.4&quot; ? &quot;0.4&quot; : &quot;1&quot;);" alt="Edge" src="{{this.dangerdiceicon}}">
   {{/if}} 
 {{/inline}}
 
@@ -25,6 +32,14 @@
      {{#each actiondice}}
     {{> actiondiePartial}}
     {{/each}} 
+    </div>
+  </fieldset>
+  <fieldset style="min-height:82px;">
+    <legend>{{augmentdice_title}}</legend>
+    <div id="fux-dice-roller-form-AugmentDiceAvailable">
+     {{#each augmentdice}}
+    {{> augmentdiePartial}}
+    {{/each}}
     </div>
   </fieldset>
   <fieldset style="min-height:82px;">
