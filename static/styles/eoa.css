@@ -2730,3 +2730,39 @@ a.roll-link i {
   flex: 0 0 64px;
   text-align: right;
 }
+.eoa-dice-one:before {
+  content: "\2460";
+}
+.eoa-dice-two:before {
+  content: "\2461";
+}
+.eoa-dice-three:before {
+  content: "\2462";
+}
+.eoa-dice-four:before {
+  content: "\2463";
+}
+.eoa-dice-five:before {
+  content: "\2464";
+}
+.eoa-dice-six:before {
+  content: "\2465";
+}
+.eoa-dice-seven:before {
+  content: "\2466";
+}
+.eoa-dice-eight:before {
+  content: "\2467";
+}
+.eoa-dice-nine:before {
+  content: "\2468";
+}
+.eoa-dice-ten:before {
+  content: "\2469";
+}
+.eoa-dice-eleven:before {
+  content: "\246a";
+}
+.eoa-dice-twelve:before {
+  content: "\246b";
+}
