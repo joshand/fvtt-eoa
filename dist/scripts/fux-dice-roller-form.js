@@ -46,6 +46,7 @@ export class FUxDiceRollerForm extends FormApplication {
     let data;
     let availabledice = game.settings.get(_module_id, 'OPTION_DICE_AVAILABLE');
     let showInitiativeOption = game.settings.get(_module_id, 'OPTION_SHOW_SEND_TO_COMBAT_TRACKER');
+    let augmentdiceicon=`systems/${_module_id}/images/augmentdie.png`;
     let actiondiceicon=`systems/${_module_id}/images/actiondie.svg`;
     let dangerdiceicon=`systems/${_module_id}/images/dangerdie.svg`;
     let customactiondiceicon=game.settings.get(_module_id, 'OPTION_CUSTOM_ACTION_DICE_ICON');
@@ -56,43 +57,53 @@ export class FUxDiceRollerForm extends FormApplication {
     if (customdangerdiceicon.length>0){
       dangerdiceicon=customdangerdiceicon;
     }        
+    let augmentdice = [];
     let actiondice = [];
     let dangerdice = [];
+    let augmentdie;
     let actiondie;
     let dangerdie;
+    let augmentdice_title = 'Augment Dice';
     let actiondice_title = 'Action Dice';
     let dangerdice_title = 'Edge Dice';
     let systemvariant = game.settings.get(_module_id, 'OPTION_SYSTEM_VARIANT');
     let systemvariantname = SystemVariantName(systemvariant);
     let diceselection=game.user.getFlag('world','fux-dice-roller-form-selection');
-        
+
+    let augmentdieselected=false;
     let actiondieselected=false;
     let dangerdieselected=false;
     for (let i = 1; i <= availabledice; i++) {
       if (i == 1) {
         actiondieselected=true;
         dangerdieselected=false;
+        augmentdieselected=false;
         if(diceselection!=null){
           if(diceselection.actiondice.length>=i-1){
             actiondieselected=diceselection.actiondice[i-1];
             dangerdieselected=diceselection.dangerdice[i-1];
-          }           
+            augmentdieselected=diceselection.augmentdice[i-1];
+          }
         } 
                 
       } else {
         actiondieselected=false;
         dangerdieselected=false;
+        augmentdieselected=false;
         if(diceselection!=null){
           if(diceselection.actiondice.length>=i-1){
             actiondieselected=diceselection.actiondice[i-1];
             dangerdieselected=diceselection.dangerdice[i-1];
-          }           
+            augmentdieselected=diceselection.augmentdice[i-1];
+          }
         }
       }
       
+      augmentdie = {"number": i, "isSelected": augmentdieselected,augmentdiceicon:augmentdiceicon};
       actiondie = {"number": i, "isSelected": actiondieselected,actiondiceicon:actiondiceicon};
       dangerdie = {"number": i, "isSelected": dangerdieselected,dangerdiceicon:dangerdiceicon};
       
+      augmentdice.push(augmentdie);
       actiondice.push(actiondie);
       dangerdice.push(dangerdie);
     }
@@ -108,8 +119,10 @@ export class FUxDiceRollerForm extends FormApplication {
       showfuxsettings: showfuxsettings,
       showfu2combathelper: showfu2combathelper,
       system_variant: systemvariantname,
+      augmentdice_title: augmentdice_title,
       actiondice_title: actiondice_title,
       dangerdice_title: dangerdice_title,
+      augmentdice: augmentdice,
       actiondice: actiondice,
       dangerdice: dangerdice,
       showInitiativeOption: showInitiativeOption
@@ -125,24 +138,32 @@ export class FUxDiceRollerForm extends FormApplication {
 
   async _onCloseApplication(html){    
     let doc = html[0].ownerDocument;
+    let augmentdiceselection=[];
     let actiondiceselection=[];
     let dangerdiceselection=[];
+    let augmentdieselected=false;
     let actiondieselected=false;
     let dangerdieselected=false;
     let availabledice = game.settings.get(_module_id, 'OPTION_DICE_AVAILABLE');
     for (let i = 1; i <= availabledice; i++) {
+      augmentdieselected=false;
       actiondieselected=false;
       dangerdieselected=false;
+      if(doc.getElementById('fux-dice-roller-form-FUAugmentDie' + i).style.opacity==1){
+        augmentdieselected=true;
+      }
       if(doc.getElementById('fux-dice-roller-form-FUActionDie' + i).style.opacity==1){
         actiondieselected=true;
       }
       if(doc.getElementById('fux-dice-roller-form-FUDangerDie' + i).style.opacity==1){
         dangerdieselected=true;
       }
+      augmentdiceselection.push(augmentdieselected) ;
       actiondiceselection.push(actiondieselected) ;
       dangerdiceselection.push(dangerdieselected) ;            
     }
     let diceselection={
+      augmentdice:augmentdiceselection,
       actiondice:actiondiceselection,
       dangerdice:dangerdiceselection
     }    
@@ -160,9 +181,11 @@ export class FUxDiceRollerForm extends FormApplication {
     for (let i = 1; i <= availabledice; i++) {
       if (i == 1) {
         doc.getElementById('fux-dice-roller-form-FUActionDie' + i).style.opacity = 1;
+        doc.getElementById('fux-dice-roller-form-FUAugmentDie' + i).style.opacity = 0.4;
         doc.getElementById('fux-dice-roller-form-FUDangerDie' + i).style.opacity = 0.4;
       } else {
         doc.getElementById('fux-dice-roller-form-FUActionDie' + i).style.opacity = 0.4;
+        doc.getElementById('fux-dice-roller-form-FUAugmentDie' + i).style.opacity = 0.4;
         doc.getElementById('fux-dice-roller-form-FUDangerDie' + i).style.opacity = 0.4;
       }
       
@@ -190,8 +213,9 @@ export class FUxDiceRollerForm extends FormApplication {
     //debugger;
     // get selected count
     let actiondice = this.getSelectedFUDice("Action", doc);
+    let augmentdice = this.getSelectedFUDice("Augment", doc);
     let dangerdice = this.getSelectedFUDice("Danger", doc);
-    let result = await RollFuxDice(actiondice, dangerdice);
+    let result = await RollFuxDice(actiondice, augmentdice, dangerdice);
 
     // --------------------------------------------- 
     let chkSendToCombatTrackerelement=doc.getElementById("fux-dice-roller-form-chkSendToCombatTracker");

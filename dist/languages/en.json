@@ -1478,6 +1478,11 @@
         "Hint": "Path to custom icon for Edge Dice. Leave blank for default"
       } ,
 
+      "OPTION_CUSTOM_AUGMENT_DICE_ICON": {
+        "Name": "Custom Augment Dice Icon",
+        "Hint": "Path to custom icon for Augment Dice. Leave blank for default"
+      } ,
+
       "SYSTEM_VARIANT_FU_CLASSIC":"FU Classic",
       "SYSTEM_VARIANT_FU_V2":"FU v2",
       "SYSTEM_VARIANT_ACTION_TALES":"Action! Tales",

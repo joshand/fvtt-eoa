@@ -30,6 +30,7 @@ class FUxDiceRoller {
     OPTION_BOTCH_VALUE: 'OPTION_BOTCH_VALUE',
     OPTION_FU_CLASSIC_MATCHING_DICE: 'OPTION_FU_CLASSIC_MATCHING_DICE',
     OPTION_CUSTOM_ACTION_DICE_ICON:'OPTION_CUSTOM_ACTION_DICE_ICON',
+    OPTION_CUSTOM_AUGMENT_DICE_ICON:'OPTION_CUSTOM_AUGMENT_DICE_ICON',
     OPTION_CUSTOM_DANGER_DICE_ICON:'OPTION_CUSTOM_DANGER_DICE_ICON'
   } 
 
@@ -42,6 +43,7 @@ class FUxDiceRoller {
     OPTION_BOTCH_VALUE: 1,
     OPTION_FU_CLASSIC_MATCHING_DICE: '',
     OPTION_CUSTOM_ACTION_DICE_ICON:'',
+    OPTION_CUSTOM_AUGMENT_DICE_ICON:'',
     OPTION_CUSTOM_DANGER_DICE_ICON:''
   }
   static CHATMSG_STYLE = {
@@ -166,6 +168,16 @@ class FUxDiceRoller {
         config: false,
         
     });
+    game.settings.register(this.ID, this.SETTINGS.OPTION_CUSTOM_AUGMENT_DICE_ICON, {
+        name: `fux-dice-roller.settings.${this.SETTINGS.OPTION_CUSTOM_AUGMENT_DICE_ICON}.Name`,
+        hint: `fux-dice-roller.settings.${this.SETTINGS.OPTION_CUSTOM_AUGMENT_DICE_ICON}.Hint`,
+        scope: 'client',
+        type: String,
+        filePicker: 'filepickertype',
+        default: "",
+        config: false,
+
+    });
     game.settings.register(this.ID, this.SETTINGS.OPTION_CUSTOM_DANGER_DICE_ICON, {
         name: `fux-dice-roller.settings.${this.SETTINGS.OPTION_CUSTOM_DANGER_DICE_ICON}.Name`,
         hint: `fux-dice-roller.settings.${this.SETTINGS.OPTION_CUSTOM_DANGER_DICE_ICON}.Hint`,
@@ -209,20 +221,26 @@ Hooks.on("chatMessage", (chatlog, messageText, chatData) => {
       let command=messageText.replace("/fux", "");
       // get action dice
       let actiondicecount = command.match(/(\d+)a/g);
+      let augmentdicecount = command.match(/(\d+)a/g);
       let dangerdicecount = command.match(/(\d+)d/g);
       
       let actiondicetoroll=0;
+      let augmentdicetoroll=0;
       let dangerdicetoroll=0;
       if (actiondicecount!=null){
         // get rid
         actiondicetoroll=parseInt(actiondicecount);
       }
+      if (augmentdicecount!=null){
+        // get rid
+        augmentdicetoroll=parseInt(augmentdicecount);
+      }
       if(dangerdicecount!=null){
         dangerdicetoroll=parseInt(dangerdicecount);
       }
-      if (actiondicetoroll>0 || dangerdicetoroll>0){
+      if (actiondicetoroll>0 || augmentdicetoroll>0 || dangerdicetoroll>0){
         // roll it
-        RollFuxDice(actiondicetoroll, dangerdicetoroll);
+        RollFuxDice(actiondicetoroll, augmentdicetoroll, dangerdicetoroll);
       } else{
         // notfy user of invalid rollcommand
         ui.notifications.warn('FUx Dice Roller  | Invalid roll command: ' + messageText);

@@ -4,11 +4,15 @@ async function RollD6s(faces){
   let roll=await new Roll(faces + "d6").roll({async: true});
   return roll;
 }
+async function RollD8s(faces){
+  let roll=await new Roll(faces + "d8").roll({async: true});
+  return roll;
+}
 function getGameSetting(settingName){
   return  game.settings.get(_module_id, settingName);
 }
-export async function RollFuxDice(actiondice, dangerdice) {
-    if (actiondice == 0 && dangerdice == 0) {
+export async function RollFuxDice(actiondice, augmentdice, dangerdice, msg = null) {
+    if (actiondice == 0 && augmentdice == 0 && dangerdice == 0) {
       //no dice, abort
       return;
     }
@@ -57,10 +61,12 @@ export async function RollFuxDice(actiondice, dangerdice) {
       }
     }
     // roll dice
+    let augmentdiceresults = await RollD8s(augmentdice);
+    // roll dice
     let actiondiceresults = await RollD6s(actiondice);
     //console.log(actiondiceresults);
     let dangerdiceresults = await RollD6s(dangerdice);
-    
+
     // prepare result array
     let arrFinals = [0, 0, 0, 0, 0, 0];  // array for result counts, slot corresponds to face value 1- 6
     // action dice
@@ -74,7 +80,6 @@ export async function RollFuxDice(actiondice, dangerdice) {
       }
     }
     
-    
     // sort action results
     actionssorted.sort(function (a, b) {
       return a - b;
@@ -87,6 +92,29 @@ export async function RollFuxDice(actiondice, dangerdice) {
         actionresult = actionresult + '' + '<img src="systems/eoa/images/actiondie_value_' + actionssorted[i] + '.png" style="margin-top:-3px;margin-left:2px;">';
       }
     }
+
+    // augment dice
+    let augmentresult = '';
+    let augmentsorted = [];
+    if (augmentdiceresults.terms[0].results.length > 0) {
+      for (let i = 0; i < augmentdiceresults.terms[0].results.length; i++) {
+        arrFinals[augmentdiceresults.terms[0].results[i].result - 1] = arrFinals[augmentdiceresults.terms[0].results[i].result - 1] - 1;
+        augmentsorted.push(augmentdiceresults.terms[0].results[i].result);
+      }
+    }
+    // sort augment result
+    augmentsorted.sort(function (a, b) {
+      return a - b;
+    });
+    // build result string for augment dice
+    for (let i = 0; i < augmentsorted.length; i++) {
+      if (i == 0) {
+        augmentresult = '<img src="systems/eoa/images/augmentdie_value_' + augmentsorted[i] + '.png" style="margin-top:0px;margin-left:2px;">';
+      } else {
+        augmentresult = augmentresult + '' + '<img src="systems/eoa/images/augmentdie_value_' + augmentsorted[i] + '.png" style="margin-top:0px;margin-left:2px;">';
+      }
+    }
+
     //danger dice
     let dangerresult = '';
     let dangersorted = [];
@@ -486,7 +514,8 @@ export async function RollFuxDice(actiondice, dangerdice) {
         blind: blindmode,
         action: actionresult,
         danger: dangerresult,
-        summary: submsg + ' => ' + oracle
+        summary: submsg + ' => ' + oracle,
+        msg: msg
       };
 
       renderTemplate(`systems/${_module_id}/templates/fux-dice-roller-chatmsg-sandbox.hbs`, rollData).then(html => {
@@ -508,6 +537,7 @@ export async function RollFuxDice(actiondice, dangerdice) {
       // any other system
       // ----------------
       let actionrolls=[];
+      let augmentrolls=[];
       let dangerrolls=[];
       
       if (systemvariant == FUX_CONST.SYSTEM_VARIANTS.EARTHDAWN_AGE_OF_LEGEND) {
@@ -519,7 +549,14 @@ export async function RollFuxDice(actiondice, dangerdice) {
           };
           actionrolls.push(dieresult);
         }
-        for (let i = 0; i < dangerdiceresults.terms[0].results.length; i++) {          
+        for (let i = 0; i < augmentdiceresults.terms[0].results.length; i++) {
+          let dieresult={
+            classes:'die d8',
+            result: augmentdiceresults.terms[0].results[i].result
+          };
+          augmentrolls.push(dieresult);
+        }
+        for (let i = 0; i < dangerdiceresults.terms[0].results.length; i++) {
           let dieresult={
             classes:'die d6',
             result: dangerdiceresults.terms[0].results[i].result
@@ -534,6 +571,13 @@ export async function RollFuxDice(actiondice, dangerdice) {
             result: actionssorted[i]
           };
           actionrolls.push(dieresult);
+        }
+        for (let i = 0; i < augmentsorted.length; i++) {
+          let dieresult={
+            classes:'die d8',
+            result: augmentsorted[i]
+          };
+          augmentrolls.push(dieresult);
         }
         for (let i = 0; i < dangersorted.length; i++) {
           let dieresult={
@@ -551,6 +595,13 @@ export async function RollFuxDice(actiondice, dangerdice) {
           formula:'Action Dice',
           rolls:actionrolls,
           total:actiondice
+        },
+        {
+          faces:8,
+          flavor:'green',
+          formula:'Augment Dice',
+          rolls:augmentrolls,
+          total:augmentdice
         },
         {
           faces:6,
@@ -579,12 +630,14 @@ export async function RollFuxDice(actiondice, dangerdice) {
         iscrit: hascrit,
         isfumble: hasfumble,
         blind: blindmode,
+        augment: augmentresult,
         action: actionresult,
         danger: dangerresult,
-        summary: submsg + ' => ' + oracle
+        summary: submsg + ' => ' + oracle,
+        msg: msg
       };
 
-      // console.log(rollData);
+      console.log(rollData);
       renderTemplate(`systems/${_module_id}/templates/fux-dice-roller-chatmsg-core.hbs`, rollData).then(html => {
         let messageData = {
           content: html,

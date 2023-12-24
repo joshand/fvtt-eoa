@@ -161,7 +161,8 @@
                         <td>
                             <div class="form-fields flex1 content">
                                 <label>NCU</label>
-                                <input type="text" name="system.current_ncu" value="{{data.system.current_ncu}}" placeholder="0" style="width: 45px;">
+<!--                                <input type="text" name="system.current_ncu" value="{{data.system.current_ncu}}" placeholder="0" style="width: 45px;">-->
+                                    <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{consumed_ncu}}</label>
                                 <label>/</label>
                                 <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_ncu}}</label>
                                 {{#if (eq breed.0.system.bonus.ncu 0)}}
@@ -507,14 +508,18 @@
                                 </span>
                             </div>
                         </td>
-                        <td>{{sk.name}}</td>
+                        <td>{{sk.name}}<div style="text-transform: uppercase;">{{sk.attributes}}</div></td>
                         <td>
                             <table><tr><td>&nbsp;</td><td>Name</td><td>Description</td></tr>
                             {{#each sk.nanoprograms as | np |}}
                                 <tr>
-                                    <td style="width:20px;">
-                                        <img src="systems/eoa/images/die_icon.png" alt="Roll Nanoprogram">
-                                        <input type="checkbox" name="system.nanoprogram.{{np._id}}" {{checked (lookup ../../data.system.nanoprogram np._id)}}>
+                                    <td style="width:60px;">
+                                        <div class="form-fields flex1">
+                                            <input type="checkbox" name="system.nanoprogram.{{np._id}}" {{checked (lookup ../../data.system.nanoprogram np._id)}}>
+                                            {{#if (lookup ../../data.system.nanoprogram np._id)}}
+                                            <img src="systems/eoa/images/die_icon.png" alt="Roll Nanoprogram" style="border: none !important;width: 20px;height: 20px;" class="np-run" data-actor="{{../../actor._id}}" data-np-cost="{{np.np}}" {{#each sk.attributes as | attr |}} data-name{{@index}}="{{attr}}" data-attr{{@index}}="{{lookup ../../../attrs attr}}"{{/each}}>
+                                            {{/if}}
+                                        </div>
                                     </td>
                                     <td style="width:100px;">
                                         {{np.name}}
@@ -543,15 +548,6 @@
                 </div>
                 <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label>
                 {{radioBoxes "system.faction_lifepath" faction_dict checked=faction_lifepath localize=true}}
-<!--                <table><tr><td>Range</td><td>Name</td><td>Description</td></tr>-->
-<!--                {{#each faction.0.system.life_path as | skill |}}-->
-<!--                    <tr>-->
-<!--                        <td>{{skill.low}}-{{skill.high}}</td>-->
-<!--                        <td>{{skill.name}}</td>-->
-<!--                        <td>{{skill.description}}</td>-->
-<!--                    </tr>-->
-<!--                {{/each}}-->
-<!--                </table>-->
             </div>
         </div>
 
