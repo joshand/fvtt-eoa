@@ -1,3 +1,10 @@
+import { RollFuxDice } from   '/static/scripts/fux-dice-roller-roll.js';
+
+// sleep time expects milliseconds
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -41,7 +48,9 @@ export class EoAActorSheet extends ActorSheet {
         context.max_hp = 0;
         context.max_np = 0;
         context.init = 0;
-        context.breed = context.items.filter(function(item) { return item.type === "breed" })
+        context.breed = context.items.filter(function (item) {
+            return item.type === "breed"
+        })
         context.breed_dict = {};
         context.breed_lifepath = context.data.system.breed_lifepath;
         if (context.breed.length > 0) {
@@ -79,12 +88,20 @@ export class EoAActorSheet extends ActorSheet {
                 `;
             });
         }
+        context.attrs = {};
         if ((context.breed.length > 0) && (context.breed_lifepath !== "")) {
             context.has_stats = true;
+            context.breed[0].system.skills.forEach((el) => {
+                if (el.name === context.breed_lifepath) {
+                    context.attrs = {"str": el.str, "sta": el.sta, "agi": el.agi, "int": el.int, "sen": el.sen, "psy": el.psy};
+                }
+            });
         } else {
             context.has_stats = false;
         }
-        context.origin = context.items.filter(function(item) { return item.type === "origin" })
+        context.origin = context.items.filter(function (item) {
+            return item.type === "origin"
+        })
         context.origin_dict = {};
         if (context.origin.length > 0) {
             context.origin[0].system.life_path.forEach((el) => {
@@ -104,9 +121,15 @@ export class EoAActorSheet extends ActorSheet {
             });
         }
         context.origin_lifepath = context.data.system.origin_lifepath;
-        context.profession = context.items.filter(function(item) { return item.type === "profession" })
-        context.skill = context.items.filter(function(item) { return item.type === "skill" })
-        context.faction = context.items.filter(function(item) { return item.type === "faction" })
+        context.profession = context.items.filter(function (item) {
+            return item.type === "profession"
+        })
+        context.skill = context.items.filter(function (item) {
+            return item.type === "skill"
+        })
+        context.faction = context.items.filter(function (item) {
+            return item.type === "faction"
+        })
         context.faction_dict = {};
         if (context.faction.length > 0) {
             context.faction[0].system.life_path.forEach((el) => {
@@ -125,6 +148,25 @@ export class EoAActorSheet extends ActorSheet {
                 `;
             });
         }
+        let el = "";
+        context.consumed_ncu = 0;
+        for (const np_k in context.data.system.nanoprogram) {
+            el = context.data.system.nanoprogram[np_k];
+            if (typeof el == "boolean") {
+                if (el === true) {
+                    if (context.profession.length > 0) {
+                        context.profession[0].system.nano_skill_list.forEach((nsl) => {
+                            nsl.nanoprograms.forEach((np) => {
+                                if (np_k === np._id) {
+                                    context.consumed_ncu += np.ncu;
+                                }
+                            });
+                        });
+                    }
+                }
+            }
+        }
+
         context.faction_lifepath = context.data.system.faction_lifepath;
         // context.items = context.items.filter(function(item) { return ["breed", "origin", "profession", "faction"].includes(item) })
         console.log("getData");
@@ -274,6 +316,28 @@ export class EoAActorSheet extends ActorSheet {
                 input.val(10);
             }
         });
+
+        html.find('.np-run').click(ev => {
+            let input = $(ev.currentTarget);
+            let a1 = input.data("attr0");
+            let a2 = input.data("attr1");
+            let n1 = input.data("name0");
+            let n2 = input.data("name1");
+            let nc = input.data("np-cost");
+            let ac = input.data("actor");
+            let a = game.actors.get(ac);
+
+            let inputValue = input.closest('tr').parents('tr').find('input.txt-skill').val();
+            if ((inputValue === "") || (isNaN(inputValue))) {
+                inputValue = 0;
+            }
+            let dicecount = parseInt(a1) + parseInt(a2) + parseInt(inputValue);
+            let m = a.name + ": " + n1 + "(" + a1 + ") + " + n2 + "(" + a2 + ") + rank(" + inputValue + ") = " + dicecount;
+            let roll = RollFuxDice(dicecount, 0, 0, m);
+
+            a.update({system: {current_np: a.system.current_np - parseInt(nc)}})
+        });
+
     }
 
     /* -------------------------------------------- */
