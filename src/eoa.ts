@@ -47,6 +47,8 @@ Hooks.once("init", async () => {
 
     // await TemplatePreloader.preloadHandlebarsTemplates();
     Handlebars.registerHelper("face", Dice.diceToFaces);
+    // await TemplatePreloader.preloadHandlebarsTemplates();
+    Handlebars.registerHelper("face2", Dice.diceToFacesAlt);
 });
 
 Hooks.once("ready", async () => {
