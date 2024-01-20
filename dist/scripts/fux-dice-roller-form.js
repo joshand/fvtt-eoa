@@ -69,6 +69,11 @@ export class FUxDiceRollerForm extends FormApplication {
     let systemvariant = game.settings.get(_module_id, 'OPTION_SYSTEM_VARIANT');
     let systemvariantname = SystemVariantName(systemvariant);
     let diceselection=game.user.getFlag('world','fux-dice-roller-form-selection');
+    console.log("diceselection");
+    console.log(diceselection);
+    if (!diceselection.hasOwnProperty("augmentdice")) {
+      diceselection.augmentdice = [];
+    }
 
     let augmentdieselected=false;
     let actiondieselected=false;
