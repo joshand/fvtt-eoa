@@ -71,47 +71,51 @@ export class FUxDiceRollerForm extends FormApplication {
     let diceselection=game.user.getFlag('world','fux-dice-roller-form-selection');
     console.log("diceselection");
     console.log(diceselection);
-    if (!diceselection.hasOwnProperty("augmentdice")) {
-      diceselection.augmentdice = [];
+
+    if (diceselection) {
+          if (!diceselection.hasOwnProperty("augmentdice")) {
+            diceselection.augmentdice = [];
+          }
+
+          let augmentdieselected=false;
+          let actiondieselected=false;
+          let dangerdieselected=false;
+          for (let i = 1; i <= availabledice; i++) {
+            if (i == 1) {
+              actiondieselected=true;
+              dangerdieselected=false;
+              augmentdieselected=false;
+              if(diceselection!=null){
+                if(diceselection.actiondice.length>=i-1){
+                  actiondieselected=diceselection.actiondice[i-1];
+                  dangerdieselected=diceselection.dangerdice[i-1];
+                  augmentdieselected=diceselection.augmentdice[i-1];
+                }
+              }
+
+            } else {
+              actiondieselected=false;
+              dangerdieselected=false;
+              augmentdieselected=false;
+              if(diceselection!=null){
+                if(diceselection.actiondice.length>=i-1){
+                  actiondieselected=diceselection.actiondice[i-1];
+                  dangerdieselected=diceselection.dangerdice[i-1];
+                  augmentdieselected=diceselection.augmentdice[i-1];
+                }
+              }
+            }
+
+            augmentdie = {"number": i, "isSelected": augmentdieselected,augmentdiceicon:augmentdiceicon};
+            actiondie = {"number": i, "isSelected": actiondieselected,actiondiceicon:actiondiceicon};
+            dangerdie = {"number": i, "isSelected": dangerdieselected,dangerdiceicon:dangerdiceicon};
+
+            augmentdice.push(augmentdie);
+            actiondice.push(actiondie);
+            dangerdice.push(dangerdie);
+          }
     }
 
-    let augmentdieselected=false;
-    let actiondieselected=false;
-    let dangerdieselected=false;
-    for (let i = 1; i <= availabledice; i++) {
-      if (i == 1) {
-        actiondieselected=true;
-        dangerdieselected=false;
-        augmentdieselected=false;
-        if(diceselection!=null){
-          if(diceselection.actiondice.length>=i-1){
-            actiondieselected=diceselection.actiondice[i-1];
-            dangerdieselected=diceselection.dangerdice[i-1];
-            augmentdieselected=diceselection.augmentdice[i-1];
-          }
-        } 
-                
-      } else {
-        actiondieselected=false;
-        dangerdieselected=false;
-        augmentdieselected=false;
-        if(diceselection!=null){
-          if(diceselection.actiondice.length>=i-1){
-            actiondieselected=diceselection.actiondice[i-1];
-            dangerdieselected=diceselection.dangerdice[i-1];
-            augmentdieselected=diceselection.augmentdice[i-1];
-          }
-        }
-      }
-      
-      augmentdie = {"number": i, "isSelected": augmentdieselected,augmentdiceicon:augmentdiceicon};
-      actiondie = {"number": i, "isSelected": actiondieselected,actiondiceicon:actiondiceicon};
-      dangerdie = {"number": i, "isSelected": dangerdieselected,dangerdiceicon:dangerdiceicon};
-      
-      augmentdice.push(augmentdie);
-      actiondice.push(actiondie);
-      dangerdice.push(dangerdie);
-    }
     let showfuxsettings = false;
     if (game.user.isGM) {
       showfuxsettings = true;
