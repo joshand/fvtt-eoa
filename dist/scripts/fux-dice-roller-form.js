@@ -114,6 +114,15 @@ export class FUxDiceRollerForm extends FormApplication {
             actiondice.push(actiondie);
             dangerdice.push(dangerdie);
           }
+    } else {
+      for (let i = 1; i <= 13; i++) {
+          augmentdie = {"number": i, "isSelected": false};
+          actiondie = {"number": i, "isSelected": false};
+          dangerdie = {"number": i, "isSelected": false};
+          augmentdice.push(augmentdie);
+          actiondice.push(actiondie);
+          dangerdice.push(dangerdie);
+      }
     }
 
     let showfuxsettings = false;
