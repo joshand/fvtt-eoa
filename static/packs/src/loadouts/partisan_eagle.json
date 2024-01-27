@@ -1,67 +1,67 @@
 {
-  "_id": "5zc8e32VfOSYSuZc",
+  "_id": "QS9PWh8a1us00uUG",
   "name": "Partisan Eagle",
   "type": "loadout",
   "img": "icons/environment/people/commoner.webp",
   "system": {
     "description": {},
     "primary_weapon": {
-      "name": "Dual Pistols",
-      "effective_range": ["mid"],
+      "name": "Revolver",
+      "effective_range": ["near", "mid"],
       "damage_formula": "3+{H}*{T}",
       "characteristics": [
         {
-          "name": "Sliding Slinger",
-          "description": "When you target an enemy from effective range you can move 1 rangeband before or after the attack."
+          "name": "Six-shooter",
+          "description": "Each time you roll a 6, increase the weapon’s tier by 1."
         }
       ]
     },
     "special_weapon": {
-      "name": "Dual Arc Submachine Guns",
-      "effective_range": ["near", "mid"],
-      "damage_formula": "5+{H}*{T}",
-      "ammo": 3,
+      "name": "Sniper Rifle",
+      "effective_range": ["mid", "far"],
+      "damage_formula": "10+{H}*{T}",
+      "ammo": 2,
       "characteristics": [
         {
-          "name": "Static",
-          "description": "Enemies hit by this become pylons of power lashing out to all static targets. Attacks against Static targets ignore cover and deal half damage to all other targets who are afflicted with Static. Static lasts until the enemy is defeated."
+          "name": "Stationary",
+          "description": "Cannot move the same turn that you use this weapon. When you hit a target from Far, ignore all DEF."
         }
       ]
     },
     "heavy_weapon": {
-      "name": "Arc Glaive",
+      "name": "Linear Fusion Rifle",
       "effective_range": ["melee", "close"],
-      "damage_formula": "9+{H}*{T}",
-      "ammo": 2,
+      "damage_formula": "12+{H}*{T}",
+      "ammo": 1,
       "characteristics": [
         {
-          "name": "Phase Shift",
-          "description": "Teleport up to Far before or after the attack."
+          "name": "Collider Round",
+          "description": "Deals damage to RES, penetrates through multiple targets or barriers, dealing damage to all enemies in a line."
         }
       ]
     },
     "melee_attack": {
-      "name": "Twin Blades",
+      "name": "Silent Takedown",
       "damage_formula": "3+{H}*{T}",
       "characteristics": [
         {
-          "name": "Blade Dance",
-          "description": "Disengage after a successful hit."
+          "name": "Backstab",
+          "description": "If undetected, deals double damage or instantly incapacitate a non Elite or Dyna foe."
         }
       ]
     },
     "passives": [
         {
-          "name": "Mirror’s Edge",
-          "description": "Whenever you successfully Disengage, gain Stealth."
+          "name": "Calculated",
+          "description": "In combat, when you end a round without moving or with stealth, gain +2d to your next attack."
         },
         {
-          "name": "Ghostwalker",
-          "description": "When targeted by an enemy Engaged with you, roll a 1d6, on a 5+ the attack automatically misses, check before the attack."
+          "name": "Ace",
+          "description": "Whenever you score a Critical, gain Stealth."
         },
         {
-          "name": "Agile",
-          "description": "Can attack twice during your turn."
+          "name": "Quiet",
+          "description": "Missing an attack does not reveal your position."
         }
     ],
     "source": {
@@ -71,10 +71,10 @@
       "uuid": "",
       "license": "CC-BY-4.0"
     },
-    "identifier": "full_metal_jaguar",
+    "identifier": "partisan_eagle",
     "type": {
-      "value": "full_metal_jaguar",
-      "subtype": "full_metal_jaguar",
+      "value": "partisan_eagle",
+      "subtype": "partisan_eagle",
       "custom": ""
     }
   },
@@ -93,5 +93,5 @@
   },
   "sort": 0,
   "folder": null,
-  "_key": "!items!5zc8e32VfOSYSuZc"
+  "_key": "!items!QS9PWh8a1us00uUG"
 }

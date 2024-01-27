@@ -1,0 +1,97 @@
+{
+  "_id": "4px9TKCgylAgemHP",
+  "name": "Bastion Warrior",
+  "type": "loadout",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {},
+    "primary_weapon": {
+      "name": "Gravity Hammer",
+      "effective_range": ["engaged"],
+      "damage_formula": "6+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Wild Down",
+          "description": "Enemies Near main target take half damage."
+        }
+      ]
+    },
+    "special_weapon": {
+      "name": "Shotgun",
+      "effective_range": ["near", "mid"],
+      "damage_formula": "10+{H}*{T}",
+      "ammo": 3,
+      "characteristics": [
+        {
+          "name": "Spread",
+          "description": "Spend X Ammo to target an additional target near the main target. Targets hit by this are staggered"
+        }
+      ]
+    },
+    "heavy_weapon": {
+      "name": "Machine Gun",
+      "effective_range": ["near", "mid", "far"],
+      "damage_formula": "15+{H}*{T}",
+      "ammo": 2,
+      "characteristics": [
+        {
+          "name": "Suppressive Barrage",
+          "description": "This attack ignores cover."
+        }
+      ]
+    },
+    "melee_attack": {
+      "name": "Shield Bash",
+      "damage_formula": "3+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Wild Down",
+          "description": "Stagger and enemy, if Critical, topple and Taunt them."
+        }
+      ]
+    },
+    "passives": [
+        {
+          "name": "Charger",
+          "description": "If you move before attacking, your attacks Shove enemies 1 rangeband away from you."
+        },
+        {
+          "name": "Supershield",
+          "description": "Gain 5 x Tier DEF. Allies Near you gain +5 DEF and cannot be Stunned."
+        },
+        {
+          "name": "The Wall",
+          "description": "Once per round, an enemy must make a Stamina Test to move past you. If they fail, you Taunt them."
+        }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "bastion_warrior",
+    "type": {
+      "value": "bastion_warrior",
+      "subtype": "bastion_warrior",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!4px9TKCgylAgemHP"
+}

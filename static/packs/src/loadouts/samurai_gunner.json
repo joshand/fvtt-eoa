@@ -1,0 +1,101 @@
+{
+  "_id": "yfiKsZWrOIhJQb3M",
+  "name": "Samurai Gunner",
+  "type": "loadout",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {},
+    "primary_weapon": {
+      "name": "Auto Rifles, SMGs",
+      "effective_range": ["near", "mid"],
+      "damage_formula": "3+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Burst",
+          "description": "Re-roll dice rolls of 3"
+        }
+      ]
+    },
+    "special_weapon": {
+      "name": "High Frequency Blade",
+      "effective_range": ["engaged"],
+      "damage_formula": "10+{H}*{T}",
+      "ammo": 4,
+      "characteristics": [
+        {
+          "name": "Deflect",
+          "description": "Consume X Ammo to increase your DEF by 10 per dice towards an incoming attack."
+        },
+        {
+          "name": "Piercing",
+          "description": "Ignore Shields"
+        }
+      ]
+    },
+    "heavy_weapon": {
+      "name": "Grenade Launcher",
+      "effective_range": ["mid", "far"],
+      "damage_formula": "10+{H}*{T}",
+      "ammo": 2,
+      "characteristics": [
+        {
+          "name": "Explosive",
+          "description": "Characters near the primary target take half damage. All affected targets have -2 penalty on their next action."
+        }
+      ]
+    },
+    "melee_attack": {
+      "name": "Power Strike",
+      "damage_formula": "2+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Breakthrough",
+          "description": "Reduce enemies DEF by 5 x Tier until the end of your next turn."
+        }
+      ]
+    },
+    "passives": [
+        {
+          "name": "Steel Flesh",
+          "description": "+10 HP, heal Tier number HP each time you defeat an enemy."
+        },
+        {
+          "name": "Vengeful",
+          "description": "+1d when targeting enemies that attacked you before."
+        },
+        {
+          "name": "CQC Master",
+          "description": "After making a ranged attack, your next melee attack is a Critical."
+        }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "samurai_gunner",
+    "type": {
+      "value": "samurai_gunner",
+      "subtype": "samurai_gunner",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!yfiKsZWrOIhJQb3M"
+}

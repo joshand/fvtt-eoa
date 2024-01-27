@@ -1,0 +1,97 @@
+{
+  "_id": "u4JUoqEZ97SSS1ng",
+  "name": "Psycorruptor",
+  "type": "loadout",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {},
+    "primary_weapon": {
+      "name": "Mindlink Drones",
+      "effective_range": ["mid"],
+      "damage_formula": "2+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Smart Guns",
+          "description": "Ignore cover, the drones also emit signals that disrupt enemy concentrative, remove an ability being Focused on or an active Buff."
+        }
+      ]
+    },
+    "special_weapon": {
+      "name": "Synaptic Spear",
+      "effective_range": ["mid", "far"],
+      "damage_formula": "5+{H}*{T}",
+      "ammo": 4,
+      "characteristics": [
+        {
+          "name": "Neural Overload",
+          "description": "Direct hit overload enemy neural pathways. If the damage is twice the target’s  RES score the target is stunned for a round."
+        }
+      ]
+    },
+    "heavy_weapon": {
+      "name": "Paracausality Annihilator",
+      "effective_range": ["far"],
+      "damage_formula": "5+{H}*{T}",
+      "ammo": 1,
+      "characteristics": [
+        {
+          "name": "Reality Distortion",
+          "description": "This weapon fires energy that alters perception and reality for target + Hits, leading to hallucinations, altered sensory inputs, causing them to perceive allies as threats for a round or alternatively cause an enemy to be completely convinced in the existence of an environmental illusion."
+        }
+      ]
+    },
+    "melee_attack": {
+      "name": "Psi Blast",
+      "damage_formula": "3+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Cognitive Static",
+          "description": "Disrupt a target’s mind, target has a -2 on their next action."
+        }
+      ]
+    },
+    "passives": [
+        {
+          "name": "Mind Fortress",
+          "description": "Gain 5 x Tier RES. Allies gain 5 RES if they are Near you."
+        },
+        {
+          "name": "Mastermind",
+          "description": "Gain +10 NP, when you generate Edge, generate +1 more."
+        },
+        {
+          "name": "Null",
+          "description": "Enemies you damage are afflicted with Null. Targets with Null must roll a d6, on a 6 they will not act for the round, after rolling, remove Null."
+        }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "psycorruptor",
+    "type": {
+      "value": "psycorruptor",
+      "subtype": "psycorruptor",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!u4JUoqEZ97SSS1ng"
+}
