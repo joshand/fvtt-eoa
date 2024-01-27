@@ -19,6 +19,12 @@ export class EoALoadoutSheet extends ItemSheet {
   getData() {
     const context = super.getData();
 
+    context.effective_range_choices = {engaged: "Engaged", melee: "Melee", close: "Close", near: "Near", mid: "Mid", far: "Far"};
+    context.primary_damage_formula = context.data.system.primary_weapon.damage_formula;
+    context.special_damage_formula = context.data.system.special_weapon.damage_formula;
+    context.heavy_damage_formula = context.data.system.heavy_weapon.damage_formula;
+    context.melee_damage_formula = context.data.system.melee_attack.damage_formula;
+
     console.log(context);
     // context.systemData = context.data.system;
 

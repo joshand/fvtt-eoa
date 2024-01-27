@@ -7,6 +7,7 @@ import { EoAFactionSheet } from "./module/items/FactionSheet";
 import { EoAActorSheet } from "./module/actors/ActorSheet";
 import { EoASkillSheet } from "./module/items/SkillSheet";
 import { EoASupplySheet } from "./module/items/SupplySheet";
+import { EoALoadoutSheet } from "./module/items/LoadoutSheet";
 import * as Dice from "./helpers/dice.js";
 
 Hooks.once("init", async () => {
@@ -37,6 +38,10 @@ Hooks.once("init", async () => {
     });
     Items.registerSheet("eoa", EoASupplySheet, {
         types: ["supply"],
+        makeDefault: true
+    });
+    Items.registerSheet("eoa", EoALoadoutSheet, {
+        types: ["loadout"],
         makeDefault: true
     });
 
