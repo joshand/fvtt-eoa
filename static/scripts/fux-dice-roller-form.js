@@ -69,8 +69,8 @@ export class FUxDiceRollerForm extends FormApplication {
     let systemvariant = game.settings.get(_module_id, 'OPTION_SYSTEM_VARIANT');
     let systemvariantname = SystemVariantName(systemvariant);
     let diceselection=game.user.getFlag('world','fux-dice-roller-form-selection');
-    console.log("diceselection");
-    console.log(diceselection);
+    // console.log("diceselection");
+    // console.log(diceselection);
 
     if (diceselection) {
           if (!diceselection.hasOwnProperty("augmentdice")) {
@@ -106,19 +106,23 @@ export class FUxDiceRollerForm extends FormApplication {
               }
             }
 
-            augmentdie = {"number": i, "isSelected": augmentdieselected,augmentdiceicon:augmentdiceicon};
-            actiondie = {"number": i, "isSelected": actiondieselected,actiondiceicon:actiondiceicon};
-            dangerdie = {"number": i, "isSelected": dangerdieselected,dangerdiceicon:dangerdiceicon};
+            augmentdie = {"number": i, "isSelected": augmentdieselected, augmentdiceicon:augmentdiceicon};
+            actiondie = {"number": i, "isSelected": actiondieselected, actiondiceicon:actiondiceicon};
+            dangerdie = {"number": i, "isSelected": dangerdieselected, dangerdiceicon:dangerdiceicon};
 
             augmentdice.push(augmentdie);
             actiondice.push(actiondie);
             dangerdice.push(dangerdie);
           }
     } else {
-      for (let i = 1; i <= 13; i++) {
-          augmentdie = {"number": i, "isSelected": false};
-          actiondie = {"number": i, "isSelected": false};
-          dangerdie = {"number": i, "isSelected": false};
+      if ((Number.isInteger(availabledice) === false) || (availabledice <= 0)) {
+        availabledice = 12;
+      }
+      for (let i = 1; i <= availabledice; i++) {
+          augmentdie = {"number": i, "isSelected": false, augmentdiceicon:augmentdiceicon};
+          actiondie = {"number": i, "isSelected": false, actiondiceicon:actiondiceicon};
+          dangerdie = {"number": i, "isSelected": false, dangerdiceicon:dangerdiceicon};
+
           augmentdice.push(augmentdie);
           actiondice.push(actiondie);
           dangerdice.push(dangerdie);
