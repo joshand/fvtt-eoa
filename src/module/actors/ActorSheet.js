@@ -390,7 +390,7 @@ export class EoAActorSheet extends ActorSheet {
         console.log(itemData);
         let all_items = this.getData();
         let item = null;
-        if (["breed", "origin", "profession", "faction"].includes(itemData.type)) {
+        if (["breed", "origin", "profession", "faction", "loadout"].includes(itemData.type)) {
             let del_items = all_items.items.filter(function(item) { return ((item.type === itemData.type) && (item.id === itemData.id)) });
             console.log("delete");
             del_items.forEach((el) => {
