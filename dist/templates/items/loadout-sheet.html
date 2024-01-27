@@ -100,6 +100,11 @@
                 </div>
 
                 <div class="form-fields flex1 content">
+                    <label><strong>Ammo</strong></label>
+                    <input type="text" name="data.system.special_weapon.ammo" value="{{data.system.special_weapon.ammo}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
                     <label><strong>Characteristics</strong></label>
                     {{#each data.system.special_weapon.characteristics as | char |}}
                         <div class="form-group">
@@ -140,6 +145,11 @@
                 <div class="form-fields flex1 content">
                     <label><strong>Damage Formula</strong></label>
                     <input type="text" name="data.system.heavy_weapon.damage_formula" value="{{heavy_damage_formula}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Ammo</strong></label>
+                    <input type="text" name="data.system.special_weapon.ammo" value="{{data.system.special_weapon.ammo}}" placeholder="0" style="width: 200px">
                 </div>
 
                 <div class="form-fields flex1 content">
