@@ -1,0 +1,97 @@
+{
+  "_id": "QS9PWh8a1us00uUG",
+  "name": "Partisan Eagle",
+  "type": "loadout",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {},
+    "primary_weapon": {
+      "name": "Revolver",
+      "effective_range": ["near", "mid"],
+      "damage_formula": "3+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Six-shooter",
+          "description": "Each time you roll a 6, increase the weapon’s tier by 1."
+        }
+      ]
+    },
+    "special_weapon": {
+      "name": "Sniper Rifle",
+      "effective_range": ["mid", "far"],
+      "damage_formula": "10+{H}*{T}",
+      "ammo": 2,
+      "characteristics": [
+        {
+          "name": "Stationary",
+          "description": "Cannot move the same turn that you use this weapon. When you hit a target from Far, ignore all DEF."
+        }
+      ]
+    },
+    "heavy_weapon": {
+      "name": "Linear Fusion Rifle",
+      "effective_range": ["melee", "close"],
+      "damage_formula": "12+{H}*{T}",
+      "ammo": 1,
+      "characteristics": [
+        {
+          "name": "Collider Round",
+          "description": "Deals damage to RES, penetrates through multiple targets or barriers, dealing damage to all enemies in a line."
+        }
+      ]
+    },
+    "melee_attack": {
+      "name": "Silent Takedown",
+      "damage_formula": "3+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Backstab",
+          "description": "If undetected, deals double damage or instantly incapacitate a non Elite or Dyna foe."
+        }
+      ]
+    },
+    "passives": [
+        {
+          "name": "Calculated",
+          "description": "In combat, when you end a round without moving or with stealth, gain +2d to your next attack."
+        },
+        {
+          "name": "Ace",
+          "description": "Whenever you score a Critical, gain Stealth."
+        },
+        {
+          "name": "Quiet",
+          "description": "Missing an attack does not reveal your position."
+        }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "partisan_eagle",
+    "type": {
+      "value": "partisan_eagle",
+      "subtype": "partisan_eagle",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!QS9PWh8a1us00uUG"
+}

@@ -1,0 +1,97 @@
+{
+  "_id": "nqvaCdBUGEFfypeV",
+  "name": "Astral Crusader",
+  "type": "loadout",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {},
+    "primary_weapon": {
+      "name": "Pulse Rifle",
+      "effective_range": ["near","mid"],
+      "damage_formula": "3+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Disruptor",
+          "description": "Target cannot benefit from Shields for a round."
+        }
+      ]
+    },
+    "special_weapon": {
+      "name": "Raygun",
+      "effective_range": ["near", "mid"],
+      "damage_formula": "5+{H}*{T}",
+      "ammo": 2,
+      "characteristics": [
+        {
+          "name": "Starlight",
+          "description": "Tag the target, allies gain a +2 bonus on the next attack targeting them."
+        }
+      ]
+    },
+    "heavy_weapon": {
+      "name": "Energy Saber",
+      "effective_range": ["melee"],
+      "damage_formula": "10+{H}*{T} against target’s RES",
+      "ammo": 4,
+      "characteristics": [
+        {
+          "name": "Surge",
+          "description": "Leap to a target before or after the attack. Allies near you when you land can Move out of turn."
+        }
+      ]
+    },
+    "melee_attack": {
+      "name": "Starlight Rondo",
+      "damage_formula": "3+{H}*{T}",
+      "characteristics": [
+        {
+          "name": "Nebulous Momentum",
+          "description": "Gain +1 Edge."
+        }
+      ]
+    },
+    "passives": [
+        {
+          "name": "Nebula Aura",
+          "description": "You and allies near you gain 1+Tier NP at the start of their turns."
+        },
+        {
+          "name": "Guidance",
+          "description": "When an ally gains Edge, they gain 1 more."
+        },
+        {
+          "name": "Restoration",
+          "description": "When an ally uses Edge they are Healed 1+Tier HP."
+        }
+    ],
+    "source": {
+      "custom": "",
+      "book": "GDoc",
+      "page": "",
+      "uuid": "",
+      "license": "CC-BY-4.0"
+    },
+    "identifier": "astral_crusader",
+    "type": {
+      "value": "astral_crusader",
+      "subtype": "astral_crusader",
+      "custom": ""
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "eoa",
+    "systemVersion": "0.0.1",
+    "coreVersion": "10.303",
+    "createdTime": 1700501348493,
+    "modifiedTime": 1700501348494,
+    "lastModifiedBy": "joshand"
+  },
+  "sort": 0,
+  "folder": null,
+  "_key": "!items!nqvaCdBUGEFfypeV"
+}
