@@ -1,0 +1,232 @@
+<style>
+    option:checked { color: red; }
+
+</style>
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    {{!-- Item Sheet Header --}}
+    <header class="sheet-header flexrow">
+        <img class="profile" src="{{item.img}}" title="{{item.name}}" data-edit="img">
+
+        <div class="header-details flexrow">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'EOA.LoadoutName'}}">
+            </h1>
+
+            <div class="item-subtitle">
+                <h4 class="item-type">{{itemType}}</h4>
+                <span class="item-status">{{itemStatus}}</span>
+            </div>
+        </div>
+    </header>
+
+    {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item active" data-tab="description">{{localize "EOA.PrimaryWeapon"}}</a>
+        <a class="item active" data-tab="special">{{localize "EOA.SpecialWeapon"}}</a>
+        <a class="item active" data-tab="heavy">{{localize "EOA.HeavyWeapon"}}</a>
+        <a class="item active" data-tab="melee">{{localize "EOA.MeleeAttack"}}</a>
+        <a class="item active" data-tab="passives">{{localize "EOA.Passives"}}</a>
+    </nav>
+
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Primary Weapon Tab --}}
+        <div class="tab flexrow active" data-group="primary" data-tab="description">
+
+            <div class="item-properties">
+                &nbsp;
+            </div>
+
+            <div class="description">
+                <div class="form-fields flex1 content">
+                    <label><strong>Name</strong></label>
+                    <input type="text" name="data.system.primary_weapon.name" value="{{data.system.primary_weapon.name}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Range</strong></label>
+                    <select style="height:125px" name="data.system.primary_weapon.effective_range" multiple>
+                        {{selectOptions effective_range_choices selected=data.system.primary_weapon.effective_range localize=false}}
+                    </select>
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Damage Formula</strong></label>
+                    <input type="text" name="data.system.primary_weapon.damage_formula" value="{{primary_damage_formula}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Characteristics</strong></label>
+                    {{#each data.system.primary_weapon.characteristics as | char |}}
+                        <div class="form-group">
+                            <div class="form-fields flex1">
+                                <input type="text" name="char.name" value="{{char.name}}"
+                                       placeholder="{{char.name}}">
+                            </div>
+                            <div class="form-fields flex4">
+                                <input type="text" name="char.description" value="{{char.description}}"
+                                       placeholder="{{char.description}}">
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        {{!-- Special Weapon Tab --}}
+        <div class="tab flexrow active" data-group="primary" data-tab="special">
+
+            <div class="item-properties">
+                &nbsp;
+            </div>
+
+            <div class="description">
+                <div class="form-fields flex1 content">
+                    <label><strong>Name</strong></label>
+                    <input type="text" name="data.system.special_weapon.name" value="{{data.system.special_weapon.name}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Range</strong></label>
+                    <select style="height:125px" name="data.system.special_weapon.effective_range" multiple>
+                        {{selectOptions effective_range_choices selected=data.system.special_weapon.effective_range localize=false}}
+                    </select>
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Damage Formula</strong></label>
+                    <input type="text" name="data.system.special_weapon.damage_formula" value="{{special_damage_formula}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Characteristics</strong></label>
+                    {{#each data.system.special_weapon.characteristics as | char |}}
+                        <div class="form-group">
+                            <div class="form-fields flex1">
+                                <input type="text" name="char.name" value="{{char.name}}"
+                                       placeholder="{{char.name}}">
+                            </div>
+                            <div class="form-fields flex4">
+                                <input type="text" name="char.description" value="{{char.description}}"
+                                       placeholder="{{char.description}}">
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        {{!-- Heavy Weapon Tab --}}
+        <div class="tab flexrow active" data-group="primary" data-tab="heavy">
+
+            <div class="item-properties">
+                &nbsp;
+            </div>
+
+            <div class="description">
+                <div class="form-fields flex1 content">
+                    <label><strong>Name</strong></label>
+                    <input type="text" name="data.system.heavy_weapon.name" value="{{data.system.heavy_weapon.name}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Range</strong></label>
+                    <select style="height:125px" name="data.system.heavy_weapon.effective_range" multiple>
+                        {{selectOptions effective_range_choices selected=data.system.heavy_weapon.effective_range localize=false}}
+                    </select>
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Damage Formula</strong></label>
+                    <input type="text" name="data.system.heavy_weapon.damage_formula" value="{{heavy_damage_formula}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Characteristics</strong></label>
+                    {{#each data.system.heavy_weapon.characteristics as | char |}}
+                        <div class="form-group">
+                            <div class="form-fields flex1">
+                                <input type="text" name="char.name" value="{{char.name}}"
+                                       placeholder="{{char.name}}">
+                            </div>
+                            <div class="form-fields flex4">
+                                <input type="text" name="char.description" value="{{char.description}}"
+                                       placeholder="{{char.description}}">
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        {{!-- Melee Attack Tab --}}
+        <div class="tab flexrow active" data-group="primary" data-tab="melee">
+
+            <div class="item-properties">
+                &nbsp;
+            </div>
+
+            <div class="description">
+                <div class="form-fields flex1 content">
+                    <label><strong>Name</strong></label>
+                    <input type="text" name="data.system.melee_attack.name" value="{{data.system.melee_attack.name}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Range</strong></label>
+                    <select style="height:125px" name="data.system.melee_attack.effective_range" multiple>
+                        {{selectOptions effective_range_choices selected=data.system.melee_attack.effective_range localize=false}}
+                    </select>
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Damage Formula</strong></label>
+                    <input type="text" name="data.system.melee_attack.damage_formula" value="{{melee_damage_formula}}" placeholder="0" style="width: 200px">
+                </div>
+
+                <div class="form-fields flex1 content">
+                    <label><strong>Characteristics</strong></label>
+                    {{#each data.system.melee_attack.characteristics as | char |}}
+                        <div class="form-group">
+                            <div class="form-fields flex1">
+                                <input type="text" name="char.name" value="{{char.name}}"
+                                       placeholder="{{char.name}}">
+                            </div>
+                            <div class="form-fields flex4">
+                                <input type="text" name="char.description" value="{{char.description}}"
+                                       placeholder="{{char.description}}">
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        {{!-- Passives Tab --}}
+        <div class="tab flexrow active" data-group="primary" data-tab="passives">
+
+            <div class="item-properties">
+                &nbsp;
+            </div>
+
+            <div class="description">
+                <div class="form-fields flex1 content">
+                    <label><strong>Characteristics</strong></label>
+                    {{#each data.system.passives as | char |}}
+                        <div class="form-group">
+                            <div class="form-fields flex1">
+                                <input type="text" name="char.name" value="{{char.name}}"
+                                       placeholder="{{char.name}}">
+                            </div>
+                            <div class="form-fields flex4">
+                                <input type="text" name="char.description" value="{{char.description}}"
+                                       placeholder="{{char.description}}">
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
