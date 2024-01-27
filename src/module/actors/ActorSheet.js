@@ -5,6 +5,10 @@ function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
+function parse_formula(str_formula) {
+    return str_formula.replace("{H}", " Hits ").replace("{T}", " Tier").replace("+", " +");
+}
+
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -130,6 +134,16 @@ export class EoAActorSheet extends ActorSheet {
         context.faction = context.items.filter(function (item) {
             return item.type === "faction"
         })
+        context.loadout = context.items.filter(function (item) {
+            return item.type === "loadout"
+        })
+        if (context.loadout.length > 0) {
+            context.primary_damage_formula = parse_formula(context.loadout[0].system.primary_weapon.damage_formula);
+            context.special_damage_formula = parse_formula(context.loadout[0].system.special_weapon.damage_formula);
+            context.heavy_damage_formula = parse_formula(context.loadout[0].system.heavy_weapon.damage_formula);
+            context.melee_damage_formula = parse_formula(context.loadout[0].system.melee_attack.damage_formula);
+        }
+
         context.faction_dict = {};
         if (context.faction.length > 0) {
             context.faction[0].system.life_path.forEach((el) => {
@@ -461,5 +475,4 @@ export class EoAActorSheet extends ActorSheet {
     //         'system.rank': Math.max(0, skill.systemData.rank + adjustment),
     //     });
     // }
-
 }

@@ -14,6 +14,9 @@
     td {
         padding: 2px !important;
     }
+    th {
+        text-align: left;
+    }
     label.checkbox {
         padding: 0;
         height: 40px;
@@ -302,7 +305,7 @@
             <div class="form-fields flex1" style="flex-direction: column !important;">
                 <label>Description</label>
                 <img src="systems/eoa/icons/history.png" />
-                <label>&nbsp;</label>
+                <label>&nbsp;<br>&nbsp;</label>
             </div>
         </a>
         <a class="item" data-tab="breed" style="padding: 10px;">
@@ -313,7 +316,7 @@
                 <label>Unspecified</label>
                 {{else}}
                 <img src="{{breed.0.img}}" />
-                <label>{{breed.0.name}}</label>
+                <label>{{breed.0.name}}<br>&nbsp;</label>
                 {{/if}}
             </div>
         </a>
@@ -325,7 +328,7 @@
                 <label>Unspecified</label>
                 {{else}}
                 <img src="{{origin.0.img}}" />
-                <label>{{origin.0.name}}</label>
+                <label>{{origin.0.name}}<br>&nbsp;</label>
                 {{/if}}
             </div>
         </a>
@@ -337,7 +340,7 @@
                 <label>Unspecified</label>
                 {{else}}
                 <img src="{{profession.0.img}}" />
-                <label>{{profession.0.name}}</label>
+                <label>{{profession.0.name}}<br>&nbsp;</label>
                 {{/if}}
             </div>
         </a>
@@ -349,7 +352,19 @@
                 <label>Unspecified</label>
                 {{else}}
                 <img src="{{faction.0.img}}" />
-                <label>{{faction.0.name}}</label>
+                <label>{{faction.0.name}}<br>&nbsp;</label>
+                {{/if}}
+            </div>
+        </a>
+        <a class="item" data-tab="loadout" style="padding: 10px;">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <label>Loadout</label>
+                {{#if (eq loadout.length 0)}}
+                <img src="icons/svg/mystery-man.svg" />
+                <label>Unspecified<br>&nbsp;</label>
+                {{else}}
+                <img src="{{loadout.0.img}}" />
+                <label>{{loadout.0.name}}</label>
                 {{/if}}
             </div>
         </a>
@@ -357,7 +372,7 @@
             <div class="form-fields flex1" style="flex-direction: column !important;">
                 <label>Items</label>
                 <img src="systems/eoa/icons/items.png" />
-                <label>&nbsp;</label>
+                <label>&nbsp;<br>&nbsp;</label>
             </div>
         </a>
     </nav>
@@ -546,6 +561,92 @@
                 </div>
                 <label><strong>Lifepath Table</strong> (Roll 2d6 or Choose)</label>
                 {{radioBoxes "system.faction_lifepath" faction_dict checked=faction_lifepath localize=true}}
+            </div>
+        </div>
+
+        {{!-- Loadout Tab --}}
+        <div class="tab flexrow" data-group="primary" data-tab="loadout">
+            <div class="form-fields flex1" style="flex-direction: column !important;">
+                <strong><em>Weapons</em></strong>
+                <table>
+                    <tr>
+                        <th style="width: 125px">Weapon/Attack</th>
+                        <th style="width: 175px">Name</th>
+                        <th>Range</th>
+                        <th>Damage Formula</th>
+                        <th>Ammo</th>
+                    </tr>
+                    <tr>
+                        <td>Primary Weapon</td>
+                        <td>{{loadout.0.system.primary_weapon.name}}</td>
+                        <td>{{loadout.0.system.primary_weapon.effective_range}}</td>
+                        <td>{{primary_damage_formula}}</td>
+                        <td>N/A</td>
+                    </tr>
+                    {{#each loadout.0.system.primary_weapon.characteristics as | char |}}
+                    <tr>
+                        <td><strong>&nbsp;</strong></td>
+                        <td style="padding-left: 15px !important">{{char.name}}</td>
+                        <td style="padding-left: 15px !important" colspan="3">{{char.description}}</td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <td>Special Weapon</td>
+                        <td>{{loadout.0.system.special_weapon.name}}</td>
+                        <td>{{loadout.0.system.special_weapon.effective_range}}</td>
+                        <td>{{special_damage_formula}}</td>
+                        <td>{{loadout.0.system.special_weapon.ammo}}</td>
+                    </tr>
+                    {{#each loadout.0.system.special_weapon.characteristics as | char |}}
+                    <tr>
+                        <td><strong>&nbsp;</strong></td>
+                        <td style="padding-left: 15px !important">{{char.name}}</td>
+                        <td style="padding-left: 15px !important" colspan="3">{{char.description}}</td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <td>Heavy Weapon</td>
+                        <td>{{loadout.0.system.heavy_weapon.name}}</td>
+                        <td>{{loadout.0.system.heavy_weapon.effective_range}}</td>
+                        <td>{{heavy_damage_formula}}</td>
+                        <td>{{loadout.0.system.heavy_weapon.ammo}}</td>
+                    </tr>
+                    {{#each loadout.0.system.heavy_weapon.characteristics as | char |}}
+                    <tr>
+                        <td><strong>&nbsp;</strong></td>
+                        <td style="padding-left: 15px !important">{{char.name}}</td>
+                        <td style="padding-left: 15px !important" colspan="3">{{char.description}}</td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <td>Melee Attack</td>
+                        <td>{{loadout.0.system.melee_attack.name}}</td>
+                        <td>{{loadout.0.system.melee_attack.effective_range}}</td>
+                        <td>{{melee_damage_formula}}</td>
+                        <td>N/A</td>
+                    </tr>
+                    {{#each loadout.0.system.melee_attack.characteristics as | char |}}
+                    <tr>
+                        <td><strong>&nbsp;</strong></td>
+                        <td style="padding-left: 15px !important">{{char.name}}</td>
+                        <td style="padding-left: 15px !important" colspan="3">{{char.description}}</td>
+                    </tr>
+                    {{/each}}
+                </table>
+
+                <strong><em>Passives</em></strong>
+                <table>
+                    <tr>
+                        <th style="width: 125px">Name</th>
+                        <th>Description</th>
+                    </tr>
+                    {{#each loadout.0.system.passives as | char |}}
+                    <tr>
+                        <td>{{char.name}}</td>
+                        <td>{{char.description}}</td>
+                    </tr>
+                    {{/each}}
+                </table>
             </div>
         </div>
 
