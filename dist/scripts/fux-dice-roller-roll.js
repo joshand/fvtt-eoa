@@ -64,7 +64,7 @@ export async function RollFuxDice(actiondice, augmentdice, dangerdice, msg = nul
     let augmentdiceresults = await RollD8s(augmentdice);
     // roll dice
     let actiondiceresults = await RollD6s(actiondice);
-    //console.log(actiondiceresults);
+    // console.log(actiondiceresults);
     let dangerdiceresults = await RollD6s(dangerdice);
 
     // prepare result array
@@ -72,11 +72,13 @@ export async function RollFuxDice(actiondice, augmentdice, dangerdice, msg = nul
     // action dice
     let actionresult = '';
     let actionssorted = [];
+    let actionsunsorted = [];
     if (actiondiceresults.terms[0].results.length > 0) {
       for (let i = 0; i < actiondiceresults.terms[0].results.length; i++) {
         // increment finals
         arrFinals[actiondiceresults.terms[0].results[i].result - 1] = arrFinals[actiondiceresults.terms[0].results[i].result - 1] + 1;
         actionssorted.push(actiondiceresults.terms[0].results[i].result);
+        actionsunsorted.push(actiondiceresults.terms[0].results[i].result)
       }
     }
     
@@ -96,10 +98,12 @@ export async function RollFuxDice(actiondice, augmentdice, dangerdice, msg = nul
     // augment dice
     let augmentresult = '';
     let augmentsorted = [];
+    let augmentunsorted = [];
     if (augmentdiceresults.terms[0].results.length > 0) {
       for (let i = 0; i < augmentdiceresults.terms[0].results.length; i++) {
         arrFinals[augmentdiceresults.terms[0].results[i].result - 1] = arrFinals[augmentdiceresults.terms[0].results[i].result - 1] - 1;
         augmentsorted.push(augmentdiceresults.terms[0].results[i].result);
+        augmentunsorted.push(augmentdiceresults.terms[0].results[i].result);
       }
     }
     // sort augment result
@@ -118,16 +122,18 @@ export async function RollFuxDice(actiondice, augmentdice, dangerdice, msg = nul
     //danger dice
     let dangerresult = '';
     let dangersorted = [];
+    let dangerunsorted = [];
     if (dangerdiceresults.terms[0].results.length > 0) {
       for (let i = 0; i < dangerdiceresults.terms[0].results.length; i++) {
         // dec finals
         if (hardmode) {
-          // In hard mode each Danger die cancels all Action dice with a matching value. 
+          // In hard mode each Danger die cancels all Action dice with a matching value.
           arrFinals[dangerdiceresults.terms[0].results[i].result - 1] = 0;
         } else {
           arrFinals[dangerdiceresults.terms[0].results[i].result - 1] = arrFinals[dangerdiceresults.terms[0].results[i].result - 1] - 1;
         }
         dangersorted.push(dangerdiceresults.terms[0].results[i].result);
+        dangerunsorted.push(dangerdiceresults.terms[0].results[i].result);
       }
     }
     // sort danger result
@@ -565,24 +571,24 @@ export async function RollFuxDice(actiondice, augmentdice, dangerdice, msg = nul
         }
         
       } else{      
-        for (let i = 0; i < actionssorted.length; i++) {
+        for (let i = 0; i < actionsunsorted.length; i++) {
           let dieresult={
             classes:'die d6',
-            result: actionssorted[i]
+            result: actionsunsorted[i]
           };
           actionrolls.push(dieresult);
         }
-        for (let i = 0; i < augmentsorted.length; i++) {
+        for (let i = 0; i < augmentunsorted.length; i++) {
           let dieresult={
             classes:'die d8',
-            result: augmentsorted[i]
+            result: augmentunsorted[i]
           };
           augmentrolls.push(dieresult);
         }
-        for (let i = 0; i < dangersorted.length; i++) {
+        for (let i = 0; i < dangerunsorted.length; i++) {
           let dieresult={
             classes:'die d6',
-            result: dangersorted[i]
+            result: dangerunsorted[i]
           };
           dangerrolls.push(dieresult);
         }  

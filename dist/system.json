@@ -76,6 +76,15 @@
       "type": "Item",
       "private": false,
       "flags": {}
+    },
+    {
+      "name": "loadouts",
+      "label": "Loadouts",
+      "system": "eoa",
+      "path": "packs/loadouts.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -88,7 +97,8 @@
         "factions",
         "origins",
         "professions",
-        "supplies"
+        "supplies",
+        "loadouts"
       ]
     }
   ],

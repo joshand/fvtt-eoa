@@ -13,6 +13,7 @@
         "nanoskill": {},
         "nanoprogram": {},
         "current_hp": 0,
+        "safety_on": true,
         "current_np": 0,
         "current_ip": 0,
         "current_sp": 0,
@@ -29,7 +30,7 @@
     }
   },
   "Item": {
-    "types": ["breed", "profession", "origin", "faction", "supply"],
+    "types": ["breed", "profession", "origin", "faction", "supply", "loadout"],
     "templates": {},
     "breed": {
       "templates": ["base"]
@@ -44,6 +45,9 @@
       "templates": ["base"]
     },
     "supply": {
+      "templates": ["base"]
+    },
+    "loadout": {
       "templates": ["base"]
     }
   }

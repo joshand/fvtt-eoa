@@ -144,6 +144,8 @@
                                 {{else}}
                                     <div class="badge">+{{breed.0.system.bonus.hp}}</div>
                                 {{/if}}
+                                <input type="checkbox" name="system.safety_on" {{checked data.system.safety_on}}>
+                                <label>Safety</label>
                             </div>
                         </td>
                         <td>
@@ -184,10 +186,6 @@
                                 <input type="text" name="system.current_sp" value="{{data.system.current_sp}}" placeholder="0" style="width: 45px;">
                                 <label>/</label>
                                 <label style="margin-left:8px; border:2px black dashed; padding:0 10px;">{{max_sp}}</label>
-                                {{#if (eq breed.0.system.bonus.items 0)}}
-                                {{else}}
-                                    <div class="badge">+{{breed.0.system.bonus.items}}</div>
-                                {{/if}}
                             </div>
                         </td>
                         <td>
@@ -517,7 +515,7 @@
                                         <div class="form-fields flex1">
                                             <input type="checkbox" name="system.nanoprogram.{{np._id}}" {{checked (lookup ../../data.system.nanoprogram np._id)}}>
                                             {{#if (lookup ../../data.system.nanoprogram np._id)}}
-                                            <img src="systems/eoa/images/die_icon.png" alt="Roll Nanoprogram" style="border: none !important;width: 20px;height: 20px;" class="np-run" data-actor="{{../../actor._id}}" data-np-cost="{{np.np}}" {{#each sk.attributes as | attr |}} data-name{{@index}}="{{attr}}" data-attr{{@index}}="{{lookup ../../../attrs attr}}"{{/each}}>
+                                            <img src="systems/eoa/images/die_icon.png" alt="Roll Nanoprogram" style="border: none !important;width: 20px;height: 20px;" class="np-run" data-actor="{{../../actor._id}}" data-np-name="{{np.name}}" data-np-cost="{{np.np}}" {{#each sk.attributes as | attr |}} data-name{{@index}}="{{attr}}" data-attr{{@index}}="{{lookup ../../../attrs attr}}"{{/each}}>
                                             {{/if}}
                                         </div>
                                     </td>
