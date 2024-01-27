@@ -323,16 +323,18 @@ export class EoAActorSheet extends ActorSheet {
             let a2 = input.data("attr1");
             let n1 = input.data("name0");
             let n2 = input.data("name1");
+            let nm = input.data("np-name");
             let nc = input.data("np-cost");
             let ac = input.data("actor");
             let a = game.actors.get(ac);
 
+            // console.log(nm);
             let inputValue = input.closest('tr').parents('tr').find('input.txt-skill').val();
             if ((inputValue === "") || (isNaN(inputValue))) {
                 inputValue = 0;
             }
             let dicecount = parseInt(a1) + parseInt(a2) + parseInt(inputValue);
-            let m = a.name + ": " + n1 + "(" + a1 + ") + " + n2 + "(" + a2 + ") + rank(" + inputValue + ") = " + dicecount;
+            let m = a.name + " runs '" + nm + "' nanoprogram! " + n1 + "(" + a1 + ") + " + n2 + "(" + a2 + ") + rank(" + inputValue + ") = " + dicecount;
             let roll = RollFuxDice(dicecount, 0, 0, m);
 
             a.update({system: {current_np: a.system.current_np - parseInt(nc)}})
