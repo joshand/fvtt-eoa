@@ -1,3 +1,7 @@
+<style>
+    option:checked { color: red; }
+
+</style>
 <form class="{{cssClass}} flexcol" autocomplete="off">
     {{!-- Item Sheet Header --}}
     <header class="sheet-header flexrow">
@@ -36,24 +40,24 @@
 
             <div class="description">
                 <div class="form-fields flex1 content">
-                    <label>Name</label>
-                    <input type="text" name="data.system.primary_weapon.name" value="{{data.system.primary_weapon.name}}" placeholder="0" style="width: 45px;">
+                    <label><strong>Name</strong></label>
+                    <input type="text" name="data.system.primary_weapon.name" value="{{data.system.primary_weapon.name}}" placeholder="0" style="width: 200px">
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Range</label>
-                    <select name="data.system.primary_weapon.effective_range" multiple>
+                    <label><strong>Range</strong></label>
+                    <select style="height:125px" name="data.system.primary_weapon.effective_range" multiple>
                         {{selectOptions effective_range_choices selected=data.system.primary_weapon.effective_range localize=false}}
                     </select>
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Damage Formula</label>
-                    <input type="text" name="data.system.primary_weapon.damage_formula" value="{{primary_damage_formula}}" placeholder="0" style="width: 45px;">
+                    <label><strong>Damage Formula</strong></label>
+                    <input type="text" name="data.system.primary_weapon.damage_formula" value="{{primary_damage_formula}}" placeholder="0" style="width: 200px">
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Characteristics</label>
+                    <label><strong>Characteristics</strong></label>
                     {{#each data.system.primary_weapon.characteristics as | char |}}
                         <div class="form-group">
                             <div class="form-fields flex1">
@@ -79,24 +83,24 @@
 
             <div class="description">
                 <div class="form-fields flex1 content">
-                    <label>Name</label>
-                    <input type="text" name="data.system.special_weapon.name" value="{{data.system.special_weapon.name}}" placeholder="0" style="width: 45px;">
+                    <label><strong>Name</strong></label>
+                    <input type="text" name="data.system.special_weapon.name" value="{{data.system.special_weapon.name}}" placeholder="0" style="width: 200px">
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Range</label>
-                    <select name="data.system.special_weapon.effective_range" multiple>
+                    <label><strong>Range</strong></label>
+                    <select style="height:125px" name="data.system.special_weapon.effective_range" multiple>
                         {{selectOptions effective_range_choices selected=data.system.special_weapon.effective_range localize=false}}
                     </select>
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Damage Formula</label>
-                    <input type="text" name="data.system.special_weapon.damage_formula" value="{{special_damage_formula}}" placeholder="0" style="width: 45px;">
+                    <label><strong>Damage Formula</strong></label>
+                    <input type="text" name="data.system.special_weapon.damage_formula" value="{{special_damage_formula}}" placeholder="0" style="width: 200px">
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Characteristics</label>
+                    <label><strong>Characteristics</strong></label>
                     {{#each data.system.special_weapon.characteristics as | char |}}
                         <div class="form-group">
                             <div class="form-fields flex1">
@@ -122,24 +126,24 @@
 
             <div class="description">
                 <div class="form-fields flex1 content">
-                    <label>Name</label>
-                    <input type="text" name="data.system.heavy_weapon.name" value="{{data.system.heavy_weapon.name}}" placeholder="0" style="width: 45px;">
+                    <label><strong>Name</strong></label>
+                    <input type="text" name="data.system.heavy_weapon.name" value="{{data.system.heavy_weapon.name}}" placeholder="0" style="width: 200px">
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Range</label>
-                    <select name="data.system.heavy_weapon.effective_range" multiple>
+                    <label><strong>Range</strong></label>
+                    <select style="height:125px" name="data.system.heavy_weapon.effective_range" multiple>
                         {{selectOptions effective_range_choices selected=data.system.heavy_weapon.effective_range localize=false}}
                     </select>
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Damage Formula</label>
-                    <input type="text" name="data.system.heavy_weapon.damage_formula" value="{{heavy_damage_formula}}" placeholder="0" style="width: 45px;">
+                    <label><strong>Damage Formula</strong></label>
+                    <input type="text" name="data.system.heavy_weapon.damage_formula" value="{{heavy_damage_formula}}" placeholder="0" style="width: 200px">
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Characteristics</label>
+                    <label><strong>Characteristics</strong></label>
                     {{#each data.system.heavy_weapon.characteristics as | char |}}
                         <div class="form-group">
                             <div class="form-fields flex1">
@@ -165,24 +169,24 @@
 
             <div class="description">
                 <div class="form-fields flex1 content">
-                    <label>Name</label>
-                    <input type="text" name="data.system.melee_attack.name" value="{{data.system.melee_attack.name}}" placeholder="0" style="width: 45px;">
+                    <label><strong>Name</strong></label>
+                    <input type="text" name="data.system.melee_attack.name" value="{{data.system.melee_attack.name}}" placeholder="0" style="width: 200px">
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Range</label>
-                    <select name="data.system.melee_attack.effective_range" multiple>
+                    <label><strong>Range</strong></label>
+                    <select style="height:125px" name="data.system.melee_attack.effective_range" multiple>
                         {{selectOptions effective_range_choices selected=data.system.melee_attack.effective_range localize=false}}
                     </select>
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Damage Formula</label>
-                    <input type="text" name="data.system.melee_attack.damage_formula" value="{{melee_damage_formula}}" placeholder="0" style="width: 45px;">
+                    <label><strong>Damage Formula</strong></label>
+                    <input type="text" name="data.system.melee_attack.damage_formula" value="{{melee_damage_formula}}" placeholder="0" style="width: 200px">
                 </div>
 
                 <div class="form-fields flex1 content">
-                    <label>Characteristics</label>
+                    <label><strong>Characteristics</strong></label>
                     {{#each data.system.melee_attack.characteristics as | char |}}
                         <div class="form-group">
                             <div class="form-fields flex1">
@@ -208,7 +212,7 @@
 
             <div class="description">
                 <div class="form-fields flex1 content">
-                    <label>Characteristics</label>
+                    <label><strong>Characteristics</strong></label>
                     {{#each data.system.passives as | char |}}
                         <div class="form-group">
                             <div class="form-fields flex1">
